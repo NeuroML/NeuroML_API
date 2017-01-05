@@ -1,0 +1,9 @@
+--std c++11
+--generate-serialization
+--generate-doxygen
+--generate-ostream
+--generate-comparison
+--root-element neuroml
+--namespace-map http://www.neuroml.org/schema/neuroml2=neuroml2
+--prologue-file XsdPrologue.txt
+--epilogue-file XsdEpilogue.txt
