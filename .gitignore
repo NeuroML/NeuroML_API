@@ -1,3 +1,7 @@
 # Temporary build files
 *.o
 test
+
+# Generated documentation
+docs/
+
