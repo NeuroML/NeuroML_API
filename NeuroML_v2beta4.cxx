@@ -13891,7 +13891,7 @@ namespace neuroml2
   }
 
 
-  // Connection
+  // Connection_base
   // 
 
 
@@ -40161,44 +40161,44 @@ namespace neuroml2
     return !(x == y);
   }
 
-  // Connection
+  // Connection_base
   //
 
-  Connection::
-  Connection (const id_type& id,
-              const preCellId_type& preCellId,
-              const postCellId_type& postCellId)
+  Connection_base::
+  Connection_base (const id_type& id,
+                   const preCellId_type& preCellId,
+                   const postCellId_type& postCellId)
   : ::neuroml2::BaseConnectionOldFormat (id,
                                          preCellId,
                                          postCellId)
   {
   }
 
-  Connection::
-  Connection (const Connection& x,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
+  Connection_base::
+  Connection_base (const Connection_base& x,
+                   ::xml_schema::flags f,
+                   ::xml_schema::container* c)
   : ::neuroml2::BaseConnectionOldFormat (x, f, c)
   {
   }
 
-  Connection::
-  Connection (const ::xercesc::DOMElement& e,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
+  Connection_base::
+  Connection_base (const ::xercesc::DOMElement& e,
+                   ::xml_schema::flags f,
+                   ::xml_schema::container* c)
   : ::neuroml2::BaseConnectionOldFormat (e, f, c)
   {
   }
 
-  Connection* Connection::
+  Connection_base* Connection_base::
   _clone (::xml_schema::flags f,
           ::xml_schema::container* c) const
   {
-    return new class Connection (*this, f, c);
+    return new class Connection_base (*this, f, c);
   }
 
-  Connection::
-  ~Connection ()
+  Connection_base::
+  ~Connection_base ()
   {
   }
 
@@ -46742,7 +46742,7 @@ namespace neuroml2
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const Connection& i)
+  operator<< (::std::ostream& o, const Connection_base& i)
   {
     o << static_cast< const ::neuroml2::BaseConnectionOldFormat& > (i);
 
@@ -55718,7 +55718,7 @@ namespace neuroml2
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const Connection& i)
+  operator<< (::xercesc::DOMElement& e, const Connection_base& i)
   {
     e << static_cast< const ::neuroml2::BaseConnectionOldFormat& > (i);
   }

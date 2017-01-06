@@ -206,6 +206,103 @@ public:
     virtual
     ~Segment();
 };
+
+/**
+ * @brief Class corresponding to the %Connection schema type.
+ *
+ * Individual chemical (event based) synaptic connection, weight==1 and
+ * no delay
+ *
+ * @nosubgrouping
+ */
+class Connection: public Connection_base
+{
+    // Our additions to the class
+protected:
+    unsigned _get_cell_id(const std::string& id_string) const;
+
+public:
+    unsigned get_pre_cell_id() const;
+
+    unsigned get_post_cell_id() const;
+
+//    std::string TODO: equiv of __str__ - override operator<<?
+
+    // Constructor signatures etc. copied from the auto-generated base class.
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    Connection(const id_type&,
+               const preCellId_type&,
+               const postCellId_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Connection(const ::xercesc::DOMElement& e,
+               ::xml_schema::flags f = 0,
+               ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Connection(const Connection& x,
+               ::xml_schema::flags f = 0,
+               ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual Connection*
+    _clone(::xml_schema::flags f = 0,
+           ::xml_schema::container* c = 0) const;
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual
+    ~Connection();
+};
+
+}
+
+// Streaming operators
+
+#include <iosfwd>
+
+namespace neuroml2
+{
+
+::std::ostream&
+operator<< (::std::ostream&, const Connection&);
+
 }
 
 #endif // NEURO_ML_CUSTOM_HXX

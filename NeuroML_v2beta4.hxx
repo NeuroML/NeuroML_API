@@ -805,6 +805,7 @@ namespace neuroml2
   class BaseConnection;
   class BaseConnectionOldFormat;
   class BaseConnectionNewFormat;
+  class Connection_base;
   class Connection;
   class ConnectionWD;
   class ElectricalProjection;
@@ -54471,7 +54472,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Connection: public ::neuroml2::BaseConnectionOldFormat
+  class Connection_base: public ::neuroml2::BaseConnectionOldFormat
   {
     public:
     /**
@@ -54483,9 +54484,9 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    Connection (const id_type&,
-                const preCellId_type&,
-                const postCellId_type&);
+    Connection_base (const id_type&,
+                     const preCellId_type&,
+                     const postCellId_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -54495,9 +54496,9 @@ namespace neuroml2
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    Connection (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    Connection_base (const ::xercesc::DOMElement& e,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -54508,9 +54509,9 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    Connection (const Connection& x,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    Connection_base (const Connection_base& x,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -54523,7 +54524,7 @@ namespace neuroml2
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual Connection*
+    virtual Connection_base*
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
@@ -54533,7 +54534,7 @@ namespace neuroml2
      * @brief Destructor.
      */
     virtual 
-    ~Connection ();
+    ~Connection_base ();
   };
 
   /**
@@ -60934,7 +60935,7 @@ namespace neuroml2
   operator<< (::std::ostream&, const BaseConnectionNewFormat&);
 
   ::std::ostream&
-  operator<< (::std::ostream&, const Connection&);
+  operator<< (::std::ostream&, const Connection_base&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const ConnectionWD&);
@@ -62235,7 +62236,7 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement&, const BaseConnectionNewFormat&);
 
   void
-  operator<< (::xercesc::DOMElement&, const Connection&);
+  operator<< (::xercesc::DOMElement&, const Connection_base&);
 
   void
   operator<< (::xercesc::DOMElement&, const ConnectionWD&);

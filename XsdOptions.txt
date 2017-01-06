@@ -14,3 +14,4 @@
 --hxx-epilogue '#include "NeuroML_custom.hxx"'
 --custom-type Morphology=/Morphology_base
 --custom-type Segment=/Segment_base
+--custom-type Connection=/Connection_base

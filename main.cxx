@@ -74,6 +74,14 @@ int main(int argc, char* argv[])
             std::ofstream f(argv[2]);
             neuroml2::neuroml(f, *model, map);
         }
+
+        // And textual summaries of the tree also come 'for free'
+        if (argc > 3)
+        {
+            std::cout << "Dumping summary to " << argv[3] << std::endl;
+            std::ofstream f(argv[3]);
+            f << *model;
+        }
     }
     catch (const xml_schema::exception& e)
     {
