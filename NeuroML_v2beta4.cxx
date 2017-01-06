@@ -7917,118 +7917,118 @@ namespace neuroml2
   }
 
 
-  // Segment
+  // Segment_base
   // 
 
-  const Segment::parent_optional& Segment::
+  const Segment_base::parent_optional& Segment_base::
   parent () const
   {
     return this->parent_;
   }
 
-  Segment::parent_optional& Segment::
+  Segment_base::parent_optional& Segment_base::
   parent ()
   {
     return this->parent_;
   }
 
-  void Segment::
+  void Segment_base::
   parent (const parent_type& x)
   {
     this->parent_.set (x);
   }
 
-  void Segment::
+  void Segment_base::
   parent (const parent_optional& x)
   {
     this->parent_ = x;
   }
 
-  void Segment::
+  void Segment_base::
   parent (::std::unique_ptr< parent_type > x)
   {
     this->parent_.set (std::move (x));
   }
 
-  const Segment::proximal_optional& Segment::
+  const Segment_base::proximal_optional& Segment_base::
   proximal () const
   {
     return this->proximal_;
   }
 
-  Segment::proximal_optional& Segment::
+  Segment_base::proximal_optional& Segment_base::
   proximal ()
   {
     return this->proximal_;
   }
 
-  void Segment::
+  void Segment_base::
   proximal (const proximal_type& x)
   {
     this->proximal_.set (x);
   }
 
-  void Segment::
+  void Segment_base::
   proximal (const proximal_optional& x)
   {
     this->proximal_ = x;
   }
 
-  void Segment::
+  void Segment_base::
   proximal (::std::unique_ptr< proximal_type > x)
   {
     this->proximal_.set (std::move (x));
   }
 
-  const Segment::distal_type& Segment::
+  const Segment_base::distal_type& Segment_base::
   distal () const
   {
     return this->distal_.get ();
   }
 
-  Segment::distal_type& Segment::
+  Segment_base::distal_type& Segment_base::
   distal ()
   {
     return this->distal_.get ();
   }
 
-  void Segment::
+  void Segment_base::
   distal (const distal_type& x)
   {
     this->distal_.set (x);
   }
 
-  void Segment::
+  void Segment_base::
   distal (::std::unique_ptr< distal_type > x)
   {
     this->distal_.set (std::move (x));
   }
 
-  const Segment::name_optional& Segment::
+  const Segment_base::name_optional& Segment_base::
   name () const
   {
     return this->name_;
   }
 
-  Segment::name_optional& Segment::
+  Segment_base::name_optional& Segment_base::
   name ()
   {
     return this->name_;
   }
 
-  void Segment::
+  void Segment_base::
   name (const name_type& x)
   {
     this->name_.set (x);
   }
 
-  void Segment::
+  void Segment_base::
   name (const name_optional& x)
   {
     this->name_ = x;
   }
 
-  void Segment::
+  void Segment_base::
   name (::std::unique_ptr< name_type > x)
   {
     this->name_.set (std::move (x));
@@ -29564,12 +29564,12 @@ namespace neuroml2
     return !(x == y);
   }
 
-  // Segment
+  // Segment_base
   //
 
-  Segment::
-  Segment (const id_type& id,
-           const distal_type& distal)
+  Segment_base::
+  Segment_base (const id_type& id,
+                const distal_type& distal)
   : ::neuroml2::BaseNonNegativeIntegerId (id),
     parent_ (this),
     proximal_ (this),
@@ -29578,9 +29578,9 @@ namespace neuroml2
   {
   }
 
-  Segment::
-  Segment (const id_type& id,
-           ::std::unique_ptr< distal_type > distal)
+  Segment_base::
+  Segment_base (const id_type& id,
+                ::std::unique_ptr< distal_type > distal)
   : ::neuroml2::BaseNonNegativeIntegerId (id),
     parent_ (this),
     proximal_ (this),
@@ -29589,10 +29589,10 @@ namespace neuroml2
   {
   }
 
-  Segment::
-  Segment (const Segment& x,
-           ::xml_schema::flags f,
-           ::xml_schema::container* c)
+  Segment_base::
+  Segment_base (const Segment_base& x,
+                ::xml_schema::flags f,
+                ::xml_schema::container* c)
   : ::neuroml2::BaseNonNegativeIntegerId (x, f, c),
     parent_ (x.parent_, f, this),
     proximal_ (x.proximal_, f, this),
@@ -29601,10 +29601,10 @@ namespace neuroml2
   {
   }
 
-  Segment::
-  Segment (const ::xercesc::DOMElement& e,
-           ::xml_schema::flags f,
-           ::xml_schema::container* c)
+  Segment_base::
+  Segment_base (const ::xercesc::DOMElement& e,
+                ::xml_schema::flags f,
+                ::xml_schema::container* c)
   : ::neuroml2::BaseNonNegativeIntegerId (e, f | ::xml_schema::flags::base, c),
     parent_ (this),
     proximal_ (this),
@@ -29618,7 +29618,7 @@ namespace neuroml2
     }
   }
 
-  void Segment::
+  void Segment_base::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
@@ -29698,15 +29698,15 @@ namespace neuroml2
     }
   }
 
-  Segment* Segment::
+  Segment_base* Segment_base::
   _clone (::xml_schema::flags f,
           ::xml_schema::container* c) const
   {
-    return new class Segment (*this, f, c);
+    return new class Segment_base (*this, f, c);
   }
 
-  Segment& Segment::
-  operator= (const Segment& x)
+  Segment_base& Segment_base::
+  operator= (const Segment_base& x)
   {
     if (this != &x)
     {
@@ -29720,13 +29720,13 @@ namespace neuroml2
     return *this;
   }
 
-  Segment::
-  ~Segment ()
+  Segment_base::
+  ~Segment_base ()
   {
   }
 
   bool
-  operator== (const Segment& x, const Segment& y)
+  operator== (const Segment_base& x, const Segment_base& y)
   {
     if (!(static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (x) ==
           static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (y)))
@@ -29748,7 +29748,7 @@ namespace neuroml2
   }
 
   bool
-  operator!= (const Segment& x, const Segment& y)
+  operator!= (const Segment_base& x, const Segment_base& y)
   {
     return !(x == y);
   }
@@ -45410,7 +45410,7 @@ namespace neuroml2
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const Segment& i)
+  operator<< (::std::ostream& o, const Segment_base& i)
   {
     o << static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (i);
 
@@ -52396,7 +52396,7 @@ namespace neuroml2
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const Segment& i)
+  operator<< (::xercesc::DOMElement& e, const Segment_base& i)
   {
     e << static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (i);
 

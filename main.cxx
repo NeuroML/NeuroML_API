@@ -51,6 +51,16 @@ int main(int argc, char* argv[])
             {
                 std::cout << "    Number of morphology segments: " << it->morphology()->num_segments() << std::endl;
                 assert(it->morphology() == it->morphology()); // Check that comparison operators still apply
+
+                // Check extra methods for segments
+                if (!it->morphology()->segment().empty())
+                {
+                    neuroml2::Segment seg1 = it->morphology()->segment().at(1);
+                    std::cout << "    Segment 1:" << std::endl;
+                    std::cout << "      length=" << seg1.length()
+                              << ", volume=" << seg1.volume()
+                              << ", surface area=" << seg1.surface_area() << std::endl;
+                }
             }
         }
 

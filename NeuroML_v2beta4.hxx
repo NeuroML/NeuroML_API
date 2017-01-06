@@ -727,6 +727,7 @@ namespace neuroml2
   class Morphology_base;
   class Morphology;
   class BaseNonNegativeIntegerId;
+  class Segment_base;
   class Segment;
   class SegmentParent;
   class Point3DWithDiam;
@@ -31802,7 +31803,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Segment: public ::neuroml2::BaseNonNegativeIntegerId
+  class Segment_base: public ::neuroml2::BaseNonNegativeIntegerId
   {
     public:
     /**
@@ -32100,8 +32101,8 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    Segment (const id_type&,
-             const distal_type&);
+    Segment_base (const id_type&,
+                  const distal_type&);
 
     /**
      * @brief Create an instance from the ultimate base and
@@ -32111,8 +32112,8 @@ namespace neuroml2
      * This constructor will try to use the passed values directly
      * instead of making copies.
      */
-    Segment (const id_type&,
-             ::std::unique_ptr< distal_type >);
+    Segment_base (const id_type&,
+                  ::std::unique_ptr< distal_type >);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -32122,9 +32123,9 @@ namespace neuroml2
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    Segment (const ::xercesc::DOMElement& e,
-             ::xml_schema::flags f = 0,
-             ::xml_schema::container* c = 0);
+    Segment_base (const ::xercesc::DOMElement& e,
+                  ::xml_schema::flags f = 0,
+                  ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -32135,9 +32136,9 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    Segment (const Segment& x,
-             ::xml_schema::flags f = 0,
-             ::xml_schema::container* c = 0);
+    Segment_base (const Segment_base& x,
+                  ::xml_schema::flags f = 0,
+                  ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -32150,7 +32151,7 @@ namespace neuroml2
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual Segment*
+    virtual Segment_base*
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
@@ -32162,8 +32163,8 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    Segment&
-    operator= (const Segment& x);
+    Segment_base&
+    operator= (const Segment_base& x);
 
     //@}
 
@@ -32171,7 +32172,7 @@ namespace neuroml2
      * @brief Destructor.
      */
     virtual 
-    ~Segment ();
+    ~Segment_base ();
 
     // Implementation.
     //
@@ -32193,10 +32194,10 @@ namespace neuroml2
   };
 
   bool
-  operator== (const Segment&, const Segment&);
+  operator== (const Segment_base&, const Segment_base&);
 
   bool
-  operator!= (const Segment&, const Segment&);
+  operator!= (const Segment_base&, const Segment_base&);
 
 
   /**
@@ -60690,7 +60691,7 @@ namespace neuroml2
   operator<< (::std::ostream&, const BaseNonNegativeIntegerId&);
 
   ::std::ostream&
-  operator<< (::std::ostream&, const Segment&);
+  operator<< (::std::ostream&, const Segment_base&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const SegmentParent&);
@@ -61975,7 +61976,7 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement&, const BaseNonNegativeIntegerId&);
 
   void
-  operator<< (::xercesc::DOMElement&, const Segment&);
+  operator<< (::xercesc::DOMElement&, const Segment_base&);
 
   void
   operator<< (::xercesc::DOMElement&, const SegmentParent&);
