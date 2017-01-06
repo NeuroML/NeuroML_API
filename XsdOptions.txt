@@ -5,5 +5,11 @@
 --generate-comparison
 --root-element neuroml
 --namespace-map http://www.neuroml.org/schema/neuroml2=neuroml2
+
+# These wrap the generate code in coverage ignore declarations for lcov
 --prologue-file XsdPrologue.txt
 --epilogue-file XsdEpilogue.txt
+
+# Customisations for generated types
+--custom-type Morphology=/Morphology_base
+--hxx-epilogue '#include "NeuroML_custom.hxx"'

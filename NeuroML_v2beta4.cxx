@@ -7849,40 +7849,40 @@ namespace neuroml2
   }
 
 
-  // Morphology
+  // Morphology_base
   // 
 
-  const Morphology::segment_sequence& Morphology::
+  const Morphology_base::segment_sequence& Morphology_base::
   segment () const
   {
     return this->segment_;
   }
 
-  Morphology::segment_sequence& Morphology::
+  Morphology_base::segment_sequence& Morphology_base::
   segment ()
   {
     return this->segment_;
   }
 
-  void Morphology::
+  void Morphology_base::
   segment (const segment_sequence& s)
   {
     this->segment_ = s;
   }
 
-  const Morphology::segmentGroup_sequence& Morphology::
+  const Morphology_base::segmentGroup_sequence& Morphology_base::
   segmentGroup () const
   {
     return this->segmentGroup_;
   }
 
-  Morphology::segmentGroup_sequence& Morphology::
+  Morphology_base::segmentGroup_sequence& Morphology_base::
   segmentGroup ()
   {
     return this->segmentGroup_;
   }
 
-  void Morphology::
+  void Morphology_base::
   segmentGroup (const segmentGroup_sequence& s)
   {
     this->segmentGroup_ = s;
@@ -29338,31 +29338,31 @@ namespace neuroml2
     return !(x == y);
   }
 
-  // Morphology
+  // Morphology_base
   //
 
-  Morphology::
-  Morphology (const id_type& id)
+  Morphology_base::
+  Morphology_base (const id_type& id)
   : ::neuroml2::Standalone (id),
     segment_ (this),
     segmentGroup_ (this)
   {
   }
 
-  Morphology::
-  Morphology (const Morphology& x,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
+  Morphology_base::
+  Morphology_base (const Morphology_base& x,
+                   ::xml_schema::flags f,
+                   ::xml_schema::container* c)
   : ::neuroml2::Standalone (x, f, c),
     segment_ (x.segment_, f, this),
     segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
 
-  Morphology::
-  Morphology (const ::xercesc::DOMElement& e,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
+  Morphology_base::
+  Morphology_base (const ::xercesc::DOMElement& e,
+                   ::xml_schema::flags f,
+                   ::xml_schema::container* c)
   : ::neuroml2::Standalone (e, f | ::xml_schema::flags::base, c),
     segment_ (this),
     segmentGroup_ (this)
@@ -29374,7 +29374,7 @@ namespace neuroml2
     }
   }
 
-  void Morphology::
+  void Morphology_base::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
@@ -29412,15 +29412,15 @@ namespace neuroml2
     }
   }
 
-  Morphology* Morphology::
+  Morphology_base* Morphology_base::
   _clone (::xml_schema::flags f,
           ::xml_schema::container* c) const
   {
-    return new class Morphology (*this, f, c);
+    return new class Morphology_base (*this, f, c);
   }
 
-  Morphology& Morphology::
-  operator= (const Morphology& x)
+  Morphology_base& Morphology_base::
+  operator= (const Morphology_base& x)
   {
     if (this != &x)
     {
@@ -29432,13 +29432,13 @@ namespace neuroml2
     return *this;
   }
 
-  Morphology::
-  ~Morphology ()
+  Morphology_base::
+  ~Morphology_base ()
   {
   }
 
   bool
-  operator== (const Morphology& x, const Morphology& y)
+  operator== (const Morphology_base& x, const Morphology_base& y)
   {
     if (!(static_cast< const ::neuroml2::Standalone& > (x) ==
           static_cast< const ::neuroml2::Standalone& > (y)))
@@ -29454,7 +29454,7 @@ namespace neuroml2
   }
 
   bool
-  operator!= (const Morphology& x, const Morphology& y)
+  operator!= (const Morphology_base& x, const Morphology_base& y)
   {
     return !(x == y);
   }
@@ -45379,18 +45379,18 @@ namespace neuroml2
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const Morphology& i)
+  operator<< (::std::ostream& o, const Morphology_base& i)
   {
     o << static_cast< const ::neuroml2::Standalone& > (i);
 
-    for (Morphology::segment_const_iterator
+    for (Morphology_base::segment_const_iterator
          b (i.segment ().begin ()), e (i.segment ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "segment: " << *b;
     }
 
-    for (Morphology::segmentGroup_const_iterator
+    for (Morphology_base::segmentGroup_const_iterator
          b (i.segmentGroup ().begin ()), e (i.segmentGroup ().end ());
          b != e; ++b)
     {
@@ -52343,13 +52343,13 @@ namespace neuroml2
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const Morphology& i)
+  operator<< (::xercesc::DOMElement& e, const Morphology_base& i)
   {
     e << static_cast< const ::neuroml2::Standalone& > (i);
 
     // segment
     //
-    for (Morphology::segment_const_iterator
+    for (Morphology_base::segment_const_iterator
          b (i.segment ().begin ()), n (i.segment ().end ());
          b != n; ++b)
     {
@@ -52364,7 +52364,7 @@ namespace neuroml2
 
     // segmentGroup
     //
-    for (Morphology::segmentGroup_const_iterator
+    for (Morphology_base::segmentGroup_const_iterator
          b (i.segmentGroup ().begin ()), n (i.segmentGroup ().end ());
          b != n; ++b)
     {

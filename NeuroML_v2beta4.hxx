@@ -724,6 +724,7 @@ namespace neuroml2
   class PinskyRinzelCA3Cell;
   class Cell;
   class Cell2CaPools;
+  class Morphology_base;
   class Morphology;
   class BaseNonNegativeIntegerId;
   class Segment;
@@ -31409,7 +31410,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Morphology: public ::neuroml2::Standalone
+  class Morphology_base: public ::neuroml2::Standalone
   {
     public:
     /**
@@ -31549,7 +31550,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    Morphology (const id_type&);
+    Morphology_base (const id_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -31559,9 +31560,9 @@ namespace neuroml2
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    Morphology (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    Morphology_base (const ::xercesc::DOMElement& e,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -31572,9 +31573,9 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    Morphology (const Morphology& x,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    Morphology_base (const Morphology_base& x,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -31587,7 +31588,7 @@ namespace neuroml2
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual Morphology*
+    virtual Morphology_base*
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
@@ -31599,8 +31600,8 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    Morphology&
-    operator= (const Morphology& x);
+    Morphology_base&
+    operator= (const Morphology_base& x);
 
     //@}
 
@@ -31608,7 +31609,7 @@ namespace neuroml2
      * @brief Destructor.
      */
     virtual 
-    ~Morphology ();
+    ~Morphology_base ();
 
     // Implementation.
     //
@@ -31628,10 +31629,10 @@ namespace neuroml2
   };
 
   bool
-  operator== (const Morphology&, const Morphology&);
+  operator== (const Morphology_base&, const Morphology_base&);
 
   bool
-  operator!= (const Morphology&, const Morphology&);
+  operator!= (const Morphology_base&, const Morphology_base&);
 
 
   /**
@@ -60683,7 +60684,7 @@ namespace neuroml2
   operator<< (::std::ostream&, const Cell2CaPools&);
 
   ::std::ostream&
-  operator<< (::std::ostream&, const Morphology&);
+  operator<< (::std::ostream&, const Morphology_base&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const BaseNonNegativeIntegerId&);
@@ -61968,7 +61969,7 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement&, const Cell2CaPools&);
 
   void
-  operator<< (::xercesc::DOMElement&, const Morphology&);
+  operator<< (::xercesc::DOMElement&, const Morphology_base&);
 
   void
   operator<< (::xercesc::DOMElement&, const BaseNonNegativeIntegerId&);
@@ -62319,6 +62320,7 @@ namespace neuroml2
 // Begin epilogue.
 //
 // LCOV_EXCL_STOP
+#include "NeuroML_custom.hxx"
 //
 // End epilogue.
 

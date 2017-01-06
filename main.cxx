@@ -49,6 +49,10 @@ int main(int argc, char* argv[])
         	 ++it)
         {
         	std::cout << "  id: " << it->id() << std::endl;
+        	if (it->morphology().present())
+        	{
+        		std::cout << "    Number of morphology segments: " << it->morphology()->num_segments() << std::endl;
+        	}
         }
 
         // We can also serialise back to a file (or other output stream)
