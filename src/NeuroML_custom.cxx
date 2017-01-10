@@ -1,6 +1,6 @@
 /// \todo Copyright notice etc.
 
-#include "NeuroML_v2beta4.hxx"
+#include "neuroml.hxx"
 
 #include <cmath>
 #include <string>
