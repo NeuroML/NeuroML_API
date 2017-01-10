@@ -1,12 +1,12 @@
 // Quick test function for the xsd-generated C++ mapping.
 
+#include <cassert>
 #include <iostream>
 #include <fstream>
 #include <memory>
 
-#include "NeuroML_v2beta4.hxx"
-
-const std::string schema_path("file://" SCHEMA_PATH);
+#include "neuroml.hxx"
+#include "NeuroML_config.hxx"
 
 int main(int argc, char* argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
         std::cout << "Parsing path " << argv[1] << std::endl;
         // We enforce use of our schema for validation, no matter what the document says
         ::xml_schema::properties props;
-        props.schema_location("http://www.neuroml.org/schema/neuroml2", schema_path);
+        props.schema_location("http://www.neuroml.org/schema/neuroml2", NeuroML_SCHEMA_PATH);
         std::unique_ptr<neuroml2::NeuroMLDocument> model(neuroml2::neuroml(argv[1], 0, props));
 
         // Required attributes (or child elements with single cardinality) can just be accessed directly.
@@ -70,7 +70,7 @@ int main(int argc, char* argv[])
             std::cout << "Serialising to " << argv[2] << std::endl;
             xml_schema::namespace_infomap map;
             map[""].name = "http://www.neuroml.org/schema/neuroml2";
-            map[""].schema = schema_path;
+            map[""].schema = NeuroML_SCHEMA_PATH;
             std::ofstream f(argv[2]);
             neuroml2::neuroml(f, *model, map);
         }

@@ -1,0 +1,9 @@
+// TODO: Licence info
+
+/**
+ * @file Main include file for the NeuroML2 C++ API.
+ *
+ * Users of the API should just include this file to get access to all functionality.
+ */
+
+#include "@NeuroML_SCHEMA_NAME@.hxx"
