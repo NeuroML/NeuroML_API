@@ -1,7 +1,8 @@
 # Temporary build files
 *.o
-test
+NeuroML_API_build
 
 # Generated documentation
 docs/
-
+/create_net
+/new.net.nml

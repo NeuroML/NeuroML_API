@@ -109,6 +109,11 @@ target_link_libraries(example neuroml)
 
 add_test(ExampleRuns example "${PROJECT_SOURCE_DIR}/test/samples/Purk2M9s.nml" test_output.nml test_output.txt)
 
+add_executable(create_net test/create_net.cxx)
+target_link_libraries(create_net neuroml)
+
+add_test(CreateNet create_net test_net.nml)
+
 # Building documentation
 ########################
 

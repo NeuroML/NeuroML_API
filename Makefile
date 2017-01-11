@@ -18,7 +18,7 @@ OBJS = $(NEUROML).o NeuroML_custom.o
 
 # Rules
 
-all: test
+all: test create_net
 
 NeuroML_%.hxx NeuroML_%.cxx: NeuroML_%.xsd Xsd*.txt
 	$(XSD) cxx-tree --options-file XsdOptions.txt $<
@@ -29,4 +29,7 @@ NeuroML_%.hxx NeuroML_%.cxx: NeuroML_%.xsd Xsd*.txt
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
 test: main.o $(OBJS)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
+
+create_net: create_net.o $(OBJS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
