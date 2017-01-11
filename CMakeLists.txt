@@ -3,12 +3,14 @@
 # CMake settings for building & installing the NeuroML2 C++ API
 
 cmake_minimum_required(VERSION 3.5)
+cmake_policy(SET CMP0022 NEW) # Link interfaces for export
 cmake_policy(SET CMP0028 NEW) # Strict use of :: in target names
 cmake_policy(SET CMP0042 NEW) # Mac OS @rpath
 cmake_policy(SET CMP0048 NEW) # VERSION option to project()
 
+# Note: the version number uses Semantic Versioning http://semver.org/
 project(NeuroML_API VERSION 0.1.0)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
 
 # Developer settable options
 ############################
@@ -29,11 +31,6 @@ set(CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING
 
 # Build rules
 #############
-
-# We use C++11
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Configure a header file to pass some of the CMake settings to the source code
 configure_file(
@@ -64,28 +61,42 @@ if (XSD_FOUND)
 else (XSD_FOUND)
     # Use pre-generated sources & CodeSynthesis headers shipped with the project
     set(XSD_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/libxsd")
-    list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIR}")
+    list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIR}" "${PROJECT_SOURCE_DIR}/src/schema")
     set(NeuroML_SCHEMA_SRCS "${PROJECT_SOURCE_DIR}/src/schema/${NeuroML_SCHEMA_NAME}.cxx")
 endif (XSD_FOUND)
 
 # The main API library
-include_directories("${PROJECT_SOURCE_DIR}/src")
-include_directories(${NeuroML_INCLUDES})
 add_library(neuroml ${NeuroML_SCHEMA_SRCS} src/NeuroML_custom.cxx)
-target_link_libraries(neuroml XercesC::XercesC)
-# TODO: Set library version properties
+target_link_libraries(neuroml PUBLIC XercesC::XercesC)
+target_include_directories(neuroml PUBLIC
+    "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>" $<BUILD_INTERFACE:${NeuroML_INCLUDES}>
+    $<INSTALL_INTERFACE:include/neuroml>)
+set_target_properties(neuroml PROPERTIES VERSION ${NeuroML_API_VERSION})
+# We use C++11 features. Ensure these propagate to users of the library.
+target_compile_features(neuroml PUBLIC cxx_auto_type cxx_constexpr cxx_right_angle_brackets)
 
 # Install rules
 ###############
 
-install(TARGETS neuroml
+set(IncludeLocation include/neuroml)
+
+install(TARGETS neuroml EXPORT NeuroML_API
         RUNTIME DESTINATION bin
-        LIBRARY DESTINATION lib)
-install(DIRECTORY "${XSD_INCLUDE_DIR}/xsd" DESTINATION include/neuroml)
+        LIBRARY DESTINATION lib
+        INCLUDES DESTINATION ${IncludeLocation})
+install(DIRECTORY "${XSD_INCLUDE_DIR}/xsd" DESTINATION ${IncludeLocation})
 install(DIRECTORY "${PROJECT_BINARY_DIR}/src/"
-        DESTINATION include/neuroml
+        DESTINATION ${IncludeLocation}
         FILES_MATCHING PATTERN "*.hxx")
-install(FILES src/NeuroML_custom.hxx DESTINATION include/neuroml)
+install(FILES src/NeuroML_custom.hxx DESTINATION ${IncludeLocation})
+
+# Export package config so other CMake-using software can use NeuroML with just
+# find_package(NeuroML_API REQUIRED).
+set(ConfigPackageLocation lib/cmake/${CMAKE_PROJECT_NAME})
+install(FILES cmake/NeuroML_APIConfig.cmake DESTINATION ${ConfigPackageLocation})
+install(EXPORT NeuroML_API DESTINATION ${ConfigPackageLocation}
+        NAMESPACE NeuroML::
+        EXPORT_LINK_INTERFACE_LIBRARIES)
 
 # Testing
 #########

@@ -25,13 +25,16 @@ to configure the build. You may then run
 
 * `make` to build,
 * `make doc` to build the HTML documentation using Doxygen (in a `docs`
-  subfolder of your build folder),
-* `ctest` to run tests,
+  subfolder of your build folder; only available if Doxygen installed),
+* `ctest` (or `make test`) to run tests,
 * `sudo make install` to install on your system, or
 * `cpack` to generate an installable package.
 
-The default CMake options should be appropriate for most cases, although
-you may wish to change the `CMAKE_INSTALL_PREFIX` to specify where the API
+The default CMake options should be appropriate for most cases. The only
+essential external dependency is [Xerces C++](http://xerces.apache.org/xerces-c/)
+which should be found automatically if installed.
+
+You may wish to change the `CMAKE_INSTALL_PREFIX` to specify where the API
 will be installed. The generated library will be placed in a `lib` subfolder,
 and all necessary headers in an `include/neuroml` subfolder.
 
