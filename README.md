@@ -9,6 +9,26 @@ C++ API for NeuroML 2
 For more info on the generated C++ structure, see the
 [XSD user manual](http://www.codesynthesis.com/projects/xsd/documentation/cxx/tree/manual/)
 
+If you have a project built with CMake that depends on the API, you can
+include it (and its own dependencies) very easily in your project. Once
+the API has been installed (see below) simply add the following line to
+your `CMakeLists.txt`:
+
+```
+find_package(NeuroML_API REQUIRED)
+```
+
+and then link against the `NeuroML::neuroml` library, e.g. by
+
+```
+add_executable(example example.cxx)
+target_link_libraries(example NeuroML::neuroml)
+```
+
+If you installed the NeuroML_API in a non-standard location, you may need
+to set the `CMAKE_PREFIX_PATH` CMake variable to that location in order to
+find the package.
+
 ## Building the API yourself
 
 The NeuroML API is built using CMake, and the process works best with
