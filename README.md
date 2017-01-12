@@ -6,8 +6,9 @@ C++ API for NeuroML 2
 
 ## Using the API
 
-For more info on the generated C++ structure, see the
-[XSD user manual](http://www.codesynthesis.com/projects/xsd/documentation/cxx/tree/manual/)
+For more info on the generated C++ structure, see the [XSD user manual].
+The sample programs in the test folder will also give you a reasonable
+idea of how things work.
 
 If you have a project built with CMake that depends on the API, you can
 include it (and its own dependencies) very easily in your project. Once
@@ -48,11 +49,11 @@ to configure the build. You may then run
   subfolder of your build folder; only available if Doxygen installed),
 * `ctest` (or `make test`) to run tests,
 * `sudo make install` to install on your system, or
-* `cpack` to generate an installable package.
+* `cpack` to generate an installable package (see [cpack documentation]).
 
 The default CMake options should be appropriate for most cases. The only
-essential external dependency is [Xerces C++](http://xerces.apache.org/xerces-c/)
-which should be found automatically if installed.
+essential external dependency is [Xerces C++] which should be found
+automatically if installed.
 
 You may wish to change the `CMAKE_INSTALL_PREFIX` to specify where the API
 will be installed. The generated library will be placed in a `lib` subfolder,
@@ -69,3 +70,7 @@ folders). You can also change the schema file to use by setting the variable
 Once the bindings have been regenerated, you can run `make copy_wrappers`
 to copy the new versions back into the source tree, for committing to the
 repository.
+
+[XSD user manual]: http://www.codesynthesis.com/projects/xsd/documentation/cxx/tree/manual/
+[cpack documentation]: https://cmake.org/cmake/help/v3.5/manual/cpack.1.html
+[Xerces C++]: http://xerces.apache.org/xerces-c/
