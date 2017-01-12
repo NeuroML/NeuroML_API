@@ -9,7 +9,6 @@
 #include <memory>
 
 #include "neuroml.hxx"
-#include "NeuroML_config.hxx"
 
 int main(int argc, char* argv[])
 {
@@ -68,11 +67,7 @@ int main(int argc, char* argv[])
         if (argc > 2)
         {
             std::cout << "Serialising to " << argv[2] << std::endl;
-            xml_schema::namespace_infomap map;
-            map[""].name = "http://www.neuroml.org/schema/neuroml2";
-            map[""].schema = NeuroML_SCHEMA_PATH;
-            std::ofstream f(argv[2]);
-            neuroml2::neuroml(f, *model, map);
+            model->writeToFile(argv[2]);
         }
 
         // And textual summaries of the tree also come 'for free'

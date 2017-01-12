@@ -4,6 +4,8 @@
 #ifndef NEURO_ML_CUSTOM_HXX
 #define NEURO_ML_CUSTOM_HXX
 
+#include <iosfwd> // For streaming operators & writeToFile
+
 namespace neuroml2
 {
 
@@ -24,6 +26,96 @@ std::unique_ptr<NeuroMLDocument> parseFile(const std::string& filePath);
  * @return A file:// URI to the .xsd file, if found.
  */
 std::string getSchemaPath();
+
+/**
+ * @brief Class corresponding to the %NeuroMLDocument schema type.
+ *
+ * This is used for the root element of NeuroML models.
+ * It supports a convenience writeToFile() method for serialising as XML.
+ *
+ * @nosubgrouping
+ */
+class NeuroMLDocument: public NeuroMLDocument_base
+{
+public:
+    /**
+     * Write this NeuroML model to an XML file.
+     *
+     * @param pathToFile Path to write to.
+     * @param mode What mode to open the file in; defaults to overwrite.
+     */
+    void writeToFile(const std::string& pathToFile, std::ios_base::openmode mode = std::ios_base::out) const;
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    NeuroMLDocument (const id_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    NeuroMLDocument (const ::xercesc::DOMElement& e,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    NeuroMLDocument (const NeuroMLDocument& x,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual NeuroMLDocument*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    NeuroMLDocument&
+    operator= (const NeuroMLDocument& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual
+    ~NeuroMLDocument ();
+};
 
 /**
  * @brief Class corresponding to the %Morphology schema type.
@@ -311,14 +403,7 @@ public:
     ~Connection();
 };
 
-}
-
 // Streaming operators
-
-#include <iosfwd>
-
-namespace neuroml2
-{
 
 ::std::ostream&
 operator<< (::std::ostream&, const Connection&);

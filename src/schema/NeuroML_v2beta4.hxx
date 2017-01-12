@@ -36,8 +36,8 @@
  * @brief Generated from NeuroML_v2beta4.xsd.
  */
 
-#ifndef NEURO_ML_V2BETA4_HXX
-#define NEURO_ML_V2BETA4_HXX
+#ifndef NEUROML_API_SCHEMA_NEURO_ML_V2BETA4_HXX
+#define NEUROML_API_SCHEMA_NEURO_ML_V2BETA4_HXX
 
 #ifndef XSD_CXX11
 #define XSD_CXX11
@@ -661,6 +661,7 @@ namespace neuroml2
   class BaseWithoutId;
   class Base;
   class Standalone;
+  class NeuroMLDocument_base;
   class NeuroMLDocument;
   class IncludeType;
   class IonChannelScalable;
@@ -7345,7 +7346,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class NeuroMLDocument: public ::neuroml2::Standalone
+  class NeuroMLDocument_base: public ::neuroml2::Standalone
   {
     public:
     /**
@@ -11389,7 +11390,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    NeuroMLDocument (const id_type&);
+    NeuroMLDocument_base (const id_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -11399,9 +11400,9 @@ namespace neuroml2
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    NeuroMLDocument (const ::xercesc::DOMElement& e,
-                     ::xml_schema::flags f = 0,
-                     ::xml_schema::container* c = 0);
+    NeuroMLDocument_base (const ::xercesc::DOMElement& e,
+                          ::xml_schema::flags f = 0,
+                          ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -11412,9 +11413,9 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    NeuroMLDocument (const NeuroMLDocument& x,
-                     ::xml_schema::flags f = 0,
-                     ::xml_schema::container* c = 0);
+    NeuroMLDocument_base (const NeuroMLDocument_base& x,
+                          ::xml_schema::flags f = 0,
+                          ::xml_schema::container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -11427,7 +11428,7 @@ namespace neuroml2
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual NeuroMLDocument*
+    virtual NeuroMLDocument_base*
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
@@ -11439,8 +11440,8 @@ namespace neuroml2
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    NeuroMLDocument&
-    operator= (const NeuroMLDocument& x);
+    NeuroMLDocument_base&
+    operator= (const NeuroMLDocument_base& x);
 
     //@}
 
@@ -11448,7 +11449,7 @@ namespace neuroml2
      * @brief Destructor.
      */
     virtual 
-    ~NeuroMLDocument ();
+    ~NeuroMLDocument_base ();
 
     // Implementation.
     //
@@ -11529,10 +11530,10 @@ namespace neuroml2
   };
 
   bool
-  operator== (const NeuroMLDocument&, const NeuroMLDocument&);
+  operator== (const NeuroMLDocument_base&, const NeuroMLDocument_base&);
 
   bool
-  operator!= (const NeuroMLDocument&, const NeuroMLDocument&);
+  operator!= (const NeuroMLDocument_base&, const NeuroMLDocument_base&);
 
 
   /**
@@ -60485,7 +60486,7 @@ namespace neuroml2
   operator<< (::std::ostream&, const Standalone&);
 
   ::std::ostream&
-  operator<< (::std::ostream&, const NeuroMLDocument&);
+  operator<< (::std::ostream&, const NeuroMLDocument_base&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const IncludeType&);
@@ -61754,7 +61755,7 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement&, const Standalone&);
 
   void
-  operator<< (::xercesc::DOMElement&, const NeuroMLDocument&);
+  operator<< (::xercesc::DOMElement&, const NeuroMLDocument_base&);
 
   void
   operator<< (::xercesc::DOMElement&, const IncludeType&);
@@ -62326,4 +62327,4 @@ namespace neuroml2
 //
 // End epilogue.
 
-#endif // NEURO_ML_V2BETA4_HXX
+#endif // NEUROML_API_SCHEMA_NEURO_ML_V2BETA4_HXX

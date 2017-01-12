@@ -9,6 +9,8 @@
 #include <cstdio>
 #include <string>
 #include <ios>
+#include <iostream>
+#include <fstream>
 
 namespace neuroml2
 {
@@ -39,6 +41,55 @@ std::string getSchemaPath()
     else
         throw std::ios_base::failure("Unable to find NeuroML schema at " INSTALLED_SCHEMA_PATH);
     return "file://" + path;
+}
+
+// NeuroMLDocument methods
+
+void NeuroMLDocument::writeToFile(const std::string& pathToFile, std::ios_base::openmode mode) const
+{
+    xml_schema::namespace_infomap map;
+    map[""].name = "http://www.neuroml.org/schema/neuroml2";
+    map[""].schema = getSchemaPath();
+    std::ofstream f(pathToFile, mode);
+    neuroml2::neuroml(f, *this, map);
+}
+
+NeuroMLDocument::NeuroMLDocument(const id_type& id)
+    : NeuroMLDocument_base(id)
+{
+}
+
+NeuroMLDocument::NeuroMLDocument(const ::xercesc::DOMElement& e,
+                                 ::xml_schema::flags f,
+                                  ::xml_schema::container* c)
+    : NeuroMLDocument_base(e, f, c)
+{
+}
+
+NeuroMLDocument::NeuroMLDocument(const NeuroMLDocument& x,
+                                 ::xml_schema::flags f,
+                                  ::xml_schema::container* c)
+    : NeuroMLDocument_base(x, f, c)
+{
+}
+
+NeuroMLDocument* NeuroMLDocument::_clone(::xml_schema::flags f,
+                                         ::xml_schema::container* c) const
+{
+    return new NeuroMLDocument(*this, f, c);
+}
+
+NeuroMLDocument& NeuroMLDocument::operator =(const NeuroMLDocument& x)
+{
+    if (this != &x)
+    {
+        static_cast<NeuroMLDocument_base&>(*this) = x;
+    }
+    return *this;
+}
+
+NeuroMLDocument::~NeuroMLDocument()
+{
 }
 
 
@@ -225,14 +276,8 @@ Connection::~Connection()
 {
 }
 
-}
 
 // Streaming operators
-
-#include <iostream>
-
-namespace neuroml2
-{
 
 ::std::ostream&
 operator<<(::std::ostream& o, const Connection& c)

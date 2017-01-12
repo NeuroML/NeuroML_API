@@ -1043,1138 +1043,1138 @@ namespace neuroml2
   }
 
 
-  // NeuroMLDocument
+  // NeuroMLDocument_base
   // 
 
-  const NeuroMLDocument::include_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::include_sequence& NeuroMLDocument_base::
   include () const
   {
     return this->include_;
   }
 
-  NeuroMLDocument::include_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::include_sequence& NeuroMLDocument_base::
   include ()
   {
     return this->include_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   include (const include_sequence& s)
   {
     this->include_ = s;
   }
 
-  const NeuroMLDocument::extracellularProperties_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::extracellularProperties_sequence& NeuroMLDocument_base::
   extracellularProperties () const
   {
     return this->extracellularProperties_;
   }
 
-  NeuroMLDocument::extracellularProperties_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::extracellularProperties_sequence& NeuroMLDocument_base::
   extracellularProperties ()
   {
     return this->extracellularProperties_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   extracellularProperties (const extracellularProperties_sequence& s)
   {
     this->extracellularProperties_ = s;
   }
 
-  const NeuroMLDocument::intracellularProperties_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::intracellularProperties_sequence& NeuroMLDocument_base::
   intracellularProperties () const
   {
     return this->intracellularProperties_;
   }
 
-  NeuroMLDocument::intracellularProperties_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::intracellularProperties_sequence& NeuroMLDocument_base::
   intracellularProperties ()
   {
     return this->intracellularProperties_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   intracellularProperties (const intracellularProperties_sequence& s)
   {
     this->intracellularProperties_ = s;
   }
 
-  const NeuroMLDocument::morphology_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::morphology_sequence& NeuroMLDocument_base::
   morphology () const
   {
     return this->morphology_;
   }
 
-  NeuroMLDocument::morphology_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::morphology_sequence& NeuroMLDocument_base::
   morphology ()
   {
     return this->morphology_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   morphology (const morphology_sequence& s)
   {
     this->morphology_ = s;
   }
 
-  const NeuroMLDocument::ionChannel_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::ionChannel_sequence& NeuroMLDocument_base::
   ionChannel () const
   {
     return this->ionChannel_;
   }
 
-  NeuroMLDocument::ionChannel_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::ionChannel_sequence& NeuroMLDocument_base::
   ionChannel ()
   {
     return this->ionChannel_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   ionChannel (const ionChannel_sequence& s)
   {
     this->ionChannel_ = s;
   }
 
-  const NeuroMLDocument::ionChannelHH_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::ionChannelHH_sequence& NeuroMLDocument_base::
   ionChannelHH () const
   {
     return this->ionChannelHH_;
   }
 
-  NeuroMLDocument::ionChannelHH_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::ionChannelHH_sequence& NeuroMLDocument_base::
   ionChannelHH ()
   {
     return this->ionChannelHH_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   ionChannelHH (const ionChannelHH_sequence& s)
   {
     this->ionChannelHH_ = s;
   }
 
-  const NeuroMLDocument::ionChannelKS_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::ionChannelKS_sequence& NeuroMLDocument_base::
   ionChannelKS () const
   {
     return this->ionChannelKS_;
   }
 
-  NeuroMLDocument::ionChannelKS_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::ionChannelKS_sequence& NeuroMLDocument_base::
   ionChannelKS ()
   {
     return this->ionChannelKS_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   ionChannelKS (const ionChannelKS_sequence& s)
   {
     this->ionChannelKS_ = s;
   }
 
-  const NeuroMLDocument::decayingPoolConcentrationModel_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::decayingPoolConcentrationModel_sequence& NeuroMLDocument_base::
   decayingPoolConcentrationModel () const
   {
     return this->decayingPoolConcentrationModel_;
   }
 
-  NeuroMLDocument::decayingPoolConcentrationModel_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::decayingPoolConcentrationModel_sequence& NeuroMLDocument_base::
   decayingPoolConcentrationModel ()
   {
     return this->decayingPoolConcentrationModel_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   decayingPoolConcentrationModel (const decayingPoolConcentrationModel_sequence& s)
   {
     this->decayingPoolConcentrationModel_ = s;
   }
 
-  const NeuroMLDocument::fixedFactorConcentrationModel_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::fixedFactorConcentrationModel_sequence& NeuroMLDocument_base::
   fixedFactorConcentrationModel () const
   {
     return this->fixedFactorConcentrationModel_;
   }
 
-  NeuroMLDocument::fixedFactorConcentrationModel_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::fixedFactorConcentrationModel_sequence& NeuroMLDocument_base::
   fixedFactorConcentrationModel ()
   {
     return this->fixedFactorConcentrationModel_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   fixedFactorConcentrationModel (const fixedFactorConcentrationModel_sequence& s)
   {
     this->fixedFactorConcentrationModel_ = s;
   }
 
-  const NeuroMLDocument::alphaCurrentSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::alphaCurrentSynapse_sequence& NeuroMLDocument_base::
   alphaCurrentSynapse () const
   {
     return this->alphaCurrentSynapse_;
   }
 
-  NeuroMLDocument::alphaCurrentSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::alphaCurrentSynapse_sequence& NeuroMLDocument_base::
   alphaCurrentSynapse ()
   {
     return this->alphaCurrentSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   alphaCurrentSynapse (const alphaCurrentSynapse_sequence& s)
   {
     this->alphaCurrentSynapse_ = s;
   }
 
-  const NeuroMLDocument::alphaSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::alphaSynapse_sequence& NeuroMLDocument_base::
   alphaSynapse () const
   {
     return this->alphaSynapse_;
   }
 
-  NeuroMLDocument::alphaSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::alphaSynapse_sequence& NeuroMLDocument_base::
   alphaSynapse ()
   {
     return this->alphaSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   alphaSynapse (const alphaSynapse_sequence& s)
   {
     this->alphaSynapse_ = s;
   }
 
-  const NeuroMLDocument::expOneSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::expOneSynapse_sequence& NeuroMLDocument_base::
   expOneSynapse () const
   {
     return this->expOneSynapse_;
   }
 
-  NeuroMLDocument::expOneSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::expOneSynapse_sequence& NeuroMLDocument_base::
   expOneSynapse ()
   {
     return this->expOneSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   expOneSynapse (const expOneSynapse_sequence& s)
   {
     this->expOneSynapse_ = s;
   }
 
-  const NeuroMLDocument::expTwoSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::expTwoSynapse_sequence& NeuroMLDocument_base::
   expTwoSynapse () const
   {
     return this->expTwoSynapse_;
   }
 
-  NeuroMLDocument::expTwoSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::expTwoSynapse_sequence& NeuroMLDocument_base::
   expTwoSynapse ()
   {
     return this->expTwoSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   expTwoSynapse (const expTwoSynapse_sequence& s)
   {
     this->expTwoSynapse_ = s;
   }
 
-  const NeuroMLDocument::expThreeSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::expThreeSynapse_sequence& NeuroMLDocument_base::
   expThreeSynapse () const
   {
     return this->expThreeSynapse_;
   }
 
-  NeuroMLDocument::expThreeSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::expThreeSynapse_sequence& NeuroMLDocument_base::
   expThreeSynapse ()
   {
     return this->expThreeSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   expThreeSynapse (const expThreeSynapse_sequence& s)
   {
     this->expThreeSynapse_ = s;
   }
 
-  const NeuroMLDocument::blockingPlasticSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::blockingPlasticSynapse_sequence& NeuroMLDocument_base::
   blockingPlasticSynapse () const
   {
     return this->blockingPlasticSynapse_;
   }
 
-  NeuroMLDocument::blockingPlasticSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::blockingPlasticSynapse_sequence& NeuroMLDocument_base::
   blockingPlasticSynapse ()
   {
     return this->blockingPlasticSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   blockingPlasticSynapse (const blockingPlasticSynapse_sequence& s)
   {
     this->blockingPlasticSynapse_ = s;
   }
 
-  const NeuroMLDocument::gapJunction_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::gapJunction_sequence& NeuroMLDocument_base::
   gapJunction () const
   {
     return this->gapJunction_;
   }
 
-  NeuroMLDocument::gapJunction_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::gapJunction_sequence& NeuroMLDocument_base::
   gapJunction ()
   {
     return this->gapJunction_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   gapJunction (const gapJunction_sequence& s)
   {
     this->gapJunction_ = s;
   }
 
-  const NeuroMLDocument::silentSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::silentSynapse_sequence& NeuroMLDocument_base::
   silentSynapse () const
   {
     return this->silentSynapse_;
   }
 
-  NeuroMLDocument::silentSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::silentSynapse_sequence& NeuroMLDocument_base::
   silentSynapse ()
   {
     return this->silentSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   silentSynapse (const silentSynapse_sequence& s)
   {
     this->silentSynapse_ = s;
   }
 
-  const NeuroMLDocument::linearGradedSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::linearGradedSynapse_sequence& NeuroMLDocument_base::
   linearGradedSynapse () const
   {
     return this->linearGradedSynapse_;
   }
 
-  NeuroMLDocument::linearGradedSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::linearGradedSynapse_sequence& NeuroMLDocument_base::
   linearGradedSynapse ()
   {
     return this->linearGradedSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   linearGradedSynapse (const linearGradedSynapse_sequence& s)
   {
     this->linearGradedSynapse_ = s;
   }
 
-  const NeuroMLDocument::gradedSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::gradedSynapse_sequence& NeuroMLDocument_base::
   gradedSynapse () const
   {
     return this->gradedSynapse_;
   }
 
-  NeuroMLDocument::gradedSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::gradedSynapse_sequence& NeuroMLDocument_base::
   gradedSynapse ()
   {
     return this->gradedSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   gradedSynapse (const gradedSynapse_sequence& s)
   {
     this->gradedSynapse_ = s;
   }
 
-  const NeuroMLDocument::biophysicalProperties_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::biophysicalProperties_sequence& NeuroMLDocument_base::
   biophysicalProperties () const
   {
     return this->biophysicalProperties_;
   }
 
-  NeuroMLDocument::biophysicalProperties_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::biophysicalProperties_sequence& NeuroMLDocument_base::
   biophysicalProperties ()
   {
     return this->biophysicalProperties_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   biophysicalProperties (const biophysicalProperties_sequence& s)
   {
     this->biophysicalProperties_ = s;
   }
 
-  const NeuroMLDocument::cell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::cell_sequence& NeuroMLDocument_base::
   cell () const
   {
     return this->cell_;
   }
 
-  NeuroMLDocument::cell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::cell_sequence& NeuroMLDocument_base::
   cell ()
   {
     return this->cell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   cell (const cell_sequence& s)
   {
     this->cell_ = s;
   }
 
-  const NeuroMLDocument::cell2CaPools_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::cell2CaPools_sequence& NeuroMLDocument_base::
   cell2CaPools () const
   {
     return this->cell2CaPools_;
   }
 
-  NeuroMLDocument::cell2CaPools_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::cell2CaPools_sequence& NeuroMLDocument_base::
   cell2CaPools ()
   {
     return this->cell2CaPools_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   cell2CaPools (const cell2CaPools_sequence& s)
   {
     this->cell2CaPools_ = s;
   }
 
-  const NeuroMLDocument::baseCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::baseCell_sequence& NeuroMLDocument_base::
   baseCell () const
   {
     return this->baseCell_;
   }
 
-  NeuroMLDocument::baseCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::baseCell_sequence& NeuroMLDocument_base::
   baseCell ()
   {
     return this->baseCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   baseCell (const baseCell_sequence& s)
   {
     this->baseCell_ = s;
   }
 
-  const NeuroMLDocument::iafTauCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::iafTauCell_sequence& NeuroMLDocument_base::
   iafTauCell () const
   {
     return this->iafTauCell_;
   }
 
-  NeuroMLDocument::iafTauCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::iafTauCell_sequence& NeuroMLDocument_base::
   iafTauCell ()
   {
     return this->iafTauCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   iafTauCell (const iafTauCell_sequence& s)
   {
     this->iafTauCell_ = s;
   }
 
-  const NeuroMLDocument::iafTauRefCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::iafTauRefCell_sequence& NeuroMLDocument_base::
   iafTauRefCell () const
   {
     return this->iafTauRefCell_;
   }
 
-  NeuroMLDocument::iafTauRefCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::iafTauRefCell_sequence& NeuroMLDocument_base::
   iafTauRefCell ()
   {
     return this->iafTauRefCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   iafTauRefCell (const iafTauRefCell_sequence& s)
   {
     this->iafTauRefCell_ = s;
   }
 
-  const NeuroMLDocument::iafCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::iafCell_sequence& NeuroMLDocument_base::
   iafCell () const
   {
     return this->iafCell_;
   }
 
-  NeuroMLDocument::iafCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::iafCell_sequence& NeuroMLDocument_base::
   iafCell ()
   {
     return this->iafCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   iafCell (const iafCell_sequence& s)
   {
     this->iafCell_ = s;
   }
 
-  const NeuroMLDocument::iafRefCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::iafRefCell_sequence& NeuroMLDocument_base::
   iafRefCell () const
   {
     return this->iafRefCell_;
   }
 
-  NeuroMLDocument::iafRefCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::iafRefCell_sequence& NeuroMLDocument_base::
   iafRefCell ()
   {
     return this->iafRefCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   iafRefCell (const iafRefCell_sequence& s)
   {
     this->iafRefCell_ = s;
   }
 
-  const NeuroMLDocument::izhikevichCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::izhikevichCell_sequence& NeuroMLDocument_base::
   izhikevichCell () const
   {
     return this->izhikevichCell_;
   }
 
-  NeuroMLDocument::izhikevichCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::izhikevichCell_sequence& NeuroMLDocument_base::
   izhikevichCell ()
   {
     return this->izhikevichCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   izhikevichCell (const izhikevichCell_sequence& s)
   {
     this->izhikevichCell_ = s;
   }
 
-  const NeuroMLDocument::izhikevich2007Cell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::izhikevich2007Cell_sequence& NeuroMLDocument_base::
   izhikevich2007Cell () const
   {
     return this->izhikevich2007Cell_;
   }
 
-  NeuroMLDocument::izhikevich2007Cell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::izhikevich2007Cell_sequence& NeuroMLDocument_base::
   izhikevich2007Cell ()
   {
     return this->izhikevich2007Cell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   izhikevich2007Cell (const izhikevich2007Cell_sequence& s)
   {
     this->izhikevich2007Cell_ = s;
   }
 
-  const NeuroMLDocument::adExIaFCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::adExIaFCell_sequence& NeuroMLDocument_base::
   adExIaFCell () const
   {
     return this->adExIaFCell_;
   }
 
-  NeuroMLDocument::adExIaFCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::adExIaFCell_sequence& NeuroMLDocument_base::
   adExIaFCell ()
   {
     return this->adExIaFCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   adExIaFCell (const adExIaFCell_sequence& s)
   {
     this->adExIaFCell_ = s;
   }
 
-  const NeuroMLDocument::fitzHughNagumoCell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::fitzHughNagumoCell_sequence& NeuroMLDocument_base::
   fitzHughNagumoCell () const
   {
     return this->fitzHughNagumoCell_;
   }
 
-  NeuroMLDocument::fitzHughNagumoCell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::fitzHughNagumoCell_sequence& NeuroMLDocument_base::
   fitzHughNagumoCell ()
   {
     return this->fitzHughNagumoCell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   fitzHughNagumoCell (const fitzHughNagumoCell_sequence& s)
   {
     this->fitzHughNagumoCell_ = s;
   }
 
-  const NeuroMLDocument::fitzHughNagumo1969Cell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::fitzHughNagumo1969Cell_sequence& NeuroMLDocument_base::
   fitzHughNagumo1969Cell () const
   {
     return this->fitzHughNagumo1969Cell_;
   }
 
-  NeuroMLDocument::fitzHughNagumo1969Cell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::fitzHughNagumo1969Cell_sequence& NeuroMLDocument_base::
   fitzHughNagumo1969Cell ()
   {
     return this->fitzHughNagumo1969Cell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   fitzHughNagumo1969Cell (const fitzHughNagumo1969Cell_sequence& s)
   {
     this->fitzHughNagumo1969Cell_ = s;
   }
 
-  const NeuroMLDocument::pinskyRinzelCA3Cell_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::pinskyRinzelCA3Cell_sequence& NeuroMLDocument_base::
   pinskyRinzelCA3Cell () const
   {
     return this->pinskyRinzelCA3Cell_;
   }
 
-  NeuroMLDocument::pinskyRinzelCA3Cell_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::pinskyRinzelCA3Cell_sequence& NeuroMLDocument_base::
   pinskyRinzelCA3Cell ()
   {
     return this->pinskyRinzelCA3Cell_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   pinskyRinzelCA3Cell (const pinskyRinzelCA3Cell_sequence& s)
   {
     this->pinskyRinzelCA3Cell_ = s;
   }
 
-  const NeuroMLDocument::pulseGenerator_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::pulseGenerator_sequence& NeuroMLDocument_base::
   pulseGenerator () const
   {
     return this->pulseGenerator_;
   }
 
-  NeuroMLDocument::pulseGenerator_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::pulseGenerator_sequence& NeuroMLDocument_base::
   pulseGenerator ()
   {
     return this->pulseGenerator_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   pulseGenerator (const pulseGenerator_sequence& s)
   {
     this->pulseGenerator_ = s;
   }
 
-  const NeuroMLDocument::pulseGeneratorDL_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::pulseGeneratorDL_sequence& NeuroMLDocument_base::
   pulseGeneratorDL () const
   {
     return this->pulseGeneratorDL_;
   }
 
-  NeuroMLDocument::pulseGeneratorDL_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::pulseGeneratorDL_sequence& NeuroMLDocument_base::
   pulseGeneratorDL ()
   {
     return this->pulseGeneratorDL_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   pulseGeneratorDL (const pulseGeneratorDL_sequence& s)
   {
     this->pulseGeneratorDL_ = s;
   }
 
-  const NeuroMLDocument::sineGenerator_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::sineGenerator_sequence& NeuroMLDocument_base::
   sineGenerator () const
   {
     return this->sineGenerator_;
   }
 
-  NeuroMLDocument::sineGenerator_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::sineGenerator_sequence& NeuroMLDocument_base::
   sineGenerator ()
   {
     return this->sineGenerator_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   sineGenerator (const sineGenerator_sequence& s)
   {
     this->sineGenerator_ = s;
   }
 
-  const NeuroMLDocument::sineGeneratorDL_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::sineGeneratorDL_sequence& NeuroMLDocument_base::
   sineGeneratorDL () const
   {
     return this->sineGeneratorDL_;
   }
 
-  NeuroMLDocument::sineGeneratorDL_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::sineGeneratorDL_sequence& NeuroMLDocument_base::
   sineGeneratorDL ()
   {
     return this->sineGeneratorDL_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   sineGeneratorDL (const sineGeneratorDL_sequence& s)
   {
     this->sineGeneratorDL_ = s;
   }
 
-  const NeuroMLDocument::rampGenerator_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::rampGenerator_sequence& NeuroMLDocument_base::
   rampGenerator () const
   {
     return this->rampGenerator_;
   }
 
-  NeuroMLDocument::rampGenerator_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::rampGenerator_sequence& NeuroMLDocument_base::
   rampGenerator ()
   {
     return this->rampGenerator_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   rampGenerator (const rampGenerator_sequence& s)
   {
     this->rampGenerator_ = s;
   }
 
-  const NeuroMLDocument::rampGeneratorDL_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::rampGeneratorDL_sequence& NeuroMLDocument_base::
   rampGeneratorDL () const
   {
     return this->rampGeneratorDL_;
   }
 
-  NeuroMLDocument::rampGeneratorDL_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::rampGeneratorDL_sequence& NeuroMLDocument_base::
   rampGeneratorDL ()
   {
     return this->rampGeneratorDL_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   rampGeneratorDL (const rampGeneratorDL_sequence& s)
   {
     this->rampGeneratorDL_ = s;
   }
 
-  const NeuroMLDocument::compoundInput_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::compoundInput_sequence& NeuroMLDocument_base::
   compoundInput () const
   {
     return this->compoundInput_;
   }
 
-  NeuroMLDocument::compoundInput_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::compoundInput_sequence& NeuroMLDocument_base::
   compoundInput ()
   {
     return this->compoundInput_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   compoundInput (const compoundInput_sequence& s)
   {
     this->compoundInput_ = s;
   }
 
-  const NeuroMLDocument::compoundInputDL_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::compoundInputDL_sequence& NeuroMLDocument_base::
   compoundInputDL () const
   {
     return this->compoundInputDL_;
   }
 
-  NeuroMLDocument::compoundInputDL_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::compoundInputDL_sequence& NeuroMLDocument_base::
   compoundInputDL ()
   {
     return this->compoundInputDL_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   compoundInputDL (const compoundInputDL_sequence& s)
   {
     this->compoundInputDL_ = s;
   }
 
-  const NeuroMLDocument::voltageClamp_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::voltageClamp_sequence& NeuroMLDocument_base::
   voltageClamp () const
   {
     return this->voltageClamp_;
   }
 
-  NeuroMLDocument::voltageClamp_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::voltageClamp_sequence& NeuroMLDocument_base::
   voltageClamp ()
   {
     return this->voltageClamp_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   voltageClamp (const voltageClamp_sequence& s)
   {
     this->voltageClamp_ = s;
   }
 
-  const NeuroMLDocument::spikeArray_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::spikeArray_sequence& NeuroMLDocument_base::
   spikeArray () const
   {
     return this->spikeArray_;
   }
 
-  NeuroMLDocument::spikeArray_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::spikeArray_sequence& NeuroMLDocument_base::
   spikeArray ()
   {
     return this->spikeArray_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   spikeArray (const spikeArray_sequence& s)
   {
     this->spikeArray_ = s;
   }
 
-  const NeuroMLDocument::timedSynapticInput_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::timedSynapticInput_sequence& NeuroMLDocument_base::
   timedSynapticInput () const
   {
     return this->timedSynapticInput_;
   }
 
-  NeuroMLDocument::timedSynapticInput_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::timedSynapticInput_sequence& NeuroMLDocument_base::
   timedSynapticInput ()
   {
     return this->timedSynapticInput_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   timedSynapticInput (const timedSynapticInput_sequence& s)
   {
     this->timedSynapticInput_ = s;
   }
 
-  const NeuroMLDocument::spikeGenerator_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::spikeGenerator_sequence& NeuroMLDocument_base::
   spikeGenerator () const
   {
     return this->spikeGenerator_;
   }
 
-  NeuroMLDocument::spikeGenerator_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::spikeGenerator_sequence& NeuroMLDocument_base::
   spikeGenerator ()
   {
     return this->spikeGenerator_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   spikeGenerator (const spikeGenerator_sequence& s)
   {
     this->spikeGenerator_ = s;
   }
 
-  const NeuroMLDocument::spikeGeneratorRandom_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::spikeGeneratorRandom_sequence& NeuroMLDocument_base::
   spikeGeneratorRandom () const
   {
     return this->spikeGeneratorRandom_;
   }
 
-  NeuroMLDocument::spikeGeneratorRandom_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::spikeGeneratorRandom_sequence& NeuroMLDocument_base::
   spikeGeneratorRandom ()
   {
     return this->spikeGeneratorRandom_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   spikeGeneratorRandom (const spikeGeneratorRandom_sequence& s)
   {
     this->spikeGeneratorRandom_ = s;
   }
 
-  const NeuroMLDocument::spikeGeneratorPoisson_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::spikeGeneratorPoisson_sequence& NeuroMLDocument_base::
   spikeGeneratorPoisson () const
   {
     return this->spikeGeneratorPoisson_;
   }
 
-  NeuroMLDocument::spikeGeneratorPoisson_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::spikeGeneratorPoisson_sequence& NeuroMLDocument_base::
   spikeGeneratorPoisson ()
   {
     return this->spikeGeneratorPoisson_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   spikeGeneratorPoisson (const spikeGeneratorPoisson_sequence& s)
   {
     this->spikeGeneratorPoisson_ = s;
   }
 
-  const NeuroMLDocument::poissonFiringSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::poissonFiringSynapse_sequence& NeuroMLDocument_base::
   poissonFiringSynapse () const
   {
     return this->poissonFiringSynapse_;
   }
 
-  NeuroMLDocument::poissonFiringSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::poissonFiringSynapse_sequence& NeuroMLDocument_base::
   poissonFiringSynapse ()
   {
     return this->poissonFiringSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   poissonFiringSynapse (const poissonFiringSynapse_sequence& s)
   {
     this->poissonFiringSynapse_ = s;
   }
 
-  const NeuroMLDocument::transientPoissonFiringSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::transientPoissonFiringSynapse_sequence& NeuroMLDocument_base::
   transientPoissonFiringSynapse () const
   {
     return this->transientPoissonFiringSynapse_;
   }
 
-  NeuroMLDocument::transientPoissonFiringSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::transientPoissonFiringSynapse_sequence& NeuroMLDocument_base::
   transientPoissonFiringSynapse ()
   {
     return this->transientPoissonFiringSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   transientPoissonFiringSynapse (const transientPoissonFiringSynapse_sequence& s)
   {
     this->transientPoissonFiringSynapse_ = s;
   }
 
-  const NeuroMLDocument::IF_curr_alpha_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::IF_curr_alpha_sequence& NeuroMLDocument_base::
   IF_curr_alpha () const
   {
     return this->IF_curr_alpha_;
   }
 
-  NeuroMLDocument::IF_curr_alpha_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::IF_curr_alpha_sequence& NeuroMLDocument_base::
   IF_curr_alpha ()
   {
     return this->IF_curr_alpha_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   IF_curr_alpha (const IF_curr_alpha_sequence& s)
   {
     this->IF_curr_alpha_ = s;
   }
 
-  const NeuroMLDocument::IF_curr_exp_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::IF_curr_exp_sequence& NeuroMLDocument_base::
   IF_curr_exp () const
   {
     return this->IF_curr_exp_;
   }
 
-  NeuroMLDocument::IF_curr_exp_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::IF_curr_exp_sequence& NeuroMLDocument_base::
   IF_curr_exp ()
   {
     return this->IF_curr_exp_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   IF_curr_exp (const IF_curr_exp_sequence& s)
   {
     this->IF_curr_exp_ = s;
   }
 
-  const NeuroMLDocument::IF_cond_alpha_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::IF_cond_alpha_sequence& NeuroMLDocument_base::
   IF_cond_alpha () const
   {
     return this->IF_cond_alpha_;
   }
 
-  NeuroMLDocument::IF_cond_alpha_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::IF_cond_alpha_sequence& NeuroMLDocument_base::
   IF_cond_alpha ()
   {
     return this->IF_cond_alpha_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   IF_cond_alpha (const IF_cond_alpha_sequence& s)
   {
     this->IF_cond_alpha_ = s;
   }
 
-  const NeuroMLDocument::IF_cond_exp_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::IF_cond_exp_sequence& NeuroMLDocument_base::
   IF_cond_exp () const
   {
     return this->IF_cond_exp_;
   }
 
-  NeuroMLDocument::IF_cond_exp_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::IF_cond_exp_sequence& NeuroMLDocument_base::
   IF_cond_exp ()
   {
     return this->IF_cond_exp_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   IF_cond_exp (const IF_cond_exp_sequence& s)
   {
     this->IF_cond_exp_ = s;
   }
 
-  const NeuroMLDocument::EIF_cond_exp_isfa_ista_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::EIF_cond_exp_isfa_ista_sequence& NeuroMLDocument_base::
   EIF_cond_exp_isfa_ista () const
   {
     return this->EIF_cond_exp_isfa_ista_;
   }
 
-  NeuroMLDocument::EIF_cond_exp_isfa_ista_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::EIF_cond_exp_isfa_ista_sequence& NeuroMLDocument_base::
   EIF_cond_exp_isfa_ista ()
   {
     return this->EIF_cond_exp_isfa_ista_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   EIF_cond_exp_isfa_ista (const EIF_cond_exp_isfa_ista_sequence& s)
   {
     this->EIF_cond_exp_isfa_ista_ = s;
   }
 
-  const NeuroMLDocument::EIF_cond_alpha_isfa_ista_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::EIF_cond_alpha_isfa_ista_sequence& NeuroMLDocument_base::
   EIF_cond_alpha_isfa_ista () const
   {
     return this->EIF_cond_alpha_isfa_ista_;
   }
 
-  NeuroMLDocument::EIF_cond_alpha_isfa_ista_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::EIF_cond_alpha_isfa_ista_sequence& NeuroMLDocument_base::
   EIF_cond_alpha_isfa_ista ()
   {
     return this->EIF_cond_alpha_isfa_ista_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   EIF_cond_alpha_isfa_ista (const EIF_cond_alpha_isfa_ista_sequence& s)
   {
     this->EIF_cond_alpha_isfa_ista_ = s;
   }
 
-  const NeuroMLDocument::HH_cond_exp_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::HH_cond_exp_sequence& NeuroMLDocument_base::
   HH_cond_exp () const
   {
     return this->HH_cond_exp_;
   }
 
-  NeuroMLDocument::HH_cond_exp_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::HH_cond_exp_sequence& NeuroMLDocument_base::
   HH_cond_exp ()
   {
     return this->HH_cond_exp_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   HH_cond_exp (const HH_cond_exp_sequence& s)
   {
     this->HH_cond_exp_ = s;
   }
 
-  const NeuroMLDocument::expCondSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::expCondSynapse_sequence& NeuroMLDocument_base::
   expCondSynapse () const
   {
     return this->expCondSynapse_;
   }
 
-  NeuroMLDocument::expCondSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::expCondSynapse_sequence& NeuroMLDocument_base::
   expCondSynapse ()
   {
     return this->expCondSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   expCondSynapse (const expCondSynapse_sequence& s)
   {
     this->expCondSynapse_ = s;
   }
 
-  const NeuroMLDocument::alphaCondSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::alphaCondSynapse_sequence& NeuroMLDocument_base::
   alphaCondSynapse () const
   {
     return this->alphaCondSynapse_;
   }
 
-  NeuroMLDocument::alphaCondSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::alphaCondSynapse_sequence& NeuroMLDocument_base::
   alphaCondSynapse ()
   {
     return this->alphaCondSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   alphaCondSynapse (const alphaCondSynapse_sequence& s)
   {
     this->alphaCondSynapse_ = s;
   }
 
-  const NeuroMLDocument::expCurrSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::expCurrSynapse_sequence& NeuroMLDocument_base::
   expCurrSynapse () const
   {
     return this->expCurrSynapse_;
   }
 
-  NeuroMLDocument::expCurrSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::expCurrSynapse_sequence& NeuroMLDocument_base::
   expCurrSynapse ()
   {
     return this->expCurrSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   expCurrSynapse (const expCurrSynapse_sequence& s)
   {
     this->expCurrSynapse_ = s;
   }
 
-  const NeuroMLDocument::alphaCurrSynapse_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::alphaCurrSynapse_sequence& NeuroMLDocument_base::
   alphaCurrSynapse () const
   {
     return this->alphaCurrSynapse_;
   }
 
-  NeuroMLDocument::alphaCurrSynapse_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::alphaCurrSynapse_sequence& NeuroMLDocument_base::
   alphaCurrSynapse ()
   {
     return this->alphaCurrSynapse_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   alphaCurrSynapse (const alphaCurrSynapse_sequence& s)
   {
     this->alphaCurrSynapse_ = s;
   }
 
-  const NeuroMLDocument::SpikeSourcePoisson_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::SpikeSourcePoisson_sequence& NeuroMLDocument_base::
   SpikeSourcePoisson () const
   {
     return this->SpikeSourcePoisson_;
   }
 
-  NeuroMLDocument::SpikeSourcePoisson_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::SpikeSourcePoisson_sequence& NeuroMLDocument_base::
   SpikeSourcePoisson ()
   {
     return this->SpikeSourcePoisson_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   SpikeSourcePoisson (const SpikeSourcePoisson_sequence& s)
   {
     this->SpikeSourcePoisson_ = s;
   }
 
-  const NeuroMLDocument::network_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::network_sequence& NeuroMLDocument_base::
   network () const
   {
     return this->network_;
   }
 
-  NeuroMLDocument::network_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::network_sequence& NeuroMLDocument_base::
   network ()
   {
     return this->network_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   network (const network_sequence& s)
   {
     this->network_ = s;
   }
 
-  const NeuroMLDocument::ComponentType_sequence& NeuroMLDocument::
+  const NeuroMLDocument_base::ComponentType_sequence& NeuroMLDocument_base::
   ComponentType () const
   {
     return this->ComponentType_;
   }
 
-  NeuroMLDocument::ComponentType_sequence& NeuroMLDocument::
+  NeuroMLDocument_base::ComponentType_sequence& NeuroMLDocument_base::
   ComponentType ()
   {
     return this->ComponentType_;
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   ComponentType (const ComponentType_sequence& s)
   {
     this->ComponentType_ = s;
@@ -18689,11 +18689,11 @@ namespace neuroml2
     return !(x == y);
   }
 
-  // NeuroMLDocument
+  // NeuroMLDocument_base
   //
 
-  NeuroMLDocument::
-  NeuroMLDocument (const id_type& id)
+  NeuroMLDocument_base::
+  NeuroMLDocument_base (const id_type& id)
   : ::neuroml2::Standalone (id),
     include_ (this),
     extracellularProperties_ (this),
@@ -18761,10 +18761,10 @@ namespace neuroml2
   {
   }
 
-  NeuroMLDocument::
-  NeuroMLDocument (const NeuroMLDocument& x,
-                   ::xml_schema::flags f,
-                   ::xml_schema::container* c)
+  NeuroMLDocument_base::
+  NeuroMLDocument_base (const NeuroMLDocument_base& x,
+                        ::xml_schema::flags f,
+                        ::xml_schema::container* c)
   : ::neuroml2::Standalone (x, f, c),
     include_ (x.include_, f, this),
     extracellularProperties_ (x.extracellularProperties_, f, this),
@@ -18832,10 +18832,10 @@ namespace neuroml2
   {
   }
 
-  NeuroMLDocument::
-  NeuroMLDocument (const ::xercesc::DOMElement& e,
-                   ::xml_schema::flags f,
-                   ::xml_schema::container* c)
+  NeuroMLDocument_base::
+  NeuroMLDocument_base (const ::xercesc::DOMElement& e,
+                        ::xml_schema::flags f,
+                        ::xml_schema::container* c)
   : ::neuroml2::Standalone (e, f | ::xml_schema::flags::base, c),
     include_ (this),
     extracellularProperties_ (this),
@@ -18908,7 +18908,7 @@ namespace neuroml2
     }
   }
 
-  void NeuroMLDocument::
+  void NeuroMLDocument_base::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
@@ -19617,15 +19617,15 @@ namespace neuroml2
     }
   }
 
-  NeuroMLDocument* NeuroMLDocument::
+  NeuroMLDocument_base* NeuroMLDocument_base::
   _clone (::xml_schema::flags f,
           ::xml_schema::container* c) const
   {
-    return new class NeuroMLDocument (*this, f, c);
+    return new class NeuroMLDocument_base (*this, f, c);
   }
 
-  NeuroMLDocument& NeuroMLDocument::
-  operator= (const NeuroMLDocument& x)
+  NeuroMLDocument_base& NeuroMLDocument_base::
+  operator= (const NeuroMLDocument_base& x)
   {
     if (this != &x)
     {
@@ -19698,13 +19698,13 @@ namespace neuroml2
     return *this;
   }
 
-  NeuroMLDocument::
-  ~NeuroMLDocument ()
+  NeuroMLDocument_base::
+  ~NeuroMLDocument_base ()
   {
   }
 
   bool
-  operator== (const NeuroMLDocument& x, const NeuroMLDocument& y)
+  operator== (const NeuroMLDocument_base& x, const NeuroMLDocument_base& y)
   {
     if (!(static_cast< const ::neuroml2::Standalone& > (x) ==
           static_cast< const ::neuroml2::Standalone& > (y)))
@@ -19903,7 +19903,7 @@ namespace neuroml2
   }
 
   bool
-  operator!= (const NeuroMLDocument& x, const NeuroMLDocument& y)
+  operator!= (const NeuroMLDocument_base& x, const NeuroMLDocument_base& y)
   {
     return !(x == y);
   }
@@ -43921,445 +43921,445 @@ namespace neuroml2
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const NeuroMLDocument& i)
+  operator<< (::std::ostream& o, const NeuroMLDocument_base& i)
   {
     o << static_cast< const ::neuroml2::Standalone& > (i);
 
-    for (NeuroMLDocument::include_const_iterator
+    for (NeuroMLDocument_base::include_const_iterator
          b (i.include ().begin ()), e (i.include ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "include: " << *b;
     }
 
-    for (NeuroMLDocument::extracellularProperties_const_iterator
+    for (NeuroMLDocument_base::extracellularProperties_const_iterator
          b (i.extracellularProperties ().begin ()), e (i.extracellularProperties ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "extracellularProperties: " << *b;
     }
 
-    for (NeuroMLDocument::intracellularProperties_const_iterator
+    for (NeuroMLDocument_base::intracellularProperties_const_iterator
          b (i.intracellularProperties ().begin ()), e (i.intracellularProperties ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "intracellularProperties: " << *b;
     }
 
-    for (NeuroMLDocument::morphology_const_iterator
+    for (NeuroMLDocument_base::morphology_const_iterator
          b (i.morphology ().begin ()), e (i.morphology ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "morphology: " << *b;
     }
 
-    for (NeuroMLDocument::ionChannel_const_iterator
+    for (NeuroMLDocument_base::ionChannel_const_iterator
          b (i.ionChannel ().begin ()), e (i.ionChannel ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "ionChannel: " << *b;
     }
 
-    for (NeuroMLDocument::ionChannelHH_const_iterator
+    for (NeuroMLDocument_base::ionChannelHH_const_iterator
          b (i.ionChannelHH ().begin ()), e (i.ionChannelHH ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "ionChannelHH: " << *b;
     }
 
-    for (NeuroMLDocument::ionChannelKS_const_iterator
+    for (NeuroMLDocument_base::ionChannelKS_const_iterator
          b (i.ionChannelKS ().begin ()), e (i.ionChannelKS ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "ionChannelKS: " << *b;
     }
 
-    for (NeuroMLDocument::decayingPoolConcentrationModel_const_iterator
+    for (NeuroMLDocument_base::decayingPoolConcentrationModel_const_iterator
          b (i.decayingPoolConcentrationModel ().begin ()), e (i.decayingPoolConcentrationModel ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "decayingPoolConcentrationModel: " << *b;
     }
 
-    for (NeuroMLDocument::fixedFactorConcentrationModel_const_iterator
+    for (NeuroMLDocument_base::fixedFactorConcentrationModel_const_iterator
          b (i.fixedFactorConcentrationModel ().begin ()), e (i.fixedFactorConcentrationModel ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "fixedFactorConcentrationModel: " << *b;
     }
 
-    for (NeuroMLDocument::alphaCurrentSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaCurrentSynapse_const_iterator
          b (i.alphaCurrentSynapse ().begin ()), e (i.alphaCurrentSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "alphaCurrentSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::alphaSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaSynapse_const_iterator
          b (i.alphaSynapse ().begin ()), e (i.alphaSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "alphaSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::expOneSynapse_const_iterator
+    for (NeuroMLDocument_base::expOneSynapse_const_iterator
          b (i.expOneSynapse ().begin ()), e (i.expOneSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "expOneSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::expTwoSynapse_const_iterator
+    for (NeuroMLDocument_base::expTwoSynapse_const_iterator
          b (i.expTwoSynapse ().begin ()), e (i.expTwoSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "expTwoSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::expThreeSynapse_const_iterator
+    for (NeuroMLDocument_base::expThreeSynapse_const_iterator
          b (i.expThreeSynapse ().begin ()), e (i.expThreeSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "expThreeSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::blockingPlasticSynapse_const_iterator
+    for (NeuroMLDocument_base::blockingPlasticSynapse_const_iterator
          b (i.blockingPlasticSynapse ().begin ()), e (i.blockingPlasticSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "blockingPlasticSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::gapJunction_const_iterator
+    for (NeuroMLDocument_base::gapJunction_const_iterator
          b (i.gapJunction ().begin ()), e (i.gapJunction ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "gapJunction: " << *b;
     }
 
-    for (NeuroMLDocument::silentSynapse_const_iterator
+    for (NeuroMLDocument_base::silentSynapse_const_iterator
          b (i.silentSynapse ().begin ()), e (i.silentSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "silentSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::linearGradedSynapse_const_iterator
+    for (NeuroMLDocument_base::linearGradedSynapse_const_iterator
          b (i.linearGradedSynapse ().begin ()), e (i.linearGradedSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "linearGradedSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::gradedSynapse_const_iterator
+    for (NeuroMLDocument_base::gradedSynapse_const_iterator
          b (i.gradedSynapse ().begin ()), e (i.gradedSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "gradedSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::biophysicalProperties_const_iterator
+    for (NeuroMLDocument_base::biophysicalProperties_const_iterator
          b (i.biophysicalProperties ().begin ()), e (i.biophysicalProperties ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "biophysicalProperties: " << *b;
     }
 
-    for (NeuroMLDocument::cell_const_iterator
+    for (NeuroMLDocument_base::cell_const_iterator
          b (i.cell ().begin ()), e (i.cell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "cell: " << *b;
     }
 
-    for (NeuroMLDocument::cell2CaPools_const_iterator
+    for (NeuroMLDocument_base::cell2CaPools_const_iterator
          b (i.cell2CaPools ().begin ()), e (i.cell2CaPools ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "cell2CaPools: " << *b;
     }
 
-    for (NeuroMLDocument::baseCell_const_iterator
+    for (NeuroMLDocument_base::baseCell_const_iterator
          b (i.baseCell ().begin ()), e (i.baseCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "baseCell: " << *b;
     }
 
-    for (NeuroMLDocument::iafTauCell_const_iterator
+    for (NeuroMLDocument_base::iafTauCell_const_iterator
          b (i.iafTauCell ().begin ()), e (i.iafTauCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "iafTauCell: " << *b;
     }
 
-    for (NeuroMLDocument::iafTauRefCell_const_iterator
+    for (NeuroMLDocument_base::iafTauRefCell_const_iterator
          b (i.iafTauRefCell ().begin ()), e (i.iafTauRefCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "iafTauRefCell: " << *b;
     }
 
-    for (NeuroMLDocument::iafCell_const_iterator
+    for (NeuroMLDocument_base::iafCell_const_iterator
          b (i.iafCell ().begin ()), e (i.iafCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "iafCell: " << *b;
     }
 
-    for (NeuroMLDocument::iafRefCell_const_iterator
+    for (NeuroMLDocument_base::iafRefCell_const_iterator
          b (i.iafRefCell ().begin ()), e (i.iafRefCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "iafRefCell: " << *b;
     }
 
-    for (NeuroMLDocument::izhikevichCell_const_iterator
+    for (NeuroMLDocument_base::izhikevichCell_const_iterator
          b (i.izhikevichCell ().begin ()), e (i.izhikevichCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "izhikevichCell: " << *b;
     }
 
-    for (NeuroMLDocument::izhikevich2007Cell_const_iterator
+    for (NeuroMLDocument_base::izhikevich2007Cell_const_iterator
          b (i.izhikevich2007Cell ().begin ()), e (i.izhikevich2007Cell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "izhikevich2007Cell: " << *b;
     }
 
-    for (NeuroMLDocument::adExIaFCell_const_iterator
+    for (NeuroMLDocument_base::adExIaFCell_const_iterator
          b (i.adExIaFCell ().begin ()), e (i.adExIaFCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "adExIaFCell: " << *b;
     }
 
-    for (NeuroMLDocument::fitzHughNagumoCell_const_iterator
+    for (NeuroMLDocument_base::fitzHughNagumoCell_const_iterator
          b (i.fitzHughNagumoCell ().begin ()), e (i.fitzHughNagumoCell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "fitzHughNagumoCell: " << *b;
     }
 
-    for (NeuroMLDocument::fitzHughNagumo1969Cell_const_iterator
+    for (NeuroMLDocument_base::fitzHughNagumo1969Cell_const_iterator
          b (i.fitzHughNagumo1969Cell ().begin ()), e (i.fitzHughNagumo1969Cell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "fitzHughNagumo1969Cell: " << *b;
     }
 
-    for (NeuroMLDocument::pinskyRinzelCA3Cell_const_iterator
+    for (NeuroMLDocument_base::pinskyRinzelCA3Cell_const_iterator
          b (i.pinskyRinzelCA3Cell ().begin ()), e (i.pinskyRinzelCA3Cell ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "pinskyRinzelCA3Cell: " << *b;
     }
 
-    for (NeuroMLDocument::pulseGenerator_const_iterator
+    for (NeuroMLDocument_base::pulseGenerator_const_iterator
          b (i.pulseGenerator ().begin ()), e (i.pulseGenerator ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "pulseGenerator: " << *b;
     }
 
-    for (NeuroMLDocument::pulseGeneratorDL_const_iterator
+    for (NeuroMLDocument_base::pulseGeneratorDL_const_iterator
          b (i.pulseGeneratorDL ().begin ()), e (i.pulseGeneratorDL ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "pulseGeneratorDL: " << *b;
     }
 
-    for (NeuroMLDocument::sineGenerator_const_iterator
+    for (NeuroMLDocument_base::sineGenerator_const_iterator
          b (i.sineGenerator ().begin ()), e (i.sineGenerator ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "sineGenerator: " << *b;
     }
 
-    for (NeuroMLDocument::sineGeneratorDL_const_iterator
+    for (NeuroMLDocument_base::sineGeneratorDL_const_iterator
          b (i.sineGeneratorDL ().begin ()), e (i.sineGeneratorDL ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "sineGeneratorDL: " << *b;
     }
 
-    for (NeuroMLDocument::rampGenerator_const_iterator
+    for (NeuroMLDocument_base::rampGenerator_const_iterator
          b (i.rampGenerator ().begin ()), e (i.rampGenerator ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "rampGenerator: " << *b;
     }
 
-    for (NeuroMLDocument::rampGeneratorDL_const_iterator
+    for (NeuroMLDocument_base::rampGeneratorDL_const_iterator
          b (i.rampGeneratorDL ().begin ()), e (i.rampGeneratorDL ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "rampGeneratorDL: " << *b;
     }
 
-    for (NeuroMLDocument::compoundInput_const_iterator
+    for (NeuroMLDocument_base::compoundInput_const_iterator
          b (i.compoundInput ().begin ()), e (i.compoundInput ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "compoundInput: " << *b;
     }
 
-    for (NeuroMLDocument::compoundInputDL_const_iterator
+    for (NeuroMLDocument_base::compoundInputDL_const_iterator
          b (i.compoundInputDL ().begin ()), e (i.compoundInputDL ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "compoundInputDL: " << *b;
     }
 
-    for (NeuroMLDocument::voltageClamp_const_iterator
+    for (NeuroMLDocument_base::voltageClamp_const_iterator
          b (i.voltageClamp ().begin ()), e (i.voltageClamp ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "voltageClamp: " << *b;
     }
 
-    for (NeuroMLDocument::spikeArray_const_iterator
+    for (NeuroMLDocument_base::spikeArray_const_iterator
          b (i.spikeArray ().begin ()), e (i.spikeArray ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "spikeArray: " << *b;
     }
 
-    for (NeuroMLDocument::timedSynapticInput_const_iterator
+    for (NeuroMLDocument_base::timedSynapticInput_const_iterator
          b (i.timedSynapticInput ().begin ()), e (i.timedSynapticInput ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "timedSynapticInput: " << *b;
     }
 
-    for (NeuroMLDocument::spikeGenerator_const_iterator
+    for (NeuroMLDocument_base::spikeGenerator_const_iterator
          b (i.spikeGenerator ().begin ()), e (i.spikeGenerator ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "spikeGenerator: " << *b;
     }
 
-    for (NeuroMLDocument::spikeGeneratorRandom_const_iterator
+    for (NeuroMLDocument_base::spikeGeneratorRandom_const_iterator
          b (i.spikeGeneratorRandom ().begin ()), e (i.spikeGeneratorRandom ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "spikeGeneratorRandom: " << *b;
     }
 
-    for (NeuroMLDocument::spikeGeneratorPoisson_const_iterator
+    for (NeuroMLDocument_base::spikeGeneratorPoisson_const_iterator
          b (i.spikeGeneratorPoisson ().begin ()), e (i.spikeGeneratorPoisson ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "spikeGeneratorPoisson: " << *b;
     }
 
-    for (NeuroMLDocument::poissonFiringSynapse_const_iterator
+    for (NeuroMLDocument_base::poissonFiringSynapse_const_iterator
          b (i.poissonFiringSynapse ().begin ()), e (i.poissonFiringSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "poissonFiringSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::transientPoissonFiringSynapse_const_iterator
+    for (NeuroMLDocument_base::transientPoissonFiringSynapse_const_iterator
          b (i.transientPoissonFiringSynapse ().begin ()), e (i.transientPoissonFiringSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "transientPoissonFiringSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::IF_curr_alpha_const_iterator
+    for (NeuroMLDocument_base::IF_curr_alpha_const_iterator
          b (i.IF_curr_alpha ().begin ()), e (i.IF_curr_alpha ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "IF_curr_alpha: " << *b;
     }
 
-    for (NeuroMLDocument::IF_curr_exp_const_iterator
+    for (NeuroMLDocument_base::IF_curr_exp_const_iterator
          b (i.IF_curr_exp ().begin ()), e (i.IF_curr_exp ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "IF_curr_exp: " << *b;
     }
 
-    for (NeuroMLDocument::IF_cond_alpha_const_iterator
+    for (NeuroMLDocument_base::IF_cond_alpha_const_iterator
          b (i.IF_cond_alpha ().begin ()), e (i.IF_cond_alpha ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "IF_cond_alpha: " << *b;
     }
 
-    for (NeuroMLDocument::IF_cond_exp_const_iterator
+    for (NeuroMLDocument_base::IF_cond_exp_const_iterator
          b (i.IF_cond_exp ().begin ()), e (i.IF_cond_exp ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "IF_cond_exp: " << *b;
     }
 
-    for (NeuroMLDocument::EIF_cond_exp_isfa_ista_const_iterator
+    for (NeuroMLDocument_base::EIF_cond_exp_isfa_ista_const_iterator
          b (i.EIF_cond_exp_isfa_ista ().begin ()), e (i.EIF_cond_exp_isfa_ista ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "EIF_cond_exp_isfa_ista: " << *b;
     }
 
-    for (NeuroMLDocument::EIF_cond_alpha_isfa_ista_const_iterator
+    for (NeuroMLDocument_base::EIF_cond_alpha_isfa_ista_const_iterator
          b (i.EIF_cond_alpha_isfa_ista ().begin ()), e (i.EIF_cond_alpha_isfa_ista ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "EIF_cond_alpha_isfa_ista: " << *b;
     }
 
-    for (NeuroMLDocument::HH_cond_exp_const_iterator
+    for (NeuroMLDocument_base::HH_cond_exp_const_iterator
          b (i.HH_cond_exp ().begin ()), e (i.HH_cond_exp ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "HH_cond_exp: " << *b;
     }
 
-    for (NeuroMLDocument::expCondSynapse_const_iterator
+    for (NeuroMLDocument_base::expCondSynapse_const_iterator
          b (i.expCondSynapse ().begin ()), e (i.expCondSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "expCondSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::alphaCondSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaCondSynapse_const_iterator
          b (i.alphaCondSynapse ().begin ()), e (i.alphaCondSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "alphaCondSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::expCurrSynapse_const_iterator
+    for (NeuroMLDocument_base::expCurrSynapse_const_iterator
          b (i.expCurrSynapse ().begin ()), e (i.expCurrSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "expCurrSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::alphaCurrSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaCurrSynapse_const_iterator
          b (i.alphaCurrSynapse ().begin ()), e (i.alphaCurrSynapse ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "alphaCurrSynapse: " << *b;
     }
 
-    for (NeuroMLDocument::SpikeSourcePoisson_const_iterator
+    for (NeuroMLDocument_base::SpikeSourcePoisson_const_iterator
          b (i.SpikeSourcePoisson ().begin ()), e (i.SpikeSourcePoisson ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "SpikeSourcePoisson: " << *b;
     }
 
-    for (NeuroMLDocument::network_const_iterator
+    for (NeuroMLDocument_base::network_const_iterator
          b (i.network ().begin ()), e (i.network ().end ());
          b != e; ++b)
     {
       o << ::std::endl << "network: " << *b;
     }
 
-    for (NeuroMLDocument::ComponentType_const_iterator
+    for (NeuroMLDocument_base::ComponentType_const_iterator
          b (i.ComponentType ().begin ()), e (i.ComponentType ().end ());
          b != e; ++b)
     {
@@ -48482,13 +48482,13 @@ namespace neuroml2
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const NeuroMLDocument& i)
+  operator<< (::xercesc::DOMElement& e, const NeuroMLDocument_base& i)
   {
     e << static_cast< const ::neuroml2::Standalone& > (i);
 
     // include
     //
-    for (NeuroMLDocument::include_const_iterator
+    for (NeuroMLDocument_base::include_const_iterator
          b (i.include ().begin ()), n (i.include ().end ());
          b != n; ++b)
     {
@@ -48503,7 +48503,7 @@ namespace neuroml2
 
     // extracellularProperties
     //
-    for (NeuroMLDocument::extracellularProperties_const_iterator
+    for (NeuroMLDocument_base::extracellularProperties_const_iterator
          b (i.extracellularProperties ().begin ()), n (i.extracellularProperties ().end ());
          b != n; ++b)
     {
@@ -48518,7 +48518,7 @@ namespace neuroml2
 
     // intracellularProperties
     //
-    for (NeuroMLDocument::intracellularProperties_const_iterator
+    for (NeuroMLDocument_base::intracellularProperties_const_iterator
          b (i.intracellularProperties ().begin ()), n (i.intracellularProperties ().end ());
          b != n; ++b)
     {
@@ -48533,7 +48533,7 @@ namespace neuroml2
 
     // morphology
     //
-    for (NeuroMLDocument::morphology_const_iterator
+    for (NeuroMLDocument_base::morphology_const_iterator
          b (i.morphology ().begin ()), n (i.morphology ().end ());
          b != n; ++b)
     {
@@ -48548,7 +48548,7 @@ namespace neuroml2
 
     // ionChannel
     //
-    for (NeuroMLDocument::ionChannel_const_iterator
+    for (NeuroMLDocument_base::ionChannel_const_iterator
          b (i.ionChannel ().begin ()), n (i.ionChannel ().end ());
          b != n; ++b)
     {
@@ -48563,7 +48563,7 @@ namespace neuroml2
 
     // ionChannelHH
     //
-    for (NeuroMLDocument::ionChannelHH_const_iterator
+    for (NeuroMLDocument_base::ionChannelHH_const_iterator
          b (i.ionChannelHH ().begin ()), n (i.ionChannelHH ().end ());
          b != n; ++b)
     {
@@ -48578,7 +48578,7 @@ namespace neuroml2
 
     // ionChannelKS
     //
-    for (NeuroMLDocument::ionChannelKS_const_iterator
+    for (NeuroMLDocument_base::ionChannelKS_const_iterator
          b (i.ionChannelKS ().begin ()), n (i.ionChannelKS ().end ());
          b != n; ++b)
     {
@@ -48593,7 +48593,7 @@ namespace neuroml2
 
     // decayingPoolConcentrationModel
     //
-    for (NeuroMLDocument::decayingPoolConcentrationModel_const_iterator
+    for (NeuroMLDocument_base::decayingPoolConcentrationModel_const_iterator
          b (i.decayingPoolConcentrationModel ().begin ()), n (i.decayingPoolConcentrationModel ().end ());
          b != n; ++b)
     {
@@ -48608,7 +48608,7 @@ namespace neuroml2
 
     // fixedFactorConcentrationModel
     //
-    for (NeuroMLDocument::fixedFactorConcentrationModel_const_iterator
+    for (NeuroMLDocument_base::fixedFactorConcentrationModel_const_iterator
          b (i.fixedFactorConcentrationModel ().begin ()), n (i.fixedFactorConcentrationModel ().end ());
          b != n; ++b)
     {
@@ -48623,7 +48623,7 @@ namespace neuroml2
 
     // alphaCurrentSynapse
     //
-    for (NeuroMLDocument::alphaCurrentSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaCurrentSynapse_const_iterator
          b (i.alphaCurrentSynapse ().begin ()), n (i.alphaCurrentSynapse ().end ());
          b != n; ++b)
     {
@@ -48638,7 +48638,7 @@ namespace neuroml2
 
     // alphaSynapse
     //
-    for (NeuroMLDocument::alphaSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaSynapse_const_iterator
          b (i.alphaSynapse ().begin ()), n (i.alphaSynapse ().end ());
          b != n; ++b)
     {
@@ -48653,7 +48653,7 @@ namespace neuroml2
 
     // expOneSynapse
     //
-    for (NeuroMLDocument::expOneSynapse_const_iterator
+    for (NeuroMLDocument_base::expOneSynapse_const_iterator
          b (i.expOneSynapse ().begin ()), n (i.expOneSynapse ().end ());
          b != n; ++b)
     {
@@ -48668,7 +48668,7 @@ namespace neuroml2
 
     // expTwoSynapse
     //
-    for (NeuroMLDocument::expTwoSynapse_const_iterator
+    for (NeuroMLDocument_base::expTwoSynapse_const_iterator
          b (i.expTwoSynapse ().begin ()), n (i.expTwoSynapse ().end ());
          b != n; ++b)
     {
@@ -48683,7 +48683,7 @@ namespace neuroml2
 
     // expThreeSynapse
     //
-    for (NeuroMLDocument::expThreeSynapse_const_iterator
+    for (NeuroMLDocument_base::expThreeSynapse_const_iterator
          b (i.expThreeSynapse ().begin ()), n (i.expThreeSynapse ().end ());
          b != n; ++b)
     {
@@ -48698,7 +48698,7 @@ namespace neuroml2
 
     // blockingPlasticSynapse
     //
-    for (NeuroMLDocument::blockingPlasticSynapse_const_iterator
+    for (NeuroMLDocument_base::blockingPlasticSynapse_const_iterator
          b (i.blockingPlasticSynapse ().begin ()), n (i.blockingPlasticSynapse ().end ());
          b != n; ++b)
     {
@@ -48713,7 +48713,7 @@ namespace neuroml2
 
     // gapJunction
     //
-    for (NeuroMLDocument::gapJunction_const_iterator
+    for (NeuroMLDocument_base::gapJunction_const_iterator
          b (i.gapJunction ().begin ()), n (i.gapJunction ().end ());
          b != n; ++b)
     {
@@ -48728,7 +48728,7 @@ namespace neuroml2
 
     // silentSynapse
     //
-    for (NeuroMLDocument::silentSynapse_const_iterator
+    for (NeuroMLDocument_base::silentSynapse_const_iterator
          b (i.silentSynapse ().begin ()), n (i.silentSynapse ().end ());
          b != n; ++b)
     {
@@ -48743,7 +48743,7 @@ namespace neuroml2
 
     // linearGradedSynapse
     //
-    for (NeuroMLDocument::linearGradedSynapse_const_iterator
+    for (NeuroMLDocument_base::linearGradedSynapse_const_iterator
          b (i.linearGradedSynapse ().begin ()), n (i.linearGradedSynapse ().end ());
          b != n; ++b)
     {
@@ -48758,7 +48758,7 @@ namespace neuroml2
 
     // gradedSynapse
     //
-    for (NeuroMLDocument::gradedSynapse_const_iterator
+    for (NeuroMLDocument_base::gradedSynapse_const_iterator
          b (i.gradedSynapse ().begin ()), n (i.gradedSynapse ().end ());
          b != n; ++b)
     {
@@ -48773,7 +48773,7 @@ namespace neuroml2
 
     // biophysicalProperties
     //
-    for (NeuroMLDocument::biophysicalProperties_const_iterator
+    for (NeuroMLDocument_base::biophysicalProperties_const_iterator
          b (i.biophysicalProperties ().begin ()), n (i.biophysicalProperties ().end ());
          b != n; ++b)
     {
@@ -48788,7 +48788,7 @@ namespace neuroml2
 
     // cell
     //
-    for (NeuroMLDocument::cell_const_iterator
+    for (NeuroMLDocument_base::cell_const_iterator
          b (i.cell ().begin ()), n (i.cell ().end ());
          b != n; ++b)
     {
@@ -48803,7 +48803,7 @@ namespace neuroml2
 
     // cell2CaPools
     //
-    for (NeuroMLDocument::cell2CaPools_const_iterator
+    for (NeuroMLDocument_base::cell2CaPools_const_iterator
          b (i.cell2CaPools ().begin ()), n (i.cell2CaPools ().end ());
          b != n; ++b)
     {
@@ -48818,7 +48818,7 @@ namespace neuroml2
 
     // baseCell
     //
-    for (NeuroMLDocument::baseCell_const_iterator
+    for (NeuroMLDocument_base::baseCell_const_iterator
          b (i.baseCell ().begin ()), n (i.baseCell ().end ());
          b != n; ++b)
     {
@@ -48833,7 +48833,7 @@ namespace neuroml2
 
     // iafTauCell
     //
-    for (NeuroMLDocument::iafTauCell_const_iterator
+    for (NeuroMLDocument_base::iafTauCell_const_iterator
          b (i.iafTauCell ().begin ()), n (i.iafTauCell ().end ());
          b != n; ++b)
     {
@@ -48848,7 +48848,7 @@ namespace neuroml2
 
     // iafTauRefCell
     //
-    for (NeuroMLDocument::iafTauRefCell_const_iterator
+    for (NeuroMLDocument_base::iafTauRefCell_const_iterator
          b (i.iafTauRefCell ().begin ()), n (i.iafTauRefCell ().end ());
          b != n; ++b)
     {
@@ -48863,7 +48863,7 @@ namespace neuroml2
 
     // iafCell
     //
-    for (NeuroMLDocument::iafCell_const_iterator
+    for (NeuroMLDocument_base::iafCell_const_iterator
          b (i.iafCell ().begin ()), n (i.iafCell ().end ());
          b != n; ++b)
     {
@@ -48878,7 +48878,7 @@ namespace neuroml2
 
     // iafRefCell
     //
-    for (NeuroMLDocument::iafRefCell_const_iterator
+    for (NeuroMLDocument_base::iafRefCell_const_iterator
          b (i.iafRefCell ().begin ()), n (i.iafRefCell ().end ());
          b != n; ++b)
     {
@@ -48893,7 +48893,7 @@ namespace neuroml2
 
     // izhikevichCell
     //
-    for (NeuroMLDocument::izhikevichCell_const_iterator
+    for (NeuroMLDocument_base::izhikevichCell_const_iterator
          b (i.izhikevichCell ().begin ()), n (i.izhikevichCell ().end ());
          b != n; ++b)
     {
@@ -48908,7 +48908,7 @@ namespace neuroml2
 
     // izhikevich2007Cell
     //
-    for (NeuroMLDocument::izhikevich2007Cell_const_iterator
+    for (NeuroMLDocument_base::izhikevich2007Cell_const_iterator
          b (i.izhikevich2007Cell ().begin ()), n (i.izhikevich2007Cell ().end ());
          b != n; ++b)
     {
@@ -48923,7 +48923,7 @@ namespace neuroml2
 
     // adExIaFCell
     //
-    for (NeuroMLDocument::adExIaFCell_const_iterator
+    for (NeuroMLDocument_base::adExIaFCell_const_iterator
          b (i.adExIaFCell ().begin ()), n (i.adExIaFCell ().end ());
          b != n; ++b)
     {
@@ -48938,7 +48938,7 @@ namespace neuroml2
 
     // fitzHughNagumoCell
     //
-    for (NeuroMLDocument::fitzHughNagumoCell_const_iterator
+    for (NeuroMLDocument_base::fitzHughNagumoCell_const_iterator
          b (i.fitzHughNagumoCell ().begin ()), n (i.fitzHughNagumoCell ().end ());
          b != n; ++b)
     {
@@ -48953,7 +48953,7 @@ namespace neuroml2
 
     // fitzHughNagumo1969Cell
     //
-    for (NeuroMLDocument::fitzHughNagumo1969Cell_const_iterator
+    for (NeuroMLDocument_base::fitzHughNagumo1969Cell_const_iterator
          b (i.fitzHughNagumo1969Cell ().begin ()), n (i.fitzHughNagumo1969Cell ().end ());
          b != n; ++b)
     {
@@ -48968,7 +48968,7 @@ namespace neuroml2
 
     // pinskyRinzelCA3Cell
     //
-    for (NeuroMLDocument::pinskyRinzelCA3Cell_const_iterator
+    for (NeuroMLDocument_base::pinskyRinzelCA3Cell_const_iterator
          b (i.pinskyRinzelCA3Cell ().begin ()), n (i.pinskyRinzelCA3Cell ().end ());
          b != n; ++b)
     {
@@ -48983,7 +48983,7 @@ namespace neuroml2
 
     // pulseGenerator
     //
-    for (NeuroMLDocument::pulseGenerator_const_iterator
+    for (NeuroMLDocument_base::pulseGenerator_const_iterator
          b (i.pulseGenerator ().begin ()), n (i.pulseGenerator ().end ());
          b != n; ++b)
     {
@@ -48998,7 +48998,7 @@ namespace neuroml2
 
     // pulseGeneratorDL
     //
-    for (NeuroMLDocument::pulseGeneratorDL_const_iterator
+    for (NeuroMLDocument_base::pulseGeneratorDL_const_iterator
          b (i.pulseGeneratorDL ().begin ()), n (i.pulseGeneratorDL ().end ());
          b != n; ++b)
     {
@@ -49013,7 +49013,7 @@ namespace neuroml2
 
     // sineGenerator
     //
-    for (NeuroMLDocument::sineGenerator_const_iterator
+    for (NeuroMLDocument_base::sineGenerator_const_iterator
          b (i.sineGenerator ().begin ()), n (i.sineGenerator ().end ());
          b != n; ++b)
     {
@@ -49028,7 +49028,7 @@ namespace neuroml2
 
     // sineGeneratorDL
     //
-    for (NeuroMLDocument::sineGeneratorDL_const_iterator
+    for (NeuroMLDocument_base::sineGeneratorDL_const_iterator
          b (i.sineGeneratorDL ().begin ()), n (i.sineGeneratorDL ().end ());
          b != n; ++b)
     {
@@ -49043,7 +49043,7 @@ namespace neuroml2
 
     // rampGenerator
     //
-    for (NeuroMLDocument::rampGenerator_const_iterator
+    for (NeuroMLDocument_base::rampGenerator_const_iterator
          b (i.rampGenerator ().begin ()), n (i.rampGenerator ().end ());
          b != n; ++b)
     {
@@ -49058,7 +49058,7 @@ namespace neuroml2
 
     // rampGeneratorDL
     //
-    for (NeuroMLDocument::rampGeneratorDL_const_iterator
+    for (NeuroMLDocument_base::rampGeneratorDL_const_iterator
          b (i.rampGeneratorDL ().begin ()), n (i.rampGeneratorDL ().end ());
          b != n; ++b)
     {
@@ -49073,7 +49073,7 @@ namespace neuroml2
 
     // compoundInput
     //
-    for (NeuroMLDocument::compoundInput_const_iterator
+    for (NeuroMLDocument_base::compoundInput_const_iterator
          b (i.compoundInput ().begin ()), n (i.compoundInput ().end ());
          b != n; ++b)
     {
@@ -49088,7 +49088,7 @@ namespace neuroml2
 
     // compoundInputDL
     //
-    for (NeuroMLDocument::compoundInputDL_const_iterator
+    for (NeuroMLDocument_base::compoundInputDL_const_iterator
          b (i.compoundInputDL ().begin ()), n (i.compoundInputDL ().end ());
          b != n; ++b)
     {
@@ -49103,7 +49103,7 @@ namespace neuroml2
 
     // voltageClamp
     //
-    for (NeuroMLDocument::voltageClamp_const_iterator
+    for (NeuroMLDocument_base::voltageClamp_const_iterator
          b (i.voltageClamp ().begin ()), n (i.voltageClamp ().end ());
          b != n; ++b)
     {
@@ -49118,7 +49118,7 @@ namespace neuroml2
 
     // spikeArray
     //
-    for (NeuroMLDocument::spikeArray_const_iterator
+    for (NeuroMLDocument_base::spikeArray_const_iterator
          b (i.spikeArray ().begin ()), n (i.spikeArray ().end ());
          b != n; ++b)
     {
@@ -49133,7 +49133,7 @@ namespace neuroml2
 
     // timedSynapticInput
     //
-    for (NeuroMLDocument::timedSynapticInput_const_iterator
+    for (NeuroMLDocument_base::timedSynapticInput_const_iterator
          b (i.timedSynapticInput ().begin ()), n (i.timedSynapticInput ().end ());
          b != n; ++b)
     {
@@ -49148,7 +49148,7 @@ namespace neuroml2
 
     // spikeGenerator
     //
-    for (NeuroMLDocument::spikeGenerator_const_iterator
+    for (NeuroMLDocument_base::spikeGenerator_const_iterator
          b (i.spikeGenerator ().begin ()), n (i.spikeGenerator ().end ());
          b != n; ++b)
     {
@@ -49163,7 +49163,7 @@ namespace neuroml2
 
     // spikeGeneratorRandom
     //
-    for (NeuroMLDocument::spikeGeneratorRandom_const_iterator
+    for (NeuroMLDocument_base::spikeGeneratorRandom_const_iterator
          b (i.spikeGeneratorRandom ().begin ()), n (i.spikeGeneratorRandom ().end ());
          b != n; ++b)
     {
@@ -49178,7 +49178,7 @@ namespace neuroml2
 
     // spikeGeneratorPoisson
     //
-    for (NeuroMLDocument::spikeGeneratorPoisson_const_iterator
+    for (NeuroMLDocument_base::spikeGeneratorPoisson_const_iterator
          b (i.spikeGeneratorPoisson ().begin ()), n (i.spikeGeneratorPoisson ().end ());
          b != n; ++b)
     {
@@ -49193,7 +49193,7 @@ namespace neuroml2
 
     // poissonFiringSynapse
     //
-    for (NeuroMLDocument::poissonFiringSynapse_const_iterator
+    for (NeuroMLDocument_base::poissonFiringSynapse_const_iterator
          b (i.poissonFiringSynapse ().begin ()), n (i.poissonFiringSynapse ().end ());
          b != n; ++b)
     {
@@ -49208,7 +49208,7 @@ namespace neuroml2
 
     // transientPoissonFiringSynapse
     //
-    for (NeuroMLDocument::transientPoissonFiringSynapse_const_iterator
+    for (NeuroMLDocument_base::transientPoissonFiringSynapse_const_iterator
          b (i.transientPoissonFiringSynapse ().begin ()), n (i.transientPoissonFiringSynapse ().end ());
          b != n; ++b)
     {
@@ -49223,7 +49223,7 @@ namespace neuroml2
 
     // IF_curr_alpha
     //
-    for (NeuroMLDocument::IF_curr_alpha_const_iterator
+    for (NeuroMLDocument_base::IF_curr_alpha_const_iterator
          b (i.IF_curr_alpha ().begin ()), n (i.IF_curr_alpha ().end ());
          b != n; ++b)
     {
@@ -49238,7 +49238,7 @@ namespace neuroml2
 
     // IF_curr_exp
     //
-    for (NeuroMLDocument::IF_curr_exp_const_iterator
+    for (NeuroMLDocument_base::IF_curr_exp_const_iterator
          b (i.IF_curr_exp ().begin ()), n (i.IF_curr_exp ().end ());
          b != n; ++b)
     {
@@ -49253,7 +49253,7 @@ namespace neuroml2
 
     // IF_cond_alpha
     //
-    for (NeuroMLDocument::IF_cond_alpha_const_iterator
+    for (NeuroMLDocument_base::IF_cond_alpha_const_iterator
          b (i.IF_cond_alpha ().begin ()), n (i.IF_cond_alpha ().end ());
          b != n; ++b)
     {
@@ -49268,7 +49268,7 @@ namespace neuroml2
 
     // IF_cond_exp
     //
-    for (NeuroMLDocument::IF_cond_exp_const_iterator
+    for (NeuroMLDocument_base::IF_cond_exp_const_iterator
          b (i.IF_cond_exp ().begin ()), n (i.IF_cond_exp ().end ());
          b != n; ++b)
     {
@@ -49283,7 +49283,7 @@ namespace neuroml2
 
     // EIF_cond_exp_isfa_ista
     //
-    for (NeuroMLDocument::EIF_cond_exp_isfa_ista_const_iterator
+    for (NeuroMLDocument_base::EIF_cond_exp_isfa_ista_const_iterator
          b (i.EIF_cond_exp_isfa_ista ().begin ()), n (i.EIF_cond_exp_isfa_ista ().end ());
          b != n; ++b)
     {
@@ -49298,7 +49298,7 @@ namespace neuroml2
 
     // EIF_cond_alpha_isfa_ista
     //
-    for (NeuroMLDocument::EIF_cond_alpha_isfa_ista_const_iterator
+    for (NeuroMLDocument_base::EIF_cond_alpha_isfa_ista_const_iterator
          b (i.EIF_cond_alpha_isfa_ista ().begin ()), n (i.EIF_cond_alpha_isfa_ista ().end ());
          b != n; ++b)
     {
@@ -49313,7 +49313,7 @@ namespace neuroml2
 
     // HH_cond_exp
     //
-    for (NeuroMLDocument::HH_cond_exp_const_iterator
+    for (NeuroMLDocument_base::HH_cond_exp_const_iterator
          b (i.HH_cond_exp ().begin ()), n (i.HH_cond_exp ().end ());
          b != n; ++b)
     {
@@ -49328,7 +49328,7 @@ namespace neuroml2
 
     // expCondSynapse
     //
-    for (NeuroMLDocument::expCondSynapse_const_iterator
+    for (NeuroMLDocument_base::expCondSynapse_const_iterator
          b (i.expCondSynapse ().begin ()), n (i.expCondSynapse ().end ());
          b != n; ++b)
     {
@@ -49343,7 +49343,7 @@ namespace neuroml2
 
     // alphaCondSynapse
     //
-    for (NeuroMLDocument::alphaCondSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaCondSynapse_const_iterator
          b (i.alphaCondSynapse ().begin ()), n (i.alphaCondSynapse ().end ());
          b != n; ++b)
     {
@@ -49358,7 +49358,7 @@ namespace neuroml2
 
     // expCurrSynapse
     //
-    for (NeuroMLDocument::expCurrSynapse_const_iterator
+    for (NeuroMLDocument_base::expCurrSynapse_const_iterator
          b (i.expCurrSynapse ().begin ()), n (i.expCurrSynapse ().end ());
          b != n; ++b)
     {
@@ -49373,7 +49373,7 @@ namespace neuroml2
 
     // alphaCurrSynapse
     //
-    for (NeuroMLDocument::alphaCurrSynapse_const_iterator
+    for (NeuroMLDocument_base::alphaCurrSynapse_const_iterator
          b (i.alphaCurrSynapse ().begin ()), n (i.alphaCurrSynapse ().end ());
          b != n; ++b)
     {
@@ -49388,7 +49388,7 @@ namespace neuroml2
 
     // SpikeSourcePoisson
     //
-    for (NeuroMLDocument::SpikeSourcePoisson_const_iterator
+    for (NeuroMLDocument_base::SpikeSourcePoisson_const_iterator
          b (i.SpikeSourcePoisson ().begin ()), n (i.SpikeSourcePoisson ().end ());
          b != n; ++b)
     {
@@ -49403,7 +49403,7 @@ namespace neuroml2
 
     // network
     //
-    for (NeuroMLDocument::network_const_iterator
+    for (NeuroMLDocument_base::network_const_iterator
          b (i.network ().begin ()), n (i.network ().end ());
          b != n; ++b)
     {
@@ -49418,7 +49418,7 @@ namespace neuroml2
 
     // ComponentType
     //
-    for (NeuroMLDocument::ComponentType_const_iterator
+    for (NeuroMLDocument_base::ComponentType_const_iterator
          b (i.ComponentType ().begin ()), n (i.ComponentType ().end ());
          b != n; ++b)
     {

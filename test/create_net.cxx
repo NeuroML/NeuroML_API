@@ -8,7 +8,6 @@
 #include <memory>
 
 #include "neuroml.hxx"
-#include "NeuroML_config.hxx"
 
 int main(int argc, char* argv[])
 {
@@ -40,12 +39,7 @@ int main(int argc, char* argv[])
         nmlDoc->network().push_back(*net);
         
         std::cout << "Saving to file: " << argv[1] << std::endl;
-
-        xml_schema::namespace_infomap map;
-        map[""].name = "http://www.neuroml.org/schema/neuroml2";
-        map[""].schema = NeuroML_SCHEMA_PATH;
-        std::ofstream f(argv[1]);
-        neuroml2::neuroml(f, *nmlDoc, map);
+        nmlDoc->writeToFile(argv[1]);
         
     }
     catch (const xml_schema::exception& e)
