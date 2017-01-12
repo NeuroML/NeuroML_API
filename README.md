@@ -39,7 +39,7 @@ you create a separate 'NeuroML_API_build' folder adjacent to the source,
 change into it, and run
 
 ```
-ccmake ../NeuroML_API
+cmake ../NeuroML_API
 ```
 
 to configure the build. You may then run
