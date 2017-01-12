@@ -1,4 +1,5 @@
-/// \todo Copyright notice
+// Copyright 2017 University College London.
+// See Licence.txt for details.
 
 #ifndef NEURO_ML_CUSTOM_HXX
 #define NEURO_ML_CUSTOM_HXX

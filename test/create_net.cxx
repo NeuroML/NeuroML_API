@@ -1,3 +1,6 @@
+// Copyright 2017 University College London.
+// See Licence.txt for details.
+
 // Test building a NeuroML2 network from scratch
 
 #include <iostream>

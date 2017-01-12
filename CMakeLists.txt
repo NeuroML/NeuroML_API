@@ -1,4 +1,5 @@
-# TODO: Licence information
+# Copyright 2017 University College London.
+# See Licence.txt for details.
 #
 # CMake settings for building & installing the NeuroML2 C++ API
 
@@ -137,8 +138,7 @@ endif(DOXYGEN_FOUND)
 ####################################
 
 include (InstallRequiredSystemLibraries)
-#set (CPACK_RESOURCE_FILE_LICENSE  
-#     "${PROJECT_SOURCE_DIR}/License.txt")
+set (CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/Licence.txt")
 set (CPACK_PACKAGE_VERSION_MAJOR "${NeuroML_API_VERSION_MAJOR}")
 set (CPACK_PACKAGE_VERSION_MINOR "${NeuroML_API_VERSION_MINOR}")
 include (CPack)

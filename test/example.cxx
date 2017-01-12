@@ -1,3 +1,6 @@
+// Copyright 2017 University College London.
+// See Licence.txt for details.
+
 // Quick test function for the xsd-generated C++ mapping.
 
 #include <cassert>

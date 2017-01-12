@@ -1,4 +1,5 @@
-/// \todo Copyright notice etc.
+// Copyright 2017 University College London.
+// See Licence.txt for details.
 
 #include "neuroml.hxx"
 #include "internal.hxx"
