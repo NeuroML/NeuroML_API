@@ -1,0 +1,19 @@
+--std c++11
+--generate-serialization
+--generate-doxygen
+--generate-ostream
+--generate-comparison
+--root-element neuroml
+--namespace-map http://www.neuroml.org/schema/neuroml2=neuroml2
+--guard-prefix NEUROML_API_SCHEMA
+
+# These wrap the generate code in coverage ignore declarations for lcov
+--prologue-file XsdPrologue.txt
+--epilogue-file XsdEpilogue.txt
+
+# Customisations for generated types
+--hxx-epilogue '#include "NeuroML_custom.hxx"'
+--custom-type NeuroMLDocument=/NeuroMLDocument_base
+--custom-type Morphology=/Morphology_base
+--custom-type Segment=/Segment_base
+--custom-type Connection=/Connection_base

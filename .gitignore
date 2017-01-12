@@ -1,0 +1,7 @@
+# Temporary build files
+*.o
+NeuroML_API_build
+
+# Generated documentation
+docs/
+

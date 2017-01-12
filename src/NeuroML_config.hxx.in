@@ -1,0 +1,12 @@
+// Copyright 2017 University College London.
+// See Licence.txt for details.
+
+//! API major version number
+#define NeuroML_API_VERSION_MAJOR @NeuroML_API_VERSION_MAJOR@
+//! API minor version number
+#define NeuroML_API_VERSION_MINOR @NeuroML_API_VERSION_MINOR@
+//! API patch version number
+#define NeuroML_API_VERSION_PATCH @NeuroML_API_VERSION_PATCH@
+
+//! Name of the schema file for NeuroML
+#define NeuroML_SCHEMA_NAME "@NeuroML_SCHEMA_NAME@"
