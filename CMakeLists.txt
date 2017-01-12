@@ -68,6 +68,12 @@ if (XSD_FOUND)
     file(GLOB _XSD_DEPS "src/schema/*.txt")
     xsd_schema(NeuroML_SCHEMA_SRCS "${NeuroML_SCHEMA_PATH}" "${_XSD_DEPS}"
                --options-file "${PROJECT_SOURCE_DIR}/src/schema/XsdOptions.txt")
+    # A special target to copy newly generated wrappers back into the source tree for distribution.
+    add_custom_target(copy_wrappers
+                      COMMAND ${CMAKE_COMMAND} -E copy_if_different ${NeuroML_SCHEMA_SRCS}
+                              ${PROJECT_SOURCE_DIR}/src/schema
+                      COMMENT "Copying new XSD wrappers to source tree"
+                      VERBATIM)
 else (XSD_FOUND)
     # Use pre-generated sources & CodeSynthesis headers shipped with the project
     set(XSD_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/libxsd")

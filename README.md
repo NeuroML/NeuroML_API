@@ -65,3 +65,7 @@ locations, but you can also set the `XSD_ROOT` _environment_ variable to the
 root folder for the software (i.e. the folder containing `bin` and `libxsd`
 folders). You can also change the schema file to use by setting the variable
 `NeuroML_SCHEMA_PATH` in ccmake.
+
+Once the bindings have been regenerated, you can run `make copy_wrappers`
+to copy the new versions back into the source tree, for committing to the
+repository.
