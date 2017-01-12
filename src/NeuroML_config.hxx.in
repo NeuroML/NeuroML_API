@@ -10,5 +10,5 @@
 //! Name of the schema file for NeuroML
 #define NeuroML_SCHEMA_NAME "@NeuroML_SCHEMA_NAME@"
 
-//! Full path to the schema file for NeuroML
+//! Full path to the schema file for NeuroML (deprecated)
 #define NeuroML_SCHEMA_PATH "file://@NeuroML_SCHEMA_ABSPATH@"

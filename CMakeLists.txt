@@ -32,10 +32,18 @@ set(CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING
 # Build rules
 #############
 
-# Configure a header file to pass some of the CMake settings to the source code
+# Some standard locations used below
+set(IncludeLocation include/neuroml)
+set(ConfigPackageLocation lib/cmake/${CMAKE_PROJECT_NAME})
+
+# Configure header files to pass some of the CMake settings to the source code
 configure_file(
     "${PROJECT_SOURCE_DIR}/src/NeuroML_config.hxx.in"
     "${PROJECT_BINARY_DIR}/src/NeuroML_config.hxx"
+    )
+configure_file(
+    "${PROJECT_SOURCE_DIR}/src/internal.hxx.in"
+    "${PROJECT_BINARY_DIR}/src/internal.hxx"
     )
 
 # Generate the main header for users of the API
@@ -78,8 +86,6 @@ target_compile_features(neuroml PUBLIC cxx_auto_type cxx_constexpr cxx_right_ang
 # Install rules
 ###############
 
-set(IncludeLocation include/neuroml)
-
 install(TARGETS neuroml EXPORT NeuroML_API
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
@@ -88,11 +94,11 @@ install(DIRECTORY "${XSD_INCLUDE_DIR}/xsd" DESTINATION ${IncludeLocation})
 install(DIRECTORY "${PROJECT_BINARY_DIR}/src/"
         DESTINATION ${IncludeLocation}
         FILES_MATCHING PATTERN "*.hxx")
-install(FILES src/NeuroML_custom.hxx DESTINATION ${IncludeLocation})
+install(FILES src/NeuroML_custom.hxx "${NeuroML_SCHEMA_PATH}"
+        DESTINATION ${IncludeLocation})
 
 # Export package config so other CMake-using software can use NeuroML with just
 # find_package(NeuroML_API REQUIRED).
-set(ConfigPackageLocation lib/cmake/${CMAKE_PROJECT_NAME})
 install(FILES cmake/NeuroML_APIConfig.cmake DESTINATION ${ConfigPackageLocation})
 install(EXPORT NeuroML_API DESTINATION ${ConfigPackageLocation}
         NAMESPACE NeuroML::
@@ -119,10 +125,10 @@ add_test(CreateNet create_net test_net.nml)
 
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
-    configure_file(${CMAKE_SOURCE_DIR}/Doxyfile.in ${CMAKE_BINARY_DIR}/Doxyfile @ONLY)
+    configure_file(${PROJECT_SOURCE_DIR}/Doxyfile.in ${PROJECT_BINARY_DIR}/Doxyfile @ONLY)
     add_custom_target(doc
-        ${DOXYGEN_EXECUTABLE} ${CMAKE_BINARY_DIR}/Doxyfile
-        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        ${DOXYGEN_EXECUTABLE} ${PROJECT_BINARY_DIR}/Doxyfile
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
         COMMENT "Generating API documentation with Doxygen" VERBATIM
     )
 endif(DOXYGEN_FOUND)
@@ -132,7 +138,7 @@ endif(DOXYGEN_FOUND)
 
 include (InstallRequiredSystemLibraries)
 #set (CPACK_RESOURCE_FILE_LICENSE  
-#     "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+#     "${PROJECT_SOURCE_DIR}/License.txt")
 set (CPACK_PACKAGE_VERSION_MAJOR "${NeuroML_API_VERSION_MAJOR}")
 set (CPACK_PACKAGE_VERSION_MINOR "${NeuroML_API_VERSION_MINOR}")
 include (CPack)

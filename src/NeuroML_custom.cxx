@@ -1,12 +1,45 @@
 /// \todo Copyright notice etc.
 
 #include "neuroml.hxx"
+#include "internal.hxx"
 
+#include <cassert>
 #include <cmath>
+#include <cstdio>
 #include <string>
+#include <ios>
 
 namespace neuroml2
 {
+
+// Global helper functions
+
+std::unique_ptr<NeuroMLDocument> parseFile(const std::string& filePath)
+{
+    ::xml_schema::properties props;
+    props.schema_location("http://www.neuroml.org/schema/neuroml2", getSchemaPath());
+    std::unique_ptr<NeuroMLDocument> model(neuroml(filePath, 0, props));
+    return model;
+}
+
+std::string getSchemaPath()
+{
+    std::string path;
+    if (FILE* fp = fopen(SOURCE_SCHEMA_PATH, "r"))
+    {
+        fclose(fp);
+        path = SOURCE_SCHEMA_PATH;
+    }
+    else if (FILE* fp = fopen(INSTALLED_SCHEMA_PATH, "r"))
+    {
+        fclose(fp);
+        path = INSTALLED_SCHEMA_PATH;
+    }
+    else
+        throw std::ios_base::failure("Unable to find NeuroML schema at " INSTALLED_SCHEMA_PATH);
+    return "file://" + path;
+}
+
 
 // Morphology methods
 
@@ -212,4 +245,3 @@ operator<<(::std::ostream& o, const Connection& c)
 
 
 }
-

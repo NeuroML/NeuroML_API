@@ -19,10 +19,7 @@ int main(int argc, char* argv[])
     try
     {
         std::cout << "Parsing path " << argv[1] << std::endl;
-        // We enforce use of our schema for validation, no matter what the document says
-        ::xml_schema::properties props;
-        props.schema_location("http://www.neuroml.org/schema/neuroml2", NeuroML_SCHEMA_PATH);
-        std::unique_ptr<neuroml2::NeuroMLDocument> model(neuroml2::neuroml(argv[1], 0, props));
+        std::unique_ptr<neuroml2::NeuroMLDocument> model = neuroml2::parseFile(argv[1]);
 
         // Required attributes (or child elements with single cardinality) can just be accessed directly.
         std::cout << "Parsed model id " << model->id() << std::endl;

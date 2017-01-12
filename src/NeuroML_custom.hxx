@@ -5,6 +5,25 @@
 
 namespace neuroml2
 {
+
+/**
+ * Helper function to parse a NeuroML file in one line of code.
+ *
+ * @param filePath Path to the file to parse.
+ * @return The object hierarchy representing the parsed model.
+ */
+std::unique_ptr<NeuroMLDocument> parseFile(const std::string& filePath);
+
+/**
+ * Get the URI of the NeuroML schema file.
+ *
+ * Primarily for internal use, this will try looking in the source tree
+ * then the CMake install location.
+ * @throw std::TODO if file not found in either location.
+ * @return A file:// URI to the .xsd file, if found.
+ */
+std::string getSchemaPath();
+
 /**
  * @brief Class corresponding to the %Morphology schema type.
  *

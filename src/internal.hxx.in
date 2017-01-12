@@ -1,0 +1,11 @@
+// TODO: Licence info
+
+/**
+ * @file For internal API use only.
+ */
+
+//! Full path to the schema file for NeuroML, in the source dir
+#define SOURCE_SCHEMA_PATH "@NeuroML_SCHEMA_ABSPATH@"
+
+//! Full path to the installed schema file for NeuroML, if CMake-defined location used
+#define INSTALLED_SCHEMA_PATH "@CMAKE_INSTALL_PREFIX@/@IncludeLocation@/@NeuroML_SCHEMA_NAME@.xsd"
