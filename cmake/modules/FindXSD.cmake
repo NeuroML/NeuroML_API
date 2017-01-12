@@ -67,7 +67,7 @@ MARK_AS_ADVANCED( XSD_INCLUDE_DIR XSD_EXECUTABLE )
 #
 # On return, FOO_SRCS will contain Foo.cxx.
 #
-MACRO( XSD_SCHEMA NAME FILE )
+MACRO( XSD_SCHEMA NAME FILE EXTRA_DEPS)
 
   #
   # Make a full path from the source directory
@@ -102,7 +102,8 @@ MACRO( XSD_SCHEMA NAME FILE )
   ADD_CUSTOM_COMMAND( OUTPUT "${xs_CXX}" "${xs_HXX}"
                       COMMAND ${XSD_EXECUTABLE}
                       ARGS "cxx-tree" "--output-dir" "${xs_OUT_DIR}" ${ARGN} ${xs_SRC}
-                      DEPENDS ${xs_SRC}
+                      MAIN_DEPENDENCY ${xs_SRC}
+                      DEPENDS ${EXTRA_DEPS}
                       WORKING_DIRECTORY ${xs_FILE_DIR}
                       COMMENT "Processing XML schema ${xs_FILE_REL}"
                       VERBATIM

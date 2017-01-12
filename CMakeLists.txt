@@ -65,7 +65,8 @@ list(APPEND NeuroML_INCLUDES "${XercesC_INCLUDE_DIRS}")
 find_package(XSD QUIET)
 if (XSD_FOUND)
     list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIRS}")
-    xsd_schema(NeuroML_SCHEMA_SRCS "${NeuroML_SCHEMA_PATH}"
+    file(GLOB _XSD_DEPS "src/schema/*.txt")
+    xsd_schema(NeuroML_SCHEMA_SRCS "${NeuroML_SCHEMA_PATH}" "${_XSD_DEPS}"
                --options-file "${PROJECT_SOURCE_DIR}/src/schema/XsdOptions.txt")
 else (XSD_FOUND)
     # Use pre-generated sources & CodeSynthesis headers shipped with the project
