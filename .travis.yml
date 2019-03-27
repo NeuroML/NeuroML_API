@@ -1,0 +1,17 @@
+language: cpp
+
+sudo: required
+
+dist: trusty
+
+compiler:
+    - gcc
+    
+install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -y -qq cmake
+    
+script: 
+    - ls -alt
+    - mkdir NeuroML_API_build
+    - cd NeuroML_API_build
