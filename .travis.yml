@@ -17,4 +17,8 @@ script:
     - cd NeuroML_API_build
     - cmake ..
     - make
+    - ctest
+    - ./create_net network.nml
+    - ./example network.nml
     - ls -alt
+    
