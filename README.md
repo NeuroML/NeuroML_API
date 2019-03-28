@@ -74,3 +74,5 @@ repository.
 [XSD user manual]: http://www.codesynthesis.com/projects/xsd/documentation/cxx/tree/manual/
 [cpack documentation]: https://cmake.org/cmake/help/v3.5/manual/cpack.1.html
 [Xerces C++]: http://xerces.apache.org/xerces-c/
+
+[![Build Status](https://travis-ci.org/NeuroML/NeuroML_API.svg?branch=master)](https://travis-ci.org/NeuroML/NeuroML_API)
