@@ -2,7 +2,7 @@
 
 C++ API for NeuroML 2
 
-**Work in progress!** See https://github.com/NeuroML/NeuroML2/issues/102.
+**Work in progress, but usable.** See https://github.com/NeuroML/NeuroML2/issues/102.
 
 ## Using the API
 
