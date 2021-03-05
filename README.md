@@ -1,8 +1,14 @@
 # NeuroML API for C++
 
-C++ API for NeuroML 2
+C++ API for NeuroML 2.
 
-**Work in progress, but usable.** See https://github.com/NeuroML/NeuroML2/issues/102.
+[![Build Status](https://travis-ci.org/NeuroML/NeuroML_API.svg?branch=master)](https://travis-ci.org/NeuroML/NeuroML_API)
+[![GitHub](https://img.shields.io/github/license/NeuroML/NeuroML_API)](https://github.com/NeuroML/NeuroML_API/blob/master/License.txt)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/NeuroML/NeuroML_API)](https://github.com/NeuroML/NeuroML_API/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/NeuroML/NeuroML_API)](https://github.com/NeuroML/NeuroML_API/issues)
+[![GitHub Org's stars](https://img.shields.io/github/stars/NeuroML?style=social)](https://github.com/NeuroML)
+[![Twitter Follow](https://img.shields.io/twitter/follow/NeuroML?style=social)](https://twitter.com/NeuroML)
+
 
 ## Using the API
 
@@ -65,7 +71,7 @@ your system and findable by CMake. The build will search standard install
 locations, but you can also set the `XSD_ROOT` _environment_ variable to the
 root folder for the software (i.e. the folder containing `bin` and `libxsd`
 folders). You can also change the schema file to use by setting the variable
-`NeuroML_SCHEMA_PATH` in ccmake.
+`NeuroML_SCHEMA_PATH` in CMake.
 
 Once the bindings have been regenerated, you can run `make copy_wrappers`
 to copy the new versions back into the source tree, for committing to the
@@ -74,5 +80,3 @@ repository.
 [XSD user manual]: http://www.codesynthesis.com/projects/xsd/documentation/cxx/tree/manual/
 [cpack documentation]: https://cmake.org/cmake/help/v3.5/manual/cpack.1.html
 [Xerces C++]: http://xerces.apache.org/xerces-c/
-
-[![Build Status](https://travis-ci.org/NeuroML/NeuroML_API.svg?branch=master)](https://travis-ci.org/NeuroML/NeuroML_API)
