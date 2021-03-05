@@ -74,11 +74,6 @@ if (XSD_FOUND)
                               ${PROJECT_SOURCE_DIR}/src/schema
                       COMMENT "Copying new XSD wrappers to source tree"
                       VERBATIM)
-else (XSD_FOUND)
-    # Use pre-generated sources & CodeSynthesis headers shipped with the project
-    set(XSD_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/libxsd")
-    list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIR}" "${PROJECT_SOURCE_DIR}/src/schema")
-    set(NeuroML_SCHEMA_SRCS "${PROJECT_SOURCE_DIR}/src/schema/${NeuroML_SCHEMA_NAME}.cxx")
 endif (XSD_FOUND)
 
 # The main API library
