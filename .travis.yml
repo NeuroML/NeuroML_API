@@ -2,16 +2,16 @@ language: cpp
 
 sudo: required
 
-dist: trusty
+dist: xenial
 
 compiler:
     - gcc
-    
+
 install:
     - sudo apt-get update -qq
-    - sudo apt-get install -y -qq cmake libxerces-c-dev
-    
-script: 
+    - sudo apt-get install -y -qq cmake libxerces-c-dev xsdcxx
+
+script:
     - ls -alt
     - mkdir NeuroML_API_build
     - cd NeuroML_API_build
@@ -21,4 +21,3 @@ script:
     - ./create_net network.nml
     - ./example network.nml
     - ls -alt
-    
