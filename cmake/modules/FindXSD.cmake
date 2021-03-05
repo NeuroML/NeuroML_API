@@ -79,7 +79,7 @@ MACRO( XSD_SCHEMA NAME FILE EXTRA_DEPS)
   # destination file path sans any extension and then build paths to the
   # generated files.
   #
-  GET_FILENAME_COMPONENT( xs_FILE "${FILE}" NAME_WE )
+  GET_FILENAME_COMPONENT( xs_FILE "${FILE}" NAME_WLE )
   GET_FILENAME_COMPONENT( xs_FILE_DIR "${FILE}" DIRECTORY )
   file(RELATIVE_PATH xs_FILE_REL "${CMAKE_SOURCE_DIR}" "${FILE}" )
 #  set(xs_OUT_TMP "${CMAKE_BINARY_DIR}/${xs_FILE_REL}")

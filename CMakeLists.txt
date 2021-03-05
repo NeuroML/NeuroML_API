@@ -10,19 +10,19 @@ cmake_policy(SET CMP0042 NEW) # Mac OS @rpath
 cmake_policy(SET CMP0048 NEW) # VERSION option to project()
 
 # Note: the version number uses Semantic Versioning http://semver.org/
-project(NeuroML_API VERSION 0.1.0)
+project(NeuroML_API VERSION 2.1.0)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
 
 # Developer settable options
 ############################
 
 # Which schema to provide the API for
-set(NeuroML_SCHEMA_PATH "${PROJECT_SOURCE_DIR}/src/schema/NeuroML_v2beta4.xsd"
+set(NeuroML_SCHEMA_PATH "${PROJECT_SOURCE_DIR}/src/schema/NeuroML_v2.1.xsd"
     CACHE PATH
     "Path to the schema file to base the API on.")
 
 get_filename_component(NeuroML_SCHEMA_ABSPATH "${NeuroML_SCHEMA_PATH}" REALPATH)
-get_filename_component(NeuroML_SCHEMA_NAME "${NeuroML_SCHEMA_PATH}" NAME_WE)
+get_filename_component(NeuroML_SCHEMA_NAME "${NeuroML_SCHEMA_ABSPATH}" NAME_WLE)
 
 # Default to shared libs
 option(BUILD_SHARED_LIBS "Build NeuroML API as a shared library" ON)
@@ -62,7 +62,7 @@ find_package(XercesC REQUIRED)
 list(APPEND NeuroML_INCLUDES "${XercesC_INCLUDE_DIRS}")
 
 # Can we regenerate the schema wrapper?
-find_package(XSD QUIET)
+find_package(XSD)
 if (XSD_FOUND)
     list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIRS}")
     file(GLOB _XSD_DEPS "src/schema/*.txt")
