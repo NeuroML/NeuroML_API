@@ -12,7 +12,7 @@ C++ API for NeuroML 2.
 
 ## Using the API
 
-For more info on the generated C++ structure, see the [XSD user manual].
+For more info on the generated C++ structure, see the [XSD user manual](https://www.codesynthesis.com/products/xsd/).
 The sample programs in the test folder will also give you a reasonable
 idea of how things work.
 
@@ -42,23 +42,25 @@ The NeuroML API is built using CMake, and the process works best with
 'out of source' builds, where you build the API in a folder separate
 from the source tree. Having cloned the repository, we therefore suggest
 you create a separate 'NeuroML_API_build' folder adjacent to the source,
-change into it, and run
+change into it, and then run the build configuration commands:
 
 ```
+mkdir NeuroML_API_build
+cd NeuroML_API_build
 cmake ../NeuroML_API
 ```
 
-to configure the build. You may then run
+You may then run
 
 * `make` to build,
 * `make doc` to build the HTML documentation using Doxygen (in a `docs`
   subfolder of your build folder; only available if Doxygen installed),
 * `ctest` (or `make test`) to run tests,
 * `sudo make install` to install on your system, or
-* `cpack` to generate an installable package (see [cpack documentation]).
+* `cpack` to generate an installable package (see [cpack documentation](https://www.codesynthesis.com/products/xsd/)).
 
 The default CMake options should be appropriate for most cases. The only
-essential external dependency is [Xerces C++] which should be found
+essential external dependency is [Xerces C++](https://www.codesynthesis.com/products/xsd/) which should be found
 automatically if installed.
 
 You may wish to change the `CMAKE_INSTALL_PREFIX` to specify where the API
@@ -66,17 +68,24 @@ will be installed. The generated library will be placed in a `lib` subfolder,
 and all necessary headers in an `include/neuroml` subfolder.
 
 If you wish to regenerate the C++ bindings (because you have changed the
-XML Schema or xsdcxx options) you will need CodeSynthesis XSD installed on
+XML Schema or xsdcxx options) you will need [CodeSynthesis XSD](https://www.codesynthesis.com/products/xsd/) installed on
 your system and findable by CMake. The build will search standard install
 locations, but you can also set the `XSD_ROOT` _environment_ variable to the
 root folder for the software (i.e. the folder containing `bin` and `libxsd`
 folders). You can also change the schema file to use by setting the variable
 `NeuroML_SCHEMA_PATH` in CMake.
 
+On Ubuntu based systems, you can install xsd using `apt`:
+
+```
+sudo apt-get install xsdcxx
+```
+
+On Fedora and other RPM based distributions, you can install xsd using `dnf` or `yum`:
+
+```
+sudo dnf install xsd
+```
 Once the bindings have been regenerated, you can run `make copy_wrappers`
 to copy the new versions back into the source tree, for committing to the
 repository.
-
-[XSD user manual]: http://www.codesynthesis.com/projects/xsd/documentation/cxx/tree/manual/
-[cpack documentation]: https://cmake.org/cmake/help/v3.5/manual/cpack.1.html
-[Xerces C++]: http://xerces.apache.org/xerces-c/
