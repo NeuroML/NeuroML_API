@@ -1,0 +1,53 @@
+name: Publish documentation
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install deps
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install libxerces-c-dev xsdcxx cmake doxygen -qq
+        python -m pip install --upgrade pip
+        pip install ghp-import
+
+    - name: Create build folder for out-of-source build
+      shell: bash
+      run: |
+        mkdir ${{github.workspace}}/NeuroML_API_build
+
+    - name: Configure CMake build
+      working-directory: ${{github.workspace}}/NeuroML_API_build
+      shell: bash
+      run: |
+        cmake $GITHUB_WORKSPACE
+
+    - name: Build
+      working-directory: ${{github.workspace}}/NeuroML_API_build
+      shell: bash
+      run: |
+        cmake --build .
+
+    - name: Generate doxygen documentation
+      shell: bash
+      working-directory: ${{github.workspace}}/NeuroML_API_build
+      run: |
+        doxygen Doxyfile
+
+    - name: Publish documentation on GH pages
+      working-directory: ${{github.workspace}}/NeuroML_API_build
+      run: |
+        ghp-import -n docs/html
