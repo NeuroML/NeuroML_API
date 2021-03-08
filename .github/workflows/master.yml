@@ -59,4 +59,4 @@ jobs:
     - name: Publish documentation on GH pages
       working-directory: ${{github.workspace}}/NeuroML_API_build
       run: |
-        ghp-import -m "Regenerate documentation" -b gh-pages -n -p docs/html
+        ghp-import -f -m "Regenerate documentation" -b gh-pages -n -p docs/html
