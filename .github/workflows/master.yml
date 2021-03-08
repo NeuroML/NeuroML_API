@@ -1,4 +1,4 @@
-name: Publish documentation
+name: Test master and publish docs
 
 on:
   push:
@@ -41,6 +41,15 @@ jobs:
       run: |
         cmake --build .
 
+    - name: Test
+      shell: bash
+      working-directory: ${{github.workspace}}/NeuroML_API_build
+      run: |
+        ctest
+        ./create_net network.nml
+        ./example network.nml
+        ls -alt
+
     - name: Generate doxygen documentation
       shell: bash
       working-directory: ${{github.workspace}}/NeuroML_API_build
@@ -50,4 +59,4 @@ jobs:
     - name: Publish documentation on GH pages
       working-directory: ${{github.workspace}}/NeuroML_API_build
       run: |
-        ghp-import -n docs/html
+        ghp-import -m "Regenerate documentation" -b gh-pages -n -p docs/html

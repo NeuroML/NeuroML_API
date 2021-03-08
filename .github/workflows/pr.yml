@@ -1,8 +1,6 @@
-name: Continuous builds
+name: CI on pull requests
 
 on:
-  push:
-    branches: [ master, development ]
   pull_request:
     branches: [ master, development ]
 
