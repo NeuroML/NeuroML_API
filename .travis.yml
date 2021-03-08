@@ -9,10 +9,13 @@ compiler:
 
 install:
     - sudo apt-get update -qq
-    - sudo apt-get install apt-transport-https ca-certificates gnupg software-properties-common wget
-    - wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
-    - sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ xenial main'
-    - sudo apt-get install -y -qq cmake libxerces-c-dev xsdcxx
+    - sudo apt-get install wget libxerces-c-dev xsdcxx -qq
+    - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
+    - mkdir ${DEPS_DIR} && pushd ${DEPS_DIR}
+    - travis_retry wget --no-check-certificate https://github.com/Kitware/CMake/releases/download/v3.19.6/cmake-3.19.6-Linux-x86_64.tar.gz
+    - tar -xvf cmake-3.19.6-Linux-x86_64.tar.gz > /dev/null
+    - export PATH="${DEPS_DIR}/cmake-3.19.6-Linux-x86_64/bin/:$PATH"
+    - popd ${TRAVIS_BUILD_DIR}
 
 script:
     - ls -alt
