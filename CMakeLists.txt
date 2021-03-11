@@ -52,7 +52,7 @@ configure_file(
     "${PROJECT_SOURCE_DIR}/src/neuroml.hxx.in"
     "${PROJECT_BINARY_DIR}/src/neuroml.hxx"
     )
- 
+
 # Add the binary tree to the search path for include files
 # so that we will find generated sources
 include_directories("${PROJECT_BINARY_DIR}/src")
@@ -61,10 +61,15 @@ include_directories("${PROJECT_BINARY_DIR}/src")
 find_package(XercesC REQUIRED)
 list(APPEND NeuroML_INCLUDES "${XercesC_INCLUDE_DIRS}")
 
-# Can we regenerate the schema wrapper?
-find_package(XSD)
-if (XSD_FOUND)
-    list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIRS}")
+# XSD
+find_package(XSD REQUIRED)
+list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIRS}")
+
+# Regenerate bindings?
+set (REGENERATE_BINDINGS OFF CACHE BOOL "Regenerate the C++ bindings. [default: OFF]")
+
+# Yes: and use newly generated copy
+if (REGENERATE_BINDINGS)
     file(GLOB _XSD_DEPS "src/schema/*.txt")
     xsd_schema(NeuroML_SCHEMA_SRCS "${NeuroML_SCHEMA_PATH}" "${_XSD_DEPS}"
                --options-file "${PROJECT_SOURCE_DIR}/src/schema/XsdOptions.txt")
@@ -74,7 +79,12 @@ if (XSD_FOUND)
                               ${PROJECT_SOURCE_DIR}/src/schema
                       COMMENT "Copying new XSD wrappers to source tree"
                       VERBATIM)
-endif (XSD_FOUND)
+else (REGENERATE_BINDINGS)
+    # No: use pre-generated bindings
+    # Will fail if bindings cannot be found in the src/schema directory
+    list(APPEND NeuroML_INCLUDES "${PROJECT_SOURCE_DIR}/src/schema")
+    set(NeuroML_SCHEMA_SRCS "${PROJECT_SOURCE_DIR}/src/schema/${NeuroML_SCHEMA_NAME}.cxx")
+endif (REGENERATE_BINDINGS)
 
 # The main API library
 add_library(neuroml ${NeuroML_SCHEMA_SRCS} src/NeuroML_custom.cxx)
