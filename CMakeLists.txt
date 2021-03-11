@@ -10,7 +10,11 @@ cmake_policy(SET CMP0042 NEW) # Mac OS @rpath
 cmake_policy(SET CMP0048 NEW) # VERSION option to project()
 
 # Note: the version number uses Semantic Versioning http://semver.org/
-project(NeuroML_API VERSION 2.1.0)
+project(NeuroML_API
+    VERSION 2.1.0
+    DESCRIPTION "C++ API for NeuroML 2"
+    HOMEPAGE_URL "https://github.com/NeuroML/NeuroML_API"
+    )
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
 
 # Developer settable options
