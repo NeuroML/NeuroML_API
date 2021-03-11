@@ -3,7 +3,7 @@
 #
 # CMake settings for building & installing the NeuroML2 C++ API
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.14)
 cmake_policy(SET CMP0022 NEW) # Link interfaces for export
 cmake_policy(SET CMP0028 NEW) # Strict use of :: in target names
 cmake_policy(SET CMP0042 NEW) # Mac OS @rpath
