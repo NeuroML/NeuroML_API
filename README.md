@@ -59,10 +59,10 @@ You may then run
   subfolder of your build folder; only available if Doxygen installed),
 * `ctest` (or `make test`) to run tests,
 * `sudo make install` to install on your system, or
-* `cpack` to generate an installable package (see [cpack documentation](https://www.codesynthesis.com/products/xsd/)).
+* `cpack` to generate an installable package (see [cpack documentation](https://cmake.org/cmake/help/latest/manual/cpack.1.html)).
 
 The default CMake options should be appropriate for most cases. The only
-essential external dependency is [Xerces C++](https://www.codesynthesis.com/products/xsd/) which should be found
+essential external dependency is [Xerces C++](http://xerces.apache.org/xerces-c/) which should be found
 automatically if installed.
 
 You may wish to change the `CMAKE_INSTALL_PREFIX` to specify where the API
