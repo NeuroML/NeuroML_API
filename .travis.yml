@@ -15,7 +15,7 @@ script:
     - ls -alt
     - mkdir NeuroML_API_build
     - cd NeuroML_API_build
-    - cmake ..
+    - cmake -DREGENERATE_BINDINGS=ON ..
     - make
     - ctest
     - ./create_net network.nml
