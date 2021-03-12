@@ -26,7 +26,7 @@ jobs:
       working-directory: ${{github.workspace}}/NeuroML_API_build
       shell: bash
       run: |
-        cmake $GITHUB_WORKSPACE
+        cmake $GITHUB_WORKSPACE -DREGENERATE_BINDINGS=ON
 
     - name: Build
       working-directory: ${{github.workspace}}/NeuroML_API_build

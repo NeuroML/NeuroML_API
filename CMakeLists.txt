@@ -3,26 +3,30 @@
 #
 # CMake settings for building & installing the NeuroML2 C++ API
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.14)
 cmake_policy(SET CMP0022 NEW) # Link interfaces for export
 cmake_policy(SET CMP0028 NEW) # Strict use of :: in target names
 cmake_policy(SET CMP0042 NEW) # Mac OS @rpath
 cmake_policy(SET CMP0048 NEW) # VERSION option to project()
 
 # Note: the version number uses Semantic Versioning http://semver.org/
-project(NeuroML_API VERSION 0.1.0)
+project(NeuroML_API
+    VERSION 2.1.0
+    DESCRIPTION "C++ API for NeuroML 2"
+    HOMEPAGE_URL "https://github.com/NeuroML/NeuroML_API"
+    )
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
 
 # Developer settable options
 ############################
 
 # Which schema to provide the API for
-set(NeuroML_SCHEMA_PATH "${PROJECT_SOURCE_DIR}/src/schema/NeuroML_v2beta4.xsd"
+set(NeuroML_SCHEMA_PATH "${PROJECT_SOURCE_DIR}/src/schema/NeuroML_v2.1.xsd"
     CACHE PATH
     "Path to the schema file to base the API on.")
 
 get_filename_component(NeuroML_SCHEMA_ABSPATH "${NeuroML_SCHEMA_PATH}" REALPATH)
-get_filename_component(NeuroML_SCHEMA_NAME "${NeuroML_SCHEMA_PATH}" NAME_WE)
+get_filename_component(NeuroML_SCHEMA_NAME "${NeuroML_SCHEMA_ABSPATH}" NAME_WLE)
 
 # Default to shared libs
 option(BUILD_SHARED_LIBS "Build NeuroML API as a shared library" ON)
@@ -52,7 +56,7 @@ configure_file(
     "${PROJECT_SOURCE_DIR}/src/neuroml.hxx.in"
     "${PROJECT_BINARY_DIR}/src/neuroml.hxx"
     )
- 
+
 # Add the binary tree to the search path for include files
 # so that we will find generated sources
 include_directories("${PROJECT_BINARY_DIR}/src")
@@ -61,10 +65,15 @@ include_directories("${PROJECT_BINARY_DIR}/src")
 find_package(XercesC REQUIRED)
 list(APPEND NeuroML_INCLUDES "${XercesC_INCLUDE_DIRS}")
 
-# Can we regenerate the schema wrapper?
-find_package(XSD QUIET)
-if (XSD_FOUND)
-    list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIRS}")
+# XSD
+find_package(XSD REQUIRED)
+list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIRS}")
+
+# Regenerate bindings?
+set (REGENERATE_BINDINGS OFF CACHE BOOL "Regenerate the C++ bindings. [default: OFF]")
+
+# Yes: and use newly generated copy
+if (REGENERATE_BINDINGS)
     file(GLOB _XSD_DEPS "src/schema/*.txt")
     xsd_schema(NeuroML_SCHEMA_SRCS "${NeuroML_SCHEMA_PATH}" "${_XSD_DEPS}"
                --options-file "${PROJECT_SOURCE_DIR}/src/schema/XsdOptions.txt")
@@ -74,12 +83,12 @@ if (XSD_FOUND)
                               ${PROJECT_SOURCE_DIR}/src/schema
                       COMMENT "Copying new XSD wrappers to source tree"
                       VERBATIM)
-else (XSD_FOUND)
-    # Use pre-generated sources & CodeSynthesis headers shipped with the project
-    set(XSD_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/libxsd")
-    list(APPEND NeuroML_INCLUDES "${XSD_INCLUDE_DIR}" "${PROJECT_SOURCE_DIR}/src/schema")
+else (REGENERATE_BINDINGS)
+    # No: use pre-generated bindings
+    # Will fail if bindings cannot be found in the src/schema directory
+    list(APPEND NeuroML_INCLUDES "${PROJECT_SOURCE_DIR}/src/schema")
     set(NeuroML_SCHEMA_SRCS "${PROJECT_SOURCE_DIR}/src/schema/${NeuroML_SCHEMA_NAME}.cxx")
-endif (XSD_FOUND)
+endif (REGENERATE_BINDINGS)
 
 # The main API library
 add_library(neuroml ${NeuroML_SCHEMA_SRCS} src/NeuroML_custom.cxx)
