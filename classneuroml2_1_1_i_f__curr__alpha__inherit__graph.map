@@ -1,0 +1,10 @@
+<map id="neuroml2::IF_curr_alpha" name="neuroml2::IF_curr_alpha">
+<area shape="rect" id="node1" title="Class corresponding to the IF_curr_alpha schema type." alt="" coords="18,528,197,555"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1base_py_n_n_ia_f_cell.html" title="Class corresponding to the basePyNNIaFCell schema type." alt="" coords="5,453,209,480"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1base_py_n_n_cell.html" title="Class corresponding to the basePyNNCell schema type." alt="" coords="15,379,199,405"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="33,304,182,331"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="25,229,190,256"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="45,155,169,181"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="14,80,201,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="36,5,179,32"/>
+</map>

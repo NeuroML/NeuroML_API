@@ -1,0 +1,7 @@
+<map id="neuroml2::NamedDimensionalType" name="neuroml2::NamedDimensionalType">
+<area shape="rect" id="node1" title="Class corresponding to the NamedDimensionalType schema type." alt="" coords="173,80,424,107"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_l_e_m_s___property.html" title="Class corresponding to the LEMS_Property schema type." alt="" coords="5,155,195,181"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_parameter.html" title="Class corresponding to the Parameter schema type." alt="" coords="219,155,378,181"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_requirement.html" title="Class corresponding to the Requirement schema type." alt="" coords="403,155,579,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="227,5,370,32"/>
+</map>

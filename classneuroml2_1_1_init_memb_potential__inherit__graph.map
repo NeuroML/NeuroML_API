@@ -1,0 +1,5 @@
+<map id="neuroml2::InitMembPotential" name="neuroml2::InitMembPotential">
+<area shape="rect" id="node1" title="Class corresponding to the InitMembPotential schema type." alt="" coords="5,169,217,196"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_value_across_seg_or_seg_group.html" title="Class corresponding to the ValueAcrossSegOrSegGroup schema type." alt="" coords="14,80,209,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="40,5,183,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="neuroml2::GateHHRatesTauInf" name="neuroml2::GateHHRatesTauInf">
+<area shape="rect" id="node1" title="Class corresponding to the GateHHRatesTauInf schema type." alt="" coords="5,229,224,256"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="53,155,177,181"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="21,80,208,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,5,186,32"/>
+</map>

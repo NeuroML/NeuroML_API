@@ -1,0 +1,10 @@
+<map id="neuroml2::BaseCellMembPotCap" name="neuroml2::BaseCellMembPotCap">
+<area shape="rect" id="node1" title="Class corresponding to the BaseCellMembPotCap schema type." alt="" coords="81,379,317,405"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_ad_ex_ia_f_cell.html" title="Class corresponding to the AdExIaFCell schema type." alt="" coords="5,453,176,480"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_izhikevich2007_cell.html" title="Class corresponding to the Izhikevich2007Cell schema type." alt="" coords="201,453,415,480"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="124,304,273,331"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="116,229,281,256"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="137,155,261,181"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="105,80,292,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="127,5,270,32"/>
+</map>

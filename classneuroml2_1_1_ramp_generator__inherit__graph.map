@@ -1,0 +1,7 @@
+<map id="neuroml2::RampGenerator" name="neuroml2::RampGenerator">
+<area shape="rect" id="node1" title="Class corresponding to the RampGenerator schema type." alt="" coords="5,304,200,331"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="20,229,185,256"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="41,155,165,181"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="9,80,196,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="31,5,174,32"/>
+</map>

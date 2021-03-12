@@ -1,0 +1,9 @@
+<map id="neuroml2::BaseProjection" name="neuroml2::BaseProjection">
+<area shape="rect" id="node1" title="Class corresponding to the BaseProjection schema type." alt="" coords="274,229,463,256"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_continuous_projection.html" title="Class corresponding to the ContinuousProjection schema type." alt="" coords="5,304,236,331"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_electrical_projection.html" title="Class corresponding to the ElectricalProjection schema type." alt="" coords="260,304,477,331"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_projection.html" title="Class corresponding to the Projection schema type." alt="" coords="502,304,659,331"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="307,155,431,181"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="275,80,462,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="297,5,440,32"/>
+</map>

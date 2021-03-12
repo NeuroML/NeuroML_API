@@ -1,0 +1,51 @@
+<map id="neuroml2::Base" name="neuroml2::Base">
+<area shape="rect" id="node1" title="Class corresponding to the Base schema type." alt="" coords="431,948,555,975"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_projection.html" title="Class corresponding to the BaseProjection schema type." alt="" coords="639,57,829,84"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_cell_set.html" title="Class corresponding to the CellSet schema type." alt="" coords="665,112,803,139"/>
+<area shape="rect" id="node9" href="$classneuroml2_1_1_channel_density.html" title="Class corresponding to the ChannelDensity schema type." alt="" coords="637,163,831,189"/>
+<area shape="rect" id="node11" href="$classneuroml2_1_1_channel_density_g_h_k.html" title="Class corresponding to the ChannelDensityGHK schema type." alt="" coords="622,213,846,240"/>
+<area shape="rect" id="node12" href="$classneuroml2_1_1_channel_density_g_h_k2.html" title="Class corresponding to the ChannelDensityGHK2 schema type." alt="" coords="618,264,850,291"/>
+<area shape="rect" id="node13" href="$classneuroml2_1_1_channel_density_nernst.html" title="Class corresponding to the ChannelDensityNernst schema type." alt="" coords="637,315,831,357"/>
+<area shape="rect" id="node15" href="$classneuroml2_1_1_channel_density_non_uniform.html" title="Class corresponding to the ChannelDensityNonUniform schema type." alt="" coords="637,381,831,422"/>
+<area shape="rect" id="node16" href="$classneuroml2_1_1_channel_density_non_uniform_g_h_k.html" title="Class corresponding to the ChannelDensityNonUniformGHK schema type." alt="" coords="637,446,831,487"/>
+<area shape="rect" id="node17" href="$classneuroml2_1_1_channel_density_non_uniform_nernst.html" title="Class corresponding to the ChannelDensityNonUniformNernst schema type." alt="" coords="637,511,831,553"/>
+<area shape="rect" id="node18" href="$classneuroml2_1_1_channel_population.html" title="Class corresponding to the ChannelPopulation schema type." alt="" coords="627,577,841,604"/>
+<area shape="rect" id="node19" href="$classneuroml2_1_1_closed_state.html" title="Class corresponding to the ClosedState schema type." alt="" coords="649,628,819,655"/>
+<area shape="rect" id="node20" href="$classneuroml2_1_1_extracellular_properties.html" title="Class corresponding to the ExtracellularProperties schema type." alt="" coords="614,679,854,705"/>
+<area shape="rect" id="node21" href="$classneuroml2_1_1_forward_transition.html" title="Class corresponding to the ForwardTransition schema type." alt="" coords="631,729,837,756"/>
+<area shape="rect" id="node22" href="$classneuroml2_1_1_gate_fractional.html" title="Class corresponding to the GateFractional schema type." alt="" coords="641,780,827,807"/>
+<area shape="rect" id="node23" href="$classneuroml2_1_1_gate_fractional_subgate.html" title="Class corresponding to the GateFractionalSubgate schema type." alt="" coords="641,831,827,873"/>
+<area shape="rect" id="node24" href="$classneuroml2_1_1_gate_h_h_instantaneous.html" title="Class corresponding to the GateHHInstantaneous schema type." alt="" coords="617,897,851,924"/>
+<area shape="rect" id="node25" href="$classneuroml2_1_1_gate_h_h_rates.html" title="Class corresponding to the GateHHRates schema type." alt="" coords="644,948,824,975"/>
+<area shape="rect" id="node26" href="$classneuroml2_1_1_gate_h_h_rates_inf.html" title="Class corresponding to the GateHHRatesInf schema type." alt="" coords="635,999,833,1025"/>
+<area shape="rect" id="node27" href="$classneuroml2_1_1_gate_h_h_rates_tau.html" title="Class corresponding to the GateHHRatesTau schema type." alt="" coords="633,1049,835,1076"/>
+<area shape="rect" id="node28" href="$classneuroml2_1_1_gate_h_h_rates_tau_inf.html" title="Class corresponding to the GateHHRatesTauInf schema type." alt="" coords="625,1100,843,1127"/>
+<area shape="rect" id="node29" href="$classneuroml2_1_1_gate_h_h_tau_inf.html" title="Class corresponding to the GateHHTauInf schema type." alt="" coords="643,1151,825,1177"/>
+<area shape="rect" id="node30" href="$classneuroml2_1_1_gate_h_h_undetermined.html" title="Class corresponding to the GateHHUndetermined schema type." alt="" coords="616,1201,852,1228"/>
+<area shape="rect" id="node31" href="$classneuroml2_1_1_gate_k_s.html" title="Class corresponding to the GateKS schema type." alt="" coords="664,1252,804,1279"/>
+<area shape="rect" id="node32" href="$classneuroml2_1_1_inhomogeneous_parameter.html" title="Class corresponding to the InhomogeneousParameter schema type." alt="" coords="603,1303,865,1329"/>
+<area shape="rect" id="node33" href="$classneuroml2_1_1_input_list.html" title="Class corresponding to the InputList schema type." alt="" coords="660,1353,808,1380"/>
+<area shape="rect" id="node34" href="$classneuroml2_1_1_open_state.html" title="Class corresponding to the OpenState schema type." alt="" coords="654,1404,814,1431"/>
+<area shape="rect" id="node35" href="$classneuroml2_1_1_reaction_scheme.html" title="Class corresponding to the ReactionScheme schema type." alt="" coords="633,1455,835,1481"/>
+<area shape="rect" id="node36" href="$classneuroml2_1_1_region.html" title="Class corresponding to the Region schema type." alt="" coords="665,1505,803,1532"/>
+<area shape="rect" id="node37" href="$classneuroml2_1_1_reverse_transition.html" title="Class corresponding to the ReverseTransition schema type." alt="" coords="630,1556,838,1583"/>
+<area shape="rect" id="node38" href="$classneuroml2_1_1_segment_group.html" title="Class corresponding to the SegmentGroup schema type." alt="" coords="639,1607,829,1633"/>
+<area shape="rect" id="node39" href="$classneuroml2_1_1_space.html" title="Class corresponding to the Space schema type." alt="" coords="669,1657,799,1684"/>
+<area shape="rect" id="node40" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="651,1708,817,1735"/>
+<area shape="rect" id="node49" href="$classneuroml2_1_1_tau_inf_transition.html" title="Class corresponding to the TauInfTransition schema type." alt="" coords="637,1759,831,1785"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="196,948,383,975"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,948,148,975"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_continuous_projection.html" title="Class corresponding to the ContinuousProjection schema type." alt="" coords="934,5,1165,32"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_electrical_projection.html" title="Class corresponding to the ElectricalProjection schema type." alt="" coords="941,56,1158,83"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_projection.html" title="Class corresponding to the Projection schema type." alt="" coords="971,107,1128,133"/>
+<area shape="rect" id="node10" href="$classneuroml2_1_1_channel_density_v_shift.html" title="Class corresponding to the ChannelDensityVShift schema type." alt="" coords="952,158,1147,199"/>
+<area shape="rect" id="node14" href="$classneuroml2_1_1_channel_density_nernst_ca2.html" title="Class corresponding to the ChannelDensityNernstCa2 schema type." alt="" coords="952,315,1147,357"/>
+<area shape="rect" id="node41" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="975,1519,1124,1545"/>
+<area shape="rect" id="node42" href="$classneuroml2_1_1_base_synapse.html" title="Class corresponding to the BaseSynapse schema type." alt="" coords="960,1569,1139,1596"/>
+<area shape="rect" id="node43" href="$classneuroml2_1_1_biophysical_properties.html" title="Class corresponding to the BiophysicalProperties schema type." alt="" coords="933,1620,1166,1647"/>
+<area shape="rect" id="node44" href="$classneuroml2_1_1_biophysical_properties2_ca_pools.html" title="Class corresponding to the BiophysicalProperties2CaPools schema type." alt="" coords="929,1671,1170,1713"/>
+<area shape="rect" id="node45" href="$classneuroml2_1_1_compound_input.html" title="Class corresponding to the CompoundInput schema type." alt="" coords="952,1737,1147,1764"/>
+<area shape="rect" id="node46" href="$classneuroml2_1_1_compound_input_d_l.html" title="Class corresponding to the CompoundInputDL schema type." alt="" coords="943,1788,1155,1815"/>
+<area shape="rect" id="node47" href="$classneuroml2_1_1_decaying_pool_concentration_model.html" title="Class corresponding to the DecayingPoolConcentrationModel schema type." alt="" coords="913,1839,1185,1881"/>
+<area shape="rect" id="node48" href="$classneuroml2_1_1_fixed_factor_concentration_model.html" title="Class corresponding to the FixedFactorConcentrationModel schema type." alt="" coords="921,1905,1177,1946"/>
+</map>

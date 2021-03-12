@@ -1,0 +1,5 @@
+<map id="neuroml2::SpecificCapacitance" name="neuroml2::SpecificCapacitance">
+<area shape="rect" id="node1" title="Class corresponding to the SpecificCapacitance schema type." alt="" coords="5,169,228,196"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_value_across_seg_or_seg_group.html" title="Class corresponding to the ValueAcrossSegOrSegGroup schema type." alt="" coords="19,80,214,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="45,5,188,32"/>
+</map>

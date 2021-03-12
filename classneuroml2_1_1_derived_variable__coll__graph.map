@@ -1,0 +1,5 @@
+<map id="neuroml2::DerivedVariable" name="neuroml2::DerivedVariable">
+<area shape="rect" id="node1" title="Class corresponding to the DerivedVariable schema type." alt="" coords="18,169,214,196"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_named_dimensional_variable.html" title="Class corresponding to the NamedDimensionalVariable schema type." alt="" coords="5,80,227,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="45,5,187,32"/>
+</map>
