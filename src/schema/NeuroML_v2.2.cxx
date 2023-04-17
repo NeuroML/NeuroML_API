@@ -39,7 +39,7 @@
 
 #include <xsd/cxx/pre.hxx>
 
-#include "NeuroML_v2.1.hxx"
+#include "NeuroML_v2.2.hxx"
 
 namespace neuroml2
 {
@@ -64,6 +64,10 @@ namespace neuroml2
 
 
   // Nml2Quantity_resistance
+  // 
+
+
+  // Nml2Quantity_resistivity
   // 
 
 
@@ -9683,114 +9687,236 @@ namespace neuroml2
   }
 
 
-  // ValueAcrossSegOrSegGroup
+  // SpikeThresh
   // 
 
-  const ValueAcrossSegOrSegGroup::value_optional& ValueAcrossSegOrSegGroup::
+  const SpikeThresh::value_type& SpikeThresh::
   value () const
   {
-    return this->value_;
+    return this->value_.get ();
   }
 
-  ValueAcrossSegOrSegGroup::value_optional& ValueAcrossSegOrSegGroup::
+  SpikeThresh::value_type& SpikeThresh::
   value ()
   {
-    return this->value_;
+    return this->value_.get ();
   }
 
-  void ValueAcrossSegOrSegGroup::
+  void SpikeThresh::
   value (const value_type& x)
   {
     this->value_.set (x);
   }
 
-  void ValueAcrossSegOrSegGroup::
-  value (const value_optional& x)
-  {
-    this->value_ = x;
-  }
-
-  void ValueAcrossSegOrSegGroup::
+  void SpikeThresh::
   value (::std::unique_ptr< value_type > x)
   {
     this->value_.set (std::move (x));
   }
 
-  const ValueAcrossSegOrSegGroup::segmentGroup_type& ValueAcrossSegOrSegGroup::
+  const SpikeThresh::segmentGroup_type& SpikeThresh::
   segmentGroup () const
   {
     return this->segmentGroup_.get ();
   }
 
-  ValueAcrossSegOrSegGroup::segmentGroup_type& ValueAcrossSegOrSegGroup::
+  SpikeThresh::segmentGroup_type& SpikeThresh::
   segmentGroup ()
   {
     return this->segmentGroup_.get ();
   }
 
-  void ValueAcrossSegOrSegGroup::
+  void SpikeThresh::
   segmentGroup (const segmentGroup_type& x)
   {
     this->segmentGroup_.set (x);
   }
 
-  void ValueAcrossSegOrSegGroup::
+  void SpikeThresh::
   segmentGroup (::std::unique_ptr< segmentGroup_type > x)
   {
     this->segmentGroup_.set (std::move (x));
   }
 
-  const ValueAcrossSegOrSegGroup::segmentGroup_type& ValueAcrossSegOrSegGroup::
+  const SpikeThresh::segmentGroup_type& SpikeThresh::
   segmentGroup_default_value ()
   {
     return segmentGroup_default_value_;
   }
 
-  const ValueAcrossSegOrSegGroup::segment_optional& ValueAcrossSegOrSegGroup::
-  segment () const
-  {
-    return this->segment_;
-  }
-
-  ValueAcrossSegOrSegGroup::segment_optional& ValueAcrossSegOrSegGroup::
-  segment ()
-  {
-    return this->segment_;
-  }
-
-  void ValueAcrossSegOrSegGroup::
-  segment (const segment_type& x)
-  {
-    this->segment_.set (x);
-  }
-
-  void ValueAcrossSegOrSegGroup::
-  segment (const segment_optional& x)
-  {
-    this->segment_ = x;
-  }
-
-  void ValueAcrossSegOrSegGroup::
-  segment (::std::unique_ptr< segment_type > x)
-  {
-    this->segment_.set (std::move (x));
-  }
-
-
-  // SpikeThresh
-  // 
-
 
   // SpecificCapacitance
   // 
+
+  const SpecificCapacitance::value_type& SpecificCapacitance::
+  value () const
+  {
+    return this->value_.get ();
+  }
+
+  SpecificCapacitance::value_type& SpecificCapacitance::
+  value ()
+  {
+    return this->value_.get ();
+  }
+
+  void SpecificCapacitance::
+  value (const value_type& x)
+  {
+    this->value_.set (x);
+  }
+
+  void SpecificCapacitance::
+  value (::std::unique_ptr< value_type > x)
+  {
+    this->value_.set (std::move (x));
+  }
+
+  const SpecificCapacitance::segmentGroup_type& SpecificCapacitance::
+  segmentGroup () const
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  SpecificCapacitance::segmentGroup_type& SpecificCapacitance::
+  segmentGroup ()
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  void SpecificCapacitance::
+  segmentGroup (const segmentGroup_type& x)
+  {
+    this->segmentGroup_.set (x);
+  }
+
+  void SpecificCapacitance::
+  segmentGroup (::std::unique_ptr< segmentGroup_type > x)
+  {
+    this->segmentGroup_.set (std::move (x));
+  }
+
+  const SpecificCapacitance::segmentGroup_type& SpecificCapacitance::
+  segmentGroup_default_value ()
+  {
+    return segmentGroup_default_value_;
+  }
 
 
   // InitMembPotential
   // 
 
+  const InitMembPotential::value_type& InitMembPotential::
+  value () const
+  {
+    return this->value_.get ();
+  }
+
+  InitMembPotential::value_type& InitMembPotential::
+  value ()
+  {
+    return this->value_.get ();
+  }
+
+  void InitMembPotential::
+  value (const value_type& x)
+  {
+    this->value_.set (x);
+  }
+
+  void InitMembPotential::
+  value (::std::unique_ptr< value_type > x)
+  {
+    this->value_.set (std::move (x));
+  }
+
+  const InitMembPotential::segmentGroup_type& InitMembPotential::
+  segmentGroup () const
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  InitMembPotential::segmentGroup_type& InitMembPotential::
+  segmentGroup ()
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  void InitMembPotential::
+  segmentGroup (const segmentGroup_type& x)
+  {
+    this->segmentGroup_.set (x);
+  }
+
+  void InitMembPotential::
+  segmentGroup (::std::unique_ptr< segmentGroup_type > x)
+  {
+    this->segmentGroup_.set (std::move (x));
+  }
+
+  const InitMembPotential::segmentGroup_type& InitMembPotential::
+  segmentGroup_default_value ()
+  {
+    return segmentGroup_default_value_;
+  }
+
 
   // Resistivity
   // 
+
+  const Resistivity::value_type& Resistivity::
+  value () const
+  {
+    return this->value_.get ();
+  }
+
+  Resistivity::value_type& Resistivity::
+  value ()
+  {
+    return this->value_.get ();
+  }
+
+  void Resistivity::
+  value (const value_type& x)
+  {
+    this->value_.set (x);
+  }
+
+  void Resistivity::
+  value (::std::unique_ptr< value_type > x)
+  {
+    this->value_.set (std::move (x));
+  }
+
+  const Resistivity::segmentGroup_type& Resistivity::
+  segmentGroup () const
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  Resistivity::segmentGroup_type& Resistivity::
+  segmentGroup ()
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  void Resistivity::
+  segmentGroup (const segmentGroup_type& x)
+  {
+    this->segmentGroup_.set (x);
+  }
+
+  void Resistivity::
+  segmentGroup (::std::unique_ptr< segmentGroup_type > x)
+  {
+    this->segmentGroup_.set (std::move (x));
+  }
+
+  const Resistivity::segmentGroup_type& Resistivity::
+  segmentGroup_default_value ()
+  {
+    return segmentGroup_default_value_;
+  }
 
 
   // ChannelPopulation
@@ -11120,6 +11246,36 @@ namespace neuroml2
   initialExtConcentration (::std::unique_ptr< initialExtConcentration_type > x)
   {
     this->initialExtConcentration_.set (std::move (x));
+  }
+
+  const Species::segmentGroup_type& Species::
+  segmentGroup () const
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  Species::segmentGroup_type& Species::
+  segmentGroup ()
+  {
+    return this->segmentGroup_.get ();
+  }
+
+  void Species::
+  segmentGroup (const segmentGroup_type& x)
+  {
+    this->segmentGroup_.set (x);
+  }
+
+  void Species::
+  segmentGroup (::std::unique_ptr< segmentGroup_type > x)
+  {
+    this->segmentGroup_.set (std::move (x));
+  }
+
+  const Species::segmentGroup_type& Species::
+  segmentGroup_default_value ()
+  {
+    return segmentGroup_default_value_;
   }
 
 
@@ -16363,6 +16519,78 @@ namespace neuroml2
 
   Nml2Quantity_resistance::
   ~Nml2Quantity_resistance ()
+  {
+  }
+
+  // Nml2Quantity_resistivity
+  //
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity ()
+  : ::xml_schema::string ()
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const char* _xsd_string_base)
+  : ::xml_schema::string (_xsd_string_base)
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const ::std::string& _xsd_string_base)
+  : ::xml_schema::string (_xsd_string_base)
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const ::xml_schema::string& _xsd_string_base)
+  : ::xml_schema::string (_xsd_string_base)
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const Nml2Quantity_resistivity& x,
+                            ::xml_schema::flags f,
+                            ::xml_schema::container* c)
+  : ::xml_schema::string (x, f, c)
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const ::xercesc::DOMElement& e,
+                            ::xml_schema::flags f,
+                            ::xml_schema::container* c)
+  : ::xml_schema::string (e, f, c)
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const ::xercesc::DOMAttr& a,
+                            ::xml_schema::flags f,
+                            ::xml_schema::container* c)
+  : ::xml_schema::string (a, f, c)
+  {
+  }
+
+  Nml2Quantity_resistivity::
+  Nml2Quantity_resistivity (const ::std::string& s,
+                            const ::xercesc::DOMElement* e,
+                            ::xml_schema::flags f,
+                            ::xml_schema::container* c)
+  : ::xml_schema::string (s, e, f, c)
+  {
+  }
+
+  Nml2Quantity_resistivity* Nml2Quantity_resistivity::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class Nml2Quantity_resistivity (*this, f, c);
+  }
+
+  Nml2Quantity_resistivity::
+  ~Nml2Quantity_resistivity ()
   {
   }
 
@@ -33696,40 +33924,37 @@ namespace neuroml2
     return !(x == y);
   }
 
-  // ValueAcrossSegOrSegGroup
+  // SpikeThresh
   //
 
-  const ValueAcrossSegOrSegGroup::segmentGroup_type ValueAcrossSegOrSegGroup::segmentGroup_default_value_ (
+  const SpikeThresh::segmentGroup_type SpikeThresh::segmentGroup_default_value_ (
     "all");
 
-  ValueAcrossSegOrSegGroup::
-  ValueAcrossSegOrSegGroup ()
+  SpikeThresh::
+  SpikeThresh (const value_type& value)
   : ::xml_schema::type (),
-    value_ (this),
-    segmentGroup_ (segmentGroup_default_value (), this),
-    segment_ (this)
+    value_ (value, this),
+    segmentGroup_ (segmentGroup_default_value (), this)
   {
   }
 
-  ValueAcrossSegOrSegGroup::
-  ValueAcrossSegOrSegGroup (const ValueAcrossSegOrSegGroup& x,
-                            ::xml_schema::flags f,
-                            ::xml_schema::container* c)
+  SpikeThresh::
+  SpikeThresh (const SpikeThresh& x,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
   : ::xml_schema::type (x, f, c),
     value_ (x.value_, f, this),
-    segmentGroup_ (x.segmentGroup_, f, this),
-    segment_ (x.segment_, f, this)
+    segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
 
-  ValueAcrossSegOrSegGroup::
-  ValueAcrossSegOrSegGroup (const ::xercesc::DOMElement& e,
-                            ::xml_schema::flags f,
-                            ::xml_schema::container* c)
+  SpikeThresh::
+  SpikeThresh (const ::xercesc::DOMElement& e,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
   : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
     value_ (this),
-    segmentGroup_ (this),
-    segment_ (this)
+    segmentGroup_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -33738,7 +33963,7 @@ namespace neuroml2
     }
   }
 
-  void ValueAcrossSegOrSegGroup::
+  void SpikeThresh::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
@@ -33759,90 +33984,19 @@ namespace neuroml2
         this->segmentGroup_.set (segmentGroup_traits::create (i, f, this));
         continue;
       }
+    }
 
-      if (n.name () == "segment" && n.namespace_ ().empty ())
-      {
-        this->segment_.set (segment_traits::create (i, f, this));
-        continue;
-      }
+    if (!value_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "value",
+        "");
     }
 
     if (!segmentGroup_.present ())
     {
       this->segmentGroup_.set (segmentGroup_default_value ());
     }
-  }
-
-  ValueAcrossSegOrSegGroup* ValueAcrossSegOrSegGroup::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
-  {
-    return new class ValueAcrossSegOrSegGroup (*this, f, c);
-  }
-
-  ValueAcrossSegOrSegGroup& ValueAcrossSegOrSegGroup::
-  operator= (const ValueAcrossSegOrSegGroup& x)
-  {
-    if (this != &x)
-    {
-      static_cast< ::xml_schema::type& > (*this) = x;
-      this->value_ = x.value_;
-      this->segmentGroup_ = x.segmentGroup_;
-      this->segment_ = x.segment_;
-    }
-
-    return *this;
-  }
-
-  ValueAcrossSegOrSegGroup::
-  ~ValueAcrossSegOrSegGroup ()
-  {
-  }
-
-  bool
-  operator== (const ValueAcrossSegOrSegGroup& x, const ValueAcrossSegOrSegGroup& y)
-  {
-    if (!(x.value () == y.value ()))
-      return false;
-
-    if (!(x.segmentGroup () == y.segmentGroup ()))
-      return false;
-
-    if (!(x.segment () == y.segment ()))
-      return false;
-
-    return true;
-  }
-
-  bool
-  operator!= (const ValueAcrossSegOrSegGroup& x, const ValueAcrossSegOrSegGroup& y)
-  {
-    return !(x == y);
-  }
-
-  // SpikeThresh
-  //
-
-  SpikeThresh::
-  SpikeThresh ()
-  : ::neuroml2::ValueAcrossSegOrSegGroup ()
-  {
-  }
-
-  SpikeThresh::
-  SpikeThresh (const SpikeThresh& x,
-               ::xml_schema::flags f,
-               ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (x, f, c)
-  {
-  }
-
-  SpikeThresh::
-  SpikeThresh (const ::xercesc::DOMElement& e,
-               ::xml_schema::flags f,
-               ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (e, f, c)
-  {
   }
 
   SpikeThresh* SpikeThresh::
@@ -33852,17 +34006,53 @@ namespace neuroml2
     return new class SpikeThresh (*this, f, c);
   }
 
+  SpikeThresh& SpikeThresh::
+  operator= (const SpikeThresh& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->value_ = x.value_;
+      this->segmentGroup_ = x.segmentGroup_;
+    }
+
+    return *this;
+  }
+
   SpikeThresh::
   ~SpikeThresh ()
   {
   }
 
+  bool
+  operator== (const SpikeThresh& x, const SpikeThresh& y)
+  {
+    if (!(x.value () == y.value ()))
+      return false;
+
+    if (!(x.segmentGroup () == y.segmentGroup ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const SpikeThresh& x, const SpikeThresh& y)
+  {
+    return !(x == y);
+  }
+
   // SpecificCapacitance
   //
 
+  const SpecificCapacitance::segmentGroup_type SpecificCapacitance::segmentGroup_default_value_ (
+    "all");
+
   SpecificCapacitance::
-  SpecificCapacitance ()
-  : ::neuroml2::ValueAcrossSegOrSegGroup ()
+  SpecificCapacitance (const value_type& value)
+  : ::xml_schema::type (),
+    value_ (value, this),
+    segmentGroup_ (segmentGroup_default_value (), this)
   {
   }
 
@@ -33870,7 +34060,9 @@ namespace neuroml2
   SpecificCapacitance (const SpecificCapacitance& x,
                        ::xml_schema::flags f,
                        ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (x, f, c)
+  : ::xml_schema::type (x, f, c),
+    value_ (x.value_, f, this),
+    segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
 
@@ -33878,8 +34070,51 @@ namespace neuroml2
   SpecificCapacitance (const ::xercesc::DOMElement& e,
                        ::xml_schema::flags f,
                        ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (e, f, c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    value_ (this),
+    segmentGroup_ (this)
   {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void SpecificCapacitance::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "value" && n.namespace_ ().empty ())
+      {
+        this->value_.set (value_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "segmentGroup" && n.namespace_ ().empty ())
+      {
+        this->segmentGroup_.set (segmentGroup_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!value_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "value",
+        "");
+    }
+
+    if (!segmentGroup_.present ())
+    {
+      this->segmentGroup_.set (segmentGroup_default_value ());
+    }
   }
 
   SpecificCapacitance* SpecificCapacitance::
@@ -33889,17 +34124,53 @@ namespace neuroml2
     return new class SpecificCapacitance (*this, f, c);
   }
 
+  SpecificCapacitance& SpecificCapacitance::
+  operator= (const SpecificCapacitance& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->value_ = x.value_;
+      this->segmentGroup_ = x.segmentGroup_;
+    }
+
+    return *this;
+  }
+
   SpecificCapacitance::
   ~SpecificCapacitance ()
   {
   }
 
+  bool
+  operator== (const SpecificCapacitance& x, const SpecificCapacitance& y)
+  {
+    if (!(x.value () == y.value ()))
+      return false;
+
+    if (!(x.segmentGroup () == y.segmentGroup ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const SpecificCapacitance& x, const SpecificCapacitance& y)
+  {
+    return !(x == y);
+  }
+
   // InitMembPotential
   //
 
+  const InitMembPotential::segmentGroup_type InitMembPotential::segmentGroup_default_value_ (
+    "all");
+
   InitMembPotential::
-  InitMembPotential ()
-  : ::neuroml2::ValueAcrossSegOrSegGroup ()
+  InitMembPotential (const value_type& value)
+  : ::xml_schema::type (),
+    value_ (value, this),
+    segmentGroup_ (segmentGroup_default_value (), this)
   {
   }
 
@@ -33907,7 +34178,9 @@ namespace neuroml2
   InitMembPotential (const InitMembPotential& x,
                      ::xml_schema::flags f,
                      ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (x, f, c)
+  : ::xml_schema::type (x, f, c),
+    value_ (x.value_, f, this),
+    segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
 
@@ -33915,8 +34188,51 @@ namespace neuroml2
   InitMembPotential (const ::xercesc::DOMElement& e,
                      ::xml_schema::flags f,
                      ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (e, f, c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    value_ (this),
+    segmentGroup_ (this)
   {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void InitMembPotential::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "value" && n.namespace_ ().empty ())
+      {
+        this->value_.set (value_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "segmentGroup" && n.namespace_ ().empty ())
+      {
+        this->segmentGroup_.set (segmentGroup_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!value_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "value",
+        "");
+    }
+
+    if (!segmentGroup_.present ())
+    {
+      this->segmentGroup_.set (segmentGroup_default_value ());
+    }
   }
 
   InitMembPotential* InitMembPotential::
@@ -33926,17 +34242,53 @@ namespace neuroml2
     return new class InitMembPotential (*this, f, c);
   }
 
+  InitMembPotential& InitMembPotential::
+  operator= (const InitMembPotential& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->value_ = x.value_;
+      this->segmentGroup_ = x.segmentGroup_;
+    }
+
+    return *this;
+  }
+
   InitMembPotential::
   ~InitMembPotential ()
   {
   }
 
+  bool
+  operator== (const InitMembPotential& x, const InitMembPotential& y)
+  {
+    if (!(x.value () == y.value ()))
+      return false;
+
+    if (!(x.segmentGroup () == y.segmentGroup ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const InitMembPotential& x, const InitMembPotential& y)
+  {
+    return !(x == y);
+  }
+
   // Resistivity
   //
 
+  const Resistivity::segmentGroup_type Resistivity::segmentGroup_default_value_ (
+    "all");
+
   Resistivity::
-  Resistivity ()
-  : ::neuroml2::ValueAcrossSegOrSegGroup ()
+  Resistivity (const value_type& value)
+  : ::xml_schema::type (),
+    value_ (value, this),
+    segmentGroup_ (segmentGroup_default_value (), this)
   {
   }
 
@@ -33944,7 +34296,9 @@ namespace neuroml2
   Resistivity (const Resistivity& x,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (x, f, c)
+  : ::xml_schema::type (x, f, c),
+    value_ (x.value_, f, this),
+    segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
 
@@ -33952,8 +34306,51 @@ namespace neuroml2
   Resistivity (const ::xercesc::DOMElement& e,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (e, f, c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    value_ (this),
+    segmentGroup_ (this)
   {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void Resistivity::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "value" && n.namespace_ ().empty ())
+      {
+        this->value_.set (value_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "segmentGroup" && n.namespace_ ().empty ())
+      {
+        this->segmentGroup_.set (segmentGroup_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!value_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "value",
+        "");
+    }
+
+    if (!segmentGroup_.present ())
+    {
+      this->segmentGroup_.set (segmentGroup_default_value ());
+    }
   }
 
   Resistivity* Resistivity::
@@ -33963,9 +34360,40 @@ namespace neuroml2
     return new class Resistivity (*this, f, c);
   }
 
+  Resistivity& Resistivity::
+  operator= (const Resistivity& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->value_ = x.value_;
+      this->segmentGroup_ = x.segmentGroup_;
+    }
+
+    return *this;
+  }
+
   Resistivity::
   ~Resistivity ()
   {
+  }
+
+  bool
+  operator== (const Resistivity& x, const Resistivity& y)
+  {
+    if (!(x.value () == y.value ()))
+      return false;
+
+    if (!(x.segmentGroup () == y.segmentGroup ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const Resistivity& x, const Resistivity& y)
+  {
+    return !(x == y);
   }
 
   // ChannelPopulation
@@ -35882,17 +36310,21 @@ namespace neuroml2
   // Species
   //
 
+  const Species::segmentGroup_type Species::segmentGroup_default_value_ (
+    "all");
+
   Species::
   Species (const id_type& id,
            const concentrationModel_type& concentrationModel,
            const initialConcentration_type& initialConcentration,
            const initialExtConcentration_type& initialExtConcentration)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (),
+  : ::xml_schema::type (),
     id_ (id, this),
     concentrationModel_ (concentrationModel, this),
     ion_ (this),
     initialConcentration_ (initialConcentration, this),
-    initialExtConcentration_ (initialExtConcentration, this)
+    initialExtConcentration_ (initialExtConcentration, this),
+    segmentGroup_ (segmentGroup_default_value (), this)
   {
   }
 
@@ -35900,12 +36332,13 @@ namespace neuroml2
   Species (const Species& x,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (x, f, c),
+  : ::xml_schema::type (x, f, c),
     id_ (x.id_, f, this),
     concentrationModel_ (x.concentrationModel_, f, this),
     ion_ (x.ion_, f, this),
     initialConcentration_ (x.initialConcentration_, f, this),
-    initialExtConcentration_ (x.initialExtConcentration_, f, this)
+    initialExtConcentration_ (x.initialExtConcentration_, f, this),
+    segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
 
@@ -35913,12 +36346,13 @@ namespace neuroml2
   Species (const ::xercesc::DOMElement& e,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::neuroml2::ValueAcrossSegOrSegGroup (e, f | ::xml_schema::flags::base, c),
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
     id_ (this),
     concentrationModel_ (this),
     ion_ (this),
     initialConcentration_ (this),
-    initialExtConcentration_ (this)
+    initialExtConcentration_ (this),
+    segmentGroup_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -35931,10 +36365,6 @@ namespace neuroml2
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
-    this->::neuroml2::ValueAcrossSegOrSegGroup::parse (p, f);
-
-    p.reset_attributes ();
-
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
@@ -35970,6 +36400,12 @@ namespace neuroml2
         this->initialExtConcentration_.set (initialExtConcentration_traits::create (i, f, this));
         continue;
       }
+
+      if (n.name () == "segmentGroup" && n.namespace_ ().empty ())
+      {
+        this->segmentGroup_.set (segmentGroup_traits::create (i, f, this));
+        continue;
+      }
     }
 
     if (!id_.present ())
@@ -35999,6 +36435,11 @@ namespace neuroml2
         "initialExtConcentration",
         "");
     }
+
+    if (!segmentGroup_.present ())
+    {
+      this->segmentGroup_.set (segmentGroup_default_value ());
+    }
   }
 
   Species* Species::
@@ -36013,12 +36454,13 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::neuroml2::ValueAcrossSegOrSegGroup& > (*this) = x;
+      static_cast< ::xml_schema::type& > (*this) = x;
       this->id_ = x.id_;
       this->concentrationModel_ = x.concentrationModel_;
       this->ion_ = x.ion_;
       this->initialConcentration_ = x.initialConcentration_;
       this->initialExtConcentration_ = x.initialExtConcentration_;
+      this->segmentGroup_ = x.segmentGroup_;
     }
 
     return *this;
@@ -36032,10 +36474,6 @@ namespace neuroml2
   bool
   operator== (const Species& x, const Species& y)
   {
-    if (!(static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (x) ==
-          static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (y)))
-      return false;
-
     if (!(x.id () == y.id ()))
       return false;
 
@@ -36049,6 +36487,9 @@ namespace neuroml2
       return false;
 
     if (!(x.initialExtConcentration () == y.initialExtConcentration ()))
+      return false;
+
+    if (!(x.segmentGroup () == y.segmentGroup ()))
       return false;
 
     return true;
@@ -45985,6 +46426,14 @@ namespace neuroml2
   }
 
   ::std::ostream&
+  operator<< (::std::ostream& o, const Nml2Quantity_resistivity& i)
+  {
+    o << static_cast< const ::xml_schema::string& > (i);
+
+    return o;
+  }
+
+  ::std::ostream&
   operator<< (::std::ostream& o, const Nml2Quantity_conductance& i)
   {
     o << static_cast< const ::xml_schema::string& > (i);
@@ -48349,51 +48798,34 @@ namespace neuroml2
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const ValueAcrossSegOrSegGroup& i)
-  {
-    if (i.value ())
-    {
-      o << ::std::endl << "value: " << *i.value ();
-    }
-
-    o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
-    if (i.segment ())
-    {
-      o << ::std::endl << "segment: " << *i.segment ();
-    }
-
-    return o;
-  }
-
-  ::std::ostream&
   operator<< (::std::ostream& o, const SpikeThresh& i)
   {
-    o << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
-
+    o << ::std::endl << "value: " << i.value ();
+    o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
   }
 
   ::std::ostream&
   operator<< (::std::ostream& o, const SpecificCapacitance& i)
   {
-    o << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
-
+    o << ::std::endl << "value: " << i.value ();
+    o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
   }
 
   ::std::ostream&
   operator<< (::std::ostream& o, const InitMembPotential& i)
   {
-    o << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
-
+    o << ::std::endl << "value: " << i.value ();
+    o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
   }
 
   ::std::ostream&
   operator<< (::std::ostream& o, const Resistivity& i)
   {
-    o << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
-
+    o << ::std::endl << "value: " << i.value ();
+    o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
   }
 
@@ -48610,8 +49042,6 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Species& i)
   {
-    o << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
-
     o << ::std::endl << "id: " << i.id ();
     o << ::std::endl << "concentrationModel: " << i.concentrationModel ();
     if (i.ion ())
@@ -48621,6 +49051,7 @@ namespace neuroml2
 
     o << ::std::endl << "initialConcentration: " << i.initialConcentration ();
     o << ::std::endl << "initialExtConcentration: " << i.initialExtConcentration ();
+    o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
   }
 
@@ -50128,6 +50559,25 @@ namespace neuroml2
   void
   operator<< (::xml_schema::list_stream& l,
               const Nml2Quantity_resistance& i)
+  {
+    l << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const Nml2Quantity_resistivity& i)
+  {
+    e << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMAttr& a, const Nml2Quantity_resistivity& i)
+  {
+    a << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xml_schema::list_stream& l,
+              const Nml2Quantity_resistivity& i)
   {
     l << static_cast< const ::xml_schema::string& > (i);
   }
@@ -56188,20 +56638,19 @@ namespace neuroml2
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const ValueAcrossSegOrSegGroup& i)
+  operator<< (::xercesc::DOMElement& e, const SpikeThresh& i)
   {
     e << static_cast< const ::xml_schema::type& > (i);
 
     // value
     //
-    if (i.value ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "value",
           e));
 
-      a << *i.value ();
+      a << i.value ();
     }
 
     // segmentGroup
@@ -56214,42 +56663,90 @@ namespace neuroml2
 
       a << i.segmentGroup ();
     }
-
-    // segment
-    //
-    if (i.segment ())
-    {
-      ::xercesc::DOMAttr& a (
-        ::xsd::cxx::xml::dom::create_attribute (
-          "segment",
-          e));
-
-      a << *i.segment ();
-    }
-  }
-
-  void
-  operator<< (::xercesc::DOMElement& e, const SpikeThresh& i)
-  {
-    e << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
   }
 
   void
   operator<< (::xercesc::DOMElement& e, const SpecificCapacitance& i)
   {
-    e << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // value
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "value",
+          e));
+
+      a << i.value ();
+    }
+
+    // segmentGroup
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "segmentGroup",
+          e));
+
+      a << i.segmentGroup ();
+    }
   }
 
   void
   operator<< (::xercesc::DOMElement& e, const InitMembPotential& i)
   {
-    e << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // value
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "value",
+          e));
+
+      a << i.value ();
+    }
+
+    // segmentGroup
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "segmentGroup",
+          e));
+
+      a << i.segmentGroup ();
+    }
   }
 
   void
   operator<< (::xercesc::DOMElement& e, const Resistivity& i)
   {
-    e << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // value
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "value",
+          e));
+
+      a << i.value ();
+    }
+
+    // segmentGroup
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "segmentGroup",
+          e));
+
+      a << i.segmentGroup ();
+    }
   }
 
   void
@@ -56867,7 +57364,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Species& i)
   {
-    e << static_cast< const ::neuroml2::ValueAcrossSegOrSegGroup& > (i);
+    e << static_cast< const ::xml_schema::type& > (i);
 
     // id
     //
@@ -56923,6 +57420,17 @@ namespace neuroml2
           e));
 
       a << i.initialExtConcentration ();
+    }
+
+    // segmentGroup
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "segmentGroup",
+          e));
+
+      a << i.segmentGroup ();
     }
   }
 
