@@ -33,11 +33,11 @@
 
 /**
  * @file
- * @brief Generated from NeuroML_v2.1.xsd.
+ * @brief Generated from NeuroML_v2.2.xsd.
  */
 
-#ifndef NEUROML_API_SCHEMA_NEURO_ML_V2_1_HXX
-#define NEUROML_API_SCHEMA_NEURO_ML_V2_1_HXX
+#ifndef NEUROML_API_SCHEMA_NEURO_ML_V2_2_HXX
+#define NEUROML_API_SCHEMA_NEURO_ML_V2_2_HXX
 
 #ifndef XSD_CXX11
 #define XSD_CXX11
@@ -119,7 +119,6 @@ namespace xml_schema
    * @brief C++ type corresponding to the anyType XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::type type;
 
   /**
    * @brief C++ type corresponding to the anySimpleType XML Schema
@@ -130,7 +129,6 @@ namespace xml_schema
   /**
    * @brief Alias for the anyType type.
    */
-  typedef ::xsd::cxx::tree::type container;
 
 
   // 8-bit
@@ -627,6 +625,7 @@ namespace neuroml2
   class Nml2Quantity_voltage;
   class Nml2Quantity_length;
   class Nml2Quantity_resistance;
+  class Nml2Quantity_resistivity;
   class Nml2Quantity_conductance;
   class Nml2Quantity_conductanceDensity;
   class Nml2Quantity_permeability;
@@ -755,7 +754,6 @@ namespace neuroml2
   class BiophysicalProperties2CaPools;
   class MembraneProperties;
   class MembraneProperties2CaPools;
-  class ValueAcrossSegOrSegGroup;
   class SpikeThresh;
   class SpecificCapacitance;
   class InitMembPotential;
@@ -1548,6 +1546,118 @@ namespace neuroml2
      */
     virtual 
     ~Nml2Quantity_resistance ();
+  };
+
+  /**
+   * @brief Class corresponding to the %Nml2Quantity_resistivity schema type.
+   *
+   * @nosubgrouping
+   */
+  class Nml2Quantity_resistivity: public ::xml_schema::string
+  {
+    public:
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from initializers for required 
+     * elements and attributes.
+     */
+    Nml2Quantity_resistivity ();
+
+    /**
+     * @brief Create an instance from a C string and initializers
+     * for required elements and attributes.
+     */
+    Nml2Quantity_resistivity (const char*);
+
+    /**
+     * @brief Create an instance from a string andinitializers
+     * for required elements and attributes.
+     */
+    Nml2Quantity_resistivity (const ::std::string&);
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    Nml2Quantity_resistivity (const ::xml_schema::string&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Nml2Quantity_resistivity (const ::xercesc::DOMElement& e,
+                              ::xml_schema::flags f = 0,
+                              ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a DOM attribute.
+     *
+     * @param a A DOM attribute to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Nml2Quantity_resistivity (const ::xercesc::DOMAttr& a,
+                              ::xml_schema::flags f = 0,
+                              ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a string fragment.
+     *
+     * @param s A string fragment to extract the data from.
+     * @param e A pointer to DOM element containing the string fragment.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Nml2Quantity_resistivity (const ::std::string& s,
+                              const ::xercesc::DOMElement* e,
+                              ::xml_schema::flags f = 0,
+                              ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Nml2Quantity_resistivity (const Nml2Quantity_resistivity& x,
+                              ::xml_schema::flags f = 0,
+                              ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual Nml2Quantity_resistivity*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~Nml2Quantity_resistivity ();
   };
 
   /**
@@ -3730,11 +3840,21 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Property schema type.
    *
-   * Generic property with a tag and value
+   * A property ( a **tag**  and **value**  pair ), which can be on any 
+   * **baseStandalone**  either as a direct child, or within an 
+   * **Annotation** . Generally something which helps the visual display or
+   * facilitates simulation of a Component, but is not a core physiological
+   * property. Common examples include: **numberInternalDivisions,** 
+   * equivalent of nseg in NEURON; **radius,**  for a radius to use in
+   * graphical displays for abstract cells ( i. e. without defined
+   * morphologies ); **color,**  the color to use for a  **Population**  or
+   * **populationList**  of cells; **recommended_dt_ms,**  the recommended
+   * timestep to use for simulating a  **Network** ,
+   * **recommended_duration_ms**  the recommended duration to use when
+   * running a  **Network**
    *
    * @nosubgrouping
    */
-  class Property: public ::xml_schema::type
   {
     public:
     /**
@@ -3951,11 +4071,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Annotation schema type.
    *
-   * Placeholder for MIRIAM related metadata, among others.
+   * A structured annotation containing metadata, specifically RDF or 
+   * **property**  elements
    *
    * @nosubgrouping
    */
-  class Annotation: public ::xml_schema::type
   {
     public:
     /**
@@ -4046,7 +4166,6 @@ namespace neuroml2
   ComponentType. *
    * @nosubgrouping
    */
-  class ComponentType: public ::xml_schema::type
   {
     public:
     /**
@@ -4816,7 +4935,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Constant: public ::xml_schema::type
   {
     public:
     /**
@@ -5174,7 +5292,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Exposure: public ::xml_schema::type
   {
     public:
     /**
@@ -5470,7 +5587,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class NamedDimensionalType: public ::xml_schema::type
   {
     public:
     /**
@@ -5766,7 +5882,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class NamedDimensionalVariable: public ::xml_schema::type
   {
     public:
     /**
@@ -6444,7 +6559,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class InstanceRequirement: public ::xml_schema::type
   {
     public:
     /**
@@ -6665,7 +6779,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Dynamics: public ::xml_schema::type
   {
     public:
     /**
@@ -7517,7 +7630,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Case: public ::xml_schema::type
   {
     public:
     /**
@@ -7753,7 +7865,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class TimeDerivative: public ::xml_schema::type
   {
     public:
     /**
@@ -8072,7 +8183,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class BaseWithoutId: public ::xml_schema::type
   {
     public:
     /**
@@ -13265,7 +13375,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class IncludeType: public ::xml_schema::type
   {
     public:
     /**
@@ -13587,7 +13696,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IonChannelKS schema type.
    *
-   * Kinetic scheme based ion channel.
+   * A kinetic scheme based ion channel with multiple  **gateKS** s, each
+   * of which consists of multiple  **KSState** s and  **KSTransition** s
+   * giving the rates of transition between them
+   * @param conductance 
    *
    * @nosubgrouping
    */
@@ -13908,10 +14020,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IonChannel schema type.
    *
-   * Note ionChannel and ionChannelHH are currently functionally identical.
-   * This is needed since many existing examples use ionChannel, some use
-   * ionChannelHH.
-   * NeuroML v2beta4 should remove one of these, probably ionChannelHH.
+   * Note  **ionChannel**  and  **ionChannelHH**  are currently
+   * functionally identical. This is needed since many existing examples
+   * use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove
+   * one of these, probably ionChannelHH.
+   * @param conductance 
    *
    * @nosubgrouping
    */
@@ -14764,10 +14877,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IonChannelHH schema type.
    *
-   * Note ionChannel and ionChannelHH are currently functionally identical.
-   * This is needed since many existing examples use ionChannel, some use
-   * ionChannelHH.
-   * NeuroML v2beta4 should remove one of these, probably ionChannelHH.
+   * Note  **ionChannel**  and  **ionChannelHH**  are currently
+   * functionally identical. This is needed since many existing examples
+   * use ionChannel, some use ionChannelHH. NeuroML v2beta4 should remove
+   * one of these, probably ionChannelHH.
+   * @param conductance 
    *
    * @nosubgrouping
    */
@@ -14837,9 +14951,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IonChannelVShift schema type.
    *
-   * Same as ionChannel, but with a vShift parameter to change voltage
-   * activation of gates. The exact usage of vShift in expressions for
-   * rates is determined by the individual gates.
+   * Same as  **ionChannel** , but with a **vShift**  parameter to change
+   * voltage activation of gates. The exact usage of **vShift**  in
+   * expressions for rates is determined by the individual gates.
+   * @param vShift 
+   * @param conductance 
    *
    * @nosubgrouping
    */
@@ -15146,9 +15262,15 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Q10ConductanceScaling schema type.
    *
+   * A value for the conductance scaling which varies as a standard
+   * function of the difference between the current temperature,
+   * **temperature,**  and the temperature at which the conductance was
+   * originally determined, **experimentalTemp**
+   * @param q10Factor 
+   * @param experimentalTemp 
+   *
    * @nosubgrouping
    */
-  class Q10ConductanceScaling: public ::xml_schema::type
   {
     public:
     /**
@@ -15516,6 +15638,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ClosedState schema type.
    *
+   * A  **KSState**  with **relativeConductance**  of 0
+   * @param relativeConductance 
+   *
    * @nosubgrouping
    */
   class ClosedState: public ::neuroml2::Base
@@ -15584,6 +15709,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %OpenState schema type.
    *
+   * A  **KSState**  with **relativeConductance**  of 1
+   * @param relativeConductance 
+   *
    * @nosubgrouping
    */
   class OpenState: public ::neuroml2::Base
@@ -15651,6 +15779,11 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ForwardTransition schema type.
+   *
+   * A forward only  **KSTransition**  for a  **gateKS**  which specifies a
+   * **rate**  ( type  **baseHHRate**  ) which follows one of the standard
+   * Hodgkin Huxley forms ( e. g.  **HHExpRate** ,  **HHSigmoidRate** , 
+   * **HHExpLinearRate**
    *
    * @nosubgrouping
    */
@@ -15872,6 +16005,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ReverseTransition schema type.
    *
+   * A reverse only  **KSTransition**  for a  **gateKS**  which specifies a
+   * **rate**  ( type  **baseHHRate**  ) which follows one of the standard
+   * Hodgkin Huxley forms ( e. g.  **HHExpRate** ,  **HHSigmoidRate** , 
+   * **HHExpLinearRate**
+   *
    * @nosubgrouping
    */
   class ReverseTransition: public ::neuroml2::Base
@@ -16091,6 +16229,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %TauInfTransition schema type.
+   *
+   * KS Transition specified in terms of time constant  **tau**  and steady
+   * state  **inf**
    *
    * @nosubgrouping
    */
@@ -16445,6 +16586,10 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %GateKS schema type.
+   *
+   * A gate which consists of multiple  **KSState** s and  **KSTransition**
+   * s giving the rates of transition between them
+   * @param instances 
    *
    * @nosubgrouping
    */
@@ -17836,6 +17981,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %GateHHRates schema type.
    *
+   * Gate which follows the general Hodgkin Huxley formalism
+   * @param instances 
+   *
    * @nosubgrouping
    */
   class GateHHRates: public ::neuroml2::Base
@@ -18283,6 +18431,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %GateHHTauInf schema type.
    *
+   * Gate which follows the general Hodgkin Huxley formalism
+   * @param instances 
+   *
    * @nosubgrouping
    */
   class GateHHTauInf: public ::neuroml2::Base
@@ -18729,6 +18880,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %GateHHRatesTauInf schema type.
+   *
+   * Gate which follows the general Hodgkin Huxley formalism
+   * @param instances 
    *
    * @nosubgrouping
    */
@@ -19299,6 +19453,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %GateHHRatesTau schema type.
    *
+   * Gate which follows the general Hodgkin Huxley formalism
+   * @param instances 
+   *
    * @nosubgrouping
    */
   class GateHHRatesTau: public ::neuroml2::Base
@@ -19806,6 +19963,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %GateHHRatesInf schema type.
+   *
+   * Gate which follows the general Hodgkin Huxley formalism
+   * @param instances 
    *
    * @nosubgrouping
    */
@@ -20315,6 +20475,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %GateHHInstantaneous schema type.
    *
+   * Gate which follows the general Hodgkin Huxley formalism but is
+   * instantaneous, so tau = 0 and gate follows exactly inf value
+   * @param instances 
+   *
    * @nosubgrouping
    */
   class GateHHInstantaneous: public ::neuroml2::Base
@@ -20623,6 +20787,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %GateFractional schema type.
+   *
+   * Gate composed of subgates contributing with fractional conductance
+   * @param instances 
    *
    * @nosubgrouping
    */
@@ -21452,7 +21619,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Q10Settings: public ::xml_schema::type
   {
     public:
     /**
@@ -21842,7 +22008,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class HHRate: public ::xml_schema::type
   {
     public:
     /**
@@ -22232,7 +22397,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class HHVariable: public ::xml_schema::type
   {
     public:
     /**
@@ -22611,7 +22775,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class HHTime: public ::xml_schema::type
   {
     public:
     /**
@@ -23076,6 +23239,15 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %DecayingPoolConcentrationModel schema type.
    *
+   * Model of an intracellular buffering mechanism for **ion**  ( currently
+   * hard Coded to be calcium, due to requirement for **iCa**  ) which has
+   * a baseline level **restingConc**  and tends to this value with time
+   * course **decayConstant.**  The ion is assumed to occupy a shell inside
+   * the membrane of thickness **shellThickness.**
+   * @param restingConc 
+   * @param decayConstant 
+   * @param shellThickness 
+   *
    * @nosubgrouping
    */
   class DecayingPoolConcentrationModel: public ::neuroml2::Standalone
@@ -23086,8 +23258,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Should not be required, as it's present on the species element!
      */
     //@{
 
@@ -23418,6 +23588,16 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %FixedFactorConcentrationModel schema type.
    *
+   * Model of buffering of concentration of an ion ( currently hard coded
+   * to be calcium, due to requirement for **iCa**  ) which has a baseline
+   * level **restingConc**  and tends to this value with time course
+   * **decayConstant.**  A fixed factor **rho**  is used to scale the
+   * incoming current *independently of the size of the compartment* to
+   * produce a concentration change.
+   * @param restingConc 
+   * @param decayConstant 
+   * @param rho 
+   *
    * @nosubgrouping
    */
   class FixedFactorConcentrationModel: public ::neuroml2::Standalone
@@ -23428,8 +23608,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Should not be required, as it's present on the species element!
      */
     //@{
 
@@ -23760,6 +23938,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BaseSynapse schema type.
    *
+   * Base type for all synapses, i. e. ComponentTypes which produce a
+   * current ( dimension current ) and change Dynamics in response to an
+   * incoming event. cno_0000009
+   *
    * @nosubgrouping
    */
   class BaseSynapse: public ::neuroml2::Standalone
@@ -23827,6 +24009,8 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %BaseVoltageDepSynapse schema type.
+   *
+   * Base type for synapses with a dependence on membrane potential
    *
    * @nosubgrouping
    */
@@ -23896,6 +24080,8 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BaseCurrentBasedSynapse schema type.
    *
+   * Synapse model which produces a synaptic current.
+   *
    * @nosubgrouping
    */
   class BaseCurrentBasedSynapse: public ::neuroml2::BaseSynapse
@@ -23963,6 +24149,12 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %BaseConductanceBasedSynapse schema type.
+   *
+   * Synapse model which exposes a conductance **g**  in addition to
+   * producing a current. Not necessarily ohmic!! cno_0000027
+   * @param gbase Baseline conductance, generally the maximum conductance
+   * following a single spike
+   * @param erev Reversal potential of the synapse
    *
    * @nosubgrouping
    */
@@ -24183,6 +24375,13 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %BaseConductanceBasedSynapseTwo schema type.
+   *
+   * Synapse model suited for a sum of two expTwoSynapses which exposes a
+   * conductance **g**  in addition to producing a current. Not necessarily
+   * ohmic!! cno_0000027
+   * @param gbase1 Baseline conductance 1
+   * @param gbase2 Baseline conductance 2
+   * @param erev Reversal potential of the synapse
    *
    * @nosubgrouping
    */
@@ -24464,6 +24663,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %GapJunction schema type.
    *
+   * Gap junction/single electrical connection
+   * @param conductance 
+   *
    * @nosubgrouping
    */
   class GapJunction: public ::neuroml2::BaseSynapse
@@ -24624,6 +24826,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %SilentSynapse schema type.
    *
+   * Dummy synapse which emits no current. Used as presynaptic endpoint for
+   * analog synaptic connection.
+   *
    * @nosubgrouping
    */
   class SilentSynapse: public ::neuroml2::BaseSynapse
@@ -24691,6 +24896,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %LinearGradedSynapse schema type.
+   *
+   * Behaves just like a one way gap junction.
+   * @param conductance 
    *
    * @nosubgrouping
    */
@@ -24851,6 +25059,14 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %GradedSynapse schema type.
+   *
+   * Graded/analog synapse. Based on synapse in Methods of http://www.
+   * nature.com/neuro/journal/v7/n12/abs/nn1352.html
+   * @param conductance 
+   * @param delta Slope of the activation curve
+   * @param k Rate constant for transmitter-receptor dissociation rate
+   * @param Vth The half-activation voltage of the synapse
+   * @param erev The reversal potential of the synapse
    *
    * @nosubgrouping
    */
@@ -25252,6 +25468,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %AlphaCurrentSynapse schema type.
    *
+   * Alpha current synapse: rise time and decay time are both **tau.**
+   * @param tau Time course for rise and decay
+   * @param ibase Baseline current increase after receiving a spike
+   *
    * @nosubgrouping
    */
   class AlphaCurrentSynapse: public ::neuroml2::BaseCurrentBasedSynapse
@@ -25472,6 +25692,14 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %AlphaSynapse schema type.
    *
+   * Ohmic synapse model where rise time and decay time are both **tau.** 
+   * Max conductance reached during this time ( assuming zero conductance
+   * before ) is **gbase**  * **weight.**
+   * @param tau Time course of rise/decay
+   * @param gbase Baseline conductance, generally the maximum conductance
+   * following a single spike
+   * @param erev Reversal potential of the synapse
+   *
    * @nosubgrouping
    */
   class AlphaSynapse: public ::neuroml2::BaseConductanceBasedSynapse
@@ -25634,6 +25862,14 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ExpOneSynapse schema type.
    *
+   * Ohmic synapse model whose conductance rises instantaneously by (
+   * **gbase**  * **weight**  ) on receiving an event, and which decays
+   * exponentially to zero with time course **tauDecay**
+   * @param tauDecay Time course of decay
+   * @param gbase Baseline conductance, generally the maximum conductance
+   * following a single spike
+   * @param erev Reversal potential of the synapse
+   *
    * @nosubgrouping
    */
   class ExpOneSynapse: public ::neuroml2::BaseConductanceBasedSynapse
@@ -25795,6 +26031,16 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ExpTwoSynapse schema type.
+   *
+   * Ohmic synapse model whose conductance waveform on receiving an event
+   * has a rise time of **tauRise**  and a decay time of **tauDecay.**  Max
+   * conductance reached during this time ( assuming zero conductance
+   * before ) is **gbase**  * **weight.**
+   * @param tauRise 
+   * @param tauDecay 
+   * @param gbase Baseline conductance, generally the maximum conductance
+   * following a single spike
+   * @param erev Reversal potential of the synapse
    *
    * @nosubgrouping
    */
@@ -26017,6 +26263,16 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ExpThreeSynapse schema type.
+   *
+   * Ohmic synapse similar to expTwoSynapse but consisting of two
+   * components that can differ in decay times and max conductances but
+   * share the same rise time.
+   * @param tauRise 
+   * @param tauDecay1 
+   * @param tauDecay2 
+   * @param gbase1 Baseline conductance 1
+   * @param gbase2 Baseline conductance 2
+   * @param erev Reversal potential of the synapse
    *
    * @nosubgrouping
    */
@@ -26300,6 +26556,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %DoubleSynapse schema type.
+   *
+   * Synapse consisting of two independent synaptic mechanisms ( e. g.
+   * AMPA-R and NMDA-R ), which can be easily colocated in connections
    *
    * @nosubgrouping
    */
@@ -26640,6 +26899,14 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %BlockingPlasticSynapse schema type.
+   *
+   * Biexponential synapse that allows for optional block and plasticity
+   * mechanisms, which can be expressed as child elements.
+   * @param tauRise 
+   * @param tauDecay 
+   * @param gbase Baseline conductance, generally the maximum conductance
+   * following a single spike
+   * @param erev Reversal potential of the synapse
    *
    * @nosubgrouping
    */
@@ -27045,7 +27312,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class BlockMechanism: public ::xml_schema::type
   {
     public:
     /**
@@ -27589,7 +27855,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class PlasticityMechanism: public ::xml_schema::type
   {
     public:
     /**
@@ -27943,6 +28208,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BaseCell schema type.
    *
+   * Base type of any cell ( e. g. point neuron like 
+   * **izhikevich2007Cell** , or a morphologically detailed  **Cell**  with
+   * **segment** s ) which can be used in a  **population**
+   *
    * @nosubgrouping
    */
   class BaseCell: public ::neuroml2::Standalone
@@ -28010,6 +28279,14 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %IafTauCell schema type.
+   *
+   * Integrate and fire cell which returns to its leak reversal potential
+   * of **leakReversal**  with a time constant **tau**
+   * @param leakReversal 
+   * @param tau 
+   * @param thresh The membrane potential at which to emit a spiking event
+   * and reset voltage
+   * @param reset The value the membrane potential is reset to on spiking
    *
    * @nosubgrouping
    */
@@ -28351,6 +28628,16 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IafTauRefCell schema type.
    *
+   * Integrate and fire cell which returns to its leak reversal potential
+   * of **leakReversal**  with a time course **tau.**  It has a refractory
+   * period of **refract**  after spiking
+   * @param refract 
+   * @param leakReversal 
+   * @param tau 
+   * @param thresh The membrane potential at which to emit a spiking event
+   * and reset voltage
+   * @param reset The value the membrane potential is reset to on spiking
+   *
    * @nosubgrouping
    */
   class IafTauRefCell: public ::neuroml2::IafTauCell
@@ -28514,6 +28801,14 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %IafCell schema type.
+   *
+   * Integrate and fire cell with capacitance **C,**  **leakConductance** 
+   * and **leakReversal**
+   * @param leakConductance 
+   * @param leakReversal 
+   * @param thresh 
+   * @param reset 
+   * @param C Total capacitance of the cell membrane
    *
    * @nosubgrouping
    */
@@ -28915,6 +29210,15 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IafRefCell schema type.
    *
+   * Integrate and fire cell with capacitance **C,**  **leakConductance,** 
+   * **leakReversal**  and refractory period **refract**
+   * @param refract 
+   * @param leakConductance 
+   * @param leakReversal 
+   * @param thresh 
+   * @param reset 
+   * @param C Total capacitance of the cell membrane
+   *
    * @nosubgrouping
    */
   class IafRefCell: public ::neuroml2::IafCell
@@ -29079,6 +29383,16 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %IzhikevichCell schema type.
+   *
+   * Cell based on the 2003 model of Izhikevich, see
+   * http://izhikevich.org/publications/spikes.htm
+   * @param v0 Initial membrane potential
+   * @param a Time scale of the recovery variable U
+   * @param b Sensitivity of U to the subthreshold fluctuations of the
+   * membrane potential V
+   * @param c After-spike reset value of V
+   * @param d After-spike increase to U
+   * @param thresh Spike threshold
    *
    * @nosubgrouping
    */
@@ -29540,6 +29854,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BaseCellMembPotCap schema type.
    *
+   * Any cell with a membrane potential **v**  with voltage units and a
+   * membrane capacitance **C.**  Also defines exposed value **iSyn**  for
+   * current due to external synapses and **iMemb**  for total
+   * transmembrane current ( usually channel currents plus **iSyn**  )
+   * @param C Total capacitance of the cell membrane
+   *
    * @nosubgrouping
    */
   class BaseCellMembPotCap: public ::neuroml2::BaseCell
@@ -29550,9 +29870,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %C
      * required attribute.
-     *
-     * This is to prevent it conflicting with attribute c (lowercase) e.g. in
-     * izhikevichCell2007
      */
     //@{
 
@@ -29702,6 +30019,19 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %Izhikevich2007Cell schema type.
+   *
+   * Cell based on the modified Izhikevich model in Izhikevich 2007,
+   * Dynamical systems in neuroscience, MIT Press
+   * @param v0 
+   * @param k 
+   * @param vr 
+   * @param vt 
+   * @param vpeak 
+   * @param a 
+   * @param b 
+   * @param c 
+   * @param d 
+   * @param C Total capacitance of the cell membrane
    *
    * @nosubgrouping
    */
@@ -30343,6 +30673,21 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %AdExIaFCell schema type.
+   *
+   * Model based on Brette R and Gerstner W ( 2005 ) Adaptive Exponential
+   * Integrate-and-Fire Model as an Effective Description of Neuronal
+   * Activity. J Neurophysiol 94:3637-3642
+   * @param gL 
+   * @param EL 
+   * @param VT 
+   * @param thresh 
+   * @param reset 
+   * @param delT 
+   * @param tauw 
+   * @param refract 
+   * @param a 
+   * @param b 
+   * @param C Total capacitance of the cell membrane
    *
    * @nosubgrouping
    */
@@ -31045,6 +31390,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %FitzHughNagumoCell schema type.
    *
+   * Simple dimensionless model of spiking cell from FitzHugh and Nagumo.
+   * Superseded by **fitzHughNagumo1969Cell**  ( See
+   * https://github.com/NeuroML/NeuroML2/issues/42 )
+   * @param I 
+   *
    * @nosubgrouping
    */
   class FitzHughNagumoCell: public ::neuroml2::BaseCell
@@ -31204,6 +31554,25 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %FitzHughNagumo1969Cell schema type.
+   *
+   * The Fitzhugh Nagumo model is a two-dimensional simplification of the
+   * Hodgkin-Huxley model of spike generation in squid giant axons. This
+   * system was suggested by FitzHugh ( FitzHugh R. [1961]: Impulses and
+   * physiological states in theoretical models of nerve membrane.
+   * Biophysical J. 1:445-466 ), who called it " Bonhoeffer-van der Pol
+   * model ", and the equivalent circuit by Nagumo et al. ( Nagumo J. ,
+   * Arimoto S. , and Yoshizawa S. [1962] An active pulse transmission line
+   * simulating nerve axon. Proc IRE. 50:2061-2070. 1962 ). This version
+   * corresponds to the one described in FitzHugh R. [1969]: Mathematical
+   * models of excitation and propagation in nerve. Chapter 1 ( pp. 1-85 in
+   * H. P. Schwan, ed. Biological Engineering, McGraw-Hill Book Co. , N. Y.
+   * )
+   * @param a 
+   * @param b 
+   * @param I plays the role of an external injected current
+   * @param phi 
+   * @param V0 
+   * @param W0 
    *
    * @nosubgrouping
    */
@@ -31664,6 +32033,30 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %PinskyRinzelCA3Cell schema type.
+   *
+   * Reduced CA3 cell model from Pinsky and Rinzel 1994. See
+   * https://github.com/OpenSourceBrain/PinskyRinzelModel
+   * @param iSoma 
+   * @param iDend 
+   * @param gLs 
+   * @param gLd 
+   * @param gNa 
+   * @param gKdr 
+   * @param gCa 
+   * @param gKahp 
+   * @param gKC 
+   * @param gc 
+   * @param eNa 
+   * @param eCa 
+   * @param eK 
+   * @param eL 
+   * @param pp 
+   * @param cm 
+   * @param alphac 
+   * @param betac 
+   * @param gNmda 
+   * @param gAmpa 
+   * @param qd0 
    *
    * @nosubgrouping
    */
@@ -33025,6 +33418,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Cell schema type.
    *
+   * Cell with  **segment** s specified in a  **morphology**  element along
+   * with details on its  **biophysicalProperties** . NOTE: this can only
+   * be correctly simulated using jLEMS when there is a single segment in
+   * the cell, and **v**  of this cell represents the membrane potential in
+   * that isopotential segment.
+   *
    * @nosubgrouping
    */
   class Cell: public ::neuroml2::BaseCell
@@ -33187,9 +33586,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %morphology
      * optional attribute.
-     *
-     * Should only be used if morphology element is outside the cell.
-     * This points to the id of the morphology
      */
     //@{
 
@@ -33266,10 +33662,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %biophysicalProperties
      * optional attribute.
-     *
-     * Should only be used if biophysicalProperties element is outside the
-     * cell.
-     * This points to the id of the biophysicalProperties
      */
     //@{
 
@@ -33439,6 +33831,13 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %Cell2CaPools schema type.
+   *
+   * Variant of cell with two independent Ca2+ pools. Cell with 
+   * **segment** s specified in a  **morphology**  element along with
+   * details on its  **biophysicalProperties** . NOTE: this can only be
+   * correctly simulated using jLEMS when there is a single segment in the
+   * cell, and **v**  of this cell represents the membrane potential in
+   * that isopotential segment.
    *
    * @nosubgrouping
    */
@@ -33617,9 +34016,8 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Morphology schema type.
    *
-   * Standalone element which is usually inside a single cell, but could be
-   * outside and
-   * referenced by id.
+   * The collection of  **segment** s which specify the 3D structure of the
+   * cell, along with a number of  **segmentGroup** s
    *
    * @nosubgrouping
    */
@@ -34012,6 +34410,23 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %Segment schema type.
+   *
+   * A segment defines the smallest unit within a possibly branching
+   * structure (  **morphology**  ), such as a dendrite or axon. Its **id**
+   * should be a nonnegative integer ( usually soma/root = 0 ). Its end
+   * points are given by the  **proximal**  and  **distal**  points. The 
+   * **proximal**  point can be omitted, usually because it is the same as
+   * a point on the  **parent**  segment, see  **proximal**  for details. 
+   * **parent**  specifies the parent segment. The first segment of a 
+   * **cell**  ( with no  **parent**  ) usually represents the soma. The
+   * shape is normally a cylinder ( radii of the  **proximal**  and 
+   * **distal**  equal, but positions different ) or a conical frustum (
+   * radii and positions different ). If the x, y, x positions of the 
+   * **proximal**  and  **distal**  are equal, the segment can be
+   * interpreted as a sphere, and in this case the radii of these points
+   * must be equal. NOTE: LEMS does not yet support multicompartmental
+   * modelling, so the Dynamics here is only appropriate for single
+   * compartment modelling.
    *
    * @nosubgrouping
    */
@@ -34417,7 +34832,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class SegmentParent: public ::xml_schema::type
   {
     public:
     /**
@@ -34641,11 +35055,24 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Point3DWithDiam schema type.
    *
-   * A 3D point with diameter.
+   * Base type for ComponentTypes which specify an ( **x,**  **y,**  **z** 
+   * ) coordinate along with a **diameter.**  Note: no dimension used in
+   * the attributes for these coordinates! These are assumed to have
+   * dimension micrometer ( 10^-6 m ). This is due to micrometers being the
+   * default option for the majority of neuronal morphology formats, and
+   * dimensions are omitted here to facilitate reading and writing of
+   * morphologies in NeuroML.
+   * @param x: x coordinate of the point. Note no dimension used, see
+   * description of  **point3DWithDiam**  for details.
+   * @param y: y coordinate of the ppoint. Note no dimension used, see
+   * description of  **point3DWithDiam**  for details.
+   * @param z: z coordinate of the ppoint. Note no dimension used, see
+   * description of  **point3DWithDiam**  for details.
+   * @param diameter: Diameter of the ppoint. Note no dimension used, see
+   * description of  **point3DWithDiam**  for details.
    *
    * @nosubgrouping
    */
-  class Point3DWithDiam: public ::xml_schema::type
   {
     public:
     /**
@@ -34948,6 +35375,19 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %SegmentGroup schema type.
+   *
+   * A method to describe a group of  **segment** s in a  **morphology** ,
+   * e. g. soma_group, dendrite_group, axon_group. While a name is useful
+   * to describe the group, the **neuroLexId**  attribute can be used to
+   * explicitly specify the meaning of the group, e. g. sao1044911821 for
+   * 'Neuronal Cell Body', sao1211023249 for 'Dendrite'. The  **segment** s
+   * in this group can be specified as: a list of individual  **member** 
+   * segments; a  **path** , all of the segments along which should be
+   * included; a  **subTree**  of the  **cell**  to include; other
+   * segmentGroups to  **include**  ( so all segments from those get
+   * included here ). An  **inhomogeneousParameter**  can be defined on the
+   * region of the cell specified by this group ( see 
+   * **variableParameter**  for usage ).
    *
    * @nosubgrouping
    */
@@ -35593,6 +36033,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %InhomogeneousParameter schema type.
    *
+   * An inhomogeneous parameter specified across the  **segmentGroup**  (
+   * see  **variableParameter**  for usage ).
+   *
    * @nosubgrouping
    */
   class InhomogeneousParameter: public ::neuroml2::Base
@@ -36115,7 +36558,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class ProximalDetails: public ::xml_schema::type
   {
     public:
     /**
@@ -36263,7 +36705,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class DistalDetails: public ::xml_schema::type
   {
     public:
     /**
@@ -36409,9 +36850,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Member schema type.
    *
+   * A single identified **segment**  which is part of the 
+  **segmentGroup** *
    * @nosubgrouping
    */
-  class Member: public ::xml_schema::type
   {
     public:
     /**
@@ -36568,9 +37010,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Include schema type.
    *
+   * Include all members of another  **segmentGroup**  in this group
+   *
    * @nosubgrouping
    */
-  class Include: public ::xml_schema::type
   {
     public:
     /**
@@ -36727,9 +37170,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Path schema type.
    *
+   * Include all the  **segment** s between those specified by  **from** 
+   * and  **to** , inclusive
+   *
    * @nosubgrouping
    */
-  class Path: public ::xml_schema::type
   {
     public:
     /**
@@ -36981,9 +37426,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %SubTree schema type.
    *
+   * Include all the  **segment** s distal to that specified by  **from** 
+   * in the  **segmentGroup**
+   *
    * @nosubgrouping
    */
-  class SubTree: public ::xml_schema::type
   {
     public:
     /**
@@ -37237,7 +37684,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class SegmentEndPoint: public ::xml_schema::type
   {
     public:
     /**
@@ -37394,9 +37840,8 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BiophysicalProperties schema type.
    *
-   * Standalone element which is usually inside a single cell, but could be
-   * outside and
-   * referenced by id.
+   * The biophysical properties of the  **cell** , including the 
+   * **membraneProperties**  and the  **intracellularProperties**
    *
    * @nosubgrouping
    */
@@ -37723,9 +38168,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BiophysicalProperties2CaPools schema type.
    *
-   * Standalone element which is usually inside a single cell, but could be
-   * outside and
-   * referenced by id.
+   * The biophysical properties of the  **cell** , including the 
+   * **membraneProperties2CaPools**  and the 
+   * **intracellularProperties2CaPools**  for a cell with two Ca pools
    *
    * @nosubgrouping
    */
@@ -38052,9 +38497,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %MembraneProperties schema type.
    *
+   * Properties specific to the membrane, such as the **populations**  of
+   * channels, **channelDensities,**  **specificCapacitance,**  etc.
+   *
    * @nosubgrouping
    */
-  class MembraneProperties: public ::xml_schema::type
   {
     public:
     /**
@@ -38932,6 +39379,8 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %MembraneProperties2CaPools schema type.
    *
+   * Variant of membraneProperties with 2 independent Ca pools
+   *
    * @nosubgrouping
    */
   class MembraneProperties2CaPools: public ::neuroml2::MembraneProperties
@@ -39095,30 +39544,30 @@ namespace neuroml2
 
 
   /**
-   * @brief Class corresponding to the %ValueAcrossSegOrSegGroup schema type.
+   * @brief Class corresponding to the %SpikeThresh schema type.
+   *
+   * Membrane potential at which to emit a spiking event. Note, usually the
+   * spiking event will not be emitted again until the membrane potential
+   * has fallen below this value and rises again to cross it in a positive
+   * direction
+   * @param value 
    *
    * @nosubgrouping
    */
-  class ValueAcrossSegOrSegGroup: public ::xml_schema::type
   {
     public:
     /**
      * @name value
      *
      * @brief Accessor and modifier functions for the %value
-     * optional attribute.
+     * required attribute.
      */
     //@{
 
     /**
      * @brief Attribute type.
      */
-    typedef ::neuroml2::Nml2Quantity value_type;
-
-    /**
-     * @brief Attribute optional container type.
-     */
-    typedef ::xsd::cxx::tree::optional< value_type > value_optional;
+    typedef ::neuroml2::Nml2Quantity_voltage value_type;
 
     /**
      * @brief Attribute traits type.
@@ -39126,20 +39575,19 @@ namespace neuroml2
     typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
 
     /**
-     * @brief Return a read-only (constant) reference to the attribute
-     * container.
+     * @brief Return a read-only (constant) reference to the attribute.
      *
-     * @return A constant reference to the optional container.
+     * @return A constant reference to the attribute.
      */
-    const value_optional&
+    const value_type&
     value () const;
 
     /**
-     * @brief Return a read-write reference to the attribute container.
+     * @brief Return a read-write reference to the attribute.
      *
-     * @return A reference to the optional container.
+     * @return A reference to the attribute.
      */
-    value_optional&
+    value_type&
     value ();
 
     /**
@@ -39154,24 +39602,12 @@ namespace neuroml2
     value (const value_type& x);
 
     /**
-     * @brief Set the attribute value.
-     *
-     * @param x An optional container with the new value to set.
-     *
-     * If the value is present in @a x then this function makes a copy 
-     * of this value and sets it as the new value of the attribute.
-     * Otherwise the attribute container is set the 'not present' state.
-     */
-    void
-    value (const value_optional& x);
-
-    /**
      * @brief Set the attribute value without copying.
      *
      * @param p A new value to use.
      *
-     * This function will try to use the passed value directly instead
-     * of making a copy.
+     * This function will try to use the passed value directly
+     * instead of making a copy.
      */
     void
     value (::std::unique_ptr< value_type > p);
@@ -39246,82 +39682,6 @@ namespace neuroml2
     //@}
 
     /**
-     * @name segment
-     *
-     * @brief Accessor and modifier functions for the %segment
-     * optional attribute.
-     */
-    //@{
-
-    /**
-     * @brief Attribute type.
-     */
-    typedef ::neuroml2::NmlId segment_type;
-
-    /**
-     * @brief Attribute optional container type.
-     */
-    typedef ::xsd::cxx::tree::optional< segment_type > segment_optional;
-
-    /**
-     * @brief Attribute traits type.
-     */
-    typedef ::xsd::cxx::tree::traits< segment_type, char > segment_traits;
-
-    /**
-     * @brief Return a read-only (constant) reference to the attribute
-     * container.
-     *
-     * @return A constant reference to the optional container.
-     */
-    const segment_optional&
-    segment () const;
-
-    /**
-     * @brief Return a read-write reference to the attribute container.
-     *
-     * @return A reference to the optional container.
-     */
-    segment_optional&
-    segment ();
-
-    /**
-     * @brief Set the attribute value.
-     *
-     * @param x A new value to set.
-     *
-     * This function makes a copy of its argument and sets it as
-     * the new value of the attribute.
-     */
-    void
-    segment (const segment_type& x);
-
-    /**
-     * @brief Set the attribute value.
-     *
-     * @param x An optional container with the new value to set.
-     *
-     * If the value is present in @a x then this function makes a copy 
-     * of this value and sets it as the new value of the attribute.
-     * Otherwise the attribute container is set the 'not present' state.
-     */
-    void
-    segment (const segment_optional& x);
-
-    /**
-     * @brief Set the attribute value without copying.
-     *
-     * @param p A new value to use.
-     *
-     * This function will try to use the passed value directly instead
-     * of making a copy.
-     */
-    void
-    segment (::std::unique_ptr< segment_type > p);
-
-    //@}
-
-    /**
      * @name Constructors
      */
     //@{
@@ -39330,114 +39690,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    ValueAcrossSegOrSegGroup ();
-
-    /**
-     * @brief Create an instance from a DOM element.
-     *
-     * @param e A DOM element to extract the data from.
-     * @param f Flags to create the new instance with.
-     * @param c A pointer to the object that will contain the new
-     * instance.
-     */
-    ValueAcrossSegOrSegGroup (const ::xercesc::DOMElement& e,
-                              ::xml_schema::flags f = 0,
-                              ::xml_schema::container* c = 0);
-
-    /**
-     * @brief Copy constructor.
-     *
-     * @param x An instance to make a copy of.
-     * @param f Flags to create the copy with.
-     * @param c A pointer to the object that will contain the copy.
-     *
-     * For polymorphic object models use the @c _clone function instead.
-     */
-    ValueAcrossSegOrSegGroup (const ValueAcrossSegOrSegGroup& x,
-                              ::xml_schema::flags f = 0,
-                              ::xml_schema::container* c = 0);
-
-    /**
-     * @brief Copy the instance polymorphically.
-     *
-     * @param f Flags to create the copy with.
-     * @param c A pointer to the object that will contain the copy.
-     * @return A pointer to the dynamically allocated copy.
-     *
-     * This function ensures that the dynamic type of the instance is
-     * used for copying and should be used for polymorphic object
-     * models instead of the copy constructor.
-     */
-    virtual ValueAcrossSegOrSegGroup*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
-
-    /**
-     * @brief Copy assignment operator.
-     *
-     * @param x An instance to make a copy of.
-     * @return A reference to itself.
-     *
-     * For polymorphic object models use the @c _clone function instead.
-     */
-    ValueAcrossSegOrSegGroup&
-    operator= (const ValueAcrossSegOrSegGroup& x);
-
-    //@}
-
-    /**
-     * @brief Destructor.
-     */
-    virtual 
-    ~ValueAcrossSegOrSegGroup ();
-
-    // Implementation.
-    //
-
-    //@cond
-
-    protected:
-    void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
-
-    protected:
-    value_optional value_;
-    ::xsd::cxx::tree::one< segmentGroup_type > segmentGroup_;
-    static const segmentGroup_type segmentGroup_default_value_;
-    segment_optional segment_;
-
-    //@endcond
-  };
-
-  bool
-  operator== (const ValueAcrossSegOrSegGroup&, const ValueAcrossSegOrSegGroup&);
-
-  bool
-  operator!= (const ValueAcrossSegOrSegGroup&, const ValueAcrossSegOrSegGroup&);
-
-
-  /**
-   * @brief Class corresponding to the %SpikeThresh schema type.
-   *
-   * Using a thin extension of ValueAcrossSegOrSegGroup to facilitate
-   * library generation (e.g. libNeuroML)
-   *
-   * @nosubgrouping
-   */
-  class SpikeThresh: public ::neuroml2::ValueAcrossSegOrSegGroup
-  {
-    public:
-    /**
-     * @name Constructors
-     */
-    //@{
-
-    /**
-     * @brief Create an instance from the ultimate base and
-     * initializers for required elements and attributes.
-     */
-    SpikeThresh ();
+    SpikeThresh (const value_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -39479,6 +39732,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    SpikeThresh&
+    operator= (const SpikeThresh& x);
+
     //@}
 
     /**
@@ -39486,19 +39750,167 @@ namespace neuroml2
      */
     virtual 
     ~SpikeThresh ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< value_type > value_;
+    ::xsd::cxx::tree::one< segmentGroup_type > segmentGroup_;
+    static const segmentGroup_type segmentGroup_default_value_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const SpikeThresh&, const SpikeThresh&);
+
+  bool
+  operator!= (const SpikeThresh&, const SpikeThresh&);
+
 
   /**
    * @brief Class corresponding to the %SpecificCapacitance schema type.
    *
-   * Using a thin extension of ValueAcrossSegOrSegGroup to facilitate
-   * library generation (e.g. libNeuroML)
+   * Capacitance per unit area
+   * @param value 
    *
    * @nosubgrouping
    */
-  class SpecificCapacitance: public ::neuroml2::ValueAcrossSegOrSegGroup
   {
     public:
+    /**
+     * @name value
+     *
+     * @brief Accessor and modifier functions for the %value
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_specificCapacitance value_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const value_type&
+    value () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    value_type&
+    value ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    value (const value_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    value (::std::unique_ptr< value_type > p);
+
+    //@}
+
+    /**
+     * @name segmentGroup
+     *
+     * @brief Accessor and modifier functions for the %segmentGroup
+     * optional attribute with a default value.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NmlId segmentGroup_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< segmentGroup_type, char > segmentGroup_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const segmentGroup_type&
+    segmentGroup () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    segmentGroup_type&
+    segmentGroup ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    segmentGroup (const segmentGroup_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    segmentGroup (::std::unique_ptr< segmentGroup_type > p);
+
+    /**
+     * @brief Return the default value for the attribute.
+     *
+     * @return A read-only (constant) reference to the attribute's
+     * default value.
+     */
+    static const segmentGroup_type&
+    segmentGroup_default_value ();
+
+    //@}
+
     /**
      * @name Constructors
      */
@@ -39508,7 +39920,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    SpecificCapacitance ();
+    SpecificCapacitance (const value_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -39550,6 +39962,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    SpecificCapacitance&
+    operator= (const SpecificCapacitance& x);
+
     //@}
 
     /**
@@ -39557,19 +39980,167 @@ namespace neuroml2
      */
     virtual 
     ~SpecificCapacitance ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< value_type > value_;
+    ::xsd::cxx::tree::one< segmentGroup_type > segmentGroup_;
+    static const segmentGroup_type segmentGroup_default_value_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const SpecificCapacitance&, const SpecificCapacitance&);
+
+  bool
+  operator!= (const SpecificCapacitance&, const SpecificCapacitance&);
+
 
   /**
    * @brief Class corresponding to the %InitMembPotential schema type.
    *
-   * Using a thin extension of ValueAcrossSegOrSegGroup to facilitate
-   * library generation (e.g. libNeuroML)
+   * Explicitly set initial membrane potential for the cell
+   * @param value 
    *
    * @nosubgrouping
    */
-  class InitMembPotential: public ::neuroml2::ValueAcrossSegOrSegGroup
   {
     public:
+    /**
+     * @name value
+     *
+     * @brief Accessor and modifier functions for the %value
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_voltage value_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const value_type&
+    value () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    value_type&
+    value ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    value (const value_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    value (::std::unique_ptr< value_type > p);
+
+    //@}
+
+    /**
+     * @name segmentGroup
+     *
+     * @brief Accessor and modifier functions for the %segmentGroup
+     * optional attribute with a default value.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NmlId segmentGroup_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< segmentGroup_type, char > segmentGroup_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const segmentGroup_type&
+    segmentGroup () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    segmentGroup_type&
+    segmentGroup ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    segmentGroup (const segmentGroup_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    segmentGroup (::std::unique_ptr< segmentGroup_type > p);
+
+    /**
+     * @brief Return the default value for the attribute.
+     *
+     * @return A read-only (constant) reference to the attribute's
+     * default value.
+     */
+    static const segmentGroup_type&
+    segmentGroup_default_value ();
+
+    //@}
+
     /**
      * @name Constructors
      */
@@ -39579,7 +40150,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    InitMembPotential ();
+    InitMembPotential (const value_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -39621,6 +40192,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    InitMembPotential&
+    operator= (const InitMembPotential& x);
+
     //@}
 
     /**
@@ -39628,19 +40210,167 @@ namespace neuroml2
      */
     virtual 
     ~InitMembPotential ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< value_type > value_;
+    ::xsd::cxx::tree::one< segmentGroup_type > segmentGroup_;
+    static const segmentGroup_type segmentGroup_default_value_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const InitMembPotential&, const InitMembPotential&);
+
+  bool
+  operator!= (const InitMembPotential&, const InitMembPotential&);
+
 
   /**
    * @brief Class corresponding to the %Resistivity schema type.
    *
-   * Using a thin extension of ValueAcrossSegOrSegGroup to facilitate
-   * library generation (e.g. libNeuroML)
+   * The resistivity, or specific axial resistance, of the cytoplasm
+   * @param value 
    *
    * @nosubgrouping
    */
-  class Resistivity: public ::neuroml2::ValueAcrossSegOrSegGroup
   {
     public:
+    /**
+     * @name value
+     *
+     * @brief Accessor and modifier functions for the %value
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_resistivity value_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const value_type&
+    value () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    value_type&
+    value ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    value (const value_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    value (::std::unique_ptr< value_type > p);
+
+    //@}
+
+    /**
+     * @name segmentGroup
+     *
+     * @brief Accessor and modifier functions for the %segmentGroup
+     * optional attribute with a default value.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NmlId segmentGroup_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< segmentGroup_type, char > segmentGroup_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const segmentGroup_type&
+    segmentGroup () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    segmentGroup_type&
+    segmentGroup ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    segmentGroup (const segmentGroup_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    segmentGroup (::std::unique_ptr< segmentGroup_type > p);
+
+    /**
+     * @brief Return the default value for the attribute.
+     *
+     * @return A read-only (constant) reference to the attribute's
+     * default value.
+     */
+    static const segmentGroup_type&
+    segmentGroup_default_value ();
+
+    //@}
+
     /**
      * @name Constructors
      */
@@ -39650,7 +40380,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    Resistivity ();
+    Resistivity (const value_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -39692,6 +40422,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Resistivity&
+    operator= (const Resistivity& x);
+
     //@}
 
     /**
@@ -39699,10 +40440,44 @@ namespace neuroml2
      */
     virtual 
     ~Resistivity ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< value_type > value_;
+    ::xsd::cxx::tree::one< segmentGroup_type > segmentGroup_;
+    static const segmentGroup_type segmentGroup_default_value_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const Resistivity&, const Resistivity&);
+
+  bool
+  operator!= (const Resistivity&, const Resistivity&);
+
 
   /**
    * @brief Class corresponding to the %ChannelPopulation schema type.
+   *
+   * Population of a **number**  of ohmic ion channels. These each produce
+   * a conductance **channelg**  across a reversal potential **erev,** 
+   * giving a total current **i.**  Note that active membrane currents are
+   * more frequently specified as a density over an area of the  **cell** 
+   * using  **channelDensity**
+   * @param number The number of channels present. This will be multiplied
+   * by the time varying conductance of the individual ion channel ( which
+   * extends  **baseIonChannel**  ) to produce the total conductance
+   * @param erev The reversal potential of the current produced
    *
    * @nosubgrouping
    */
@@ -40095,17 +40870,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -40265,6 +41029,15 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ChannelDensityNonUniform schema type.
+   *
+   * Specifies a time varying ohmic conductance density, which is
+   * distributed on a region of the **cell.**  The conductance density of
+   * the channel is not uniform, but is set using the 
+   * **variableParameter** . Note, there is no dynamical description of
+   * this in LEMS yet, as this type only makes sense for multicompartmental
+   * cells. A ComponentType for this needs to be present to enable export
+   * of NeuroML 2 multicompartmental cells via LEMS/jNeuroML to NEURON
+   * @param erev The reversal potential of the current produced
    *
    * @nosubgrouping
    */
@@ -40456,17 +41229,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -40622,6 +41384,15 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ChannelDensityNonUniformNernst schema type.
    *
+   * Specifies a time varying conductance density, which is distributed on
+   * a region of the **cell,**  and whose reversal potential is calculated
+   * from the Nernst equation. Hard coded for Ca only!. The conductance
+   * density of the channel is not uniform, but is set using the 
+   * **variableParameter** . Note, there is no dynamical description of
+   * this in LEMS yet, as this type only makes sense for multicompartmental
+   * cells. A ComponentType for this needs to be present to enable export
+   * of NeuroML 2 multicompartmental cells via LEMS/jNeuroML to NEURON
+   *
    * @nosubgrouping
    */
   class ChannelDensityNonUniformNernst: public ::neuroml2::Base
@@ -40754,17 +41525,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -40918,6 +41678,16 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ChannelDensityNonUniformGHK schema type.
    *
+   * Specifies a time varying conductance density, which is distributed on
+   * a region of the **cell,**  and whose current is calculated from the
+   * Goldman-Hodgkin-Katz equation. Hard coded for Ca only!. The
+   * conductance density of the channel is not uniform, but is set using
+   * the  **variableParameter** . Note, there is no dynamical description
+   * of this in LEMS yet, as this type only makes sense for
+   * multicompartmental cells. A ComponentType for this needs to be present
+   * to enable export of NeuroML 2 multicompartmental cells via
+   * LEMS/jNeuroML to NEURON
+   *
    * @nosubgrouping
    */
   class ChannelDensityNonUniformGHK: public ::neuroml2::Base
@@ -41050,17 +41820,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -41213,6 +41972,13 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ChannelDensity schema type.
+   *
+   * Specifies a time varying ohmic conductance density, **gDensity,** 
+   * which is distributed on an area of the **cell**  ( specified in 
+   * **membraneProperties**  ) with fixed reversal potential **erev** 
+   * producing a current density **iDensity**
+   * @param erev The reversal potential of the current produced
+   * @param condDensity 
    *
    * @nosubgrouping
    */
@@ -41623,17 +42389,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -41792,6 +42547,13 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ChannelDensityVShift schema type.
+   *
+   * Same as  **channelDensity** , but with a **vShift**  parameter to
+   * change voltage activation of gates. The exact usage of **vShift**  in
+   * expressions for rates is determined by the individual gates.
+   * @param vShift 
+   * @param erev The reversal potential of the current produced
+   * @param condDensity 
    *
    * @nosubgrouping
    */
@@ -41955,6 +42717,13 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ChannelDensityNernst schema type.
+   *
+   * Specifies a time varying conductance density, **gDensity,**  which is
+   * distributed on an area of the **cell,**  producing a current density
+   * **iDensity**  and whose reversal potential is calculated from the
+   * Nernst equation. Hard coded for Ca only! See
+   * https://github.com/OpenSourceBrain/ghk-nernst.
+   * @param condDensity 
    *
    * @nosubgrouping
    */
@@ -42307,17 +43076,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -42475,6 +43233,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ChannelDensityNernstCa2 schema type.
    *
+   * This component is similar to the original component type 
+   * **channelDensityNernst**  but it is changed in order to have a
+   * reversal potential that depends on a second independent Ca++ pool (
+   * ca2 ). See https://github.com/OpenSourceBrain/ghk-nernst.
+   * @param condDensity 
+   *
    * @nosubgrouping
    */
   class ChannelDensityNernstCa2: public ::neuroml2::ChannelDensityNernst
@@ -42544,6 +43308,13 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ChannelDensityGHK schema type.
+   *
+   * Specifies a time varying conductance density, **gDensity,**  which is
+   * distributed on an area of the cell, producing a current density
+   * **iDensity**  and whose reversal potential is calculated from the
+   * Goldman Hodgkin Katz equation. Hard coded for Ca only! See
+   * https://github.com/OpenSourceBrain/ghk-nernst.
+   * @param permeability 
    *
    * @nosubgrouping
    */
@@ -42814,17 +43585,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -42981,6 +43741,12 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ChannelDensityGHK2 schema type.
+   *
+   * Time varying conductance density, **gDensity,**  which is distributed
+   * on an area of the cell, producing a current density **iDensity.** 
+   * Modified version of Jaffe et al. 1994 ( used also in Lawrence et al.
+   * 2006 ). See https://github.com/OpenSourceBrain/ghk-nernst.
+   * @param condDensity 
    *
    * @nosubgrouping
    */
@@ -43269,17 +44035,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * required attribute.
-     *
-     * Specifying the ion here again is redundant, this will be set in
-     * ionChannel definition. It is added here
-     * TEMPORARILY since selecting all ca or na conducting channel
-     * populations/densities in a cell would be difficult otherwise.
-     * Also, it will make it easier to set the correct native simulator value
-     * for erev (e.g. ek for ion = k in NEURON).
-     * Currently a required attribute.
-     * It should be removed in the longer term, due to possible
-     * inconsistencies in this value and that in the ionChannel
-     * element. TODO: remove.
      */
     //@{
 
@@ -43436,9 +44191,23 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %VariableParameter schema type.
    *
+   * Specifies a **parameter**  ( e. g. condDensity ) which can vary its
+   * value across a **segmentGroup.**  The value is calculated from
+   * **value**  attribute of the  **inhomogeneousValue**  subelement. This
+   * element is normally a child of  **channelDensityNonUniform** , 
+   * **channelDensityNonUniformNernst**  or 
+   * **channelDensityNonUniformGHK**  and is used to calculate the value of
+   * the conductance, etc. which will vary on different parts of the cell.
+   * The **segmentGroup**  specified here needs to define an 
+   * **inhomogeneousParameter**  ( referenced from
+   * **inhomogeneousParameter**  in the  **inhomogeneousValue**  ), which
+   * calculates a **variable**  ( e. g. p ) varying across the cell ( e. g.
+   * based on the path length from soma ), which is then used in the
+   * **value**  attribute of the  **inhomogeneousValue**  ( so for example
+   * condDensity = f( p ) )
+   *
    * @nosubgrouping
    */
-  class VariableParameter: public ::xml_schema::type
   {
     public:
     /**
@@ -43732,9 +44501,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %InhomogeneousValue schema type.
    *
+   * Specifies the **value**  of an **inhomogeneousParameter.**  For usage
+   * see  **variableParameter**
+   *
    * @nosubgrouping
    */
-  class InhomogeneousValue: public ::xml_schema::type
   {
     public:
     /**
@@ -43951,9 +44722,14 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Species schema type.
    *
+   * Description of a chemical species identified by **ion,**  which has
+   * internal, **concentration,**  and external, **extConcentration** 
+   * values for its concentration
+   * @param initialConcentration 
+   * @param initialExtConcentration 
+   *
    * @nosubgrouping
    */
-  class Species: public ::neuroml2::ValueAcrossSegOrSegGroup
   {
     public:
     /**
@@ -44077,10 +44853,6 @@ namespace neuroml2
      *
      * @brief Accessor and modifier functions for the %ion
      * optional attribute.
-     *
-     * Specifying the ion here again is redundant, the ion name should be the
-     * same as id. Kept for now
-     * until LEMS implementation can select by id. TODO: remove.
      */
     //@{
 
@@ -44269,6 +45041,73 @@ namespace neuroml2
     //@}
 
     /**
+     * @name segmentGroup
+     *
+     * @brief Accessor and modifier functions for the %segmentGroup
+     * optional attribute with a default value.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NmlId segmentGroup_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< segmentGroup_type, char > segmentGroup_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const segmentGroup_type&
+    segmentGroup () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    segmentGroup_type&
+    segmentGroup ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    segmentGroup (const segmentGroup_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    segmentGroup (::std::unique_ptr< segmentGroup_type > p);
+
+    /**
+     * @brief Return the default value for the attribute.
+     *
+     * @return A read-only (constant) reference to the attribute's
+     * default value.
+     */
+    static const segmentGroup_type&
+    segmentGroup_default_value ();
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -44357,6 +45196,8 @@ namespace neuroml2
     ion_optional ion_;
     ::xsd::cxx::tree::one< initialConcentration_type > initialConcentration_;
     ::xsd::cxx::tree::one< initialExtConcentration_type > initialExtConcentration_;
+    ::xsd::cxx::tree::one< segmentGroup_type > segmentGroup_;
+    static const segmentGroup_type segmentGroup_default_value_;
 
     //@endcond
   };
@@ -44514,9 +45355,15 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IntracellularProperties schema type.
    *
+   * Biophysical properties related to the intracellular space within the 
+   * **cell** , such as the  **resistivity**  and the list of ionic 
+   * **species**  present. **caConc**  and **caConcExt**  are explicitly
+   * exposed here to facilitate accessing these values from other
+   * Components, even though **caConcExt**  is clearly not an intracellular
+   * property
+   *
    * @nosubgrouping
    */
-  class IntracellularProperties: public ::xml_schema::type
   {
     public:
     /**
@@ -44743,6 +45590,8 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %IntracellularProperties2CaPools schema type.
+   *
+   * Variant of intracellularProperties with 2 independent Ca pools
    *
    * @nosubgrouping
    */
@@ -44979,7 +45828,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class ExtracellularPropertiesLocal: public ::xml_schema::type
   {
     public:
     /**
@@ -45362,8 +46210,14 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %PulseGenerator schema type.
    *
-   * Generates a constant current pulse of a certain amplitude (with
-   * dimensions for current) for a specified duration after a delay.
+   * Generates a constant current pulse of a certain **amplitude**  for a
+   * specified **duration**  after a **delay.**  Scaled by **weight,**  if
+   * set
+   * @param delay Delay before change in current. Current is zero prior to
+   * this.
+   * @param duration Duration for holding current at amplitude. Current is
+   * zero after delay + duration.
+   * @param amplitude Amplitude of current pulse
    *
    * @nosubgrouping
    */
@@ -45645,8 +46499,14 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %PulseGeneratorDL schema type.
    *
-   * Generates a constant current pulse of a certain amplitude (non
-   * dimensional) for a specified duration after a delay.
+   * Dimensionless equivalent of  **pulseGenerator** . Generates a constant
+   * current pulse of a certain **amplitude**  for a specified **duration**
+   * after a **delay.**  Scaled by **weight,**  if set
+   * @param delay Delay before change in current. Current is zero prior to
+   * this.
+   * @param duration Duration for holding current at amplitude. Current is
+   * zero after delay + duration.
+   * @param amplitude Amplitude of current pulse
    *
    * @nosubgrouping
    */
@@ -45927,6 +46787,19 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %SineGenerator schema type.
+   *
+   * Generates a sinusoidally varying current after a time **delay,**  for
+   * a fixed **duration.**  The **period**  and maximum **amplitude**  of
+   * the current can be set as well as the **phase**  at which to start.
+   * Scaled by **weight,**  if set
+   * @param phase Phase ( between 0 and 2*pi ) at which to start the
+   * varying current ( i. e. at time given by delay )
+   * @param delay Delay before change in current. Current is zero prior to
+   * this.
+   * @param duration Duration for holding current at amplitude. Current is
+   * zero after delay + duration.
+   * @param amplitude Maximum amplitude of current
+   * @param period Time period of oscillation
    *
    * @nosubgrouping
    */
@@ -46328,6 +47201,20 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %SineGeneratorDL schema type.
    *
+   * Dimensionless equivalent of  **sineGenerator** . Generates a
+   * sinusoidally varying current after a time **delay,**  for a fixed
+   * **duration.**  The **period**  and maximum **amplitude**  of the
+   * current can be set as well as the **phase**  at which to start. Scaled
+   * by **weight,**  if set
+   * @param phase Phase ( between 0 and 2*pi ) at which to start the
+   * varying current ( i. e. at time given by delay )
+   * @param delay Delay before change in current. Current is zero prior to
+   * this.
+   * @param duration Duration for holding current at amplitude. Current is
+   * zero after delay + duration.
+   * @param amplitude Maximum amplitude of current
+   * @param period Time period of oscillation
+   *
    * @nosubgrouping
    */
   class SineGeneratorDL: public ::neuroml2::Standalone
@@ -46727,6 +47614,21 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %RampGenerator schema type.
+   *
+   * Generates a ramping current after a time **delay,**  for a fixed
+   * **duration.**  During this time the current steadily changes from
+   * **startAmplitude**  to **finishAmplitude.**  Scaled by **weight,**  if
+   * set
+   * @param delay Delay before change in current. Current is
+   * baselineAmplitude prior to this.
+   * @param duration Duration for holding current at amplitude. Current is
+   * baselineAmplitude after delay + duration.
+   * @param startAmplitude Amplitude of linearly varying current at time
+   * delay
+   * @param finishAmplitude Amplitude of linearly varying current at time
+   * delay + duration
+   * @param baselineAmplitude Amplitude of current before time delay, and
+   * after time delay + duration
    *
    * @nosubgrouping
    */
@@ -47128,6 +48030,22 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %RampGeneratorDL schema type.
    *
+   * Dimensionless equivalent of  **rampGenerator** . Generates a ramping
+   * current after a time **delay,**  for a fixed **duration.**  During
+   * this time the dimensionless current steadily changes from
+   * **startAmplitude**  to **finishAmplitude.**  Scaled by **weight,**  if
+   * set
+   * @param delay Delay before change in current. Current is
+   * baselineAmplitude prior to this.
+   * @param duration Duration for holding current at amplitude. Current is
+   * baselineAmplitude after delay + duration.
+   * @param startAmplitude Amplitude of linearly varying current at time
+   * delay
+   * @param finishAmplitude Amplitude of linearly varying current at time
+   * delay + duration
+   * @param baselineAmplitude Amplitude of current before time delay, and
+   * after time delay + duration
+   *
    * @nosubgrouping
    */
   class RampGeneratorDL: public ::neuroml2::Standalone
@@ -47528,6 +48446,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %CompoundInput schema type.
    *
+   * Generates a current which is the sum of all its child 
+   * **basePointCurrent**  element, e. g. can be a combination of 
+   * **pulseGenerator** ,  **sineGenerator**  elements producing a single
+   * **i.**  Scaled by **weight,**  if set
+   *
    * @nosubgrouping
    */
   class CompoundInput: public ::neuroml2::Standalone
@@ -47823,6 +48746,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %CompoundInputDL schema type.
    *
+   * Generates a current which is the sum of all its child 
+   * **basePointCurrentDL**  elements, e. g. can be a combination of 
+   * **pulseGeneratorDL** ,  **sineGeneratorDL**  elements producing a
+   * single **i.**  Scaled by **weight,**  if set
+   *
    * @nosubgrouping
    */
   class CompoundInputDL: public ::neuroml2::Standalone
@@ -48117,6 +49045,19 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %VoltageClamp schema type.
+   *
+   * Voltage clamp. Applies a variable current **i**  to try to keep parent
+   * at **targetVoltage.**  Not yet fully tested!!! Consider using
+   * voltageClampTriple!!
+   * @param delay Delay before change in current. Current is zero prior to
+   * this.
+   * @param duration Duration for attempting to keep parent at
+   * targetVoltage. Current is zero after delay + duration.
+   * @param targetVoltage Current will be applied to try to get parent to
+   * this target voltage
+   * @param simpleSeriesResistance Current will be calculated by the
+   * difference in voltage between the target and parent, divided by this
+   * value
    *
    * @nosubgrouping
    */
@@ -48457,6 +49398,24 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %VoltageClampTriple schema type.
+   *
+   * Voltage clamp with 3 clamp levels. Applies a variable current **i**  (
+   * through **simpleSeriesResistance**  ) to try to keep parent cell at
+   * **conditioningVoltage**  until time **delay,**  **testingVoltage** 
+   * until **delay**  + **duration,**  and **returnVoltage**  afterwards.
+   * Only enabled if **active**  = 1.
+   * @param active Whether the voltage clamp is active ( 1 ) or inactive (
+   * 0 ).
+   * @param delay Delay before switching from conditioningVoltage to
+   * testingVoltage.
+   * @param duration Duration to hold at testingVoltage.
+   * @param conditioningVoltage Target voltage before time delay
+   * @param testingVoltage Target voltage between times delay and delay +
+   * duration
+   * @param returnVoltage Target voltage after time duration
+   * @param simpleSeriesResistance Current will be calculated by the
+   * difference in voltage between the target and parent, divided by this
+   * value
    *
    * @nosubgrouping
    */
@@ -48978,6 +49937,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Spike schema type.
    *
+   * Emits a single spike at the specified **time**
+   * @param time Time at which to emit one spike event
+   *
    * @nosubgrouping
    */
   class Spike: public ::neuroml2::BaseNonNegativeIntegerId
@@ -49137,6 +50099,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %SpikeArray schema type.
+   *
+   * Set of spike ComponentTypes, each emitting one spike at a certain
+   * time. Can be used to feed a predetermined spike train into a cell
    *
    * @nosubgrouping
    */
@@ -49302,6 +50267,9 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %TimedSynapticInput schema type.
+   *
+   * Spike array connected to a single **synapse,**  producing a current
+   * triggered by each  **spike**  in the array.
    *
    * @nosubgrouping
    */
@@ -49588,6 +50556,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %SpikeGenerator schema type.
    *
+   * Simple generator of spikes at a regular interval set by **period**
+   * @param period Time between spikes. The first spike will be emitted
+   * after this time.
+   *
    * @nosubgrouping
    */
   class SpikeGenerator: public ::neuroml2::Standalone
@@ -49747,6 +50719,11 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %SpikeGeneratorRandom schema type.
+   *
+   * Generator of spikes with a random interspike interval of at least
+   * **minISI**  and at most **maxISI**
+   * @param maxISI Maximum interspike interval
+   * @param minISI Minimum interspike interval
    *
    * @nosubgrouping
    */
@@ -49968,6 +50945,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %SpikeGeneratorPoisson schema type.
    *
+   * Generator of spikes whose ISI is distributed according to an
+   * exponential PDF with scale: 1 / **averageRate**
+   * @param averageRate The average rate at which spikes are emitted
+   *
    * @nosubgrouping
    */
   class SpikeGeneratorPoisson: public ::neuroml2::Standalone
@@ -50127,6 +51108,12 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %SpikeGeneratorRefPoisson schema type.
+   *
+   * Generator of spikes whose ISI distribution is the maximum entropy
+   * distribution over [ **minimumISI,**  +infinity ) with mean: 1 /
+   * **averageRate**
+   * @param minimumISI The minimum interspike interval
+   * @param averageRate The average rate at which spikes are emitted
    *
    * @nosubgrouping
    */
@@ -50288,6 +51275,12 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %PoissonFiringSynapse schema type.
+   *
+   * Poisson spike generator firing at **averageRate,**  which is connected
+   * to single **synapse**  that is triggered every time a spike is
+   * generated, producing an input current. See also 
+   * **transientPoissonFiringSynapse** .
+   * @param averageRate The average rate at which spikes are emitted
    *
    * @nosubgrouping
    */
@@ -50568,6 +51561,14 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %TransientPoissonFiringSynapse schema type.
+   *
+   * Poisson spike generator firing at **averageRate**  after a **delay** 
+   * and for a **duration,**  connected to single **synapse**  that is
+   * triggered every time a spike is generated, providing an input current.
+   * Similar to ComponentType  **poissonFiringSynapse** .
+   * @param averageRate 
+   * @param delay 
+   * @param duration 
    *
    * @nosubgrouping
    */
@@ -50968,6 +51969,14 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %Network schema type.
+   *
+   * Network containing:  **population** s ( potentially of type 
+   * **populationList** , and so specifying a list of cell  **location** s
+   * );  **projection** s ( with lists of  **connection** s ) and/or 
+   * **explicitConnection** s; and  **inputList** s ( with lists of 
+   * **input** s ) and/or  **explicitInput** s. Note: often in NeuroML this
+   * will be of type  **networkWithTemperature**  if there are temperature
+   * dependent elements ( e. g. ion channels ).
    *
    * @nosubgrouping
    */
@@ -52339,7 +53348,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class SpaceStructure: public ::xml_schema::type
   {
     public:
     /**
@@ -52952,6 +53960,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Region schema type.
    *
+   * Initial attempt to specify 3D region for placing cells. Work in
+   * progress. . .
+   *
    * @nosubgrouping
    */
   class Region: public ::neuroml2::Base
@@ -53128,6 +54139,15 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %Population schema type.
+   *
+   * A population of components, with just one parameter for the **size,** 
+   * i. e. number of components to create. Note: quite often this is used
+   * with type= **populationList**  which means the size is determined by
+   * the number of  **instance** s ( with  **location** s ) in the list.
+   * The **size**  attribute is still set, and there will be a validation
+   * error if this does not match the number in the list.
+   * @param size Number of instances of this Component to create when the
+   * population is instantiated
    *
    * @nosubgrouping
    */
@@ -53809,7 +54829,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class Layout: public ::xml_schema::type
   {
     public:
     /**
@@ -54217,7 +55236,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class UnstructuredLayout: public ::xml_schema::type
   {
     public:
     /**
@@ -54383,7 +55401,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class RandomLayout: public ::xml_schema::type
   {
     public:
     /**
@@ -54626,7 +55643,6 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
-  class GridLayout: public ::xml_schema::type
   {
     public:
     /**
@@ -54922,9 +55938,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Instance schema type.
    *
+   * Specifies a single instance of a component in a  **population**  (
+   * placed at  **location**  ).
+   *
    * @nosubgrouping
    */
-  class Instance: public ::xml_schema::type
   {
     public:
     /**
@@ -55355,9 +56373,14 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Location schema type.
    *
+   * Specifies the ( x, y, z ) location of a single  **instance**  of a
+   * component in a  **population**
+   * @param x 
+   * @param y 
+   * @param z 
+   *
    * @nosubgrouping
    */
-  class Location: public ::xml_schema::type
   {
     public:
     /**
@@ -55761,13 +56784,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %SynapticConnection schema type.
    *
-   * Single explicit connection. Introduced to test connections in LEMS.
-   * Will probably be removed in favour of
-   * connections wrapped in projection element
+   * Explicit event connection between named components, which gets
+   * processed via a new instance of a **synapse**  component which is
+   * created on the target component
    *
    * @nosubgrouping
    */
-  class SynapticConnection: public ::xml_schema::type
   {
     public:
     /**
@@ -56344,8 +57366,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Projection schema type.
    *
-   * Projection (set of synaptic connections) between two populations.
-   * Chemical/event based synaptic transmission
+   * Projection from one population, **presynapticPopulation**  to another,
+   * **postsynapticPopulation,**  through **synapse.**  Contains lists of 
+   * **connection**  or  **connectionWD**  elements.
    *
    * @nosubgrouping
    */
@@ -56710,7 +57733,7 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BaseConnectionOldFormat schema type.
    *
-   * Base of all synaptic connections with preCellId, postSegmentId, etc. 
+   * Base of all synaptic connections with preCellId, postSegmentId, etc.
    * Note: this is not the best name for these attributes, since Id is
    * superfluous, hence BaseConnectionNewFormat
    *
@@ -57202,7 +58225,7 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BaseConnectionNewFormat schema type.
    *
-   * Base of all synaptic connections with preCell, postSegment, etc. 
+   * Base of all synaptic connections with preCell, postSegment, etc.
    * See BaseConnectionOldFormat
    *
    * @nosubgrouping
@@ -57693,8 +58716,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Connection schema type.
    *
-   * Individual chemical (event based) synaptic connection, weight==1 and
-   * no delay
+   * Event connection directly between named components, which gets
+   * processed via a new instance of a **synapse**  component which is
+   * created on the target component. Normally contained inside a 
+   * **projection**  element.
    *
    * @nosubgrouping
    */
@@ -57766,7 +58791,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ConnectionWD schema type.
    *
-   * Individual synaptic connection with weight and delay
+   * Event connection between named components, which gets processed via a
+   * new instance of a synapse component which is created on the target
+   * component, includes setting of **weight**  and **delay**  for the
+   * synaptic connection
+   * @param weight 
+   * @param delay 
    *
    * @nosubgrouping
    */
@@ -57979,8 +59009,8 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ElectricalProjection schema type.
    *
-   * Projection between two populations consisting of electrical
-   * connections (gap junctions)
+   * A projection between **presynapticPopulation**  to another
+   * **postsynapticPopulation**  through gap junctions.
    *
    * @nosubgrouping
    */
@@ -58279,7 +59309,7 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ElectricalConnection schema type.
    *
-   * Individual electrical synaptic connection
+   * To enable connections between populations through gap junctions.
    *
    * @nosubgrouping
    */
@@ -58443,8 +59473,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ElectricalConnectionInstance schema type.
    *
-   * Projection between two populations consisting of analog connections
-   * (e.g. graded synapses)
+   * To enable connections between populations through gap junctions.
+   * Populations need to be of type  **populationList**  and contain 
+   * **instance**  and  **location**  elements.
    *
    * @nosubgrouping
    */
@@ -58517,8 +59548,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ElectricalConnectionInstanceW schema type.
    *
-   * Projection between two populations consisting of analog connections
-   * (e.g. graded synapses). Includes setting of weight for the connection
+   * To enable connections between populations through gap junctions.
+   * Populations need to be of type  **populationList**  and contain 
+   * **instance**  and  **location**  elements. Includes setting of
+   * **weight**  for the connection
+   * @param weight 
    *
    * @nosubgrouping
    */
@@ -58672,8 +59706,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ContinuousProjection schema type.
    *
-   * Projection between two populations consisting of analog connections
-   * (e.g. graded synapses)
+   * A projection between **presynapticPopulation**  and
+   * **postsynapticPopulation**  through components **preComponent**  at
+   * the start and **postComponent**  at the end of a 
+   * **continuousConnection**  or  **continuousConnectionInstance** . Can
+   * be used for analog synapses.
    *
    * @nosubgrouping
    */
@@ -58972,7 +60009,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ContinuousConnection schema type.
    *
-   * Individual continuous/analog synaptic connection
+   * An instance of a connection in a  **continuousProjection**  between
+   * **presynapticPopulation**  to another **postsynapticPopulation** 
+   * through a **preComponent**  at the start and **postComponent**  at the
+   * end. Can be used for analog synapses.
    *
    * @nosubgrouping
    */
@@ -59196,7 +60236,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ContinuousConnectionInstance schema type.
    *
-   * Individual continuous/analog synaptic connection - instance based
+   * An instance of a connection in a  **continuousProjection**  between
+   * **presynapticPopulation**  to another **postsynapticPopulation** 
+   * through a **preComponent**  at the start and **postComponent**  at the
+   * end. Populations need to be of type  **populationList**  and contain 
+   * **instance**  and  **location**  elements. Can be used for analog
+   * synapses.
    *
    * @nosubgrouping
    */
@@ -59270,8 +60315,13 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ContinuousConnectionInstanceW schema type.
    *
-   * Individual continuous/analog synaptic connection - instance based.
-   * Includes setting of _weight for the connection
+   * An instance of a connection in a  **continuousProjection**  between
+   * **presynapticPopulation**  to another **postsynapticPopulation** 
+   * through a **preComponent**  at the start and **postComponent**  at the
+   * end. Populations need to be of type  **populationList**  and contain 
+   * **instance**  and  **location**  elements. Can be used for analog
+   * synapses. Includes setting of **weight**  for the connection
+   * @param weight 
    *
    * @nosubgrouping
    */
@@ -59426,13 +60476,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ExplicitInput schema type.
    *
-   * Single explicit input. Introduced to test inputs in LEMS. Will
-   * probably be removed in favour of
-   * inputs wrapped in inputList element
+   * An explicit input ( anything which extends  **basePointCurrent**  ) to
+   * a target cell in a population
    *
    * @nosubgrouping
    */
-  class ExplicitInput: public ::xml_schema::type
   {
     public:
     /**
@@ -59726,8 +60774,7 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %InputList schema type.
    *
-   * List of inputs to a population. Currents will be provided by the
-   * specified component.
+   * An explicit list of  **input** s to a **population.**
    *
    * @nosubgrouping
    */
@@ -60079,11 +61126,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %Input schema type.
    *
-   * Individual input to the cell specified by target
+   * Specifies a single input to a **target,**  optionally giving the
+   * **segmentId**  ( default 0 ) and **fractionAlong**  the segment (
+   * default 0. 5 ).
    *
    * @nosubgrouping
    */
-  class Input: public ::xml_schema::type
   {
     public:
     /**
@@ -60514,8 +61562,8 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %InputW schema type.
    *
-   * Individual input to the cell specified by target. Includes setting of
-   * _weight for the connection
+   * Specifies input lists. Can set **weight**  to scale individual inputs.
+   * @param weight 
    *
    * @nosubgrouping
    */
@@ -60667,6 +61715,21 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %basePyNNCell schema type.
+   *
+   * Base type of any PyNN standard cell model. Note: membrane potential
+   * **v**  has dimensions voltage, but all other parameters are
+   * dimensionless. This is to facilitate translation to and from PyNN
+   * scripts in Python, where these parameters have implicit units, see
+   * http://neuralensemble.org/trac/PyNN/wiki/StandardModels
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
    *
    * @nosubgrouping
    */
@@ -61012,6 +62075,22 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %basePyNNIaFCell schema type.
+   *
+   * Base type of any PyNN standard integrate and fire model
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
    *
    * @nosubgrouping
    */
@@ -61363,6 +62442,28 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %basePyNNIaFCondCell schema type.
    *
+   * Base type of conductance based PyNN IaF cell models
+   * @param e_rev_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param e_rev_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
+   *
    * @nosubgrouping
    */
   class basePyNNIaFCondCell: public ::neuroml2::basePyNNIaFCell
@@ -61571,6 +62672,23 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IF_curr_alpha schema type.
    *
+   * Leaky integrate and fire model with fixed threshold and
+   * alpha-function-shaped post-synaptic current
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
+   *
    * @nosubgrouping
    */
   class IF_curr_alpha: public ::neuroml2::basePyNNIaFCell
@@ -61649,6 +62767,23 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IF_curr_exp schema type.
    *
+   * Leaky integrate and fire model with fixed threshold and
+   * decaying-exponential post-synaptic current
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
+   *
    * @nosubgrouping
    */
   class IF_curr_exp: public ::neuroml2::basePyNNIaFCell
@@ -61726,6 +62861,29 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %IF_cond_alpha schema type.
+   *
+   * Leaky integrate and fire model with fixed threshold and
+   * alpha-function-shaped post-synaptic conductance
+   * @param e_rev_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param e_rev_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
    *
    * @nosubgrouping
    */
@@ -61807,6 +62965,29 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %IF_cond_exp schema type.
    *
+   * Leaky integrate and fire model with fixed threshold and
+   * exponentially-decaying post-synaptic conductance
+   * @param e_rev_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param e_rev_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
+   *
    * @nosubgrouping
    */
   class IF_cond_exp: public ::neuroml2::basePyNNIaFCondCell
@@ -61886,6 +63067,35 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %EIF_cond_exp_isfa_ista schema type.
+   *
+   * Adaptive exponential integrate and fire neuron according to Brette R
+   * and Gerstner W ( 2005 ) with exponentially-decaying post-synaptic
+   * conductance
+   * @param v_spike 
+   * @param delta_T 
+   * @param tau_w 
+   * @param a 
+   * @param b 
+   * @param e_rev_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param e_rev_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
    *
    * @nosubgrouping
    */
@@ -62244,6 +63454,35 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %EIF_cond_alpha_isfa_ista schema type.
    *
+   * Adaptive exponential integrate and fire neuron according to Brette R
+   * and Gerstner W ( 2005 ) with alpha-function-shaped post-synaptic
+   * conductance
+   * @param v_spike 
+   * @param delta_T 
+   * @param tau_w 
+   * @param a 
+   * @param b 
+   * @param e_rev_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param e_rev_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_refrac 
+   * @param v_thresh 
+   * @param tau_m 
+   * @param v_rest 
+   * @param v_reset 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
+   *
    * @nosubgrouping
    */
   class EIF_cond_alpha_isfa_ista: public ::neuroml2::EIF_cond_exp_isfa_ista
@@ -62328,6 +63567,28 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %HH_cond_exp schema type.
+   *
+   * Single-compartment Hodgkin-Huxley-type neuron with transient sodium
+   * and delayed-rectifier potassium currents using the ion channel models
+   * from Traub.
+   * @param gbar_K 
+   * @param gbar_Na 
+   * @param g_leak 
+   * @param e_rev_K 
+   * @param e_rev_Na 
+   * @param e_rev_leak 
+   * @param v_offset 
+   * @param e_rev_E 
+   * @param e_rev_I 
+   * @param cm 
+   * @param i_offset 
+   * @param tau_syn_E This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param tau_syn_I This parameter is never used in the NeuroML2
+   * description of this cell! Any synapse producing a current can be
+   * placed on this cell
+   * @param v_init 
    *
    * @nosubgrouping
    */
@@ -62875,6 +64136,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %BasePynnSynapse schema type.
    *
+   * Base type for all PyNN synapses. Note, the current **I**  produced is
+   * dimensionless, but it requires a membrane potential **v**  with
+   * dimension voltage
+   * @param tau_syn 
+   *
    * @nosubgrouping
    */
   class BasePynnSynapse: public ::neuroml2::BaseSynapse
@@ -63023,6 +64289,11 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %ExpCondSynapse schema type.
+   *
+   * Conductance based synapse with instantaneous rise and single
+   * exponential decay ( with time constant tau_syn )
+   * @param e_rev 
+   * @param tau_syn 
    *
    * @nosubgrouping
    */
@@ -63174,6 +64445,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %AlphaCondSynapse schema type.
    *
+   * Alpha synapse: rise time and decay time are both tau_syn. Conductance
+   * based synapse.
+   * @param e_rev 
+   * @param tau_syn 
+   *
    * @nosubgrouping
    */
   class AlphaCondSynapse: public ::neuroml2::BasePynnSynapse
@@ -63324,6 +64600,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ExpCurrSynapse schema type.
    *
+   * Current based synapse with instantaneous rise and single exponential
+   * decay ( with time constant tau_syn )
+   * @param tau_syn 
+   *
    * @nosubgrouping
    */
   class ExpCurrSynapse: public ::neuroml2::BasePynnSynapse
@@ -63393,6 +64673,10 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %AlphaCurrSynapse schema type.
    *
+   * Alpha synapse: rise time and decay time are both tau_syn. Current
+   * based synapse.
+   * @param tau_syn 
+   *
    * @nosubgrouping
    */
   class AlphaCurrSynapse: public ::neuroml2::BasePynnSynapse
@@ -63461,6 +64745,11 @@ namespace neuroml2
 
   /**
    * @brief Class corresponding to the %SpikeSourcePoisson schema type.
+   *
+   * Spike source, generating spikes according to a Poisson process.
+   * @param start 
+   * @param duration 
+   * @param rate 
    *
    * @nosubgrouping
    */
@@ -63760,6 +65049,9 @@ namespace neuroml2
 
   ::std::ostream&
   operator<< (::std::ostream&, const Nml2Quantity_resistance&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const Nml2Quantity_resistivity&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const Nml2Quantity_conductance&);
@@ -64150,9 +65442,6 @@ namespace neuroml2
 
   ::std::ostream&
   operator<< (::std::ostream&, const MembraneProperties2CaPools&);
-
-  ::std::ostream&
-  operator<< (::std::ostream&, const ValueAcrossSegOrSegGroup&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const SpikeThresh&);
@@ -64776,6 +66065,16 @@ namespace neuroml2
   void
   operator<< (::xml_schema::list_stream&,
               const Nml2Quantity_resistance&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const Nml2Quantity_resistivity&);
+
+  void
+  operator<< (::xercesc::DOMAttr&, const Nml2Quantity_resistivity&);
+
+  void
+  operator<< (::xml_schema::list_stream&,
+              const Nml2Quantity_resistivity&);
 
   void
   operator<< (::xercesc::DOMElement&, const Nml2Quantity_conductance&);
@@ -65496,9 +66795,6 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement&, const MembraneProperties2CaPools&);
 
   void
-  operator<< (::xercesc::DOMElement&, const ValueAcrossSegOrSegGroup&);
-
-  void
   operator<< (::xercesc::DOMElement&, const SpikeThresh&);
 
   void
@@ -65808,4 +67104,4 @@ namespace neuroml2
 //
 // End epilogue.
 
-#endif // NEUROML_API_SCHEMA_NEURO_ML_V2_1_HXX
+#endif // NEUROML_API_SCHEMA_NEURO_ML_V2_2_HXX
