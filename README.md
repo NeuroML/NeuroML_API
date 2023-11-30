@@ -2,7 +2,7 @@
 
 C++ API for NeuroML 2.
 
-[![Build Status](https://travis-ci.org/NeuroML/NeuroML_API.svg?branch=master)](https://travis-ci.org/NeuroML/NeuroML_API)
+[![Test master and publish docs](https://github.com/NeuroML/NeuroML_API/actions/workflows/master.yml/badge.svg)](https://github.com/NeuroML/NeuroML_API/actions/workflows/master.yml)
 [![GitHub](https://img.shields.io/github/license/NeuroML/NeuroML_API)](https://github.com/NeuroML/NeuroML_API/blob/master/License.txt)
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/NeuroML/NeuroML_API?include_prereleases)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/NeuroML/NeuroML_API)
