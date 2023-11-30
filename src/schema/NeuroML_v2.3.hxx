@@ -33,11 +33,11 @@
 
 /**
  * @file
- * @brief Generated from NeuroML_v2.2.xsd.
+ * @brief Generated from NeuroML_v2.3.xsd.
  */
 
-#ifndef NEUROML_API_SCHEMA_NEURO_ML_V2_2_HXX
-#define NEUROML_API_SCHEMA_NEURO_ML_V2_2_HXX
+#ifndef NEUROML_API_SCHEMA_NEURO_ML_V2_3_HXX
+#define NEUROML_API_SCHEMA_NEURO_ML_V2_3_HXX
 
 #ifndef XSD_CXX11
 #define XSD_CXX11
@@ -641,11 +641,13 @@ namespace neuroml2
   class Nml2Quantity_conductancePerVoltage;
   class MetaId;
   class NeuroLexId;
+  class Nml2PopulationReferencePath;
   class NonNegativeInteger;
   class PositiveInteger;
   class DoubleGreaterThanZero;
   class ZeroOrOne;
   class Notes;
+  class BaseWithoutId;
   class Property;
   class Annotation;
   class ComponentType;
@@ -654,6 +656,7 @@ namespace neuroml2
   class NamedDimensionalType;
   class NamedDimensionalVariable;
   class Parameter;
+  class DerivedParameter;
   class LEMS_Property;
   class Requirement;
   class InstanceRequirement;
@@ -663,8 +666,16 @@ namespace neuroml2
   class ConditionalDerivedVariable;
   class Case;
   class TimeDerivative;
+  class OnStart;
+  class StateAssignment;
+  class OnEvent;
+  class EventOut;
+  class OnCondition;
+  class Transition;
+  class Regime;
+  class OnEntry;
+  class TrueOrFalse;
   class ZeroToOne;
-  class BaseWithoutId;
   class Base;
   class Standalone;
   class NeuroMLDocument_base;
@@ -731,6 +742,7 @@ namespace neuroml2
   class FitzHughNagumoCell;
   class FitzHughNagumo1969Cell;
   class PinskyRinzelCA3Cell;
+  class HindmarshRose1984Cell;
   class Cell;
   class Cell2CaPools;
   class Morphology_base;
@@ -3349,6 +3361,120 @@ namespace neuroml2
   };
 
   /**
+   * @brief Class corresponding to the %Nml2PopulationReferencePath schema type.
+   *
+   * A path referring to another component.
+   *
+   * @nosubgrouping
+   */
+  class Nml2PopulationReferencePath: public ::xml_schema::string
+  {
+    public:
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from initializers for required 
+     * elements and attributes.
+     */
+    Nml2PopulationReferencePath ();
+
+    /**
+     * @brief Create an instance from a C string and initializers
+     * for required elements and attributes.
+     */
+    Nml2PopulationReferencePath (const char*);
+
+    /**
+     * @brief Create an instance from a string andinitializers
+     * for required elements and attributes.
+     */
+    Nml2PopulationReferencePath (const ::std::string&);
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    Nml2PopulationReferencePath (const ::xml_schema::string&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Nml2PopulationReferencePath (const ::xercesc::DOMElement& e,
+                                 ::xml_schema::flags f = 0,
+                                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a DOM attribute.
+     *
+     * @param a A DOM attribute to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Nml2PopulationReferencePath (const ::xercesc::DOMAttr& a,
+                                 ::xml_schema::flags f = 0,
+                                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a string fragment.
+     *
+     * @param s A string fragment to extract the data from.
+     * @param e A pointer to DOM element containing the string fragment.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Nml2PopulationReferencePath (const ::std::string& s,
+                                 const ::xercesc::DOMElement* e,
+                                 ::xml_schema::flags f = 0,
+                                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Nml2PopulationReferencePath (const Nml2PopulationReferencePath& x,
+                                 ::xml_schema::flags f = 0,
+                                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual Nml2PopulationReferencePath*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~Nml2PopulationReferencePath ();
+  };
+
+  /**
    * @brief Class corresponding to the %NonNegativeInteger schema type.
    *
    * An attribute useful as id of segments, connections, etc: integer >=0
@@ -3838,6 +3964,110 @@ namespace neuroml2
   };
 
   /**
+   * @brief Class corresponding to the %BaseWithoutId schema type.
+   *
+   * Base element without ID specified *yet*, e.g. for an element with a
+   * particular requirement on its id which does not comply with NmlId
+   * (e.g. Segment needs nonNegativeInteger).
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    BaseWithoutId ();
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    BaseWithoutId (const ::xercesc::DOMElement& e,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a DOM attribute.
+     *
+     * @param a A DOM attribute to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    BaseWithoutId (const ::xercesc::DOMAttr& a,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a string fragment.
+     *
+     * @param s A string fragment to extract the data from.
+     * @param e A pointer to DOM element containing the string fragment.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    BaseWithoutId (const ::std::string& s,
+                   const ::xercesc::DOMElement* e,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    BaseWithoutId (const BaseWithoutId& x,
+                   ::xml_schema::flags f = 0,
+                   ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual BaseWithoutId*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~BaseWithoutId ();
+  };
+
+  bool
+  operator== (const BaseWithoutId&, const BaseWithoutId&);
+
+  bool
+  operator!= (const BaseWithoutId&, const BaseWithoutId&);
+
+
+  /**
    * @brief Class corresponding to the %Property schema type.
    *
    * A property ( a **tag**  and **value**  pair ), which can be on any 
@@ -3855,6 +4085,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Property: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -4076,6 +4307,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Annotation: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -4151,13 +4383,6 @@ namespace neuroml2
 
     //@endcond
   };
-
-  bool
-  operator== (const Annotation&, const Annotation&);
-
-  bool
-  operator!= (const Annotation&, const Annotation&);
-
 
   /**
    * @brief Class corresponding to the %ComponentType schema type.
@@ -4293,6 +4518,70 @@ namespace neuroml2
      */
     void
     Parameter (const Parameter_sequence& s);
+
+    //@}
+
+    /**
+     * @name DerivedParameter
+     *
+     * @brief Accessor and modifier functions for the %DerivedParameter
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::DerivedParameter DerivedParameter_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< DerivedParameter_type > DerivedParameter_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef DerivedParameter_sequence::iterator DerivedParameter_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef DerivedParameter_sequence::const_iterator DerivedParameter_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< DerivedParameter_type, char > DerivedParameter_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const DerivedParameter_sequence&
+    DerivedParameter () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    DerivedParameter_sequence&
+    DerivedParameter ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    DerivedParameter (const DerivedParameter_sequence& s);
 
     //@}
 
@@ -4909,6 +5198,7 @@ namespace neuroml2
     protected:
     Property_sequence Property_;
     Parameter_sequence Parameter_;
+    DerivedParameter_sequence DerivedParameter_;
     Constant_sequence Constant_;
     Exposure_sequence Exposure_;
     Requirement_sequence Requirement_;
@@ -4935,6 +5225,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Constant: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -5292,6 +5583,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Exposure: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -5587,6 +5879,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class NamedDimensionalType: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -5882,6 +6175,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class NamedDimensionalVariable: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -6317,6 +6611,169 @@ namespace neuroml2
     virtual 
     ~Parameter ();
   };
+
+  /**
+   * @brief Class corresponding to the %DerivedParameter schema type.
+   *
+   * LEMS DerivedParamter element
+   *
+   * @nosubgrouping
+   */
+  class DerivedParameter: public ::neuroml2::NamedDimensionalType
+  {
+    public:
+    /**
+     * @name value
+     *
+     * @brief Accessor and modifier functions for the %value
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string value_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const value_type&
+    value () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    value_type&
+    value ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    value (const value_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    value (::std::unique_ptr< value_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    DerivedParameter (const name_type&,
+                      const dimension_type&,
+                      const value_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    DerivedParameter (const ::xercesc::DOMElement& e,
+                      ::xml_schema::flags f = 0,
+                      ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    DerivedParameter (const DerivedParameter& x,
+                      ::xml_schema::flags f = 0,
+                      ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual DerivedParameter*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    DerivedParameter&
+    operator= (const DerivedParameter& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~DerivedParameter ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< value_type > value_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const DerivedParameter&, const DerivedParameter&);
+
+  bool
+  operator!= (const DerivedParameter&, const DerivedParameter&);
+
 
   /**
    * @brief Class corresponding to the %LEMS_Property schema type.
@@ -7038,6 +7495,274 @@ namespace neuroml2
     //@}
 
     /**
+     * @name OnStart
+     *
+     * @brief Accessor and modifier functions for the %OnStart
+     * optional element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::OnStart OnStart_type;
+
+    /**
+     * @brief Element optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< OnStart_type > OnStart_optional;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< OnStart_type, char > OnStart_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const OnStart_optional&
+    OnStart () const;
+
+    /**
+     * @brief Return a read-write reference to the element container.
+     *
+     * @return A reference to the optional container.
+     */
+    OnStart_optional&
+    OnStart ();
+
+    /**
+     * @brief Set the element value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the element.
+     */
+    void
+    OnStart (const OnStart_type& x);
+
+    /**
+     * @brief Set the element value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the element.
+     * Otherwise the element container is set the 'not present' state.
+     */
+    void
+    OnStart (const OnStart_optional& x);
+
+    /**
+     * @brief Set the element value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    OnStart (::std::unique_ptr< OnStart_type > p);
+
+    //@}
+
+    /**
+     * @name OnEvent
+     *
+     * @brief Accessor and modifier functions for the %OnEvent
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::OnEvent OnEvent_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< OnEvent_type > OnEvent_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef OnEvent_sequence::iterator OnEvent_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef OnEvent_sequence::const_iterator OnEvent_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< OnEvent_type, char > OnEvent_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const OnEvent_sequence&
+    OnEvent () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    OnEvent_sequence&
+    OnEvent ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    OnEvent (const OnEvent_sequence& s);
+
+    //@}
+
+    /**
+     * @name OnCondition
+     *
+     * @brief Accessor and modifier functions for the %OnCondition
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::OnCondition OnCondition_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< OnCondition_type > OnCondition_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef OnCondition_sequence::iterator OnCondition_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef OnCondition_sequence::const_iterator OnCondition_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< OnCondition_type, char > OnCondition_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const OnCondition_sequence&
+    OnCondition () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    OnCondition_sequence&
+    OnCondition ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    OnCondition (const OnCondition_sequence& s);
+
+    //@}
+
+    /**
+     * @name Regime
+     *
+     * @brief Accessor and modifier functions for the %Regime
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::Regime Regime_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< Regime_type > Regime_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef Regime_sequence::iterator Regime_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef Regime_sequence::const_iterator Regime_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< Regime_type, char > Regime_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const Regime_sequence&
+    Regime () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    Regime_sequence&
+    Regime ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    Regime (const Regime_sequence& s);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -7122,6 +7847,10 @@ namespace neuroml2
     DerivedVariable_sequence DerivedVariable_;
     ConditionalDerivedVariable_sequence ConditionalDerivedVariable_;
     TimeDerivative_sequence TimeDerivative_;
+    OnStart_optional OnStart_;
+    OnEvent_sequence OnEvent_;
+    OnCondition_sequence OnCondition_;
+    Regime_sequence Regime_;
 
     //@endcond
   };
@@ -8079,6 +8808,2108 @@ namespace neuroml2
 
 
   /**
+   * @brief Class corresponding to the %OnStart schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name StateAssignment
+     *
+     * @brief Accessor and modifier functions for the %StateAssignment
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::StateAssignment StateAssignment_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< StateAssignment_type > StateAssignment_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef StateAssignment_sequence::iterator StateAssignment_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef StateAssignment_sequence::const_iterator StateAssignment_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< StateAssignment_type, char > StateAssignment_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const StateAssignment_sequence&
+    StateAssignment () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    StateAssignment_sequence&
+    StateAssignment ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    StateAssignment (const StateAssignment_sequence& s);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    OnStart ();
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    OnStart (const ::xercesc::DOMElement& e,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnStart (const OnStart& x,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual OnStart*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnStart&
+    operator= (const OnStart& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~OnStart ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    StateAssignment_sequence StateAssignment_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const OnStart&, const OnStart&);
+
+  bool
+  operator!= (const OnStart&, const OnStart&);
+
+
+  /**
+   * @brief Class corresponding to the %StateAssignment schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name variable
+     *
+     * @brief Accessor and modifier functions for the %variable
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string variable_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< variable_type, char > variable_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const variable_type&
+    variable () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    variable_type&
+    variable ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    variable (const variable_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    variable (::std::unique_ptr< variable_type > p);
+
+    //@}
+
+    /**
+     * @name value
+     *
+     * @brief Accessor and modifier functions for the %value
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string value_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const value_type&
+    value () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    value_type&
+    value ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    value (const value_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    value (::std::unique_ptr< value_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    StateAssignment (const variable_type&,
+                     const value_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    StateAssignment (const ::xercesc::DOMElement& e,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    StateAssignment (const StateAssignment& x,
+                     ::xml_schema::flags f = 0,
+                     ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual StateAssignment*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    StateAssignment&
+    operator= (const StateAssignment& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~StateAssignment ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< variable_type > variable_;
+    ::xsd::cxx::tree::one< value_type > value_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const StateAssignment&, const StateAssignment&);
+
+  bool
+  operator!= (const StateAssignment&, const StateAssignment&);
+
+
+  /**
+   * @brief Class corresponding to the %OnEvent schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name StateAssignment
+     *
+     * @brief Accessor and modifier functions for the %StateAssignment
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::StateAssignment StateAssignment_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< StateAssignment_type > StateAssignment_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef StateAssignment_sequence::iterator StateAssignment_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef StateAssignment_sequence::const_iterator StateAssignment_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< StateAssignment_type, char > StateAssignment_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const StateAssignment_sequence&
+    StateAssignment () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    StateAssignment_sequence&
+    StateAssignment ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    StateAssignment (const StateAssignment_sequence& s);
+
+    //@}
+
+    /**
+     * @name EventOut
+     *
+     * @brief Accessor and modifier functions for the %EventOut
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::EventOut EventOut_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< EventOut_type > EventOut_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef EventOut_sequence::iterator EventOut_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef EventOut_sequence::const_iterator EventOut_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< EventOut_type, char > EventOut_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const EventOut_sequence&
+    EventOut () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    EventOut_sequence&
+    EventOut ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    EventOut (const EventOut_sequence& s);
+
+    //@}
+
+    /**
+     * @name port
+     *
+     * @brief Accessor and modifier functions for the %port
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string port_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< port_type, char > port_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const port_type&
+    port () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    port_type&
+    port ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    port (const port_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    port (::std::unique_ptr< port_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    OnEvent (const port_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    OnEvent (const ::xercesc::DOMElement& e,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnEvent (const OnEvent& x,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual OnEvent*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnEvent&
+    operator= (const OnEvent& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~OnEvent ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    StateAssignment_sequence StateAssignment_;
+    EventOut_sequence EventOut_;
+    ::xsd::cxx::tree::one< port_type > port_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const OnEvent&, const OnEvent&);
+
+  bool
+  operator!= (const OnEvent&, const OnEvent&);
+
+
+  /**
+   * @brief Class corresponding to the %EventOut schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name port
+     *
+     * @brief Accessor and modifier functions for the %port
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string port_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< port_type, char > port_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const port_type&
+    port () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    port_type&
+    port ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    port (const port_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    port (::std::unique_ptr< port_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    EventOut (const port_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    EventOut (const ::xercesc::DOMElement& e,
+              ::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    EventOut (const EventOut& x,
+              ::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual EventOut*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    EventOut&
+    operator= (const EventOut& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~EventOut ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< port_type > port_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const EventOut&, const EventOut&);
+
+  bool
+  operator!= (const EventOut&, const EventOut&);
+
+
+  /**
+   * @brief Class corresponding to the %OnCondition schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name StateAssignment
+     *
+     * @brief Accessor and modifier functions for the %StateAssignment
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::StateAssignment StateAssignment_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< StateAssignment_type > StateAssignment_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef StateAssignment_sequence::iterator StateAssignment_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef StateAssignment_sequence::const_iterator StateAssignment_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< StateAssignment_type, char > StateAssignment_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const StateAssignment_sequence&
+    StateAssignment () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    StateAssignment_sequence&
+    StateAssignment ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    StateAssignment (const StateAssignment_sequence& s);
+
+    //@}
+
+    /**
+     * @name EventOut
+     *
+     * @brief Accessor and modifier functions for the %EventOut
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::EventOut EventOut_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< EventOut_type > EventOut_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef EventOut_sequence::iterator EventOut_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef EventOut_sequence::const_iterator EventOut_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< EventOut_type, char > EventOut_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const EventOut_sequence&
+    EventOut () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    EventOut_sequence&
+    EventOut ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    EventOut (const EventOut_sequence& s);
+
+    //@}
+
+    /**
+     * @name Transition
+     *
+     * @brief Accessor and modifier functions for the %Transition
+     * optional element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::Transition Transition_type;
+
+    /**
+     * @brief Element optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< Transition_type > Transition_optional;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< Transition_type, char > Transition_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const Transition_optional&
+    Transition () const;
+
+    /**
+     * @brief Return a read-write reference to the element container.
+     *
+     * @return A reference to the optional container.
+     */
+    Transition_optional&
+    Transition ();
+
+    /**
+     * @brief Set the element value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the element.
+     */
+    void
+    Transition (const Transition_type& x);
+
+    /**
+     * @brief Set the element value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the element.
+     * Otherwise the element container is set the 'not present' state.
+     */
+    void
+    Transition (const Transition_optional& x);
+
+    /**
+     * @brief Set the element value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    Transition (::std::unique_ptr< Transition_type > p);
+
+    //@}
+
+    /**
+     * @name test
+     *
+     * @brief Accessor and modifier functions for the %test
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string test_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< test_type, char > test_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const test_type&
+    test () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    test_type&
+    test ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    test (const test_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    test (::std::unique_ptr< test_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    OnCondition (const test_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    OnCondition (const ::xercesc::DOMElement& e,
+                 ::xml_schema::flags f = 0,
+                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnCondition (const OnCondition& x,
+                 ::xml_schema::flags f = 0,
+                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual OnCondition*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnCondition&
+    operator= (const OnCondition& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~OnCondition ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    StateAssignment_sequence StateAssignment_;
+    EventOut_sequence EventOut_;
+    Transition_optional Transition_;
+    ::xsd::cxx::tree::one< test_type > test_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const OnCondition&, const OnCondition&);
+
+  bool
+  operator!= (const OnCondition&, const OnCondition&);
+
+
+  /**
+   * @brief Class corresponding to the %Transition schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name regime
+     *
+     * @brief Accessor and modifier functions for the %regime
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string regime_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< regime_type, char > regime_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const regime_type&
+    regime () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    regime_type&
+    regime ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    regime (const regime_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    regime (::std::unique_ptr< regime_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    Transition (const regime_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Transition (const ::xercesc::DOMElement& e,
+                ::xml_schema::flags f = 0,
+                ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Transition (const Transition& x,
+                ::xml_schema::flags f = 0,
+                ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual Transition*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Transition&
+    operator= (const Transition& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~Transition ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< regime_type > regime_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const Transition&, const Transition&);
+
+  bool
+  operator!= (const Transition&, const Transition&);
+
+
+  /**
+   * @brief Class corresponding to the %Regime schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name TimeDerivative
+     *
+     * @brief Accessor and modifier functions for the %TimeDerivative
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::TimeDerivative TimeDerivative_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< TimeDerivative_type > TimeDerivative_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef TimeDerivative_sequence::iterator TimeDerivative_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef TimeDerivative_sequence::const_iterator TimeDerivative_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< TimeDerivative_type, char > TimeDerivative_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const TimeDerivative_sequence&
+    TimeDerivative () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    TimeDerivative_sequence&
+    TimeDerivative ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    TimeDerivative (const TimeDerivative_sequence& s);
+
+    //@}
+
+    /**
+     * @name OnEntry
+     *
+     * @brief Accessor and modifier functions for the %OnEntry
+     * optional element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::OnEntry OnEntry_type;
+
+    /**
+     * @brief Element optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< OnEntry_type > OnEntry_optional;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< OnEntry_type, char > OnEntry_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const OnEntry_optional&
+    OnEntry () const;
+
+    /**
+     * @brief Return a read-write reference to the element container.
+     *
+     * @return A reference to the optional container.
+     */
+    OnEntry_optional&
+    OnEntry ();
+
+    /**
+     * @brief Set the element value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the element.
+     */
+    void
+    OnEntry (const OnEntry_type& x);
+
+    /**
+     * @brief Set the element value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the element.
+     * Otherwise the element container is set the 'not present' state.
+     */
+    void
+    OnEntry (const OnEntry_optional& x);
+
+    /**
+     * @brief Set the element value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    OnEntry (::std::unique_ptr< OnEntry_type > p);
+
+    //@}
+
+    /**
+     * @name OnCondition
+     *
+     * @brief Accessor and modifier functions for the %OnCondition
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::OnCondition OnCondition_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< OnCondition_type > OnCondition_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef OnCondition_sequence::iterator OnCondition_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef OnCondition_sequence::const_iterator OnCondition_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< OnCondition_type, char > OnCondition_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const OnCondition_sequence&
+    OnCondition () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    OnCondition_sequence&
+    OnCondition ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    OnCondition (const OnCondition_sequence& s);
+
+    //@}
+
+    /**
+     * @name name
+     *
+     * @brief Accessor and modifier functions for the %name
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::xml_schema::string name_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const name_type&
+    name () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    name_type&
+    name ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    name (const name_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    name (::std::unique_ptr< name_type > p);
+
+    //@}
+
+    /**
+     * @name initial
+     *
+     * @brief Accessor and modifier functions for the %initial
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::TrueOrFalse initial_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< initial_type > initial_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< initial_type, char > initial_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const initial_optional&
+    initial () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    initial_optional&
+    initial ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    initial (const initial_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    initial (const initial_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    initial (::std::unique_ptr< initial_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    Regime (const name_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    Regime (const ::xercesc::DOMElement& e,
+            ::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Regime (const Regime& x,
+            ::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual Regime*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Regime&
+    operator= (const Regime& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~Regime ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    TimeDerivative_sequence TimeDerivative_;
+    OnEntry_optional OnEntry_;
+    OnCondition_sequence OnCondition_;
+    ::xsd::cxx::tree::one< name_type > name_;
+    initial_optional initial_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const Regime&, const Regime&);
+
+  bool
+  operator!= (const Regime&, const Regime&);
+
+
+  /**
+   * @brief Class corresponding to the %OnEntry schema type.
+   *
+   * @nosubgrouping
+   */
+  {
+    public:
+    /**
+     * @name StateAssignment
+     *
+     * @brief Accessor and modifier functions for the %StateAssignment
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::StateAssignment StateAssignment_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< StateAssignment_type > StateAssignment_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef StateAssignment_sequence::iterator StateAssignment_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef StateAssignment_sequence::const_iterator StateAssignment_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< StateAssignment_type, char > StateAssignment_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const StateAssignment_sequence&
+    StateAssignment () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    StateAssignment_sequence&
+    StateAssignment ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    StateAssignment (const StateAssignment_sequence& s);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    OnEntry ();
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    OnEntry (const ::xercesc::DOMElement& e,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnEntry (const OnEntry& x,
+             ::xml_schema::flags f = 0,
+             ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual OnEntry*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    OnEntry&
+    operator= (const OnEntry& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~OnEntry ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    StateAssignment_sequence StateAssignment_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const OnEntry&, const OnEntry&);
+
+  bool
+  operator!= (const OnEntry&, const OnEntry&);
+
+
+  /**
+   * @brief Enumeration class corresponding to the %TrueOrFalse
+   * schema type.
+   */
+  class TrueOrFalse: public ::xml_schema::string
+  {
+    public:
+
+    /**
+     * @brief Underlying enum type.
+     */
+    enum value
+    {
+      true_,
+      false_
+    };
+
+    /**
+     * @brief Create an instance from the underlying enum value.
+     *
+     * @param v A enum value.
+     */
+    TrueOrFalse (value v);
+
+    /**
+     * @brief Create an instance from a C string.
+     *
+     * @param v A string value.
+     */
+    TrueOrFalse (const char* v);
+
+    /**
+     * @brief Create an instance from a string.
+     *
+     * @param v A string value.
+     */
+    TrueOrFalse (const ::std::string& v);
+
+    /**
+     * @brief Create an instance from the base value.
+     *
+     * @param v A base value.
+     */
+    TrueOrFalse (const ::xml_schema::string& v);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    TrueOrFalse (const ::xercesc::DOMElement& e,
+                 ::xml_schema::flags f = 0,
+                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a DOM attribute.
+     *
+     * @param a A DOM attribute to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    TrueOrFalse (const ::xercesc::DOMAttr& a,
+                 ::xml_schema::flags f = 0,
+                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Create an instance from a string fragment.
+     *
+     * @param s A string fragment to extract the data from.
+     * @param e A pointer to DOM element containing the string fragment.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    TrueOrFalse (const ::std::string& s,
+                 const ::xercesc::DOMElement* e,
+                 ::xml_schema::flags f = 0,
+                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    TrueOrFalse (const TrueOrFalse& x,
+                 ::xml_schema::flags f = 0,
+                 ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual TrueOrFalse*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Assign the underlying enum value.
+     *
+     * @param v A enum value.
+     * @return A refernce to the instance.
+     */
+    TrueOrFalse&
+    operator= (value v);
+
+    /**
+     * @brief Implicit conversion operator to the underlying
+     * enum value.
+     *
+     * @return A enum value.
+     */
+    virtual
+    operator value () const
+    {
+      return _xsd_TrueOrFalse_convert ();
+    }
+
+    //@cond
+
+    protected:
+    value
+    _xsd_TrueOrFalse_convert () const;
+
+    public:
+    static const char* const _xsd_TrueOrFalse_literals_[2];
+    static const value _xsd_TrueOrFalse_indexes_[2];
+
+    //@endcond
+  };
+
+  /**
    * @brief Class corresponding to the %ZeroToOne schema type.
    *
    * Float value restricted to between 1 and 0
@@ -8173,186 +11004,6 @@ namespace neuroml2
     virtual 
     ~ZeroToOne ();
   };
-
-  /**
-   * @brief Class corresponding to the %BaseWithoutId schema type.
-   *
-   * Base element without ID specified *yet*, e.g. for an element with a
-   * particular requirement on its id which does not comply with NmlId
-   * (e.g. Segment needs nonNegativeInteger).
-   *
-   * @nosubgrouping
-   */
-  {
-    public:
-    /**
-     * @name neuroLexId
-     *
-     * @brief Accessor and modifier functions for the %neuroLexId
-     * optional attribute.
-     */
-    //@{
-
-    /**
-     * @brief Attribute type.
-     */
-    typedef ::neuroml2::NeuroLexId neuroLexId_type;
-
-    /**
-     * @brief Attribute optional container type.
-     */
-    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
-
-    /**
-     * @brief Attribute traits type.
-     */
-    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
-
-    /**
-     * @brief Return a read-only (constant) reference to the attribute
-     * container.
-     *
-     * @return A constant reference to the optional container.
-     */
-    const neuroLexId_optional&
-    neuroLexId () const;
-
-    /**
-     * @brief Return a read-write reference to the attribute container.
-     *
-     * @return A reference to the optional container.
-     */
-    neuroLexId_optional&
-    neuroLexId ();
-
-    /**
-     * @brief Set the attribute value.
-     *
-     * @param x A new value to set.
-     *
-     * This function makes a copy of its argument and sets it as
-     * the new value of the attribute.
-     */
-    void
-    neuroLexId (const neuroLexId_type& x);
-
-    /**
-     * @brief Set the attribute value.
-     *
-     * @param x An optional container with the new value to set.
-     *
-     * If the value is present in @a x then this function makes a copy 
-     * of this value and sets it as the new value of the attribute.
-     * Otherwise the attribute container is set the 'not present' state.
-     */
-    void
-    neuroLexId (const neuroLexId_optional& x);
-
-    /**
-     * @brief Set the attribute value without copying.
-     *
-     * @param p A new value to use.
-     *
-     * This function will try to use the passed value directly instead
-     * of making a copy.
-     */
-    void
-    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
-
-    //@}
-
-    /**
-     * @name Constructors
-     */
-    //@{
-
-    /**
-     * @brief Create an instance from the ultimate base and
-     * initializers for required elements and attributes.
-     */
-    BaseWithoutId ();
-
-    /**
-     * @brief Create an instance from a DOM element.
-     *
-     * @param e A DOM element to extract the data from.
-     * @param f Flags to create the new instance with.
-     * @param c A pointer to the object that will contain the new
-     * instance.
-     */
-    BaseWithoutId (const ::xercesc::DOMElement& e,
-                   ::xml_schema::flags f = 0,
-                   ::xml_schema::container* c = 0);
-
-    /**
-     * @brief Copy constructor.
-     *
-     * @param x An instance to make a copy of.
-     * @param f Flags to create the copy with.
-     * @param c A pointer to the object that will contain the copy.
-     *
-     * For polymorphic object models use the @c _clone function instead.
-     */
-    BaseWithoutId (const BaseWithoutId& x,
-                   ::xml_schema::flags f = 0,
-                   ::xml_schema::container* c = 0);
-
-    /**
-     * @brief Copy the instance polymorphically.
-     *
-     * @param f Flags to create the copy with.
-     * @param c A pointer to the object that will contain the copy.
-     * @return A pointer to the dynamically allocated copy.
-     *
-     * This function ensures that the dynamic type of the instance is
-     * used for copying and should be used for polymorphic object
-     * models instead of the copy constructor.
-     */
-    virtual BaseWithoutId*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
-
-    /**
-     * @brief Copy assignment operator.
-     *
-     * @param x An instance to make a copy of.
-     * @return A reference to itself.
-     *
-     * For polymorphic object models use the @c _clone function instead.
-     */
-    BaseWithoutId&
-    operator= (const BaseWithoutId& x);
-
-    //@}
-
-    /**
-     * @brief Destructor.
-     */
-    virtual 
-    ~BaseWithoutId ();
-
-    // Implementation.
-    //
-
-    //@cond
-
-    protected:
-    void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
-
-    protected:
-    neuroLexId_optional neuroLexId_;
-
-    //@endcond
-  };
-
-  bool
-  operator== (const BaseWithoutId&, const BaseWithoutId&);
-
-  bool
-  operator!= (const BaseWithoutId&, const BaseWithoutId&);
-
 
   /**
    * @brief Class corresponding to the %Base schema type.
@@ -11164,6 +13815,70 @@ namespace neuroml2
     //@}
 
     /**
+     * @name hindmarshRose1984Cell
+     *
+     * @brief Accessor and modifier functions for the %hindmarshRose1984Cell
+     * sequence element.
+     */
+    //@{
+
+    /**
+     * @brief Element type.
+     */
+    typedef ::neuroml2::HindmarshRose1984Cell hindmarshRose1984Cell_type;
+
+    /**
+     * @brief Element sequence container type.
+     */
+    typedef ::xsd::cxx::tree::sequence< hindmarshRose1984Cell_type > hindmarshRose1984Cell_sequence;
+
+    /**
+     * @brief Element iterator type.
+     */
+    typedef hindmarshRose1984Cell_sequence::iterator hindmarshRose1984Cell_iterator;
+
+    /**
+     * @brief Element constant iterator type.
+     */
+    typedef hindmarshRose1984Cell_sequence::const_iterator hindmarshRose1984Cell_const_iterator;
+
+    /**
+     * @brief Element traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< hindmarshRose1984Cell_type, char > hindmarshRose1984Cell_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the element
+     * sequence.
+     *
+     * @return A constant reference to the sequence container.
+     */
+    const hindmarshRose1984Cell_sequence&
+    hindmarshRose1984Cell () const;
+
+    /**
+     * @brief Return a read-write reference to the element sequence.
+     *
+     * @return A reference to the sequence container.
+     */
+    hindmarshRose1984Cell_sequence&
+    hindmarshRose1984Cell ();
+
+    /**
+     * @brief Copy elements from a given sequence.
+     *
+     * @param s A sequence to copy elements from.
+     *
+     * For each element in @a s this function makes a copy and adds it 
+     * to the sequence. Note that this operation completely changes the 
+     * sequence and all old elements will be lost.
+     */
+    void
+    hindmarshRose1984Cell (const hindmarshRose1984Cell_sequence& s);
+
+    //@}
+
+    /**
      * @name pulseGenerator
      *
      * @brief Accessor and modifier functions for the %pulseGenerator
@@ -13327,6 +16042,7 @@ namespace neuroml2
     fitzHughNagumoCell_sequence fitzHughNagumoCell_;
     fitzHughNagumo1969Cell_sequence fitzHughNagumo1969Cell_;
     pinskyRinzelCA3Cell_sequence pinskyRinzelCA3Cell_;
+    hindmarshRose1984Cell_sequence hindmarshRose1984Cell_;
     pulseGenerator_sequence pulseGenerator_;
     pulseGeneratorDL_sequence pulseGeneratorDL_;
     sineGenerator_sequence sineGenerator_;
@@ -13601,6 +16317,82 @@ namespace neuroml2
     //@}
 
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -13682,6 +16474,7 @@ namespace neuroml2
 
     protected:
     q10ConductanceScaling_sequence q10ConductanceScaling_;
+    neuroLexId_optional neuroLexId_;
 
     //@endcond
   };
@@ -13923,6 +16716,82 @@ namespace neuroml2
     //@}
 
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -14006,6 +16875,7 @@ namespace neuroml2
     gateKS_sequence gateKS_;
     species_optional species_;
     conductance_optional conductance_;
+    neuroLexId_optional neuroLexId_;
 
     //@endcond
   };
@@ -15271,6 +18141,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Q10ConductanceScaling: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -22008,6 +24879,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class HHRate: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -22397,6 +25269,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class HHVariable: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -22775,6 +25648,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class HHTime: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -23948,6 +26822,82 @@ namespace neuroml2
   {
     public:
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -23998,6 +26948,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    BaseSynapse&
+    operator= (const BaseSynapse& x);
+
     //@}
 
     /**
@@ -24005,7 +26966,29 @@ namespace neuroml2
      */
     virtual 
     ~BaseSynapse ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    neuroLexId_optional neuroLexId_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const BaseSynapse&, const BaseSynapse&);
+
+  bool
+  operator!= (const BaseSynapse&, const BaseSynapse&);
+
 
   /**
    * @brief Class corresponding to the %BaseVoltageDepSynapse schema type.
@@ -27312,6 +30295,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class BlockMechanism: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -27855,6 +30839,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class PlasticityMechanism: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -28218,6 +31203,82 @@ namespace neuroml2
   {
     public:
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -28268,6 +31329,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    BaseCell&
+    operator= (const BaseCell& x);
+
     //@}
 
     /**
@@ -28275,7 +31347,29 @@ namespace neuroml2
      */
     virtual 
     ~BaseCell ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    neuroLexId_optional neuroLexId_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const BaseCell&, const BaseCell&);
+
+  bool
+  operator!= (const BaseCell&, const BaseCell&);
+
 
   /**
    * @brief Class corresponding to the %IafTauCell schema type.
@@ -30022,15 +33116,16 @@ namespace neuroml2
    *
    * Cell based on the modified Izhikevich model in Izhikevich 2007,
    * Dynamical systems in neuroscience, MIT Press
-   * @param v0 
+   * @param v0 Initial membrane potential
    * @param k 
-   * @param vr 
-   * @param vt 
-   * @param vpeak 
-   * @param a 
-   * @param b 
-   * @param c 
-   * @param d 
+   * @param vr Resting membrane potential
+   * @param vt Spike threshold
+   * @param vpeak Peak action potential value
+   * @param a Time scale of recovery variable u
+   * @param b Sensitivity of recovery variable u to subthreshold
+   * fluctuations of membrane potential v
+   * @param c After-spike reset value of v
+   * @param d After-spike increase to u
    * @param C Total capacitance of the cell membrane
    *
    * @nosubgrouping
@@ -30677,16 +33772,16 @@ namespace neuroml2
    * Model based on Brette R and Gerstner W ( 2005 ) Adaptive Exponential
    * Integrate-and-Fire Model as an Effective Description of Neuronal
    * Activity. J Neurophysiol 94:3637-3642
-   * @param gL 
-   * @param EL 
-   * @param VT 
-   * @param thresh 
-   * @param reset 
-   * @param delT 
-   * @param tauw 
-   * @param refract 
-   * @param a 
-   * @param b 
+   * @param gL Leak conductance
+   * @param EL Leak reversal potential
+   * @param VT Spike threshold
+   * @param thresh Spike detection threshold
+   * @param reset Reset potential
+   * @param delT Slope factor
+   * @param tauw Adaptation time constant
+   * @param refract Refractory period
+   * @param a Sub-threshold adaptation variable
+   * @param b Spike-triggered adaptation variable
    * @param C Total capacitance of the cell membrane
    *
    * @nosubgrouping
@@ -32034,7 +35129,9 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %PinskyRinzelCA3Cell schema type.
    *
-   * Reduced CA3 cell model from Pinsky and Rinzel 1994. See
+   * Reduced CA3 cell model from Pinsky, P. F. , Rinzel, J. Intrinsic and
+   * network rhythmogenesis in a reduced traub model for CA3 neurons. J
+   * Comput Neurosci 1, 39-60 ( 1994 ). See
    * https://github.com/OpenSourceBrain/PinskyRinzelModel
    * @param iSoma 
    * @param iDend 
@@ -33416,6 +36513,791 @@ namespace neuroml2
 
 
   /**
+   * @brief Class corresponding to the %HindmarshRose1984Cell schema type.
+   *
+   * The Hindmarsh Rose model is a simplified point cell model which
+   * captures complex firing patterns of single neurons, such as periodic
+   * and chaotic bursting. It has a fast spiking subsystem, which is a
+   * generalization of the FitzHugh-Nagumo system, coupled to a slower
+   * subsystem which allows the model to fire bursts. The dynamical
+   * variables x, y, z correspond to the membrane potential, a recovery
+   * variable, and a slower adaptation current, respectively. See Hindmarsh
+   * J. L. , and Rose R. M. ( 1984 ) A model of neuronal bursting using
+   * three coupled first order differential equations. Proc. R. Soc.
+   * London, Ser. B 221:87?102.
+   * @param a cubic term in x nullcline
+   * @param b quadratic term in x nullcline
+   * @param c constant term in y nullcline
+   * @param d quadratic term in y nullcline
+   * @param r timescale separation between slow and fast subsystem ( r
+   * greater than 0; r much less than 1 )
+   * @param s related to adaptation
+   * @param x1 related to the system's resting potential
+   * @param v_scaling scaling of x for physiological membrane potential
+   * @param x0 
+   * @param y0 
+   * @param z0 
+   * @param C Total capacitance of the cell membrane
+   *
+   * @nosubgrouping
+   */
+  class HindmarshRose1984Cell: public ::neuroml2::BaseCellMembPotCap
+  {
+    public:
+    /**
+     * @name a
+     *
+     * @brief Accessor and modifier functions for the %a
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none a_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< a_type, char > a_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const a_type&
+    a () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    a_type&
+    a ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    a (const a_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    a (::std::unique_ptr< a_type > p);
+
+    //@}
+
+    /**
+     * @name b
+     *
+     * @brief Accessor and modifier functions for the %b
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none b_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< b_type, char > b_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const b_type&
+    b () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    b_type&
+    b ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    b (const b_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    b (::std::unique_ptr< b_type > p);
+
+    //@}
+
+    /**
+     * @name c
+     *
+     * @brief Accessor and modifier functions for the %c
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none c_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< c_type, char > c_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const c_type&
+    c () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    c_type&
+    c ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    c (const c_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    c (::std::unique_ptr< c_type > p);
+
+    //@}
+
+    /**
+     * @name d
+     *
+     * @brief Accessor and modifier functions for the %d
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none d_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< d_type, char > d_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const d_type&
+    d () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    d_type&
+    d ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    d (const d_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    d (::std::unique_ptr< d_type > p);
+
+    //@}
+
+    /**
+     * @name s
+     *
+     * @brief Accessor and modifier functions for the %s
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none s_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< s_type, char > s_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const s_type&
+    s () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    s_type&
+    s ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    s (const s_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    s (::std::unique_ptr< s_type > p);
+
+    //@}
+
+    /**
+     * @name x1
+     *
+     * @brief Accessor and modifier functions for the %x1
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none x1_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< x1_type, char > x1_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const x1_type&
+    x1 () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    x1_type&
+    x1 ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    x1 (const x1_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    x1 (::std::unique_ptr< x1_type > p);
+
+    //@}
+
+    /**
+     * @name r
+     *
+     * @brief Accessor and modifier functions for the %r
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none r_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< r_type, char > r_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const r_type&
+    r () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    r_type&
+    r ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    r (const r_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    r (::std::unique_ptr< r_type > p);
+
+    //@}
+
+    /**
+     * @name x0
+     *
+     * @brief Accessor and modifier functions for the %x0
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none x0_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< x0_type, char > x0_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const x0_type&
+    x0 () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    x0_type&
+    x0 ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    x0 (const x0_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    x0 (::std::unique_ptr< x0_type > p);
+
+    //@}
+
+    /**
+     * @name y0
+     *
+     * @brief Accessor and modifier functions for the %y0
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none y0_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< y0_type, char > y0_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const y0_type&
+    y0 () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    y0_type&
+    y0 ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    y0 (const y0_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    y0 (::std::unique_ptr< y0_type > p);
+
+    //@}
+
+    /**
+     * @name z0
+     *
+     * @brief Accessor and modifier functions for the %z0
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_none z0_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< z0_type, char > z0_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const z0_type&
+    z0 () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    z0_type&
+    z0 ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    z0 (const z0_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    z0 (::std::unique_ptr< z0_type > p);
+
+    //@}
+
+    /**
+     * @name v_scaling
+     *
+     * @brief Accessor and modifier functions for the %v_scaling
+     * required attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::Nml2Quantity_voltage v_scaling_type;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< v_scaling_type, char > v_scaling_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute.
+     *
+     * @return A constant reference to the attribute.
+     */
+    const v_scaling_type&
+    v_scaling () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute.
+     *
+     * @return A reference to the attribute.
+     */
+    v_scaling_type&
+    v_scaling ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    v_scaling (const v_scaling_type& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly
+     * instead of making a copy.
+     */
+    void
+    v_scaling (::std::unique_ptr< v_scaling_type > p);
+
+    //@}
+
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    HindmarshRose1984Cell (const id_type&,
+                           const C_type&,
+                           const a_type&,
+                           const b_type&,
+                           const c_type&,
+                           const d_type&,
+                           const s_type&,
+                           const x1_type&,
+                           const r_type&,
+                           const x0_type&,
+                           const y0_type&,
+                           const z0_type&,
+                           const v_scaling_type&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    HindmarshRose1984Cell (const ::xercesc::DOMElement& e,
+                           ::xml_schema::flags f = 0,
+                           ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    HindmarshRose1984Cell (const HindmarshRose1984Cell& x,
+                           ::xml_schema::flags f = 0,
+                           ::xml_schema::container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual HindmarshRose1984Cell*
+    _clone (::xml_schema::flags f = 0,
+            ::xml_schema::container* c = 0) const;
+
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    HindmarshRose1984Cell&
+    operator= (const HindmarshRose1984Cell& x);
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~HindmarshRose1984Cell ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    ::xsd::cxx::tree::one< a_type > a_;
+    ::xsd::cxx::tree::one< b_type > b_;
+    ::xsd::cxx::tree::one< c_type > c_;
+    ::xsd::cxx::tree::one< d_type > d_;
+    ::xsd::cxx::tree::one< s_type > s_;
+    ::xsd::cxx::tree::one< x1_type > x1_;
+    ::xsd::cxx::tree::one< r_type > r_;
+    ::xsd::cxx::tree::one< x0_type > x0_;
+    ::xsd::cxx::tree::one< y0_type > y0_;
+    ::xsd::cxx::tree::one< z0_type > z0_;
+    ::xsd::cxx::tree::one< v_scaling_type > v_scaling_;
+
+    //@endcond
+  };
+
+  bool
+  operator== (const HindmarshRose1984Cell&, const HindmarshRose1984Cell&);
+
+  bool
+  operator!= (const HindmarshRose1984Cell&, const HindmarshRose1984Cell&);
+
+
+  /**
    * @brief Class corresponding to the %Cell schema type.
    *
    * Cell with  **segment** s specified in a  **morphology**  element along
@@ -34720,6 +38602,82 @@ namespace neuroml2
     //@}
 
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -34816,6 +38774,7 @@ namespace neuroml2
     proximal_optional proximal_;
     ::xsd::cxx::tree::one< distal_type > distal_;
     name_optional name_;
+    neuroLexId_optional neuroLexId_;
 
     //@endcond
   };
@@ -34832,6 +38791,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SegmentParent: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -35073,6 +39033,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Point3DWithDiam: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -35931,6 +39892,82 @@ namespace neuroml2
     //@}
 
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -36019,6 +40056,7 @@ namespace neuroml2
     path_sequence path_;
     subTree_sequence subTree_;
     inhomogeneousParameter_sequence inhomogeneousParameter_;
+    neuroLexId_optional neuroLexId_;
 
     //@endcond
   };
@@ -36556,8 +40594,12 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %ProximalDetails schema type.
    *
+   * What to do at the proximal point when creating an inhomogeneous
+   * parameter
+   *
    * @nosubgrouping
    */
+  class ProximalDetails: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -36703,8 +40745,11 @@ namespace neuroml2
   /**
    * @brief Class corresponding to the %DistalDetails schema type.
    *
+   * What to do at the distal point when creating an inhomogeneous
+  parameter *
    * @nosubgrouping
    */
+  class DistalDetails: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -36854,6 +40899,7 @@ namespace neuroml2
   **segmentGroup** *
    * @nosubgrouping
    */
+  class Member: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -37014,6 +41060,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Include: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -37175,6 +41222,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Path: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -37431,6 +41479,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SubTree: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -37684,6 +41733,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SegmentEndPoint: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -38502,6 +42552,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class MembraneProperties: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -39554,6 +43605,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SpikeThresh: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -39784,6 +43836,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SpecificCapacitance: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -40014,6 +44067,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class InitMembPotential: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -40244,6 +44298,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Resistivity: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -44506,6 +48561,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class InhomogeneousValue: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -44730,66 +48786,9 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Species: public ::neuroml2::Base
   {
     public:
-    /**
-     * @name id
-     *
-     * @brief Accessor and modifier functions for the %id
-     * required attribute.
-     */
-    //@{
-
-    /**
-     * @brief Attribute type.
-     */
-    typedef ::neuroml2::NmlId id_type;
-
-    /**
-     * @brief Attribute traits type.
-     */
-    typedef ::xsd::cxx::tree::traits< id_type, char > id_traits;
-
-    /**
-     * @brief Return a read-only (constant) reference to the attribute.
-     *
-     * @return A constant reference to the attribute.
-     */
-    const id_type&
-    id () const;
-
-    /**
-     * @brief Return a read-write reference to the attribute.
-     *
-     * @return A reference to the attribute.
-     */
-    id_type&
-    id ();
-
-    /**
-     * @brief Set the attribute value.
-     *
-     * @param x A new value to set.
-     *
-     * This function makes a copy of its argument and sets it as
-     * the new value of the attribute.
-     */
-    void
-    id (const id_type& x);
-
-    /**
-     * @brief Set the attribute value without copying.
-     *
-     * @param p A new value to use.
-     *
-     * This function will try to use the passed value directly
-     * instead of making a copy.
-     */
-    void
-    id (::std::unique_ptr< id_type > p);
-
-    //@}
-
     /**
      * @name concentrationModel
      *
@@ -45191,7 +49190,6 @@ namespace neuroml2
            ::xml_schema::flags);
 
     protected:
-    ::xsd::cxx::tree::one< id_type > id_;
     ::xsd::cxx::tree::one< concentrationModel_type > concentrationModel_;
     ion_optional ion_;
     ::xsd::cxx::tree::one< initialConcentration_type > initialConcentration_;
@@ -45364,6 +49362,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class IntracellularProperties: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -45828,6 +49827,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class ExtracellularPropertiesLocal: public ::neuroml2::Base
   {
     public:
     /**
@@ -45903,7 +49903,7 @@ namespace neuroml2
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    ExtracellularPropertiesLocal ();
+    ExtracellularPropertiesLocal (const id_type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -52840,6 +56840,82 @@ namespace neuroml2
     //@}
 
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -52933,6 +57009,7 @@ namespace neuroml2
     inputList_sequence inputList_;
     type_optional type_;
     temperature_optional temperature_;
+    neuroLexId_optional neuroLexId_;
 
     //@endcond
   };
@@ -53348,6 +57425,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SpaceStructure: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -54581,6 +58659,82 @@ namespace neuroml2
     //@}
 
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -54668,6 +58822,7 @@ namespace neuroml2
     size_optional size_;
     type_optional type_;
     extracellularProperties_optional extracellularProperties_;
+    neuroLexId_optional neuroLexId_;
 
     //@endcond
   };
@@ -54829,6 +58984,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Layout: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -55236,6 +59392,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class UnstructuredLayout: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -55401,6 +59558,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class RandomLayout: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -55643,6 +59801,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class GridLayout: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -55943,6 +60102,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Instance: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -56381,6 +60541,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Location: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -56790,8 +60951,85 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class SynapticConnection: public ::neuroml2::BaseWithoutId
   {
     public:
+    /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
     /**
      * @name from
      *
@@ -56803,7 +61041,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string from_type;
+    typedef ::neuroml2::Nml2PopulationReferencePath from_type;
 
     /**
      * @brief Attribute traits type.
@@ -56861,7 +61099,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string to_type;
+    typedef ::neuroml2::Nml2PopulationReferencePath to_type;
 
     /**
      * @brief Attribute traits type.
@@ -56919,7 +61157,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string synapse_type;
+    typedef ::neuroml2::NmlId synapse_type;
 
     /**
      * @brief Attribute traits type.
@@ -57125,6 +61363,7 @@ namespace neuroml2
            ::xml_schema::flags);
 
     protected:
+    neuroLexId_optional neuroLexId_;
     ::xsd::cxx::tree::one< from_type > from_;
     ::xsd::cxx::tree::one< to_type > to_;
     ::xsd::cxx::tree::one< synapse_type > synapse_;
@@ -57671,6 +61910,82 @@ namespace neuroml2
   {
     public:
     /**
+     * @name neuroLexId
+     *
+     * @brief Accessor and modifier functions for the %neuroLexId
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::neuroml2::NeuroLexId neuroLexId_type;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< neuroLexId_type > neuroLexId_optional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< neuroLexId_type, char > neuroLexId_traits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const neuroLexId_optional&
+    neuroLexId () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    neuroLexId_optional&
+    neuroLexId ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    neuroLexId (const neuroLexId_type& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    neuroLexId (const neuroLexId_optional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    neuroLexId (::std::unique_ptr< neuroLexId_type > p);
+
+    //@}
+
+    /**
      * @name Constructors
      */
     //@{
@@ -57721,6 +62036,17 @@ namespace neuroml2
     _clone (::xml_schema::flags f = 0,
             ::xml_schema::container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    BaseConnection&
+    operator= (const BaseConnection& x);
+
     //@}
 
     /**
@@ -57728,7 +62054,29 @@ namespace neuroml2
      */
     virtual 
     ~BaseConnection ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< char >&,
+           ::xml_schema::flags);
+
+    protected:
+    neuroLexId_optional neuroLexId_;
+
+    //@endcond
   };
+
+  bool
+  operator== (const BaseConnection&, const BaseConnection&);
+
+  bool
+  operator!= (const BaseConnection&, const BaseConnection&);
+
 
   /**
    * @brief Class corresponding to the %BaseConnectionOldFormat schema type.
@@ -57753,7 +62101,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string preCellId_type;
+    typedef ::neuroml2::Nml2PopulationReferencePath preCellId_type;
 
     /**
      * @brief Attribute traits type.
@@ -57943,7 +62291,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string postCellId_type;
+    typedef ::neuroml2::Nml2PopulationReferencePath postCellId_type;
 
     /**
      * @brief Attribute traits type.
@@ -60481,6 +64829,7 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class ExplicitInput: public ::neuroml2::BaseWithoutId
   {
     public:
     /**
@@ -60494,7 +64843,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string target_type;
+    typedef ::neuroml2::Nml2PopulationReferencePath target_type;
 
     /**
      * @brief Attribute traits type.
@@ -60552,7 +64901,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string input_type;
+    typedef ::neuroml2::NmlId input_type;
 
     /**
      * @brief Attribute traits type.
@@ -60610,7 +64959,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string destination_type;
+    typedef ::neuroml2::NmlId destination_type;
 
     /**
      * @brief Attribute optional container type.
@@ -61132,66 +65481,9 @@ namespace neuroml2
    *
    * @nosubgrouping
    */
+  class Input: public ::neuroml2::BaseNonNegativeIntegerId
   {
     public:
-    /**
-     * @name id
-     *
-     * @brief Accessor and modifier functions for the %id
-     * required attribute.
-     */
-    //@{
-
-    /**
-     * @brief Attribute type.
-     */
-    typedef ::neuroml2::NonNegativeInteger id_type;
-
-    /**
-     * @brief Attribute traits type.
-     */
-    typedef ::xsd::cxx::tree::traits< id_type, char > id_traits;
-
-    /**
-     * @brief Return a read-only (constant) reference to the attribute.
-     *
-     * @return A constant reference to the attribute.
-     */
-    const id_type&
-    id () const;
-
-    /**
-     * @brief Return a read-write reference to the attribute.
-     *
-     * @return A reference to the attribute.
-     */
-    id_type&
-    id ();
-
-    /**
-     * @brief Set the attribute value.
-     *
-     * @param x A new value to set.
-     *
-     * This function makes a copy of its argument and sets it as
-     * the new value of the attribute.
-     */
-    void
-    id (const id_type& x);
-
-    /**
-     * @brief Set the attribute value without copying.
-     *
-     * @param p A new value to use.
-     *
-     * This function will try to use the passed value directly
-     * instead of making a copy.
-     */
-    void
-    id (::std::unique_ptr< id_type > p);
-
-    //@}
-
     /**
      * @name target
      *
@@ -61203,7 +65495,7 @@ namespace neuroml2
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string target_type;
+    typedef ::neuroml2::Nml2PopulationReferencePath target_type;
 
     /**
      * @brief Attribute traits type.
@@ -61543,7 +65835,6 @@ namespace neuroml2
            ::xml_schema::flags);
 
     protected:
-    ::xsd::cxx::tree::one< id_type > id_;
     ::xsd::cxx::tree::one< target_type > target_;
     ::xsd::cxx::tree::one< destination_type > destination_;
     segmentId_optional segmentId_;
@@ -65099,6 +69390,9 @@ namespace neuroml2
   operator<< (::std::ostream&, const NeuroLexId&);
 
   ::std::ostream&
+  operator<< (::std::ostream&, const Nml2PopulationReferencePath&);
+
+  ::std::ostream&
   operator<< (::std::ostream&, const NonNegativeInteger&);
 
   ::std::ostream&
@@ -65112,6 +69406,9 @@ namespace neuroml2
 
   ::std::ostream&
   operator<< (::std::ostream&, const Notes&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const BaseWithoutId&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const Property&);
@@ -65136,6 +69433,9 @@ namespace neuroml2
 
   ::std::ostream&
   operator<< (::std::ostream&, const Parameter&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const DerivedParameter&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const LEMS_Property&);
@@ -65165,10 +69465,37 @@ namespace neuroml2
   operator<< (::std::ostream&, const TimeDerivative&);
 
   ::std::ostream&
-  operator<< (::std::ostream&, const ZeroToOne&);
+  operator<< (::std::ostream&, const OnStart&);
 
   ::std::ostream&
-  operator<< (::std::ostream&, const BaseWithoutId&);
+  operator<< (::std::ostream&, const StateAssignment&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const OnEvent&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const EventOut&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const OnCondition&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const Transition&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const Regime&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const OnEntry&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, TrueOrFalse::value);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const TrueOrFalse&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const ZeroToOne&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const Base&);
@@ -65376,6 +69703,9 @@ namespace neuroml2
 
   ::std::ostream&
   operator<< (::std::ostream&, const PinskyRinzelCA3Cell&);
+
+  ::std::ostream&
+  operator<< (::std::ostream&, const HindmarshRose1984Cell&);
 
   ::std::ostream&
   operator<< (::std::ostream&, const Cell&);
@@ -66227,6 +70557,16 @@ namespace neuroml2
               const NeuroLexId&);
 
   void
+  operator<< (::xercesc::DOMElement&, const Nml2PopulationReferencePath&);
+
+  void
+  operator<< (::xercesc::DOMAttr&, const Nml2PopulationReferencePath&);
+
+  void
+  operator<< (::xml_schema::list_stream&,
+              const Nml2PopulationReferencePath&);
+
+  void
   operator<< (::xercesc::DOMElement&, const NonNegativeInteger&);
 
   void
@@ -66277,6 +70617,16 @@ namespace neuroml2
               const Notes&);
 
   void
+  operator<< (::xercesc::DOMElement&, const BaseWithoutId&);
+
+  void
+  operator<< (::xercesc::DOMAttr&, const BaseWithoutId&);
+
+  void
+  operator<< (::xml_schema::list_stream&,
+              const BaseWithoutId&);
+
+  void
   operator<< (::xercesc::DOMElement&, const Property&);
 
   void
@@ -66299,6 +70649,9 @@ namespace neuroml2
 
   void
   operator<< (::xercesc::DOMElement&, const Parameter&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const DerivedParameter&);
 
   void
   operator<< (::xercesc::DOMElement&, const LEMS_Property&);
@@ -66326,6 +70679,40 @@ namespace neuroml2
 
   void
   operator<< (::xercesc::DOMElement&, const TimeDerivative&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const OnStart&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const StateAssignment&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const OnEvent&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const EventOut&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const OnCondition&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const Transition&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const Regime&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const OnEntry&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const TrueOrFalse&);
+
+  void
+  operator<< (::xercesc::DOMAttr&, const TrueOrFalse&);
+
+  void
+  operator<< (::xml_schema::list_stream&,
+              const TrueOrFalse&);
 
   void
   operator<< (::xercesc::DOMElement&, const ZeroToOne&);
@@ -66497,9 +70884,6 @@ namespace neuroml2
            ::xml_schema::flags f = 0);
 
   //@}
-
-  void
-  operator<< (::xercesc::DOMElement&, const BaseWithoutId&);
 
   void
   operator<< (::xercesc::DOMElement&, const Base&);
@@ -66723,6 +71107,9 @@ namespace neuroml2
 
   void
   operator<< (::xercesc::DOMElement&, const PinskyRinzelCA3Cell&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const HindmarshRose1984Cell&);
 
   void
   operator<< (::xercesc::DOMElement&, const Cell&);
@@ -67104,4 +71491,4 @@ namespace neuroml2
 //
 // End epilogue.
 
-#endif // NEUROML_API_SCHEMA_NEURO_ML_V2_2_HXX
+#endif // NEUROML_API_SCHEMA_NEURO_ML_V2_3_HXX
