@@ -1,0 +1,5 @@
+<map id="neuroml2::Point3DWithDiam" name="neuroml2::Point3DWithDiam">
+<area shape="rect" id="node1" title="Class corresponding to the Point3DWithDiam schema type." alt="" coords="5,155,213,181"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="16,80,203,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="38,5,181,32"/>
+</map>

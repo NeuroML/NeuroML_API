@@ -1,0 +1,10 @@
+<map id="neuroml2::BaseConnectionOldFormat" name="neuroml2::BaseConnectionOldFormat">
+<area shape="rect" id="node1" title="Class corresponding to the BaseConnectionOldFormat schema type." alt="" coords="110,319,307,360"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_connection_w_d.html" title="Class corresponding to the ConnectionWD schema type." alt="" coords="5,408,193,435"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_connection__base.html" title="Class corresponding to the Connection schema type." alt="" coords="218,408,421,435"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_connection.html" title="Class corresponding to the BaseConnection schema type." alt="" coords="110,244,307,271"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="104,155,313,196"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="115,80,302,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="137,5,280,32"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_connection.html" title="Class corresponding to the Connection schema type." alt="" coords="237,483,402,509"/>
+</map>

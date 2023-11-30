@@ -1,0 +1,31 @@
+<map id="neuroml2::BaseCell" name="neuroml2::BaseCell">
+<area shape="rect" id="node1" title="Class corresponding to the BaseCell schema type." alt="" coords="816,296,965,323"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_base_cell_memb_pot_cap.html" title="Class corresponding to the BaseCellMembPotCap schema type." alt="" coords="1026,68,1262,95"/>
+<area shape="rect" id="node10" href="$classneuroml2_1_1_cell.html" title="Class corresponding to the Cell schema type." alt="" coords="1085,144,1203,171"/>
+<area shape="rect" id="node12" href="$classneuroml2_1_1_fitz_hugh_nagumo1969_cell.html" title="Class corresponding to the FitzHughNagumo1969Cell schema type." alt="" coords="1013,195,1275,221"/>
+<area shape="rect" id="node13" href="$classneuroml2_1_1_fitz_hugh_nagumo_cell.html" title="Class corresponding to the FitzHughNagumoCell schema type." alt="" coords="1029,245,1259,272"/>
+<area shape="rect" id="node14" href="$classneuroml2_1_1_iaf_cell.html" title="Class corresponding to the IafCell schema type." alt="" coords="1077,296,1211,323"/>
+<area shape="rect" id="node16" href="$classneuroml2_1_1_iaf_tau_cell.html" title="Class corresponding to the IafTauCell schema type." alt="" coords="1066,347,1222,373"/>
+<area shape="rect" id="node18" href="$classneuroml2_1_1_izhikevich_cell.html" title="Class corresponding to the IzhikevichCell schema type." alt="" coords="1053,397,1235,424"/>
+<area shape="rect" id="node19" href="$classneuroml2_1_1_pinsky_rinzel_c_a3_cell.html" title="Class corresponding to the PinskyRinzelCA3Cell schema type." alt="" coords="1031,448,1257,475"/>
+<area shape="rect" id="node20" href="$classneuroml2_1_1base_py_n_n_cell.html" title="Class corresponding to the basePyNNCell schema type." alt="" coords="1052,499,1236,525"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="603,296,768,323"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="431,296,555,323"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="196,296,383,323"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,296,148,323"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_ad_ex_ia_f_cell.html" title="Class corresponding to the AdExIaFCell schema type." alt="" coords="1363,5,1534,32"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_hindmarsh_rose1984_cell.html" title="Class corresponding to the HindmarshRose1984Cell schema type." alt="" coords="1323,56,1575,83"/>
+<area shape="rect" id="node9" href="$classneuroml2_1_1_izhikevich2007_cell.html" title="Class corresponding to the Izhikevich2007Cell schema type." alt="" coords="1341,107,1556,133"/>
+<area shape="rect" id="node11" href="$classneuroml2_1_1_cell2_ca_pools.html" title="Class corresponding to the Cell2CaPools schema type." alt="" coords="1360,157,1537,184"/>
+<area shape="rect" id="node15" href="$classneuroml2_1_1_iaf_ref_cell.html" title="Class corresponding to the IafRefCell schema type." alt="" coords="1371,296,1527,323"/>
+<area shape="rect" id="node17" href="$classneuroml2_1_1_iaf_tau_ref_cell.html" title="Class corresponding to the IafTauRefCell schema type." alt="" coords="1359,347,1538,373"/>
+<area shape="rect" id="node21" href="$classneuroml2_1_1_h_h__cond__exp.html" title="Class corresponding to the HH_cond_exp schema type." alt="" coords="1358,473,1539,500"/>
+<area shape="rect" id="node22" href="$classneuroml2_1_1base_py_n_n_ia_f_cell.html" title="Class corresponding to the basePyNNIaFCell schema type." alt="" coords="1347,524,1551,551"/>
+<area shape="rect" id="node23" href="$classneuroml2_1_1_i_f__curr__alpha.html" title="Class corresponding to the IF_curr_alpha schema type." alt="" coords="1652,473,1831,500"/>
+<area shape="rect" id="node24" href="$classneuroml2_1_1_i_f__curr__exp.html" title="Class corresponding to the IF_curr_exp schema type." alt="" coords="1658,524,1825,551"/>
+<area shape="rect" id="node25" href="$classneuroml2_1_1base_py_n_n_ia_f_cond_cell.html" title="Class corresponding to the basePyNNIaFCondCell schema type." alt="" coords="1623,575,1860,601"/>
+<area shape="rect" id="node26" href="$classneuroml2_1_1_e_i_f__cond__exp__isfa__ista.html" title="Class corresponding to the EIF_cond_exp_isfa_ista schema type." alt="" coords="1925,509,2076,550"/>
+<area shape="rect" id="node28" href="$classneuroml2_1_1_i_f__cond__alpha.html" title="Class corresponding to the IF_cond_alpha schema type." alt="" coords="1908,575,2093,601"/>
+<area shape="rect" id="node29" href="$classneuroml2_1_1_i_f__cond__exp.html" title="Class corresponding to the IF_cond_exp schema type." alt="" coords="1914,625,2087,652"/>
+<area shape="rect" id="node27" href="$classneuroml2_1_1_e_i_f__cond__alpha__isfa__ista.html" title="Class corresponding to the EIF_cond_alpha_isfa_ista schema type." alt="" coords="2141,509,2292,550"/>
+</map>

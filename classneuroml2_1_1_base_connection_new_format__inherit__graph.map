@@ -1,0 +1,13 @@
+<map id="neuroml2::BaseConnectionNewFormat" name="neuroml2::BaseConnectionNewFormat">
+<area shape="rect" id="node1" title="Class corresponding to the BaseConnectionNewFormat schema type." alt="" coords="154,319,351,360"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_continuous_connection.html" title="Class corresponding to the ContinuousConnection schema type." alt="" coords="5,408,244,435"/>
+<area shape="rect" id="node9" href="$classneuroml2_1_1_electrical_connection.html" title="Class corresponding to the ElectricalConnection schema type." alt="" coords="268,408,493,435"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_connection.html" title="Class corresponding to the BaseConnection schema type." alt="" coords="154,244,351,271"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="148,155,357,196"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="159,80,346,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="181,5,324,32"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_continuous_connection_instance.html" title="Class corresponding to the ContinuousConnectionInstance schema type." alt="" coords="5,483,244,524"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_continuous_connection_instance_w.html" title="Class corresponding to the ContinuousConnectionInstanceW schema type." alt="" coords="5,572,244,613"/>
+<area shape="rect" id="node10" href="$classneuroml2_1_1_electrical_connection_instance.html" title="Class corresponding to the ElectricalConnectionInstance schema type." alt="" coords="268,483,493,524"/>
+<area shape="rect" id="node11" href="$classneuroml2_1_1_electrical_connection_instance_w.html" title="Class corresponding to the ElectricalConnectionInstanceW schema type." alt="" coords="268,572,493,613"/>
+</map>

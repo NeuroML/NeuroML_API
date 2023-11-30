@@ -1,0 +1,6 @@
+<map id="neuroml2::ConditionalDerivedVariable" name="neuroml2::ConditionalDerivedVariable">
+<area shape="rect" id="node1" title="Class corresponding to the ConditionalDerivedVariable schema type." alt="" coords="7,244,225,285"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_named_dimensional_variable.html" title="Class corresponding to the NamedDimensionalVariable schema type." alt="" coords="5,155,227,196"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="23,80,209,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="45,5,187,32"/>
+</map>

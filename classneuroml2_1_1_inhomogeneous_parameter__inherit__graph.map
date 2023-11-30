@@ -1,0 +1,6 @@
+<map id="neuroml2::InhomogeneousParameter" name="neuroml2::InhomogeneousParameter">
+<area shape="rect" id="node1" title="Class corresponding to the InhomogeneousParameter schema type." alt="" coords="5,229,268,256"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="75,155,199,181"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="43,80,230,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="65,5,208,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="neuroml2::IntracellularProperties2CaPools" name="neuroml2::IntracellularProperties2CaPools">
+<area shape="rect" id="node1" title="Class corresponding to the IntracellularProperties2CaPools schema type." alt="" coords="5,229,249,271"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_intracellular_properties.html" title="Class corresponding to the IntracellularProperties schema type." alt="" coords="9,155,245,181"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="34,80,221,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="56,5,199,32"/>
+</map>

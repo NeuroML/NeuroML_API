@@ -1,0 +1,7 @@
+<map id="neuroml2::Input" name="neuroml2::Input">
+<area shape="rect" id="node1" title="Class corresponding to the Input schema type." alt="" coords="47,244,173,271"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_input_w.html" title="Class corresponding to the InputW schema type." alt="" coords="41,319,179,345"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="5,155,215,196"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="17,80,203,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="39,5,181,32"/>
+</map>

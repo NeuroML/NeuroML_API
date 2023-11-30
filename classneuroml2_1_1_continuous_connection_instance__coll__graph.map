@@ -1,0 +1,9 @@
+<map id="neuroml2::ContinuousConnectionInstance" name="neuroml2::ContinuousConnectionInstance">
+<area shape="rect" id="node1" title="Class corresponding to the ContinuousConnectionInstance schema type." alt="" coords="5,483,244,524"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_continuous_connection.html" title="Class corresponding to the ContinuousConnection schema type." alt="" coords="5,408,244,435"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_connection_new_format.html" title="Class corresponding to the BaseConnectionNewFormat schema type." alt="" coords="26,319,223,360"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_connection.html" title="Class corresponding to the BaseConnection schema type." alt="" coords="26,244,223,271"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="20,155,229,196"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="31,80,218,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="53,5,196,32"/>
+</map>

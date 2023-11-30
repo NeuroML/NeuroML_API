@@ -1,0 +1,6 @@
+<map id="neuroml2::MembraneProperties2CaPools" name="neuroml2::MembraneProperties2CaPools">
+<area shape="rect" id="node1" title="Class corresponding to the MembraneProperties2CaPools schema type." alt="" coords="5,229,241,271"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_membrane_properties.html" title="Class corresponding to the MembraneProperties schema type." alt="" coords="9,155,237,181"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="30,80,217,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="52,5,195,32"/>
+</map>

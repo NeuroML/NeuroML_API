@@ -1,0 +1,36 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,973,156,1000"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_block_types.html" title="Enumeration class corresponding to the BlockTypes schema type." alt="" coords="233,5,398,32"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_meta_id.html" title="Class corresponding to the MetaId schema type." alt="" coords="247,56,384,83"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_metric.html" title="Enumeration class corresponding to the Metric schema type." alt="" coords="249,107,382,133"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_neuro_lex_id.html" title="Class corresponding to the NeuroLexId schema type." alt="" coords="232,157,399,184"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_nml2_population_reference_path.html" title="Class corresponding to the Nml2PopulationReferencePath schema type." alt="" coords="217,209,413,250"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_nml2_quantity.html" title="Class corresponding to the Nml2Quantity schema type." alt="" coords="224,275,407,301"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_nml2_quantity__capacitance.html" title="Class corresponding to the Nml2Quantity_capacitance schema type." alt="" coords="224,326,407,367"/>
+<area shape="rect" id="node9" href="$classneuroml2_1_1_nml2_quantity__concentration.html" title="Class corresponding to the Nml2Quantity_concentration schema type." alt="" coords="224,391,407,433"/>
+<area shape="rect" id="node10" href="$classneuroml2_1_1_nml2_quantity__conductance.html" title="Class corresponding to the Nml2Quantity_conductance schema type." alt="" coords="224,457,407,498"/>
+<area shape="rect" id="node11" href="$classneuroml2_1_1_nml2_quantity__conductance_density.html" title="Class corresponding to the Nml2Quantity_conductanceDensity schema type." alt="" coords="224,522,407,563"/>
+<area shape="rect" id="node12" href="$classneuroml2_1_1_nml2_quantity__conductance_per_voltage.html" title="Class corresponding to the Nml2Quantity_conductancePerVoltage schema type." alt="" coords="224,587,407,629"/>
+<area shape="rect" id="node13" href="$classneuroml2_1_1_nml2_quantity__current.html" title="Class corresponding to the Nml2Quantity_current schema type." alt="" coords="224,653,407,694"/>
+<area shape="rect" id="node14" href="$classneuroml2_1_1_nml2_quantity__current_density.html" title="Class corresponding to the Nml2Quantity_currentDensity schema type." alt="" coords="224,718,407,759"/>
+<area shape="rect" id="node15" href="$classneuroml2_1_1_nml2_quantity__length.html" title="Class corresponding to the Nml2Quantity_length schema type." alt="" coords="224,783,407,825"/>
+<area shape="rect" id="node16" href="$classneuroml2_1_1_nml2_quantity__none.html" title="Class corresponding to the Nml2Quantity_none schema type." alt="" coords="204,849,427,876"/>
+<area shape="rect" id="node17" href="$classneuroml2_1_1_nml2_quantity__permeability.html" title="Class corresponding to the Nml2Quantity_permeability schema type." alt="" coords="224,901,407,942"/>
+<area shape="rect" id="node18" href="$classneuroml2_1_1_nml2_quantity__pertime.html" title="Class corresponding to the Nml2Quantity_pertime schema type." alt="" coords="224,966,407,1007"/>
+<area shape="rect" id="node19" href="$classneuroml2_1_1_nml2_quantity__resistance.html" title="Class corresponding to the Nml2Quantity_resistance schema type." alt="" coords="224,1031,407,1073"/>
+<area shape="rect" id="node20" href="$classneuroml2_1_1_nml2_quantity__resistivity.html" title="Class corresponding to the Nml2Quantity_resistivity schema type." alt="" coords="224,1097,407,1138"/>
+<area shape="rect" id="node21" href="$classneuroml2_1_1_nml2_quantity__rho_factor.html" title="Class corresponding to the Nml2Quantity_rhoFactor schema type." alt="" coords="224,1162,407,1203"/>
+<area shape="rect" id="node22" href="$classneuroml2_1_1_nml2_quantity__specific_capacitance.html" title="Class corresponding to the Nml2Quantity_specificCapacitance schema type." alt="" coords="224,1227,407,1269"/>
+<area shape="rect" id="node23" href="$classneuroml2_1_1_nml2_quantity__temperature.html" title="Class corresponding to the Nml2Quantity_temperature schema type." alt="" coords="224,1293,407,1334"/>
+<area shape="rect" id="node24" href="$classneuroml2_1_1_nml2_quantity__time.html" title="Class corresponding to the Nml2Quantity_time schema type." alt="" coords="205,1359,425,1385"/>
+<area shape="rect" id="node25" href="$classneuroml2_1_1_nml2_quantity__voltage.html" title="Class corresponding to the Nml2Quantity_voltage schema type." alt="" coords="224,1410,407,1451"/>
+<area shape="rect" id="node26" href="$classneuroml2_1_1_nml_id.html" title="Class corresponding to the NmlId schema type." alt="" coords="250,1476,381,1503"/>
+<area shape="rect" id="node27" href="$classneuroml2_1_1_notes.html" title="Class corresponding to the Notes schema type." alt="" coords="250,1527,381,1553"/>
+<area shape="rect" id="node28" href="$classneuroml2_1_1_plasticity_types.html" title="Enumeration class corresponding to the PlasticityTypes schema type." alt="" coords="221,1577,410,1604"/>
+<area shape="rect" id="node29" href="$classneuroml2_1_1_true_or_false.html" title="Enumeration class corresponding to the TrueOrFalse schema type." alt="" coords="232,1628,399,1655"/>
+<area shape="rect" id="node30" href="$classneuroml2_1_1allowed_spaces.html" title="Enumeration class corresponding to the allowedSpaces schema type." alt="" coords="221,1679,410,1705"/>
+<area shape="rect" id="node31" href="$classneuroml2_1_1channel_types.html" title="Enumeration class corresponding to the channelTypes schema type." alt="" coords="225,1729,405,1756"/>
+<area shape="rect" id="node32" href="$classneuroml2_1_1gate_types.html" title="Enumeration class corresponding to the gateTypes schema type." alt="" coords="236,1780,395,1807"/>
+<area shape="rect" id="node33" href="$classneuroml2_1_1network_types.html" title="Enumeration class corresponding to the networkTypes schema type." alt="" coords="224,1831,407,1857"/>
+<area shape="rect" id="node34" href="$classneuroml2_1_1population_types.html" title="Enumeration class corresponding to the populationTypes schema type." alt="" coords="216,1881,415,1908"/>
+</map>

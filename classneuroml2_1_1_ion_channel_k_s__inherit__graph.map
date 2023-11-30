@@ -1,0 +1,7 @@
+<map id="neuroml2::IonChannelKS" name="neuroml2::IonChannelKS">
+<area shape="rect" id="node1" title="Class corresponding to the IonChannelKS schema type." alt="" coords="7,304,190,331"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="16,229,181,256"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="37,155,161,181"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="5,80,192,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="27,5,170,32"/>
+</map>

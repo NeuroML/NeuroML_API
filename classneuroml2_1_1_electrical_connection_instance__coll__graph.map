@@ -1,0 +1,9 @@
+<map id="neuroml2::ElectricalConnectionInstance" name="neuroml2::ElectricalConnectionInstance">
+<area shape="rect" id="node1" title="Class corresponding to the ElectricalConnectionInstance schema type." alt="" coords="5,483,231,524"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_electrical_connection.html" title="Class corresponding to the ElectricalConnection schema type." alt="" coords="5,408,231,435"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_connection_new_format.html" title="Class corresponding to the BaseConnectionNewFormat schema type." alt="" coords="19,319,217,360"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_connection.html" title="Class corresponding to the BaseConnection schema type." alt="" coords="19,244,217,271"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="13,155,223,196"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="25,80,211,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="47,5,189,32"/>
+</map>

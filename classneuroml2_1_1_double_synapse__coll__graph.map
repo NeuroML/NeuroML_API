@@ -1,0 +1,9 @@
+<map id="neuroml2::DoubleSynapse" name="neuroml2::DoubleSynapse">
+<area shape="rect" id="node1" title="Class corresponding to the DoubleSynapse schema type." alt="" coords="8,468,201,495"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_voltage_dep_synapse.html" title="Class corresponding to the BaseVoltageDepSynapse schema type." alt="" coords="5,379,204,420"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_synapse.html" title="Class corresponding to the BaseSynapse schema type." alt="" coords="15,304,194,331"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="22,229,187,256"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="43,155,167,181"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="11,80,198,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="33,5,176,32"/>
+</map>

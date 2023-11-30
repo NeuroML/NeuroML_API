@@ -1,0 +1,22 @@
+<map id="neuroml2::BaseNonNegativeIntegerId" name="neuroml2::BaseNonNegativeIntegerId">
+<area shape="rect" id="node1" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="431,212,640,253"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_connection.html" title="Class corresponding to the BaseConnection schema type." alt="" coords="688,135,885,162"/>
+<area shape="rect" id="node16" href="$classneuroml2_1_1_input.html" title="Class corresponding to the Input schema type." alt="" coords="724,194,849,221"/>
+<area shape="rect" id="node18" href="$classneuroml2_1_1_segment__base.html" title="Class corresponding to the Segment schema type." alt="" coords="693,245,881,271"/>
+<area shape="rect" id="node20" href="$classneuroml2_1_1_spike.html" title="Class corresponding to the Spike schema type." alt="" coords="723,295,850,322"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="196,219,383,246"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,219,148,246"/>
+<area shape="rect" id="node5" href="$classneuroml2_1_1_base_connection_new_format.html" title="Class corresponding to the BaseConnectionNewFormat schema type." alt="" coords="933,63,1131,104"/>
+<area shape="rect" id="node12" href="$classneuroml2_1_1_base_connection_old_format.html" title="Class corresponding to the BaseConnectionOldFormat schema type." alt="" coords="933,128,1131,169"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_continuous_connection.html" title="Class corresponding to the ContinuousConnection schema type." alt="" coords="1179,17,1417,43"/>
+<area shape="rect" id="node9" href="$classneuroml2_1_1_electrical_connection.html" title="Class corresponding to the ElectricalConnection schema type." alt="" coords="1185,74,1411,101"/>
+<area shape="rect" id="node7" href="$classneuroml2_1_1_continuous_connection_instance.html" title="Class corresponding to the ContinuousConnectionInstance schema type." alt="" coords="1465,5,1704,47"/>
+<area shape="rect" id="node8" href="$classneuroml2_1_1_continuous_connection_instance_w.html" title="Class corresponding to the ContinuousConnectionInstanceW schema type." alt="" coords="1752,5,1991,47"/>
+<area shape="rect" id="node10" href="$classneuroml2_1_1_electrical_connection_instance.html" title="Class corresponding to the ElectricalConnectionInstance schema type." alt="" coords="1472,71,1697,112"/>
+<area shape="rect" id="node11" href="$classneuroml2_1_1_electrical_connection_instance_w.html" title="Class corresponding to the ElectricalConnectionInstanceW schema type." alt="" coords="1759,71,1984,112"/>
+<area shape="rect" id="node13" href="$classneuroml2_1_1_connection_w_d.html" title="Class corresponding to the ConnectionWD schema type." alt="" coords="1204,131,1392,158"/>
+<area shape="rect" id="node14" href="$classneuroml2_1_1_connection__base.html" title="Class corresponding to the Connection schema type." alt="" coords="1197,182,1399,209"/>
+<area shape="rect" id="node15" href="$classneuroml2_1_1_connection.html" title="Class corresponding to the Connection schema type." alt="" coords="1502,182,1667,209"/>
+<area shape="rect" id="node17" href="$classneuroml2_1_1_input_w.html" title="Class corresponding to the InputW schema type." alt="" coords="963,194,1101,221"/>
+<area shape="rect" id="node19" href="$classneuroml2_1_1_segment.html" title="Class corresponding to the Segment schema type." alt="" coords="957,245,1107,271"/>
+</map>

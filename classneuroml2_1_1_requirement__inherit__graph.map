@@ -1,0 +1,6 @@
+<map id="neuroml2::Requirement" name="neuroml2::Requirement">
+<area shape="rect" id="node1" title="Class corresponding to the Requirement schema type." alt="" coords="43,229,219,256"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_named_dimensional_type.html" title="Class corresponding to the NamedDimensionalType schema type." alt="" coords="5,155,256,181"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="37,80,224,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="59,5,202,32"/>
+</map>

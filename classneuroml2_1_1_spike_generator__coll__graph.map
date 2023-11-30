@@ -1,0 +1,7 @@
+<map id="neuroml2::SpikeGenerator" name="neuroml2::SpikeGenerator">
+<area shape="rect" id="node1" title="Class corresponding to the SpikeGenerator schema type." alt="" coords="5,304,197,331"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="19,229,184,256"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="39,155,163,181"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="8,80,195,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="30,5,173,32"/>
+</map>

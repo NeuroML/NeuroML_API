@@ -1,0 +1,8 @@
+<map id="neuroml2::NeuroMLDocument_base" name="neuroml2::NeuroMLDocument_base">
+<area shape="rect" id="node1" title="Class corresponding to the NeuroMLDocument schema type." alt="" coords="5,304,260,331"/>
+<area shape="rect" id="node6" href="$classneuroml2_1_1_neuro_m_l_document.html" title="Class corresponding to the NeuroMLDocument schema type." alt="" coords="24,379,241,405"/>
+<area shape="rect" id="node2" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="50,229,215,256"/>
+<area shape="rect" id="node3" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="71,155,195,181"/>
+<area shape="rect" id="node4" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="39,80,226,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="61,5,204,32"/>
+</map>
