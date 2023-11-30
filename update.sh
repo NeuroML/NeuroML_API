@@ -6,9 +6,10 @@
 #
 # Script to regenerate and update the API for a new version of the NeuroML schema
 #
-NEUROML_VERSION="2.2"
+NEUROML_VERSION="2.3"
 
 echo "Please ensure that you have ctest and xsd installed. See readme for details."
+echo "For building documentation doxygen is required also."
 
 rm -rf build && \
     mkdir build && \

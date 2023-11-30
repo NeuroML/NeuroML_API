@@ -78,7 +78,7 @@ On Fedora and other RPM based distributions, you can install Xerces and xsd
 from the standard repositories using `dnf` or `yum`:
 
 ```
-sudo dnf install xsd xerces-c-devel
+sudo dnf install xsd xerces-c-devel doxygen
 ```
 
 If you install xsd in a non-standard location, please set the `XSD_ROOT`

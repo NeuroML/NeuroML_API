@@ -39,7 +39,7 @@
 
 #include <xsd/cxx/pre.hxx>
 
-#include "NeuroML_v2.2.hxx"
+#include "NeuroML_v2.3.hxx"
 
 namespace neuroml2
 {
@@ -131,6 +131,10 @@ namespace neuroml2
   // 
 
 
+  // Nml2PopulationReferencePath
+  // 
+
+
   // NonNegativeInteger
   // 
 
@@ -161,6 +165,10 @@ namespace neuroml2
 
 
   // Notes
+  // 
+
+
+  // BaseWithoutId
   // 
 
 
@@ -257,6 +265,24 @@ namespace neuroml2
   Parameter (const Parameter_sequence& s)
   {
     this->Parameter_ = s;
+  }
+
+  const ComponentType::DerivedParameter_sequence& ComponentType::
+  DerivedParameter () const
+  {
+    return this->DerivedParameter_;
+  }
+
+  ComponentType::DerivedParameter_sequence& ComponentType::
+  DerivedParameter ()
+  {
+    return this->DerivedParameter_;
+  }
+
+  void ComponentType::
+  DerivedParameter (const DerivedParameter_sequence& s)
+  {
+    this->DerivedParameter_ = s;
   }
 
   const ComponentType::Constant_sequence& ComponentType::
@@ -820,6 +846,34 @@ namespace neuroml2
   // 
 
 
+  // DerivedParameter
+  // 
+
+  const DerivedParameter::value_type& DerivedParameter::
+  value () const
+  {
+    return this->value_.get ();
+  }
+
+  DerivedParameter::value_type& DerivedParameter::
+  value ()
+  {
+    return this->value_.get ();
+  }
+
+  void DerivedParameter::
+  value (const value_type& x)
+  {
+    this->value_.set (x);
+  }
+
+  void DerivedParameter::
+  value (::std::unique_ptr< value_type > x)
+  {
+    this->value_.set (std::move (x));
+  }
+
+
   // LEMS_Property
   // 
 
@@ -977,6 +1031,90 @@ namespace neuroml2
   TimeDerivative (const TimeDerivative_sequence& s)
   {
     this->TimeDerivative_ = s;
+  }
+
+  const Dynamics::OnStart_optional& Dynamics::
+  OnStart () const
+  {
+    return this->OnStart_;
+  }
+
+  Dynamics::OnStart_optional& Dynamics::
+  OnStart ()
+  {
+    return this->OnStart_;
+  }
+
+  void Dynamics::
+  OnStart (const OnStart_type& x)
+  {
+    this->OnStart_.set (x);
+  }
+
+  void Dynamics::
+  OnStart (const OnStart_optional& x)
+  {
+    this->OnStart_ = x;
+  }
+
+  void Dynamics::
+  OnStart (::std::unique_ptr< OnStart_type > x)
+  {
+    this->OnStart_.set (std::move (x));
+  }
+
+  const Dynamics::OnEvent_sequence& Dynamics::
+  OnEvent () const
+  {
+    return this->OnEvent_;
+  }
+
+  Dynamics::OnEvent_sequence& Dynamics::
+  OnEvent ()
+  {
+    return this->OnEvent_;
+  }
+
+  void Dynamics::
+  OnEvent (const OnEvent_sequence& s)
+  {
+    this->OnEvent_ = s;
+  }
+
+  const Dynamics::OnCondition_sequence& Dynamics::
+  OnCondition () const
+  {
+    return this->OnCondition_;
+  }
+
+  Dynamics::OnCondition_sequence& Dynamics::
+  OnCondition ()
+  {
+    return this->OnCondition_;
+  }
+
+  void Dynamics::
+  OnCondition (const OnCondition_sequence& s)
+  {
+    this->OnCondition_ = s;
+  }
+
+  const Dynamics::Regime_sequence& Dynamics::
+  Regime () const
+  {
+    return this->Regime_;
+  }
+
+  Dynamics::Regime_sequence& Dynamics::
+  Regime ()
+  {
+    return this->Regime_;
+  }
+
+  void Dynamics::
+  Regime (const Regime_sequence& s)
+  {
+    this->Regime_ = s;
   }
 
 
@@ -1180,42 +1318,487 @@ namespace neuroml2
   }
 
 
+  // OnStart
+  // 
+
+  const OnStart::StateAssignment_sequence& OnStart::
+  StateAssignment () const
+  {
+    return this->StateAssignment_;
+  }
+
+  OnStart::StateAssignment_sequence& OnStart::
+  StateAssignment ()
+  {
+    return this->StateAssignment_;
+  }
+
+  void OnStart::
+  StateAssignment (const StateAssignment_sequence& s)
+  {
+    this->StateAssignment_ = s;
+  }
+
+
+  // StateAssignment
+  // 
+
+  const StateAssignment::variable_type& StateAssignment::
+  variable () const
+  {
+    return this->variable_.get ();
+  }
+
+  StateAssignment::variable_type& StateAssignment::
+  variable ()
+  {
+    return this->variable_.get ();
+  }
+
+  void StateAssignment::
+  variable (const variable_type& x)
+  {
+    this->variable_.set (x);
+  }
+
+  void StateAssignment::
+  variable (::std::unique_ptr< variable_type > x)
+  {
+    this->variable_.set (std::move (x));
+  }
+
+  const StateAssignment::value_type& StateAssignment::
+  value () const
+  {
+    return this->value_.get ();
+  }
+
+  StateAssignment::value_type& StateAssignment::
+  value ()
+  {
+    return this->value_.get ();
+  }
+
+  void StateAssignment::
+  value (const value_type& x)
+  {
+    this->value_.set (x);
+  }
+
+  void StateAssignment::
+  value (::std::unique_ptr< value_type > x)
+  {
+    this->value_.set (std::move (x));
+  }
+
+
+  // OnEvent
+  // 
+
+  const OnEvent::StateAssignment_sequence& OnEvent::
+  StateAssignment () const
+  {
+    return this->StateAssignment_;
+  }
+
+  OnEvent::StateAssignment_sequence& OnEvent::
+  StateAssignment ()
+  {
+    return this->StateAssignment_;
+  }
+
+  void OnEvent::
+  StateAssignment (const StateAssignment_sequence& s)
+  {
+    this->StateAssignment_ = s;
+  }
+
+  const OnEvent::EventOut_sequence& OnEvent::
+  EventOut () const
+  {
+    return this->EventOut_;
+  }
+
+  OnEvent::EventOut_sequence& OnEvent::
+  EventOut ()
+  {
+    return this->EventOut_;
+  }
+
+  void OnEvent::
+  EventOut (const EventOut_sequence& s)
+  {
+    this->EventOut_ = s;
+  }
+
+  const OnEvent::port_type& OnEvent::
+  port () const
+  {
+    return this->port_.get ();
+  }
+
+  OnEvent::port_type& OnEvent::
+  port ()
+  {
+    return this->port_.get ();
+  }
+
+  void OnEvent::
+  port (const port_type& x)
+  {
+    this->port_.set (x);
+  }
+
+  void OnEvent::
+  port (::std::unique_ptr< port_type > x)
+  {
+    this->port_.set (std::move (x));
+  }
+
+
+  // EventOut
+  // 
+
+  const EventOut::port_type& EventOut::
+  port () const
+  {
+    return this->port_.get ();
+  }
+
+  EventOut::port_type& EventOut::
+  port ()
+  {
+    return this->port_.get ();
+  }
+
+  void EventOut::
+  port (const port_type& x)
+  {
+    this->port_.set (x);
+  }
+
+  void EventOut::
+  port (::std::unique_ptr< port_type > x)
+  {
+    this->port_.set (std::move (x));
+  }
+
+
+  // OnCondition
+  // 
+
+  const OnCondition::StateAssignment_sequence& OnCondition::
+  StateAssignment () const
+  {
+    return this->StateAssignment_;
+  }
+
+  OnCondition::StateAssignment_sequence& OnCondition::
+  StateAssignment ()
+  {
+    return this->StateAssignment_;
+  }
+
+  void OnCondition::
+  StateAssignment (const StateAssignment_sequence& s)
+  {
+    this->StateAssignment_ = s;
+  }
+
+  const OnCondition::EventOut_sequence& OnCondition::
+  EventOut () const
+  {
+    return this->EventOut_;
+  }
+
+  OnCondition::EventOut_sequence& OnCondition::
+  EventOut ()
+  {
+    return this->EventOut_;
+  }
+
+  void OnCondition::
+  EventOut (const EventOut_sequence& s)
+  {
+    this->EventOut_ = s;
+  }
+
+  const OnCondition::Transition_optional& OnCondition::
+  Transition () const
+  {
+    return this->Transition_;
+  }
+
+  OnCondition::Transition_optional& OnCondition::
+  Transition ()
+  {
+    return this->Transition_;
+  }
+
+  void OnCondition::
+  Transition (const Transition_type& x)
+  {
+    this->Transition_.set (x);
+  }
+
+  void OnCondition::
+  Transition (const Transition_optional& x)
+  {
+    this->Transition_ = x;
+  }
+
+  void OnCondition::
+  Transition (::std::unique_ptr< Transition_type > x)
+  {
+    this->Transition_.set (std::move (x));
+  }
+
+  const OnCondition::test_type& OnCondition::
+  test () const
+  {
+    return this->test_.get ();
+  }
+
+  OnCondition::test_type& OnCondition::
+  test ()
+  {
+    return this->test_.get ();
+  }
+
+  void OnCondition::
+  test (const test_type& x)
+  {
+    this->test_.set (x);
+  }
+
+  void OnCondition::
+  test (::std::unique_ptr< test_type > x)
+  {
+    this->test_.set (std::move (x));
+  }
+
+
+  // Transition
+  // 
+
+  const Transition::regime_type& Transition::
+  regime () const
+  {
+    return this->regime_.get ();
+  }
+
+  Transition::regime_type& Transition::
+  regime ()
+  {
+    return this->regime_.get ();
+  }
+
+  void Transition::
+  regime (const regime_type& x)
+  {
+    this->regime_.set (x);
+  }
+
+  void Transition::
+  regime (::std::unique_ptr< regime_type > x)
+  {
+    this->regime_.set (std::move (x));
+  }
+
+
+  // Regime
+  // 
+
+  const Regime::TimeDerivative_sequence& Regime::
+  TimeDerivative () const
+  {
+    return this->TimeDerivative_;
+  }
+
+  Regime::TimeDerivative_sequence& Regime::
+  TimeDerivative ()
+  {
+    return this->TimeDerivative_;
+  }
+
+  void Regime::
+  TimeDerivative (const TimeDerivative_sequence& s)
+  {
+    this->TimeDerivative_ = s;
+  }
+
+  const Regime::OnEntry_optional& Regime::
+  OnEntry () const
+  {
+    return this->OnEntry_;
+  }
+
+  Regime::OnEntry_optional& Regime::
+  OnEntry ()
+  {
+    return this->OnEntry_;
+  }
+
+  void Regime::
+  OnEntry (const OnEntry_type& x)
+  {
+    this->OnEntry_.set (x);
+  }
+
+  void Regime::
+  OnEntry (const OnEntry_optional& x)
+  {
+    this->OnEntry_ = x;
+  }
+
+  void Regime::
+  OnEntry (::std::unique_ptr< OnEntry_type > x)
+  {
+    this->OnEntry_.set (std::move (x));
+  }
+
+  const Regime::OnCondition_sequence& Regime::
+  OnCondition () const
+  {
+    return this->OnCondition_;
+  }
+
+  Regime::OnCondition_sequence& Regime::
+  OnCondition ()
+  {
+    return this->OnCondition_;
+  }
+
+  void Regime::
+  OnCondition (const OnCondition_sequence& s)
+  {
+    this->OnCondition_ = s;
+  }
+
+  const Regime::name_type& Regime::
+  name () const
+  {
+    return this->name_.get ();
+  }
+
+  Regime::name_type& Regime::
+  name ()
+  {
+    return this->name_.get ();
+  }
+
+  void Regime::
+  name (const name_type& x)
+  {
+    this->name_.set (x);
+  }
+
+  void Regime::
+  name (::std::unique_ptr< name_type > x)
+  {
+    this->name_.set (std::move (x));
+  }
+
+  const Regime::initial_optional& Regime::
+  initial () const
+  {
+    return this->initial_;
+  }
+
+  Regime::initial_optional& Regime::
+  initial ()
+  {
+    return this->initial_;
+  }
+
+  void Regime::
+  initial (const initial_type& x)
+  {
+    this->initial_.set (x);
+  }
+
+  void Regime::
+  initial (const initial_optional& x)
+  {
+    this->initial_ = x;
+  }
+
+  void Regime::
+  initial (::std::unique_ptr< initial_type > x)
+  {
+    this->initial_.set (std::move (x));
+  }
+
+
+  // OnEntry
+  // 
+
+  const OnEntry::StateAssignment_sequence& OnEntry::
+  StateAssignment () const
+  {
+    return this->StateAssignment_;
+  }
+
+  OnEntry::StateAssignment_sequence& OnEntry::
+  StateAssignment ()
+  {
+    return this->StateAssignment_;
+  }
+
+  void OnEntry::
+  StateAssignment (const StateAssignment_sequence& s)
+  {
+    this->StateAssignment_ = s;
+  }
+
+
+  // TrueOrFalse
+  // 
+
+  TrueOrFalse::
+  TrueOrFalse (value v)
+  : ::xml_schema::string (_xsd_TrueOrFalse_literals_[v])
+  {
+  }
+
+  TrueOrFalse::
+  TrueOrFalse (const char* v)
+  : ::xml_schema::string (v)
+  {
+  }
+
+  TrueOrFalse::
+  TrueOrFalse (const ::std::string& v)
+  : ::xml_schema::string (v)
+  {
+  }
+
+  TrueOrFalse::
+  TrueOrFalse (const ::xml_schema::string& v)
+  : ::xml_schema::string (v)
+  {
+  }
+
+  TrueOrFalse::
+  TrueOrFalse (const TrueOrFalse& v,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
+  : ::xml_schema::string (v, f, c)
+  {
+  }
+
+  TrueOrFalse& TrueOrFalse::
+  operator= (value v)
+  {
+    static_cast< ::xml_schema::string& > (*this) = 
+    ::xml_schema::string (_xsd_TrueOrFalse_literals_[v]);
+
+    return *this;
+  }
+
+
   // ZeroToOne
   // 
-
-
-  // BaseWithoutId
-  // 
-
-  const BaseWithoutId::neuroLexId_optional& BaseWithoutId::
-  neuroLexId () const
-  {
-    return this->neuroLexId_;
-  }
-
-  BaseWithoutId::neuroLexId_optional& BaseWithoutId::
-  neuroLexId ()
-  {
-    return this->neuroLexId_;
-  }
-
-  void BaseWithoutId::
-  neuroLexId (const neuroLexId_type& x)
-  {
-    this->neuroLexId_.set (x);
-  }
-
-  void BaseWithoutId::
-  neuroLexId (const neuroLexId_optional& x)
-  {
-    this->neuroLexId_ = x;
-  }
-
-  void BaseWithoutId::
-  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
-  {
-    this->neuroLexId_.set (std::move (x));
-  }
 
 
   // Base
@@ -1991,6 +2574,24 @@ namespace neuroml2
     this->pinskyRinzelCA3Cell_ = s;
   }
 
+  const NeuroMLDocument_base::hindmarshRose1984Cell_sequence& NeuroMLDocument_base::
+  hindmarshRose1984Cell () const
+  {
+    return this->hindmarshRose1984Cell_;
+  }
+
+  NeuroMLDocument_base::hindmarshRose1984Cell_sequence& NeuroMLDocument_base::
+  hindmarshRose1984Cell ()
+  {
+    return this->hindmarshRose1984Cell_;
+  }
+
+  void NeuroMLDocument_base::
+  hindmarshRose1984Cell (const hindmarshRose1984Cell_sequence& s)
+  {
+    this->hindmarshRose1984Cell_ = s;
+  }
+
   const NeuroMLDocument_base::pulseGenerator_sequence& NeuroMLDocument_base::
   pulseGenerator () const
   {
@@ -2617,6 +3218,36 @@ namespace neuroml2
     this->q10ConductanceScaling_ = s;
   }
 
+  const IonChannelScalable::neuroLexId_optional& IonChannelScalable::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  IonChannelScalable::neuroLexId_optional& IonChannelScalable::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void IonChannelScalable::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void IonChannelScalable::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void IonChannelScalable::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
+
 
   // IonChannelKS
   // 
@@ -2697,6 +3328,36 @@ namespace neuroml2
   conductance (::std::unique_ptr< conductance_type > x)
   {
     this->conductance_.set (std::move (x));
+  }
+
+  const IonChannelKS::neuroLexId_optional& IonChannelKS::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  IonChannelKS::neuroLexId_optional& IonChannelKS::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void IonChannelKS::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void IonChannelKS::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void IonChannelKS::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
   }
 
 
@@ -5551,6 +6212,36 @@ namespace neuroml2
   // BaseSynapse
   // 
 
+  const BaseSynapse::neuroLexId_optional& BaseSynapse::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  BaseSynapse::neuroLexId_optional& BaseSynapse::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void BaseSynapse::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void BaseSynapse::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void BaseSynapse::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
+
 
   // BaseVoltageDepSynapse
   // 
@@ -6594,6 +7285,36 @@ namespace neuroml2
 
   // BaseCell
   // 
+
+  const BaseCell::neuroLexId_optional& BaseCell::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  BaseCell::neuroLexId_optional& BaseCell::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void BaseCell::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void BaseCell::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void BaseCell::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
 
 
   // IafTauCell
@@ -8200,6 +8921,274 @@ namespace neuroml2
   }
 
 
+  // HindmarshRose1984Cell
+  // 
+
+  const HindmarshRose1984Cell::a_type& HindmarshRose1984Cell::
+  a () const
+  {
+    return this->a_.get ();
+  }
+
+  HindmarshRose1984Cell::a_type& HindmarshRose1984Cell::
+  a ()
+  {
+    return this->a_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  a (const a_type& x)
+  {
+    this->a_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  a (::std::unique_ptr< a_type > x)
+  {
+    this->a_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::b_type& HindmarshRose1984Cell::
+  b () const
+  {
+    return this->b_.get ();
+  }
+
+  HindmarshRose1984Cell::b_type& HindmarshRose1984Cell::
+  b ()
+  {
+    return this->b_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  b (const b_type& x)
+  {
+    this->b_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  b (::std::unique_ptr< b_type > x)
+  {
+    this->b_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::c_type& HindmarshRose1984Cell::
+  c () const
+  {
+    return this->c_.get ();
+  }
+
+  HindmarshRose1984Cell::c_type& HindmarshRose1984Cell::
+  c ()
+  {
+    return this->c_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  c (const c_type& x)
+  {
+    this->c_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  c (::std::unique_ptr< c_type > x)
+  {
+    this->c_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::d_type& HindmarshRose1984Cell::
+  d () const
+  {
+    return this->d_.get ();
+  }
+
+  HindmarshRose1984Cell::d_type& HindmarshRose1984Cell::
+  d ()
+  {
+    return this->d_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  d (const d_type& x)
+  {
+    this->d_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  d (::std::unique_ptr< d_type > x)
+  {
+    this->d_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::s_type& HindmarshRose1984Cell::
+  s () const
+  {
+    return this->s_.get ();
+  }
+
+  HindmarshRose1984Cell::s_type& HindmarshRose1984Cell::
+  s ()
+  {
+    return this->s_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  s (const s_type& x)
+  {
+    this->s_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  s (::std::unique_ptr< s_type > x)
+  {
+    this->s_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::x1_type& HindmarshRose1984Cell::
+  x1 () const
+  {
+    return this->x1_.get ();
+  }
+
+  HindmarshRose1984Cell::x1_type& HindmarshRose1984Cell::
+  x1 ()
+  {
+    return this->x1_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  x1 (const x1_type& x)
+  {
+    this->x1_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  x1 (::std::unique_ptr< x1_type > x)
+  {
+    this->x1_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::r_type& HindmarshRose1984Cell::
+  r () const
+  {
+    return this->r_.get ();
+  }
+
+  HindmarshRose1984Cell::r_type& HindmarshRose1984Cell::
+  r ()
+  {
+    return this->r_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  r (const r_type& x)
+  {
+    this->r_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  r (::std::unique_ptr< r_type > x)
+  {
+    this->r_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::x0_type& HindmarshRose1984Cell::
+  x0 () const
+  {
+    return this->x0_.get ();
+  }
+
+  HindmarshRose1984Cell::x0_type& HindmarshRose1984Cell::
+  x0 ()
+  {
+    return this->x0_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  x0 (const x0_type& x)
+  {
+    this->x0_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  x0 (::std::unique_ptr< x0_type > x)
+  {
+    this->x0_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::y0_type& HindmarshRose1984Cell::
+  y0 () const
+  {
+    return this->y0_.get ();
+  }
+
+  HindmarshRose1984Cell::y0_type& HindmarshRose1984Cell::
+  y0 ()
+  {
+    return this->y0_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  y0 (const y0_type& x)
+  {
+    this->y0_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  y0 (::std::unique_ptr< y0_type > x)
+  {
+    this->y0_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::z0_type& HindmarshRose1984Cell::
+  z0 () const
+  {
+    return this->z0_.get ();
+  }
+
+  HindmarshRose1984Cell::z0_type& HindmarshRose1984Cell::
+  z0 ()
+  {
+    return this->z0_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  z0 (const z0_type& x)
+  {
+    this->z0_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  z0 (::std::unique_ptr< z0_type > x)
+  {
+    this->z0_.set (std::move (x));
+  }
+
+  const HindmarshRose1984Cell::v_scaling_type& HindmarshRose1984Cell::
+  v_scaling () const
+  {
+    return this->v_scaling_.get ();
+  }
+
+  HindmarshRose1984Cell::v_scaling_type& HindmarshRose1984Cell::
+  v_scaling ()
+  {
+    return this->v_scaling_.get ();
+  }
+
+  void HindmarshRose1984Cell::
+  v_scaling (const v_scaling_type& x)
+  {
+    this->v_scaling_.set (x);
+  }
+
+  void HindmarshRose1984Cell::
+  v_scaling (::std::unique_ptr< v_scaling_type > x)
+  {
+    this->v_scaling_.set (std::move (x));
+  }
+
+
   // Cell
   // 
 
@@ -8543,6 +9532,36 @@ namespace neuroml2
     this->name_.set (std::move (x));
   }
 
+  const Segment_base::neuroLexId_optional& Segment_base::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  Segment_base::neuroLexId_optional& Segment_base::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void Segment_base::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void Segment_base::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void Segment_base::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
+
 
   // SegmentParent
   // 
@@ -8853,6 +9872,36 @@ namespace neuroml2
   inhomogeneousParameter (const inhomogeneousParameter_sequence& s)
   {
     this->inhomogeneousParameter_ = s;
+  }
+
+  const SegmentGroup::neuroLexId_optional& SegmentGroup::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  SegmentGroup::neuroLexId_optional& SegmentGroup::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void SegmentGroup::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void SegmentGroup::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void SegmentGroup::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
   }
 
 
@@ -11122,30 +12171,6 @@ namespace neuroml2
   // Species
   // 
 
-  const Species::id_type& Species::
-  id () const
-  {
-    return this->id_.get ();
-  }
-
-  Species::id_type& Species::
-  id ()
-  {
-    return this->id_.get ();
-  }
-
-  void Species::
-  id (const id_type& x)
-  {
-    this->id_.set (x);
-  }
-
-  void Species::
-  id (::std::unique_ptr< id_type > x)
-  {
-    this->id_.set (std::move (x));
-  }
-
   const Species::concentrationModel_type& Species::
   concentrationModel () const
   {
@@ -13188,6 +14213,36 @@ namespace neuroml2
     this->temperature_.set (std::move (x));
   }
 
+  const Network::neuroLexId_optional& Network::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  Network::neuroLexId_optional& Network::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void Network::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void Network::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void Network::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
+
 
   // networkTypes
   // 
@@ -13688,6 +14743,36 @@ namespace neuroml2
   extracellularProperties (::std::unique_ptr< extracellularProperties_type > x)
   {
     this->extracellularProperties_.set (std::move (x));
+  }
+
+  const Population::neuroLexId_optional& Population::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  Population::neuroLexId_optional& Population::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void Population::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void Population::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void Population::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
   }
 
 
@@ -14235,6 +15320,36 @@ namespace neuroml2
   // SynapticConnection
   // 
 
+  const SynapticConnection::neuroLexId_optional& SynapticConnection::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  SynapticConnection::neuroLexId_optional& SynapticConnection::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void SynapticConnection::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void SynapticConnection::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void SynapticConnection::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
+
   const SynapticConnection::from_type& SynapticConnection::
   from () const
   {
@@ -14456,6 +15571,36 @@ namespace neuroml2
 
   // BaseConnection
   // 
+
+  const BaseConnection::neuroLexId_optional& BaseConnection::
+  neuroLexId () const
+  {
+    return this->neuroLexId_;
+  }
+
+  BaseConnection::neuroLexId_optional& BaseConnection::
+  neuroLexId ()
+  {
+    return this->neuroLexId_;
+  }
+
+  void BaseConnection::
+  neuroLexId (const neuroLexId_type& x)
+  {
+    this->neuroLexId_.set (x);
+  }
+
+  void BaseConnection::
+  neuroLexId (const neuroLexId_optional& x)
+  {
+    this->neuroLexId_ = x;
+  }
+
+  void BaseConnection::
+  neuroLexId (::std::unique_ptr< neuroLexId_type > x)
+  {
+    this->neuroLexId_.set (std::move (x));
+  }
 
 
   // BaseConnectionOldFormat
@@ -15272,30 +16417,6 @@ namespace neuroml2
 
   // Input
   // 
-
-  const Input::id_type& Input::
-  id () const
-  {
-    return this->id_.get ();
-  }
-
-  Input::id_type& Input::
-  id ()
-  {
-    return this->id_.get ();
-  }
-
-  void Input::
-  id (const id_type& x)
-  {
-    this->id_.set (x);
-  }
-
-  void Input::
-  id (::std::unique_ptr< id_type > x)
-  {
-    this->id_.set (std::move (x));
-  }
 
   const Input::target_type& Input::
   target () const
@@ -17674,6 +18795,78 @@ namespace neuroml2
   {
   }
 
+  // Nml2PopulationReferencePath
+  //
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath ()
+  : ::xml_schema::string ()
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const char* _xsd_string_base)
+  : ::xml_schema::string (_xsd_string_base)
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const ::std::string& _xsd_string_base)
+  : ::xml_schema::string (_xsd_string_base)
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const ::xml_schema::string& _xsd_string_base)
+  : ::xml_schema::string (_xsd_string_base)
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const Nml2PopulationReferencePath& x,
+                               ::xml_schema::flags f,
+                               ::xml_schema::container* c)
+  : ::xml_schema::string (x, f, c)
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const ::xercesc::DOMElement& e,
+                               ::xml_schema::flags f,
+                               ::xml_schema::container* c)
+  : ::xml_schema::string (e, f, c)
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const ::xercesc::DOMAttr& a,
+                               ::xml_schema::flags f,
+                               ::xml_schema::container* c)
+  : ::xml_schema::string (a, f, c)
+  {
+  }
+
+  Nml2PopulationReferencePath::
+  Nml2PopulationReferencePath (const ::std::string& s,
+                               const ::xercesc::DOMElement* e,
+                               ::xml_schema::flags f,
+                               ::xml_schema::container* c)
+  : ::xml_schema::string (s, e, f, c)
+  {
+  }
+
+  Nml2PopulationReferencePath* Nml2PopulationReferencePath::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class Nml2PopulationReferencePath (*this, f, c);
+  }
+
+  Nml2PopulationReferencePath::
+  ~Nml2PopulationReferencePath ()
+  {
+  }
+
   // NonNegativeInteger
   //
 
@@ -17943,13 +19136,79 @@ namespace neuroml2
   {
   }
 
+  // BaseWithoutId
+  //
+
+  BaseWithoutId::
+  BaseWithoutId ()
+  : ::xml_schema::type ()
+  {
+  }
+
+  BaseWithoutId::
+  BaseWithoutId (const BaseWithoutId& x,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c)
+  {
+  }
+
+  BaseWithoutId::
+  BaseWithoutId (const ::xercesc::DOMElement& e,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+  : ::xml_schema::type (e, f, c)
+  {
+  }
+
+  BaseWithoutId::
+  BaseWithoutId (const ::xercesc::DOMAttr& a,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+  : ::xml_schema::type (a, f, c)
+  {
+  }
+
+  BaseWithoutId::
+  BaseWithoutId (const ::std::string& s,
+                 const ::xercesc::DOMElement* e,
+                 ::xml_schema::flags f,
+                 ::xml_schema::container* c)
+  : ::xml_schema::type (s, e, f, c)
+  {
+  }
+
+  BaseWithoutId* BaseWithoutId::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class BaseWithoutId (*this, f, c);
+  }
+
+  BaseWithoutId::
+  ~BaseWithoutId ()
+  {
+  }
+
+  bool
+  operator== (const BaseWithoutId&, const BaseWithoutId&)
+  {
+    return true;
+  }
+
+  bool
+  operator!= (const BaseWithoutId& x, const BaseWithoutId& y)
+  {
+    return !(x == y);
+  }
+
   // Property
   //
 
   Property::
   Property (const tag_type& tag,
             const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     tag_ (tag, this),
     value_ (value, this)
   {
@@ -17959,7 +19218,7 @@ namespace neuroml2
   Property (const Property& x,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     tag_ (x.tag_, f, this),
     value_ (x.value_, f, this)
   {
@@ -17969,7 +19228,7 @@ namespace neuroml2
   Property (const ::xercesc::DOMElement& e,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     tag_ (this),
     value_ (this)
   {
@@ -18030,7 +19289,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->tag_ = x.tag_;
       this->value_ = x.value_;
     }
@@ -18066,7 +19325,7 @@ namespace neuroml2
 
   Annotation::
   Annotation ()
-  : ::xml_schema::type ()
+  : ::neuroml2::BaseWithoutId ()
   {
   }
 
@@ -18074,7 +19333,7 @@ namespace neuroml2
   Annotation (const Annotation& x,
               ::xml_schema::flags f,
               ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c)
+  : ::neuroml2::BaseWithoutId (x, f, c)
   {
   }
 
@@ -18082,7 +19341,7 @@ namespace neuroml2
   Annotation (const ::xercesc::DOMElement& e,
               ::xml_schema::flags f,
               ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c)
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -18117,18 +19376,6 @@ namespace neuroml2
   {
   }
 
-  bool
-  operator== (const Annotation&, const Annotation&)
-  {
-    return true;
-  }
-
-  bool
-  operator!= (const Annotation& x, const Annotation& y)
-  {
-    return !(x == y);
-  }
-
   // ComponentType
   //
 
@@ -18137,6 +19384,7 @@ namespace neuroml2
   : ::xml_schema::type (),
     Property_ (this),
     Parameter_ (this),
+    DerivedParameter_ (this),
     Constant_ (this),
     Exposure_ (this),
     Requirement_ (this),
@@ -18155,6 +19403,7 @@ namespace neuroml2
   : ::xml_schema::type (x, f, c),
     Property_ (x.Property_, f, this),
     Parameter_ (x.Parameter_, f, this),
+    DerivedParameter_ (x.DerivedParameter_, f, this),
     Constant_ (x.Constant_, f, this),
     Exposure_ (x.Exposure_, f, this),
     Requirement_ (x.Requirement_, f, this),
@@ -18173,6 +19422,7 @@ namespace neuroml2
   : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
     Property_ (this),
     Parameter_ (this),
+    DerivedParameter_ (this),
     Constant_ (this),
     Exposure_ (this),
     Requirement_ (this),
@@ -18218,6 +19468,17 @@ namespace neuroml2
           Parameter_traits::create (i, f, this));
 
         this->Parameter_.push_back (::std::move (r));
+        continue;
+      }
+
+      // DerivedParameter
+      //
+      if (n.name () == "DerivedParameter" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< DerivedParameter_type > r (
+          DerivedParameter_traits::create (i, f, this));
+
+        this->DerivedParameter_.push_back (::std::move (r));
         continue;
       }
 
@@ -18327,6 +19588,7 @@ namespace neuroml2
       static_cast< ::xml_schema::type& > (*this) = x;
       this->Property_ = x.Property_;
       this->Parameter_ = x.Parameter_;
+      this->DerivedParameter_ = x.DerivedParameter_;
       this->Constant_ = x.Constant_;
       this->Exposure_ = x.Exposure_;
       this->Requirement_ = x.Requirement_;
@@ -18352,6 +19614,9 @@ namespace neuroml2
       return false;
 
     if (!(x.Parameter () == y.Parameter ()))
+      return false;
+
+    if (!(x.DerivedParameter () == y.DerivedParameter ()))
       return false;
 
     if (!(x.Constant () == y.Constant ()))
@@ -18394,7 +19659,7 @@ namespace neuroml2
   Constant (const name_type& name,
             const dimension_type& dimension,
             const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     name_ (name, this),
     dimension_ (dimension, this),
     value_ (value, this),
@@ -18406,7 +19671,7 @@ namespace neuroml2
   Constant (const Constant& x,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     name_ (x.name_, f, this),
     dimension_ (x.dimension_, f, this),
     value_ (x.value_, f, this),
@@ -18418,7 +19683,7 @@ namespace neuroml2
   Constant (const ::xercesc::DOMElement& e,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     name_ (this),
     dimension_ (this),
     value_ (this),
@@ -18500,7 +19765,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->name_ = x.name_;
       this->dimension_ = x.dimension_;
       this->value_ = x.value_;
@@ -18545,7 +19810,7 @@ namespace neuroml2
   Exposure::
   Exposure (const name_type& name,
             const dimension_type& dimension)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     name_ (name, this),
     dimension_ (dimension, this),
     description_ (this)
@@ -18556,7 +19821,7 @@ namespace neuroml2
   Exposure (const Exposure& x,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     name_ (x.name_, f, this),
     dimension_ (x.dimension_, f, this),
     description_ (x.description_, f, this)
@@ -18567,7 +19832,7 @@ namespace neuroml2
   Exposure (const ::xercesc::DOMElement& e,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     name_ (this),
     dimension_ (this),
     description_ (this)
@@ -18635,7 +19900,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->name_ = x.name_;
       this->dimension_ = x.dimension_;
       this->description_ = x.description_;
@@ -18676,7 +19941,7 @@ namespace neuroml2
   NamedDimensionalType::
   NamedDimensionalType (const name_type& name,
                         const dimension_type& dimension)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     name_ (name, this),
     dimension_ (dimension, this),
     description_ (this)
@@ -18687,7 +19952,7 @@ namespace neuroml2
   NamedDimensionalType (const NamedDimensionalType& x,
                         ::xml_schema::flags f,
                         ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     name_ (x.name_, f, this),
     dimension_ (x.dimension_, f, this),
     description_ (x.description_, f, this)
@@ -18698,7 +19963,7 @@ namespace neuroml2
   NamedDimensionalType (const ::xercesc::DOMElement& e,
                         ::xml_schema::flags f,
                         ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     name_ (this),
     dimension_ (this),
     description_ (this)
@@ -18766,7 +20031,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->name_ = x.name_;
       this->dimension_ = x.dimension_;
       this->description_ = x.description_;
@@ -18807,7 +20072,7 @@ namespace neuroml2
   NamedDimensionalVariable::
   NamedDimensionalVariable (const name_type& name,
                             const dimension_type& dimension)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     name_ (name, this),
     dimension_ (dimension, this),
     description_ (this),
@@ -18819,7 +20084,7 @@ namespace neuroml2
   NamedDimensionalVariable (const NamedDimensionalVariable& x,
                             ::xml_schema::flags f,
                             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     name_ (x.name_, f, this),
     dimension_ (x.dimension_, f, this),
     description_ (x.description_, f, this),
@@ -18831,7 +20096,7 @@ namespace neuroml2
   NamedDimensionalVariable (const ::xercesc::DOMElement& e,
                             ::xml_schema::flags f,
                             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     name_ (this),
     dimension_ (this),
     description_ (this),
@@ -18906,7 +20171,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->name_ = x.name_;
       this->dimension_ = x.dimension_;
       this->description_ = x.description_;
@@ -18982,6 +20247,114 @@ namespace neuroml2
   Parameter::
   ~Parameter ()
   {
+  }
+
+  // DerivedParameter
+  //
+
+  DerivedParameter::
+  DerivedParameter (const name_type& name,
+                    const dimension_type& dimension,
+                    const value_type& value)
+  : ::neuroml2::NamedDimensionalType (name,
+                                      dimension),
+    value_ (value, this)
+  {
+  }
+
+  DerivedParameter::
+  DerivedParameter (const DerivedParameter& x,
+                    ::xml_schema::flags f,
+                    ::xml_schema::container* c)
+  : ::neuroml2::NamedDimensionalType (x, f, c),
+    value_ (x.value_, f, this)
+  {
+  }
+
+  DerivedParameter::
+  DerivedParameter (const ::xercesc::DOMElement& e,
+                    ::xml_schema::flags f,
+                    ::xml_schema::container* c)
+  : ::neuroml2::NamedDimensionalType (e, f | ::xml_schema::flags::base, c),
+    value_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void DerivedParameter::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    this->::neuroml2::NamedDimensionalType::parse (p, f);
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "value" && n.namespace_ ().empty ())
+      {
+        this->value_.set (value_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!value_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "value",
+        "");
+    }
+  }
+
+  DerivedParameter* DerivedParameter::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class DerivedParameter (*this, f, c);
+  }
+
+  DerivedParameter& DerivedParameter::
+  operator= (const DerivedParameter& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::neuroml2::NamedDimensionalType& > (*this) = x;
+      this->value_ = x.value_;
+    }
+
+    return *this;
+  }
+
+  DerivedParameter::
+  ~DerivedParameter ()
+  {
+  }
+
+  bool
+  operator== (const DerivedParameter& x, const DerivedParameter& y)
+  {
+    if (!(static_cast< const ::neuroml2::NamedDimensionalType& > (x) ==
+          static_cast< const ::neuroml2::NamedDimensionalType& > (y)))
+      return false;
+
+    if (!(x.value () == y.value ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const DerivedParameter& x, const DerivedParameter& y)
+  {
+    return !(x == y);
   }
 
   // LEMS_Property
@@ -19250,7 +20623,11 @@ namespace neuroml2
     StateVariable_ (this),
     DerivedVariable_ (this),
     ConditionalDerivedVariable_ (this),
-    TimeDerivative_ (this)
+    TimeDerivative_ (this),
+    OnStart_ (this),
+    OnEvent_ (this),
+    OnCondition_ (this),
+    Regime_ (this)
   {
   }
 
@@ -19262,7 +20639,11 @@ namespace neuroml2
     StateVariable_ (x.StateVariable_, f, this),
     DerivedVariable_ (x.DerivedVariable_, f, this),
     ConditionalDerivedVariable_ (x.ConditionalDerivedVariable_, f, this),
-    TimeDerivative_ (x.TimeDerivative_, f, this)
+    TimeDerivative_ (x.TimeDerivative_, f, this),
+    OnStart_ (x.OnStart_, f, this),
+    OnEvent_ (x.OnEvent_, f, this),
+    OnCondition_ (x.OnCondition_, f, this),
+    Regime_ (x.Regime_, f, this)
   {
   }
 
@@ -19274,7 +20655,11 @@ namespace neuroml2
     StateVariable_ (this),
     DerivedVariable_ (this),
     ConditionalDerivedVariable_ (this),
-    TimeDerivative_ (this)
+    TimeDerivative_ (this),
+    OnStart_ (this),
+    OnEvent_ (this),
+    OnCondition_ (this),
+    Regime_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -19337,6 +20722,53 @@ namespace neuroml2
         continue;
       }
 
+      // OnStart
+      //
+      if (n.name () == "OnStart" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< OnStart_type > r (
+          OnStart_traits::create (i, f, this));
+
+        if (!this->OnStart_)
+        {
+          this->OnStart_.set (::std::move (r));
+          continue;
+        }
+      }
+
+      // OnEvent
+      //
+      if (n.name () == "OnEvent" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< OnEvent_type > r (
+          OnEvent_traits::create (i, f, this));
+
+        this->OnEvent_.push_back (::std::move (r));
+        continue;
+      }
+
+      // OnCondition
+      //
+      if (n.name () == "OnCondition" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< OnCondition_type > r (
+          OnCondition_traits::create (i, f, this));
+
+        this->OnCondition_.push_back (::std::move (r));
+        continue;
+      }
+
+      // Regime
+      //
+      if (n.name () == "Regime" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< Regime_type > r (
+          Regime_traits::create (i, f, this));
+
+        this->Regime_.push_back (::std::move (r));
+        continue;
+      }
+
       break;
     }
   }
@@ -19358,6 +20790,10 @@ namespace neuroml2
       this->DerivedVariable_ = x.DerivedVariable_;
       this->ConditionalDerivedVariable_ = x.ConditionalDerivedVariable_;
       this->TimeDerivative_ = x.TimeDerivative_;
+      this->OnStart_ = x.OnStart_;
+      this->OnEvent_ = x.OnEvent_;
+      this->OnCondition_ = x.OnCondition_;
+      this->Regime_ = x.Regime_;
     }
 
     return *this;
@@ -19381,6 +20817,18 @@ namespace neuroml2
       return false;
 
     if (!(x.TimeDerivative () == y.TimeDerivative ()))
+      return false;
+
+    if (!(x.OnStart () == y.OnStart ()))
+      return false;
+
+    if (!(x.OnEvent () == y.OnEvent ()))
+      return false;
+
+    if (!(x.OnCondition () == y.OnCondition ()))
+      return false;
+
+    if (!(x.Regime () == y.Regime ()))
       return false;
 
     return true;
@@ -19877,6 +21325,1063 @@ namespace neuroml2
     return !(x == y);
   }
 
+  // OnStart
+  //
+
+  OnStart::
+  OnStart ()
+  : ::xml_schema::type (),
+    StateAssignment_ (this)
+  {
+  }
+
+  OnStart::
+  OnStart (const OnStart& x,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    StateAssignment_ (x.StateAssignment_, f, this)
+  {
+  }
+
+  OnStart::
+  OnStart (const ::xercesc::DOMElement& e,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    StateAssignment_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, false);
+      this->parse (p, f);
+    }
+  }
+
+  void OnStart::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    for (; p.more_content (); p.next_content (false))
+    {
+      const ::xercesc::DOMElement& i (p.cur_element ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      // StateAssignment
+      //
+      if (n.name () == "StateAssignment" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< StateAssignment_type > r (
+          StateAssignment_traits::create (i, f, this));
+
+        this->StateAssignment_.push_back (::std::move (r));
+        continue;
+      }
+
+      break;
+    }
+  }
+
+  OnStart* OnStart::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class OnStart (*this, f, c);
+  }
+
+  OnStart& OnStart::
+  operator= (const OnStart& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->StateAssignment_ = x.StateAssignment_;
+    }
+
+    return *this;
+  }
+
+  OnStart::
+  ~OnStart ()
+  {
+  }
+
+  bool
+  operator== (const OnStart& x, const OnStart& y)
+  {
+    if (!(x.StateAssignment () == y.StateAssignment ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const OnStart& x, const OnStart& y)
+  {
+    return !(x == y);
+  }
+
+  // StateAssignment
+  //
+
+  StateAssignment::
+  StateAssignment (const variable_type& variable,
+                   const value_type& value)
+  : ::xml_schema::type (),
+    variable_ (variable, this),
+    value_ (value, this)
+  {
+  }
+
+  StateAssignment::
+  StateAssignment (const StateAssignment& x,
+                   ::xml_schema::flags f,
+                   ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    variable_ (x.variable_, f, this),
+    value_ (x.value_, f, this)
+  {
+  }
+
+  StateAssignment::
+  StateAssignment (const ::xercesc::DOMElement& e,
+                   ::xml_schema::flags f,
+                   ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    variable_ (this),
+    value_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void StateAssignment::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "variable" && n.namespace_ ().empty ())
+      {
+        this->variable_.set (variable_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "value" && n.namespace_ ().empty ())
+      {
+        this->value_.set (value_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!variable_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "variable",
+        "");
+    }
+
+    if (!value_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "value",
+        "");
+    }
+  }
+
+  StateAssignment* StateAssignment::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class StateAssignment (*this, f, c);
+  }
+
+  StateAssignment& StateAssignment::
+  operator= (const StateAssignment& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->variable_ = x.variable_;
+      this->value_ = x.value_;
+    }
+
+    return *this;
+  }
+
+  StateAssignment::
+  ~StateAssignment ()
+  {
+  }
+
+  bool
+  operator== (const StateAssignment& x, const StateAssignment& y)
+  {
+    if (!(x.variable () == y.variable ()))
+      return false;
+
+    if (!(x.value () == y.value ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const StateAssignment& x, const StateAssignment& y)
+  {
+    return !(x == y);
+  }
+
+  // OnEvent
+  //
+
+  OnEvent::
+  OnEvent (const port_type& port)
+  : ::xml_schema::type (),
+    StateAssignment_ (this),
+    EventOut_ (this),
+    port_ (port, this)
+  {
+  }
+
+  OnEvent::
+  OnEvent (const OnEvent& x,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    StateAssignment_ (x.StateAssignment_, f, this),
+    EventOut_ (x.EventOut_, f, this),
+    port_ (x.port_, f, this)
+  {
+  }
+
+  OnEvent::
+  OnEvent (const ::xercesc::DOMElement& e,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    StateAssignment_ (this),
+    EventOut_ (this),
+    port_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void OnEvent::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    for (; p.more_content (); p.next_content (false))
+    {
+      const ::xercesc::DOMElement& i (p.cur_element ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      // StateAssignment
+      //
+      if (n.name () == "StateAssignment" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< StateAssignment_type > r (
+          StateAssignment_traits::create (i, f, this));
+
+        this->StateAssignment_.push_back (::std::move (r));
+        continue;
+      }
+
+      // EventOut
+      //
+      if (n.name () == "EventOut" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< EventOut_type > r (
+          EventOut_traits::create (i, f, this));
+
+        this->EventOut_.push_back (::std::move (r));
+        continue;
+      }
+
+      break;
+    }
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "port" && n.namespace_ ().empty ())
+      {
+        this->port_.set (port_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!port_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "port",
+        "");
+    }
+  }
+
+  OnEvent* OnEvent::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class OnEvent (*this, f, c);
+  }
+
+  OnEvent& OnEvent::
+  operator= (const OnEvent& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->StateAssignment_ = x.StateAssignment_;
+      this->EventOut_ = x.EventOut_;
+      this->port_ = x.port_;
+    }
+
+    return *this;
+  }
+
+  OnEvent::
+  ~OnEvent ()
+  {
+  }
+
+  bool
+  operator== (const OnEvent& x, const OnEvent& y)
+  {
+    if (!(x.StateAssignment () == y.StateAssignment ()))
+      return false;
+
+    if (!(x.EventOut () == y.EventOut ()))
+      return false;
+
+    if (!(x.port () == y.port ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const OnEvent& x, const OnEvent& y)
+  {
+    return !(x == y);
+  }
+
+  // EventOut
+  //
+
+  EventOut::
+  EventOut (const port_type& port)
+  : ::xml_schema::type (),
+    port_ (port, this)
+  {
+  }
+
+  EventOut::
+  EventOut (const EventOut& x,
+            ::xml_schema::flags f,
+            ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    port_ (x.port_, f, this)
+  {
+  }
+
+  EventOut::
+  EventOut (const ::xercesc::DOMElement& e,
+            ::xml_schema::flags f,
+            ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    port_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void EventOut::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "port" && n.namespace_ ().empty ())
+      {
+        this->port_.set (port_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!port_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "port",
+        "");
+    }
+  }
+
+  EventOut* EventOut::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class EventOut (*this, f, c);
+  }
+
+  EventOut& EventOut::
+  operator= (const EventOut& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->port_ = x.port_;
+    }
+
+    return *this;
+  }
+
+  EventOut::
+  ~EventOut ()
+  {
+  }
+
+  bool
+  operator== (const EventOut& x, const EventOut& y)
+  {
+    if (!(x.port () == y.port ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const EventOut& x, const EventOut& y)
+  {
+    return !(x == y);
+  }
+
+  // OnCondition
+  //
+
+  OnCondition::
+  OnCondition (const test_type& test)
+  : ::xml_schema::type (),
+    StateAssignment_ (this),
+    EventOut_ (this),
+    Transition_ (this),
+    test_ (test, this)
+  {
+  }
+
+  OnCondition::
+  OnCondition (const OnCondition& x,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    StateAssignment_ (x.StateAssignment_, f, this),
+    EventOut_ (x.EventOut_, f, this),
+    Transition_ (x.Transition_, f, this),
+    test_ (x.test_, f, this)
+  {
+  }
+
+  OnCondition::
+  OnCondition (const ::xercesc::DOMElement& e,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    StateAssignment_ (this),
+    EventOut_ (this),
+    Transition_ (this),
+    test_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void OnCondition::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    for (; p.more_content (); p.next_content (false))
+    {
+      const ::xercesc::DOMElement& i (p.cur_element ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      // StateAssignment
+      //
+      if (n.name () == "StateAssignment" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< StateAssignment_type > r (
+          StateAssignment_traits::create (i, f, this));
+
+        this->StateAssignment_.push_back (::std::move (r));
+        continue;
+      }
+
+      // EventOut
+      //
+      if (n.name () == "EventOut" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< EventOut_type > r (
+          EventOut_traits::create (i, f, this));
+
+        this->EventOut_.push_back (::std::move (r));
+        continue;
+      }
+
+      // Transition
+      //
+      if (n.name () == "Transition" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< Transition_type > r (
+          Transition_traits::create (i, f, this));
+
+        if (!this->Transition_)
+        {
+          this->Transition_.set (::std::move (r));
+          continue;
+        }
+      }
+
+      break;
+    }
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "test" && n.namespace_ ().empty ())
+      {
+        this->test_.set (test_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!test_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "test",
+        "");
+    }
+  }
+
+  OnCondition* OnCondition::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class OnCondition (*this, f, c);
+  }
+
+  OnCondition& OnCondition::
+  operator= (const OnCondition& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->StateAssignment_ = x.StateAssignment_;
+      this->EventOut_ = x.EventOut_;
+      this->Transition_ = x.Transition_;
+      this->test_ = x.test_;
+    }
+
+    return *this;
+  }
+
+  OnCondition::
+  ~OnCondition ()
+  {
+  }
+
+  bool
+  operator== (const OnCondition& x, const OnCondition& y)
+  {
+    if (!(x.StateAssignment () == y.StateAssignment ()))
+      return false;
+
+    if (!(x.EventOut () == y.EventOut ()))
+      return false;
+
+    if (!(x.Transition () == y.Transition ()))
+      return false;
+
+    if (!(x.test () == y.test ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const OnCondition& x, const OnCondition& y)
+  {
+    return !(x == y);
+  }
+
+  // Transition
+  //
+
+  Transition::
+  Transition (const regime_type& regime)
+  : ::xml_schema::type (),
+    regime_ (regime, this)
+  {
+  }
+
+  Transition::
+  Transition (const Transition& x,
+              ::xml_schema::flags f,
+              ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    regime_ (x.regime_, f, this)
+  {
+  }
+
+  Transition::
+  Transition (const ::xercesc::DOMElement& e,
+              ::xml_schema::flags f,
+              ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    regime_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void Transition::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "regime" && n.namespace_ ().empty ())
+      {
+        this->regime_.set (regime_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!regime_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "regime",
+        "");
+    }
+  }
+
+  Transition* Transition::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class Transition (*this, f, c);
+  }
+
+  Transition& Transition::
+  operator= (const Transition& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->regime_ = x.regime_;
+    }
+
+    return *this;
+  }
+
+  Transition::
+  ~Transition ()
+  {
+  }
+
+  bool
+  operator== (const Transition& x, const Transition& y)
+  {
+    if (!(x.regime () == y.regime ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const Transition& x, const Transition& y)
+  {
+    return !(x == y);
+  }
+
+  // Regime
+  //
+
+  Regime::
+  Regime (const name_type& name)
+  : ::xml_schema::type (),
+    TimeDerivative_ (this),
+    OnEntry_ (this),
+    OnCondition_ (this),
+    name_ (name, this),
+    initial_ (this)
+  {
+  }
+
+  Regime::
+  Regime (const Regime& x,
+          ::xml_schema::flags f,
+          ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    TimeDerivative_ (x.TimeDerivative_, f, this),
+    OnEntry_ (x.OnEntry_, f, this),
+    OnCondition_ (x.OnCondition_, f, this),
+    name_ (x.name_, f, this),
+    initial_ (x.initial_, f, this)
+  {
+  }
+
+  Regime::
+  Regime (const ::xercesc::DOMElement& e,
+          ::xml_schema::flags f,
+          ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    TimeDerivative_ (this),
+    OnEntry_ (this),
+    OnCondition_ (this),
+    name_ (this),
+    initial_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void Regime::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    for (; p.more_content (); p.next_content (false))
+    {
+      const ::xercesc::DOMElement& i (p.cur_element ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      // TimeDerivative
+      //
+      if (n.name () == "TimeDerivative" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< TimeDerivative_type > r (
+          TimeDerivative_traits::create (i, f, this));
+
+        this->TimeDerivative_.push_back (::std::move (r));
+        continue;
+      }
+
+      // OnEntry
+      //
+      if (n.name () == "OnEntry" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< OnEntry_type > r (
+          OnEntry_traits::create (i, f, this));
+
+        if (!this->OnEntry_)
+        {
+          this->OnEntry_.set (::std::move (r));
+          continue;
+        }
+      }
+
+      // OnCondition
+      //
+      if (n.name () == "OnCondition" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< OnCondition_type > r (
+          OnCondition_traits::create (i, f, this));
+
+        this->OnCondition_.push_back (::std::move (r));
+        continue;
+      }
+
+      break;
+    }
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "name" && n.namespace_ ().empty ())
+      {
+        this->name_.set (name_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "initial" && n.namespace_ ().empty ())
+      {
+        this->initial_.set (initial_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!name_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "name",
+        "");
+    }
+  }
+
+  Regime* Regime::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class Regime (*this, f, c);
+  }
+
+  Regime& Regime::
+  operator= (const Regime& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->TimeDerivative_ = x.TimeDerivative_;
+      this->OnEntry_ = x.OnEntry_;
+      this->OnCondition_ = x.OnCondition_;
+      this->name_ = x.name_;
+      this->initial_ = x.initial_;
+    }
+
+    return *this;
+  }
+
+  Regime::
+  ~Regime ()
+  {
+  }
+
+  bool
+  operator== (const Regime& x, const Regime& y)
+  {
+    if (!(x.TimeDerivative () == y.TimeDerivative ()))
+      return false;
+
+    if (!(x.OnEntry () == y.OnEntry ()))
+      return false;
+
+    if (!(x.OnCondition () == y.OnCondition ()))
+      return false;
+
+    if (!(x.name () == y.name ()))
+      return false;
+
+    if (!(x.initial () == y.initial ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const Regime& x, const Regime& y)
+  {
+    return !(x == y);
+  }
+
+  // OnEntry
+  //
+
+  OnEntry::
+  OnEntry ()
+  : ::xml_schema::type (),
+    StateAssignment_ (this)
+  {
+  }
+
+  OnEntry::
+  OnEntry (const OnEntry& x,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
+  : ::xml_schema::type (x, f, c),
+    StateAssignment_ (x.StateAssignment_, f, this)
+  {
+  }
+
+  OnEntry::
+  OnEntry (const ::xercesc::DOMElement& e,
+           ::xml_schema::flags f,
+           ::xml_schema::container* c)
+  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+    StateAssignment_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, false);
+      this->parse (p, f);
+    }
+  }
+
+  void OnEntry::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    for (; p.more_content (); p.next_content (false))
+    {
+      const ::xercesc::DOMElement& i (p.cur_element ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      // StateAssignment
+      //
+      if (n.name () == "StateAssignment" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< StateAssignment_type > r (
+          StateAssignment_traits::create (i, f, this));
+
+        this->StateAssignment_.push_back (::std::move (r));
+        continue;
+      }
+
+      break;
+    }
+  }
+
+  OnEntry* OnEntry::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class OnEntry (*this, f, c);
+  }
+
+  OnEntry& OnEntry::
+  operator= (const OnEntry& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::type& > (*this) = x;
+      this->StateAssignment_ = x.StateAssignment_;
+    }
+
+    return *this;
+  }
+
+  OnEntry::
+  ~OnEntry ()
+  {
+  }
+
+  bool
+  operator== (const OnEntry& x, const OnEntry& y)
+  {
+    if (!(x.StateAssignment () == y.StateAssignment ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const OnEntry& x, const OnEntry& y)
+  {
+    return !(x == y);
+  }
+
+  // TrueOrFalse
+  //
+
+  TrueOrFalse::
+  TrueOrFalse (const ::xercesc::DOMElement& e,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
+  : ::xml_schema::string (e, f, c)
+  {
+    _xsd_TrueOrFalse_convert ();
+  }
+
+  TrueOrFalse::
+  TrueOrFalse (const ::xercesc::DOMAttr& a,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
+  : ::xml_schema::string (a, f, c)
+  {
+    _xsd_TrueOrFalse_convert ();
+  }
+
+  TrueOrFalse::
+  TrueOrFalse (const ::std::string& s,
+               const ::xercesc::DOMElement* e,
+               ::xml_schema::flags f,
+               ::xml_schema::container* c)
+  : ::xml_schema::string (s, e, f, c)
+  {
+    _xsd_TrueOrFalse_convert ();
+  }
+
+  TrueOrFalse* TrueOrFalse::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class TrueOrFalse (*this, f, c);
+  }
+
+  TrueOrFalse::value TrueOrFalse::
+  _xsd_TrueOrFalse_convert () const
+  {
+    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_TrueOrFalse_literals_);
+    const value* i (::std::lower_bound (
+                      _xsd_TrueOrFalse_indexes_,
+                      _xsd_TrueOrFalse_indexes_ + 2,
+                      *this,
+                      c));
+
+    if (i == _xsd_TrueOrFalse_indexes_ + 2 || _xsd_TrueOrFalse_literals_[*i] != *this)
+    {
+      throw ::xsd::cxx::tree::unexpected_enumerator < char > (*this);
+    }
+
+    return *i;
+  }
+
+  const char* const TrueOrFalse::
+  _xsd_TrueOrFalse_literals_[2] =
+  {
+    "true",
+    "false"
+  };
+
+  const TrueOrFalse::value TrueOrFalse::
+  _xsd_TrueOrFalse_indexes_[2] =
+  {
+    ::neuroml2::TrueOrFalse::false_,
+    ::neuroml2::TrueOrFalse::true_
+  };
+
   // ZeroToOne
   //
 
@@ -19931,96 +22436,6 @@ namespace neuroml2
   {
   }
 
-  // BaseWithoutId
-  //
-
-  BaseWithoutId::
-  BaseWithoutId ()
-  : ::xml_schema::type (),
-    neuroLexId_ (this)
-  {
-  }
-
-  BaseWithoutId::
-  BaseWithoutId (const BaseWithoutId& x,
-                 ::xml_schema::flags f,
-                 ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
-    neuroLexId_ (x.neuroLexId_, f, this)
-  {
-  }
-
-  BaseWithoutId::
-  BaseWithoutId (const ::xercesc::DOMElement& e,
-                 ::xml_schema::flags f,
-                 ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
-    neuroLexId_ (this)
-  {
-    if ((f & ::xml_schema::flags::base) == 0)
-    {
-      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
-      this->parse (p, f);
-    }
-  }
-
-  void BaseWithoutId::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
-  {
-    while (p.more_attributes ())
-    {
-      const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
-
-      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
-      {
-        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
-        continue;
-      }
-    }
-  }
-
-  BaseWithoutId* BaseWithoutId::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
-  {
-    return new class BaseWithoutId (*this, f, c);
-  }
-
-  BaseWithoutId& BaseWithoutId::
-  operator= (const BaseWithoutId& x)
-  {
-    if (this != &x)
-    {
-      static_cast< ::xml_schema::type& > (*this) = x;
-      this->neuroLexId_ = x.neuroLexId_;
-    }
-
-    return *this;
-  }
-
-  BaseWithoutId::
-  ~BaseWithoutId ()
-  {
-  }
-
-  bool
-  operator== (const BaseWithoutId& x, const BaseWithoutId& y)
-  {
-    if (!(x.neuroLexId () == y.neuroLexId ()))
-      return false;
-
-    return true;
-  }
-
-  bool
-  operator!= (const BaseWithoutId& x, const BaseWithoutId& y)
-  {
-    return !(x == y);
-  }
-
   // Base
   //
 
@@ -20058,10 +22473,6 @@ namespace neuroml2
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
-    this->::neuroml2::BaseWithoutId::parse (p, f);
-
-    p.reset_attributes ();
-
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
@@ -20110,10 +22521,6 @@ namespace neuroml2
   bool
   operator== (const Base& x, const Base& y)
   {
-    if (!(static_cast< const ::neuroml2::BaseWithoutId& > (x) ==
-          static_cast< const ::neuroml2::BaseWithoutId& > (y)))
-      return false;
-
     if (!(x.id () == y.id ()))
       return false;
 
@@ -20334,6 +22741,7 @@ namespace neuroml2
     fitzHughNagumoCell_ (this),
     fitzHughNagumo1969Cell_ (this),
     pinskyRinzelCA3Cell_ (this),
+    hindmarshRose1984Cell_ (this),
     pulseGenerator_ (this),
     pulseGeneratorDL_ (this),
     sineGenerator_ (this),
@@ -20409,6 +22817,7 @@ namespace neuroml2
     fitzHughNagumoCell_ (x.fitzHughNagumoCell_, f, this),
     fitzHughNagumo1969Cell_ (x.fitzHughNagumo1969Cell_, f, this),
     pinskyRinzelCA3Cell_ (x.pinskyRinzelCA3Cell_, f, this),
+    hindmarshRose1984Cell_ (x.hindmarshRose1984Cell_, f, this),
     pulseGenerator_ (x.pulseGenerator_, f, this),
     pulseGeneratorDL_ (x.pulseGeneratorDL_, f, this),
     sineGenerator_ (x.sineGenerator_, f, this),
@@ -20484,6 +22893,7 @@ namespace neuroml2
     fitzHughNagumoCell_ (this),
     fitzHughNagumo1969Cell_ (this),
     pinskyRinzelCA3Cell_ (this),
+    hindmarshRose1984Cell_ (this),
     pulseGenerator_ (this),
     pulseGeneratorDL_ (this),
     sineGenerator_ (this),
@@ -20921,6 +23331,17 @@ namespace neuroml2
         continue;
       }
 
+      // hindmarshRose1984Cell
+      //
+      if (n.name () == "hindmarshRose1984Cell" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
+      {
+        ::std::unique_ptr< hindmarshRose1984Cell_type > r (
+          hindmarshRose1984Cell_traits::create (i, f, this));
+
+        this->hindmarshRose1984Cell_.push_back (::std::move (r));
+        continue;
+      }
+
       // pulseGenerator
       //
       if (n.name () == "pulseGenerator" && n.namespace_ () == "http://www.neuroml.org/schema/neuroml2")
@@ -21325,6 +23746,7 @@ namespace neuroml2
       this->fitzHughNagumoCell_ = x.fitzHughNagumoCell_;
       this->fitzHughNagumo1969Cell_ = x.fitzHughNagumo1969Cell_;
       this->pinskyRinzelCA3Cell_ = x.pinskyRinzelCA3Cell_;
+      this->hindmarshRose1984Cell_ = x.hindmarshRose1984Cell_;
       this->pulseGenerator_ = x.pulseGenerator_;
       this->pulseGeneratorDL_ = x.pulseGeneratorDL_;
       this->sineGenerator_ = x.sineGenerator_;
@@ -21477,6 +23899,9 @@ namespace neuroml2
       return false;
 
     if (!(x.pinskyRinzelCA3Cell () == y.pinskyRinzelCA3Cell ()))
+      return false;
+
+    if (!(x.hindmarshRose1984Cell () == y.hindmarshRose1984Cell ()))
       return false;
 
     if (!(x.pulseGenerator () == y.pulseGenerator ()))
@@ -21687,7 +24112,8 @@ namespace neuroml2
   IonChannelScalable::
   IonChannelScalable (const id_type& id)
   : ::neuroml2::Standalone (id),
-    q10ConductanceScaling_ (this)
+    q10ConductanceScaling_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -21696,7 +24122,8 @@ namespace neuroml2
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
   : ::neuroml2::Standalone (x, f, c),
-    q10ConductanceScaling_ (x.q10ConductanceScaling_, f, this)
+    q10ConductanceScaling_ (x.q10ConductanceScaling_, f, this),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -21705,7 +24132,8 @@ namespace neuroml2
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
   : ::neuroml2::Standalone (e, f | ::xml_schema::flags::base, c),
-    q10ConductanceScaling_ (this)
+    q10ConductanceScaling_ (this),
+    neuroLexId_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -21739,6 +24167,21 @@ namespace neuroml2
 
       break;
     }
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
+    }
   }
 
   IonChannelScalable* IonChannelScalable::
@@ -21755,6 +24198,7 @@ namespace neuroml2
     {
       static_cast< ::neuroml2::Standalone& > (*this) = x;
       this->q10ConductanceScaling_ = x.q10ConductanceScaling_;
+      this->neuroLexId_ = x.neuroLexId_;
     }
 
     return *this;
@@ -21775,6 +24219,9 @@ namespace neuroml2
     if (!(x.q10ConductanceScaling () == y.q10ConductanceScaling ()))
       return false;
 
+    if (!(x.neuroLexId () == y.neuroLexId ()))
+      return false;
+
     return true;
   }
 
@@ -21792,7 +24239,8 @@ namespace neuroml2
   : ::neuroml2::Standalone (id),
     gateKS_ (this),
     species_ (this),
-    conductance_ (this)
+    conductance_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -21803,7 +24251,8 @@ namespace neuroml2
   : ::neuroml2::Standalone (x, f, c),
     gateKS_ (x.gateKS_, f, this),
     species_ (x.species_, f, this),
-    conductance_ (x.conductance_, f, this)
+    conductance_ (x.conductance_, f, this),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -21814,7 +24263,8 @@ namespace neuroml2
   : ::neuroml2::Standalone (e, f | ::xml_schema::flags::base, c),
     gateKS_ (this),
     species_ (this),
-    conductance_ (this)
+    conductance_ (this),
+    neuroLexId_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -21868,6 +24318,12 @@ namespace neuroml2
         this->conductance_.set (conductance_traits::create (i, f, this));
         continue;
       }
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
     }
   }
 
@@ -21887,6 +24343,7 @@ namespace neuroml2
       this->gateKS_ = x.gateKS_;
       this->species_ = x.species_;
       this->conductance_ = x.conductance_;
+      this->neuroLexId_ = x.neuroLexId_;
     }
 
     return *this;
@@ -21911,6 +24368,9 @@ namespace neuroml2
       return false;
 
     if (!(x.conductance () == y.conductance ()))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
       return false;
 
     return true;
@@ -22418,7 +24878,7 @@ namespace neuroml2
   Q10ConductanceScaling::
   Q10ConductanceScaling (const q10Factor_type& q10Factor,
                          const experimentalTemp_type& experimentalTemp)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     q10Factor_ (q10Factor, this),
     experimentalTemp_ (experimentalTemp, this)
   {
@@ -22428,7 +24888,7 @@ namespace neuroml2
   Q10ConductanceScaling (const Q10ConductanceScaling& x,
                          ::xml_schema::flags f,
                          ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     q10Factor_ (x.q10Factor_, f, this),
     experimentalTemp_ (x.experimentalTemp_, f, this)
   {
@@ -22438,7 +24898,7 @@ namespace neuroml2
   Q10ConductanceScaling (const ::xercesc::DOMElement& e,
                          ::xml_schema::flags f,
                          ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     q10Factor_ (this),
     experimentalTemp_ (this)
   {
@@ -22499,7 +24959,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->q10Factor_ = x.q10Factor_;
       this->experimentalTemp_ = x.experimentalTemp_;
     }
@@ -25683,7 +28143,7 @@ namespace neuroml2
 
   HHRate::
   HHRate (const type_type& type)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     type_ (type, this),
     rate_ (this),
     midpoint_ (this),
@@ -25695,7 +28155,7 @@ namespace neuroml2
   HHRate (const HHRate& x,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     type_ (x.type_, f, this),
     rate_ (x.rate_, f, this),
     midpoint_ (x.midpoint_, f, this),
@@ -25707,7 +28167,7 @@ namespace neuroml2
   HHRate (const ::xercesc::DOMElement& e,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     type_ (this),
     rate_ (this),
     midpoint_ (this),
@@ -25775,7 +28235,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->type_ = x.type_;
       this->rate_ = x.rate_;
       this->midpoint_ = x.midpoint_;
@@ -25819,7 +28279,7 @@ namespace neuroml2
 
   HHVariable::
   HHVariable (const type_type& type)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     type_ (type, this),
     rate_ (this),
     midpoint_ (this),
@@ -25831,7 +28291,7 @@ namespace neuroml2
   HHVariable (const HHVariable& x,
               ::xml_schema::flags f,
               ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     type_ (x.type_, f, this),
     rate_ (x.rate_, f, this),
     midpoint_ (x.midpoint_, f, this),
@@ -25843,7 +28303,7 @@ namespace neuroml2
   HHVariable (const ::xercesc::DOMElement& e,
               ::xml_schema::flags f,
               ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     type_ (this),
     rate_ (this),
     midpoint_ (this),
@@ -25911,7 +28371,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->type_ = x.type_;
       this->rate_ = x.rate_;
       this->midpoint_ = x.midpoint_;
@@ -25955,7 +28415,7 @@ namespace neuroml2
 
   HHTime::
   HHTime (const type_type& type)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     type_ (type, this),
     rate_ (this),
     midpoint_ (this),
@@ -25968,7 +28428,7 @@ namespace neuroml2
   HHTime (const HHTime& x,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     type_ (x.type_, f, this),
     rate_ (x.rate_, f, this),
     midpoint_ (x.midpoint_, f, this),
@@ -25981,7 +28441,7 @@ namespace neuroml2
   HHTime (const ::xercesc::DOMElement& e,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     type_ (this),
     rate_ (this),
     midpoint_ (this),
@@ -26056,7 +28516,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->type_ = x.type_;
       this->rate_ = x.rate_;
       this->midpoint_ = x.midpoint_;
@@ -26442,7 +28902,8 @@ namespace neuroml2
 
   BaseSynapse::
   BaseSynapse (const id_type& id)
-  : ::neuroml2::Standalone (id)
+  : ::neuroml2::Standalone (id),
+    neuroLexId_ (this)
   {
   }
 
@@ -26450,7 +28911,8 @@ namespace neuroml2
   BaseSynapse (const BaseSynapse& x,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::neuroml2::Standalone (x, f, c)
+  : ::neuroml2::Standalone (x, f, c),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -26458,8 +28920,36 @@ namespace neuroml2
   BaseSynapse (const ::xercesc::DOMElement& e,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::neuroml2::Standalone (e, f, c)
+  : ::neuroml2::Standalone (e, f | ::xml_schema::flags::base, c),
+    neuroLexId_ (this)
   {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void BaseSynapse::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    this->::neuroml2::Standalone::parse (p, f);
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
+    }
   }
 
   BaseSynapse* BaseSynapse::
@@ -26469,9 +28959,40 @@ namespace neuroml2
     return new class BaseSynapse (*this, f, c);
   }
 
+  BaseSynapse& BaseSynapse::
+  operator= (const BaseSynapse& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::neuroml2::Standalone& > (*this) = x;
+      this->neuroLexId_ = x.neuroLexId_;
+    }
+
+    return *this;
+  }
+
   BaseSynapse::
   ~BaseSynapse ()
   {
+  }
+
+  bool
+  operator== (const BaseSynapse& x, const BaseSynapse& y)
+  {
+    if (!(static_cast< const ::neuroml2::Standalone& > (x) ==
+          static_cast< const ::neuroml2::Standalone& > (y)))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const BaseSynapse& x, const BaseSynapse& y)
+  {
+    return !(x == y);
   }
 
   // BaseVoltageDepSynapse
@@ -28275,7 +30796,7 @@ namespace neuroml2
                   const blockConcentration_type& blockConcentration,
                   const scalingConc_type& scalingConc,
                   const scalingVolt_type& scalingVolt)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     type_ (type, this),
     species_ (species, this),
     blockConcentration_ (blockConcentration, this),
@@ -28288,7 +30809,7 @@ namespace neuroml2
   BlockMechanism (const BlockMechanism& x,
                   ::xml_schema::flags f,
                   ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     type_ (x.type_, f, this),
     species_ (x.species_, f, this),
     blockConcentration_ (x.blockConcentration_, f, this),
@@ -28301,7 +30822,7 @@ namespace neuroml2
   BlockMechanism (const ::xercesc::DOMElement& e,
                   ::xml_schema::flags f,
                   ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     type_ (this),
     species_ (this),
     blockConcentration_ (this),
@@ -28404,7 +30925,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->type_ = x.type_;
       this->species_ = x.species_;
       this->blockConcentration_ = x.blockConcentration_;
@@ -28524,7 +31045,7 @@ namespace neuroml2
   PlasticityMechanism (const type_type& type,
                        const initReleaseProb_type& initReleaseProb,
                        const tauRec_type& tauRec)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     type_ (type, this),
     initReleaseProb_ (initReleaseProb, this),
     tauRec_ (tauRec, this),
@@ -28536,7 +31057,7 @@ namespace neuroml2
   PlasticityMechanism (const PlasticityMechanism& x,
                        ::xml_schema::flags f,
                        ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     type_ (x.type_, f, this),
     initReleaseProb_ (x.initReleaseProb_, f, this),
     tauRec_ (x.tauRec_, f, this),
@@ -28548,7 +31069,7 @@ namespace neuroml2
   PlasticityMechanism (const ::xercesc::DOMElement& e,
                        ::xml_schema::flags f,
                        ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     type_ (this),
     initReleaseProb_ (this),
     tauRec_ (this),
@@ -28630,7 +31151,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->type_ = x.type_;
       this->initReleaseProb_ = x.initReleaseProb_;
       this->tauRec_ = x.tauRec_;
@@ -28674,7 +31195,8 @@ namespace neuroml2
 
   BaseCell::
   BaseCell (const id_type& id)
-  : ::neuroml2::Standalone (id)
+  : ::neuroml2::Standalone (id),
+    neuroLexId_ (this)
   {
   }
 
@@ -28682,7 +31204,8 @@ namespace neuroml2
   BaseCell (const BaseCell& x,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::neuroml2::Standalone (x, f, c)
+  : ::neuroml2::Standalone (x, f, c),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -28690,8 +31213,36 @@ namespace neuroml2
   BaseCell (const ::xercesc::DOMElement& e,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::neuroml2::Standalone (e, f, c)
+  : ::neuroml2::Standalone (e, f | ::xml_schema::flags::base, c),
+    neuroLexId_ (this)
   {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void BaseCell::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    this->::neuroml2::Standalone::parse (p, f);
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
+    }
   }
 
   BaseCell* BaseCell::
@@ -28701,9 +31252,40 @@ namespace neuroml2
     return new class BaseCell (*this, f, c);
   }
 
+  BaseCell& BaseCell::
+  operator= (const BaseCell& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::neuroml2::Standalone& > (*this) = x;
+      this->neuroLexId_ = x.neuroLexId_;
+    }
+
+    return *this;
+  }
+
   BaseCell::
   ~BaseCell ()
   {
+  }
+
+  bool
+  operator== (const BaseCell& x, const BaseCell& y)
+  {
+    if (!(static_cast< const ::neuroml2::Standalone& > (x) ==
+          static_cast< const ::neuroml2::Standalone& > (y)))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const BaseCell& x, const BaseCell& y)
+  {
+    return !(x == y);
   }
 
   // IafTauCell
@@ -31028,6 +33610,324 @@ namespace neuroml2
     return !(x == y);
   }
 
+  // HindmarshRose1984Cell
+  //
+
+  HindmarshRose1984Cell::
+  HindmarshRose1984Cell (const id_type& id,
+                         const C_type& C,
+                         const a_type& a,
+                         const b_type& b,
+                         const c_type& c,
+                         const d_type& d,
+                         const s_type& s,
+                         const x1_type& x1,
+                         const r_type& r,
+                         const x0_type& x0,
+                         const y0_type& y0,
+                         const z0_type& z0,
+                         const v_scaling_type& v_scaling)
+  : ::neuroml2::BaseCellMembPotCap (id,
+                                    C),
+    a_ (a, this),
+    b_ (b, this),
+    c_ (c, this),
+    d_ (d, this),
+    s_ (s, this),
+    x1_ (x1, this),
+    r_ (r, this),
+    x0_ (x0, this),
+    y0_ (y0, this),
+    z0_ (z0, this),
+    v_scaling_ (v_scaling, this)
+  {
+  }
+
+  HindmarshRose1984Cell::
+  HindmarshRose1984Cell (const HindmarshRose1984Cell& x,
+                         ::xml_schema::flags f,
+                         ::xml_schema::container* c)
+  : ::neuroml2::BaseCellMembPotCap (x, f, c),
+    a_ (x.a_, f, this),
+    b_ (x.b_, f, this),
+    c_ (x.c_, f, this),
+    d_ (x.d_, f, this),
+    s_ (x.s_, f, this),
+    x1_ (x.x1_, f, this),
+    r_ (x.r_, f, this),
+    x0_ (x.x0_, f, this),
+    y0_ (x.y0_, f, this),
+    z0_ (x.z0_, f, this),
+    v_scaling_ (x.v_scaling_, f, this)
+  {
+  }
+
+  HindmarshRose1984Cell::
+  HindmarshRose1984Cell (const ::xercesc::DOMElement& e,
+                         ::xml_schema::flags f,
+                         ::xml_schema::container* c)
+  : ::neuroml2::BaseCellMembPotCap (e, f | ::xml_schema::flags::base, c),
+    a_ (this),
+    b_ (this),
+    c_ (this),
+    d_ (this),
+    s_ (this),
+    x1_ (this),
+    r_ (this),
+    x0_ (this),
+    y0_ (this),
+    z0_ (this),
+    v_scaling_ (this)
+  {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void HindmarshRose1984Cell::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    this->::neuroml2::BaseCellMembPotCap::parse (p, f);
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "a" && n.namespace_ ().empty ())
+      {
+        this->a_.set (a_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "b" && n.namespace_ ().empty ())
+      {
+        this->b_.set (b_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "c" && n.namespace_ ().empty ())
+      {
+        this->c_.set (c_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "d" && n.namespace_ ().empty ())
+      {
+        this->d_.set (d_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "s" && n.namespace_ ().empty ())
+      {
+        this->s_.set (s_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "x1" && n.namespace_ ().empty ())
+      {
+        this->x1_.set (x1_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "r" && n.namespace_ ().empty ())
+      {
+        this->r_.set (r_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "x0" && n.namespace_ ().empty ())
+      {
+        this->x0_.set (x0_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "y0" && n.namespace_ ().empty ())
+      {
+        this->y0_.set (y0_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "z0" && n.namespace_ ().empty ())
+      {
+        this->z0_.set (z0_traits::create (i, f, this));
+        continue;
+      }
+
+      if (n.name () == "v_scaling" && n.namespace_ ().empty ())
+      {
+        this->v_scaling_.set (v_scaling_traits::create (i, f, this));
+        continue;
+      }
+    }
+
+    if (!a_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "a",
+        "");
+    }
+
+    if (!b_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "b",
+        "");
+    }
+
+    if (!c_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "c",
+        "");
+    }
+
+    if (!d_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "d",
+        "");
+    }
+
+    if (!s_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "s",
+        "");
+    }
+
+    if (!x1_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "x1",
+        "");
+    }
+
+    if (!r_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "r",
+        "");
+    }
+
+    if (!x0_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "x0",
+        "");
+    }
+
+    if (!y0_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "y0",
+        "");
+    }
+
+    if (!z0_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "z0",
+        "");
+    }
+
+    if (!v_scaling_.present ())
+    {
+      throw ::xsd::cxx::tree::expected_attribute< char > (
+        "v_scaling",
+        "");
+    }
+  }
+
+  HindmarshRose1984Cell* HindmarshRose1984Cell::
+  _clone (::xml_schema::flags f,
+          ::xml_schema::container* c) const
+  {
+    return new class HindmarshRose1984Cell (*this, f, c);
+  }
+
+  HindmarshRose1984Cell& HindmarshRose1984Cell::
+  operator= (const HindmarshRose1984Cell& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::neuroml2::BaseCellMembPotCap& > (*this) = x;
+      this->a_ = x.a_;
+      this->b_ = x.b_;
+      this->c_ = x.c_;
+      this->d_ = x.d_;
+      this->s_ = x.s_;
+      this->x1_ = x.x1_;
+      this->r_ = x.r_;
+      this->x0_ = x.x0_;
+      this->y0_ = x.y0_;
+      this->z0_ = x.z0_;
+      this->v_scaling_ = x.v_scaling_;
+    }
+
+    return *this;
+  }
+
+  HindmarshRose1984Cell::
+  ~HindmarshRose1984Cell ()
+  {
+  }
+
+  bool
+  operator== (const HindmarshRose1984Cell& x, const HindmarshRose1984Cell& y)
+  {
+    if (!(static_cast< const ::neuroml2::BaseCellMembPotCap& > (x) ==
+          static_cast< const ::neuroml2::BaseCellMembPotCap& > (y)))
+      return false;
+
+    if (!(x.a () == y.a ()))
+      return false;
+
+    if (!(x.b () == y.b ()))
+      return false;
+
+    if (!(x.c () == y.c ()))
+      return false;
+
+    if (!(x.d () == y.d ()))
+      return false;
+
+    if (!(x.s () == y.s ()))
+      return false;
+
+    if (!(x.x1 () == y.x1 ()))
+      return false;
+
+    if (!(x.r () == y.r ()))
+      return false;
+
+    if (!(x.x0 () == y.x0 ()))
+      return false;
+
+    if (!(x.y0 () == y.y0 ()))
+      return false;
+
+    if (!(x.z0 () == y.z0 ()))
+      return false;
+
+    if (!(x.v_scaling () == y.v_scaling ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const HindmarshRose1984Cell& x, const HindmarshRose1984Cell& y)
+  {
+    return !(x == y);
+  }
+
   // Cell
   //
 
@@ -31454,10 +34354,6 @@ namespace neuroml2
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
-    this->::neuroml2::BaseWithoutId::parse (p, f);
-
-    p.reset_attributes ();
-
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
@@ -31506,10 +34402,6 @@ namespace neuroml2
   bool
   operator== (const BaseNonNegativeIntegerId& x, const BaseNonNegativeIntegerId& y)
   {
-    if (!(static_cast< const ::neuroml2::BaseWithoutId& > (x) ==
-          static_cast< const ::neuroml2::BaseWithoutId& > (y)))
-      return false;
-
     if (!(x.id () == y.id ()))
       return false;
 
@@ -31532,7 +34424,8 @@ namespace neuroml2
     parent_ (this),
     proximal_ (this),
     distal_ (distal, this),
-    name_ (this)
+    name_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -31543,7 +34436,8 @@ namespace neuroml2
     parent_ (this),
     proximal_ (this),
     distal_ (std::move (distal), this),
-    name_ (this)
+    name_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -31555,7 +34449,8 @@ namespace neuroml2
     parent_ (x.parent_, f, this),
     proximal_ (x.proximal_, f, this),
     distal_ (x.distal_, f, this),
-    name_ (x.name_, f, this)
+    name_ (x.name_, f, this),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -31567,7 +34462,8 @@ namespace neuroml2
     parent_ (this),
     proximal_ (this),
     distal_ (this),
-    name_ (this)
+    name_ (this),
+    neuroLexId_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -31653,6 +34549,12 @@ namespace neuroml2
         this->name_.set (name_traits::create (i, f, this));
         continue;
       }
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
     }
   }
 
@@ -31673,6 +34575,7 @@ namespace neuroml2
       this->proximal_ = x.proximal_;
       this->distal_ = x.distal_;
       this->name_ = x.name_;
+      this->neuroLexId_ = x.neuroLexId_;
     }
 
     return *this;
@@ -31702,6 +34605,9 @@ namespace neuroml2
     if (!(x.name () == y.name ()))
       return false;
 
+    if (!(x.neuroLexId () == y.neuroLexId ()))
+      return false;
+
     return true;
   }
 
@@ -31716,7 +34622,7 @@ namespace neuroml2
 
   SegmentParent::
   SegmentParent (const segment_type& segment)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     segment_ (segment, this),
     fractionAlong_ (fractionAlong_default_value (), this)
   {
@@ -31726,7 +34632,7 @@ namespace neuroml2
   SegmentParent (const SegmentParent& x,
                  ::xml_schema::flags f,
                  ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     segment_ (x.segment_, f, this),
     fractionAlong_ (x.fractionAlong_, f, this)
   {
@@ -31736,7 +34642,7 @@ namespace neuroml2
   SegmentParent (const ::xercesc::DOMElement& e,
                  ::xml_schema::flags f,
                  ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     segment_ (this),
     fractionAlong_ (this)
   {
@@ -31795,7 +34701,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->segment_ = x.segment_;
       this->fractionAlong_ = x.fractionAlong_;
     }
@@ -31834,7 +34740,7 @@ namespace neuroml2
                    const y_type& y,
                    const z_type& z,
                    const diameter_type& diameter)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     x_ (x, this),
     y_ (y, this),
     z_ (z, this),
@@ -31846,7 +34752,7 @@ namespace neuroml2
   Point3DWithDiam (const Point3DWithDiam& x,
                    ::xml_schema::flags f,
                    ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     x_ (x.x_, f, this),
     y_ (x.y_, f, this),
     z_ (x.z_, f, this),
@@ -31858,7 +34764,7 @@ namespace neuroml2
   Point3DWithDiam (const ::xercesc::DOMElement& e,
                    ::xml_schema::flags f,
                    ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     x_ (this),
     y_ (this),
     z_ (this),
@@ -31947,7 +34853,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->x_ = x.x_;
       this->y_ = x.y_;
       this->z_ = x.z_;
@@ -31999,7 +34905,8 @@ namespace neuroml2
     include_ (this),
     path_ (this),
     subTree_ (this),
-    inhomogeneousParameter_ (this)
+    inhomogeneousParameter_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -32015,7 +34922,8 @@ namespace neuroml2
     include_ (x.include_, f, this),
     path_ (x.path_, f, this),
     subTree_ (x.subTree_, f, this),
-    inhomogeneousParameter_ (x.inhomogeneousParameter_, f, this)
+    inhomogeneousParameter_ (x.inhomogeneousParameter_, f, this),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -32031,7 +34939,8 @@ namespace neuroml2
     include_ (this),
     path_ (this),
     subTree_ (this),
-    inhomogeneousParameter_ (this)
+    inhomogeneousParameter_ (this),
+    neuroLexId_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -32148,6 +35057,21 @@ namespace neuroml2
 
       break;
     }
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
+    }
   }
 
   SegmentGroup* SegmentGroup::
@@ -32171,6 +35095,7 @@ namespace neuroml2
       this->path_ = x.path_;
       this->subTree_ = x.subTree_;
       this->inhomogeneousParameter_ = x.inhomogeneousParameter_;
+      this->neuroLexId_ = x.neuroLexId_;
     }
 
     return *this;
@@ -32210,6 +35135,9 @@ namespace neuroml2
       return false;
 
     if (!(x.inhomogeneousParameter () == y.inhomogeneousParameter ()))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
       return false;
 
     return true;
@@ -32472,7 +35400,7 @@ namespace neuroml2
 
   ProximalDetails::
   ProximalDetails (const translationStart_type& translationStart)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     translationStart_ (translationStart, this)
   {
   }
@@ -32481,7 +35409,7 @@ namespace neuroml2
   ProximalDetails (const ProximalDetails& x,
                    ::xml_schema::flags f,
                    ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     translationStart_ (x.translationStart_, f, this)
   {
   }
@@ -32490,7 +35418,7 @@ namespace neuroml2
   ProximalDetails (const ::xercesc::DOMElement& e,
                    ::xml_schema::flags f,
                    ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     translationStart_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
@@ -32537,7 +35465,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->translationStart_ = x.translationStart_;
     }
 
@@ -32569,7 +35497,7 @@ namespace neuroml2
 
   DistalDetails::
   DistalDetails (const normalizationEnd_type& normalizationEnd)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     normalizationEnd_ (normalizationEnd, this)
   {
   }
@@ -32578,7 +35506,7 @@ namespace neuroml2
   DistalDetails (const DistalDetails& x,
                  ::xml_schema::flags f,
                  ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     normalizationEnd_ (x.normalizationEnd_, f, this)
   {
   }
@@ -32587,7 +35515,7 @@ namespace neuroml2
   DistalDetails (const ::xercesc::DOMElement& e,
                  ::xml_schema::flags f,
                  ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     normalizationEnd_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
@@ -32634,7 +35562,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->normalizationEnd_ = x.normalizationEnd_;
     }
 
@@ -32666,7 +35594,7 @@ namespace neuroml2
 
   Member::
   Member (const segment_type& segment)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     segment_ (segment, this)
   {
   }
@@ -32675,7 +35603,7 @@ namespace neuroml2
   Member (const Member& x,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     segment_ (x.segment_, f, this)
   {
   }
@@ -32684,7 +35612,7 @@ namespace neuroml2
   Member (const ::xercesc::DOMElement& e,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     segment_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
@@ -32731,7 +35659,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->segment_ = x.segment_;
     }
 
@@ -32763,7 +35691,7 @@ namespace neuroml2
 
   Include::
   Include (const segmentGroup_type& segmentGroup)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     segmentGroup_ (segmentGroup, this)
   {
   }
@@ -32772,7 +35700,7 @@ namespace neuroml2
   Include (const Include& x,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     segmentGroup_ (x.segmentGroup_, f, this)
   {
   }
@@ -32781,7 +35709,7 @@ namespace neuroml2
   Include (const ::xercesc::DOMElement& e,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     segmentGroup_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
@@ -32828,7 +35756,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->segmentGroup_ = x.segmentGroup_;
     }
 
@@ -32860,7 +35788,7 @@ namespace neuroml2
 
   Path::
   Path ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     from_ (this),
     to_ (this)
   {
@@ -32870,7 +35798,7 @@ namespace neuroml2
   Path (const Path& x,
         ::xml_schema::flags f,
         ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     from_ (x.from_, f, this),
     to_ (x.to_, f, this)
   {
@@ -32880,7 +35808,7 @@ namespace neuroml2
   Path (const ::xercesc::DOMElement& e,
         ::xml_schema::flags f,
         ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     from_ (this),
     to_ (this)
   {
@@ -32945,7 +35873,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->from_ = x.from_;
       this->to_ = x.to_;
     }
@@ -32981,7 +35909,7 @@ namespace neuroml2
 
   SubTree::
   SubTree ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     from_ (this),
     to_ (this)
   {
@@ -32991,7 +35919,7 @@ namespace neuroml2
   SubTree (const SubTree& x,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     from_ (x.from_, f, this),
     to_ (x.to_, f, this)
   {
@@ -33001,7 +35929,7 @@ namespace neuroml2
   SubTree (const ::xercesc::DOMElement& e,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     from_ (this),
     to_ (this)
   {
@@ -33066,7 +35994,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->from_ = x.from_;
       this->to_ = x.to_;
     }
@@ -33102,7 +36030,7 @@ namespace neuroml2
 
   SegmentEndPoint::
   SegmentEndPoint (const segment_type& segment)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     segment_ (segment, this)
   {
   }
@@ -33111,7 +36039,7 @@ namespace neuroml2
   SegmentEndPoint (const SegmentEndPoint& x,
                    ::xml_schema::flags f,
                    ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     segment_ (x.segment_, f, this)
   {
   }
@@ -33120,7 +36048,7 @@ namespace neuroml2
   SegmentEndPoint (const ::xercesc::DOMElement& e,
                    ::xml_schema::flags f,
                    ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     segment_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
@@ -33167,7 +36095,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->segment_ = x.segment_;
     }
 
@@ -33531,7 +36459,7 @@ namespace neuroml2
 
   MembraneProperties::
   MembraneProperties ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     channelPopulation_ (this),
     channelDensity_ (this),
     channelDensityVShift_ (this),
@@ -33551,7 +36479,7 @@ namespace neuroml2
   MembraneProperties (const MembraneProperties& x,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     channelPopulation_ (x.channelPopulation_, f, this),
     channelDensity_ (x.channelDensity_, f, this),
     channelDensityVShift_ (x.channelDensityVShift_, f, this),
@@ -33571,7 +36499,7 @@ namespace neuroml2
   MembraneProperties (const ::xercesc::DOMElement& e,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     channelPopulation_ (this),
     channelDensity_ (this),
     channelDensityVShift_ (this),
@@ -33750,7 +36678,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->channelPopulation_ = x.channelPopulation_;
       this->channelDensity_ = x.channelDensity_;
       this->channelDensityVShift_ = x.channelDensityVShift_;
@@ -33932,7 +36860,7 @@ namespace neuroml2
 
   SpikeThresh::
   SpikeThresh (const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     value_ (value, this),
     segmentGroup_ (segmentGroup_default_value (), this)
   {
@@ -33942,7 +36870,7 @@ namespace neuroml2
   SpikeThresh (const SpikeThresh& x,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     value_ (x.value_, f, this),
     segmentGroup_ (x.segmentGroup_, f, this)
   {
@@ -33952,7 +36880,7 @@ namespace neuroml2
   SpikeThresh (const ::xercesc::DOMElement& e,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     value_ (this),
     segmentGroup_ (this)
   {
@@ -34011,7 +36939,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->value_ = x.value_;
       this->segmentGroup_ = x.segmentGroup_;
     }
@@ -34050,7 +36978,7 @@ namespace neuroml2
 
   SpecificCapacitance::
   SpecificCapacitance (const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     value_ (value, this),
     segmentGroup_ (segmentGroup_default_value (), this)
   {
@@ -34060,7 +36988,7 @@ namespace neuroml2
   SpecificCapacitance (const SpecificCapacitance& x,
                        ::xml_schema::flags f,
                        ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     value_ (x.value_, f, this),
     segmentGroup_ (x.segmentGroup_, f, this)
   {
@@ -34070,7 +36998,7 @@ namespace neuroml2
   SpecificCapacitance (const ::xercesc::DOMElement& e,
                        ::xml_schema::flags f,
                        ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     value_ (this),
     segmentGroup_ (this)
   {
@@ -34129,7 +37057,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->value_ = x.value_;
       this->segmentGroup_ = x.segmentGroup_;
     }
@@ -34168,7 +37096,7 @@ namespace neuroml2
 
   InitMembPotential::
   InitMembPotential (const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     value_ (value, this),
     segmentGroup_ (segmentGroup_default_value (), this)
   {
@@ -34178,7 +37106,7 @@ namespace neuroml2
   InitMembPotential (const InitMembPotential& x,
                      ::xml_schema::flags f,
                      ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     value_ (x.value_, f, this),
     segmentGroup_ (x.segmentGroup_, f, this)
   {
@@ -34188,7 +37116,7 @@ namespace neuroml2
   InitMembPotential (const ::xercesc::DOMElement& e,
                      ::xml_schema::flags f,
                      ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     value_ (this),
     segmentGroup_ (this)
   {
@@ -34247,7 +37175,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->value_ = x.value_;
       this->segmentGroup_ = x.segmentGroup_;
     }
@@ -34286,7 +37214,7 @@ namespace neuroml2
 
   Resistivity::
   Resistivity (const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     value_ (value, this),
     segmentGroup_ (segmentGroup_default_value (), this)
   {
@@ -34296,7 +37224,7 @@ namespace neuroml2
   Resistivity (const Resistivity& x,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     value_ (x.value_, f, this),
     segmentGroup_ (x.segmentGroup_, f, this)
   {
@@ -34306,7 +37234,7 @@ namespace neuroml2
   Resistivity (const ::xercesc::DOMElement& e,
                ::xml_schema::flags f,
                ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     value_ (this),
     segmentGroup_ (this)
   {
@@ -34365,7 +37293,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->value_ = x.value_;
       this->segmentGroup_ = x.segmentGroup_;
     }
@@ -36195,7 +39123,7 @@ namespace neuroml2
   InhomogeneousValue::
   InhomogeneousValue (const inhomogeneousParameter_type& inhomogeneousParameter,
                       const value_type& value)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     inhomogeneousParameter_ (inhomogeneousParameter, this),
     value_ (value, this)
   {
@@ -36205,7 +39133,7 @@ namespace neuroml2
   InhomogeneousValue (const InhomogeneousValue& x,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     inhomogeneousParameter_ (x.inhomogeneousParameter_, f, this),
     value_ (x.value_, f, this)
   {
@@ -36215,7 +39143,7 @@ namespace neuroml2
   InhomogeneousValue (const ::xercesc::DOMElement& e,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     inhomogeneousParameter_ (this),
     value_ (this)
   {
@@ -36276,7 +39204,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->inhomogeneousParameter_ = x.inhomogeneousParameter_;
       this->value_ = x.value_;
     }
@@ -36318,8 +39246,7 @@ namespace neuroml2
            const concentrationModel_type& concentrationModel,
            const initialConcentration_type& initialConcentration,
            const initialExtConcentration_type& initialExtConcentration)
-  : ::xml_schema::type (),
-    id_ (id, this),
+  : ::neuroml2::Base (id),
     concentrationModel_ (concentrationModel, this),
     ion_ (this),
     initialConcentration_ (initialConcentration, this),
@@ -36332,8 +39259,7 @@ namespace neuroml2
   Species (const Species& x,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
-    id_ (x.id_, f, this),
+  : ::neuroml2::Base (x, f, c),
     concentrationModel_ (x.concentrationModel_, f, this),
     ion_ (x.ion_, f, this),
     initialConcentration_ (x.initialConcentration_, f, this),
@@ -36346,8 +39272,7 @@ namespace neuroml2
   Species (const ::xercesc::DOMElement& e,
            ::xml_schema::flags f,
            ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
-    id_ (this),
+  : ::neuroml2::Base (e, f | ::xml_schema::flags::base, c),
     concentrationModel_ (this),
     ion_ (this),
     initialConcentration_ (this),
@@ -36365,17 +39290,15 @@ namespace neuroml2
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
+    this->::neuroml2::Base::parse (p, f);
+
+    p.reset_attributes ();
+
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
       const ::xsd::cxx::xml::qualified_name< char > n (
         ::xsd::cxx::xml::dom::name< char > (i));
-
-      if (n.name () == "id" && n.namespace_ ().empty ())
-      {
-        this->id_.set (id_traits::create (i, f, this));
-        continue;
-      }
 
       if (n.name () == "concentrationModel" && n.namespace_ ().empty ())
       {
@@ -36406,13 +39329,6 @@ namespace neuroml2
         this->segmentGroup_.set (segmentGroup_traits::create (i, f, this));
         continue;
       }
-    }
-
-    if (!id_.present ())
-    {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "id",
-        "");
     }
 
     if (!concentrationModel_.present ())
@@ -36454,8 +39370,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
-      this->id_ = x.id_;
+      static_cast< ::neuroml2::Base& > (*this) = x;
       this->concentrationModel_ = x.concentrationModel_;
       this->ion_ = x.ion_;
       this->initialConcentration_ = x.initialConcentration_;
@@ -36474,7 +39389,8 @@ namespace neuroml2
   bool
   operator== (const Species& x, const Species& y)
   {
-    if (!(x.id () == y.id ()))
+    if (!(static_cast< const ::neuroml2::Base& > (x) ==
+          static_cast< const ::neuroml2::Base& > (y)))
       return false;
 
     if (!(x.concentrationModel () == y.concentrationModel ()))
@@ -36620,7 +39536,7 @@ namespace neuroml2
 
   IntracellularProperties::
   IntracellularProperties ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     species_ (this),
     resistivity_ (this)
   {
@@ -36630,7 +39546,7 @@ namespace neuroml2
   IntracellularProperties (const IntracellularProperties& x,
                            ::xml_schema::flags f,
                            ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     species_ (x.species_, f, this),
     resistivity_ (x.resistivity_, f, this)
   {
@@ -36640,7 +39556,7 @@ namespace neuroml2
   IntracellularProperties (const ::xercesc::DOMElement& e,
                            ::xml_schema::flags f,
                            ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     species_ (this),
     resistivity_ (this)
   {
@@ -36699,7 +39615,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->species_ = x.species_;
       this->resistivity_ = x.resistivity_;
     }
@@ -36874,8 +39790,8 @@ namespace neuroml2
   //
 
   ExtracellularPropertiesLocal::
-  ExtracellularPropertiesLocal ()
-  : ::xml_schema::type (),
+  ExtracellularPropertiesLocal (const id_type& id)
+  : ::neuroml2::Base (id),
     species_ (this)
   {
   }
@@ -36884,7 +39800,7 @@ namespace neuroml2
   ExtracellularPropertiesLocal (const ExtracellularPropertiesLocal& x,
                                 ::xml_schema::flags f,
                                 ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::Base (x, f, c),
     species_ (x.species_, f, this)
   {
   }
@@ -36893,12 +39809,12 @@ namespace neuroml2
   ExtracellularPropertiesLocal (const ::xercesc::DOMElement& e,
                                 ::xml_schema::flags f,
                                 ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::Base (e, f | ::xml_schema::flags::base, c),
     species_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, false);
+      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
@@ -36907,6 +39823,8 @@ namespace neuroml2
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
+    this->::neuroml2::Base::parse (p, f);
+
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
@@ -36940,7 +39858,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::Base& > (*this) = x;
       this->species_ = x.species_;
     }
 
@@ -36955,6 +39873,10 @@ namespace neuroml2
   bool
   operator== (const ExtracellularPropertiesLocal& x, const ExtracellularPropertiesLocal& y)
   {
+    if (!(static_cast< const ::neuroml2::Base& > (x) ==
+          static_cast< const ::neuroml2::Base& > (y)))
+      return false;
+
     if (!(x.species () == y.species ()))
       return false;
 
@@ -40004,7 +42926,8 @@ namespace neuroml2
     explicitInput_ (this),
     inputList_ (this),
     type_ (this),
-    temperature_ (this)
+    temperature_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -40025,7 +42948,8 @@ namespace neuroml2
     explicitInput_ (x.explicitInput_, f, this),
     inputList_ (x.inputList_, f, this),
     type_ (x.type_, f, this),
-    temperature_ (x.temperature_, f, this)
+    temperature_ (x.temperature_, f, this),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -40046,7 +42970,8 @@ namespace neuroml2
     explicitInput_ (this),
     inputList_ (this),
     type_ (this),
-    temperature_ (this)
+    temperature_ (this),
+    neuroLexId_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -40210,6 +43135,12 @@ namespace neuroml2
         this->temperature_.set (temperature_traits::create (i, f, this));
         continue;
       }
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
     }
   }
 
@@ -40239,6 +43170,7 @@ namespace neuroml2
       this->inputList_ = x.inputList_;
       this->type_ = x.type_;
       this->temperature_ = x.temperature_;
+      this->neuroLexId_ = x.neuroLexId_;
     }
 
     return *this;
@@ -40293,6 +43225,9 @@ namespace neuroml2
       return false;
 
     if (!(x.temperature () == y.temperature ()))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
       return false;
 
     return true;
@@ -40507,7 +43442,7 @@ namespace neuroml2
 
   SpaceStructure::
   SpaceStructure ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     xSpacing_ (this),
     ySpacing_ (this),
     zSpacing_ (this),
@@ -40521,7 +43456,7 @@ namespace neuroml2
   SpaceStructure (const SpaceStructure& x,
                   ::xml_schema::flags f,
                   ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     xSpacing_ (x.xSpacing_, f, this),
     ySpacing_ (x.ySpacing_, f, this),
     zSpacing_ (x.zSpacing_, f, this),
@@ -40535,7 +43470,7 @@ namespace neuroml2
   SpaceStructure (const ::xercesc::DOMElement& e,
                   ::xml_schema::flags f,
                   ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     xSpacing_ (this),
     ySpacing_ (this),
     zSpacing_ (this),
@@ -40625,7 +43560,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->xSpacing_ = x.xSpacing_;
       this->ySpacing_ = x.ySpacing_;
       this->zSpacing_ = x.zSpacing_;
@@ -40869,7 +43804,8 @@ namespace neuroml2
     component_ (component, this),
     size_ (this),
     type_ (this),
-    extracellularProperties_ (this)
+    extracellularProperties_ (this),
+    neuroLexId_ (this)
   {
   }
 
@@ -40883,7 +43819,8 @@ namespace neuroml2
     component_ (x.component_, f, this),
     size_ (x.size_, f, this),
     type_ (x.type_, f, this),
-    extracellularProperties_ (x.extracellularProperties_, f, this)
+    extracellularProperties_ (x.extracellularProperties_, f, this),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -40897,7 +43834,8 @@ namespace neuroml2
     component_ (this),
     size_ (this),
     type_ (this),
-    extracellularProperties_ (this)
+    extracellularProperties_ (this),
+    neuroLexId_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
     {
@@ -40977,6 +43915,12 @@ namespace neuroml2
         this->extracellularProperties_.set (extracellularProperties_traits::create (i, f, this));
         continue;
       }
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
     }
 
     if (!component_.present ())
@@ -41006,6 +43950,7 @@ namespace neuroml2
       this->size_ = x.size_;
       this->type_ = x.type_;
       this->extracellularProperties_ = x.extracellularProperties_;
+      this->neuroLexId_ = x.neuroLexId_;
     }
 
     return *this;
@@ -41039,6 +43984,9 @@ namespace neuroml2
       return false;
 
     if (!(x.extracellularProperties () == y.extracellularProperties ()))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
       return false;
 
     return true;
@@ -41125,7 +44073,7 @@ namespace neuroml2
 
   Layout::
   Layout ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     random_ (this),
     grid_ (this),
     unstructured_ (this),
@@ -41137,7 +44085,7 @@ namespace neuroml2
   Layout (const Layout& x,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     random_ (x.random_, f, this),
     grid_ (x.grid_, f, this),
     unstructured_ (x.unstructured_, f, this),
@@ -41149,7 +44097,7 @@ namespace neuroml2
   Layout (const ::xercesc::DOMElement& e,
           ::xml_schema::flags f,
           ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     random_ (this),
     grid_ (this),
     unstructured_ (this),
@@ -41243,7 +44191,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->random_ = x.random_;
       this->grid_ = x.grid_;
       this->unstructured_ = x.unstructured_;
@@ -41287,7 +44235,7 @@ namespace neuroml2
 
   UnstructuredLayout::
   UnstructuredLayout ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     number_ (this)
   {
   }
@@ -41296,7 +44244,7 @@ namespace neuroml2
   UnstructuredLayout (const UnstructuredLayout& x,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     number_ (x.number_, f, this)
   {
   }
@@ -41305,7 +44253,7 @@ namespace neuroml2
   UnstructuredLayout (const ::xercesc::DOMElement& e,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     number_ (this)
   {
     if ((f & ::xml_schema::flags::base) == 0)
@@ -41345,7 +44293,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->number_ = x.number_;
     }
 
@@ -41377,7 +44325,7 @@ namespace neuroml2
 
   RandomLayout::
   RandomLayout ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     number_ (this),
     region_ (this)
   {
@@ -41387,7 +44335,7 @@ namespace neuroml2
   RandomLayout (const RandomLayout& x,
                 ::xml_schema::flags f,
                 ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     number_ (x.number_, f, this),
     region_ (x.region_, f, this)
   {
@@ -41397,7 +44345,7 @@ namespace neuroml2
   RandomLayout (const ::xercesc::DOMElement& e,
                 ::xml_schema::flags f,
                 ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     number_ (this),
     region_ (this)
   {
@@ -41444,7 +44392,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->number_ = x.number_;
       this->region_ = x.region_;
     }
@@ -41480,7 +44428,7 @@ namespace neuroml2
 
   GridLayout::
   GridLayout ()
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     xSize_ (this),
     ySize_ (this),
     zSize_ (this)
@@ -41491,7 +44439,7 @@ namespace neuroml2
   GridLayout (const GridLayout& x,
               ::xml_schema::flags f,
               ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     xSize_ (x.xSize_, f, this),
     ySize_ (x.ySize_, f, this),
     zSize_ (x.zSize_, f, this)
@@ -41502,7 +44450,7 @@ namespace neuroml2
   GridLayout (const ::xercesc::DOMElement& e,
               ::xml_schema::flags f,
               ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     xSize_ (this),
     ySize_ (this),
     zSize_ (this)
@@ -41556,7 +44504,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->xSize_ = x.xSize_;
       this->ySize_ = x.ySize_;
       this->zSize_ = x.zSize_;
@@ -41596,7 +44544,7 @@ namespace neuroml2
 
   Instance::
   Instance (const location_type& location)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     location_ (location, this),
     id_ (this),
     i_ (this),
@@ -41607,7 +44555,7 @@ namespace neuroml2
 
   Instance::
   Instance (::std::unique_ptr< location_type > location)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     location_ (std::move (location), this),
     id_ (this),
     i_ (this),
@@ -41620,7 +44568,7 @@ namespace neuroml2
   Instance (const Instance& x,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     location_ (x.location_, f, this),
     id_ (x.id_, f, this),
     i_ (x.i_, f, this),
@@ -41633,7 +44581,7 @@ namespace neuroml2
   Instance (const ::xercesc::DOMElement& e,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     location_ (this),
     id_ (this),
     i_ (this),
@@ -41725,7 +44673,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->location_ = x.location_;
       this->id_ = x.id_;
       this->i_ = x.i_;
@@ -41775,7 +44723,7 @@ namespace neuroml2
   Location (const x_type& x,
             const y_type& y,
             const z_type& z)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     x_ (x, this),
     y_ (y, this),
     z_ (z, this)
@@ -41786,7 +44734,7 @@ namespace neuroml2
   Location (const Location& x,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     x_ (x.x_, f, this),
     y_ (x.y_, f, this),
     z_ (x.z_, f, this)
@@ -41797,7 +44745,7 @@ namespace neuroml2
   Location (const ::xercesc::DOMElement& e,
             ::xml_schema::flags f,
             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     x_ (this),
     y_ (this),
     z_ (this)
@@ -41872,7 +44820,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->x_ = x.x_;
       this->y_ = x.y_;
       this->z_ = x.z_;
@@ -42029,7 +44977,8 @@ namespace neuroml2
   SynapticConnection (const from_type& from,
                       const to_type& to,
                       const synapse_type& synapse)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
+    neuroLexId_ (this),
     from_ (from, this),
     to_ (to, this),
     synapse_ (synapse, this),
@@ -42041,7 +44990,8 @@ namespace neuroml2
   SynapticConnection (const SynapticConnection& x,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
+    neuroLexId_ (x.neuroLexId_, f, this),
     from_ (x.from_, f, this),
     to_ (x.to_, f, this),
     synapse_ (x.synapse_, f, this),
@@ -42053,7 +45003,8 @@ namespace neuroml2
   SynapticConnection (const ::xercesc::DOMElement& e,
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
+    neuroLexId_ (this),
     from_ (this),
     to_ (this),
     synapse_ (this),
@@ -42075,6 +45026,12 @@ namespace neuroml2
       const ::xercesc::DOMAttr& i (p.next_attribute ());
       const ::xsd::cxx::xml::qualified_name< char > n (
         ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
 
       if (n.name () == "from" && n.namespace_ ().empty ())
       {
@@ -42135,7 +45092,8 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
+      this->neuroLexId_ = x.neuroLexId_;
       this->from_ = x.from_;
       this->to_ = x.to_;
       this->synapse_ = x.synapse_;
@@ -42153,6 +45111,9 @@ namespace neuroml2
   bool
   operator== (const SynapticConnection& x, const SynapticConnection& y)
   {
+    if (!(x.neuroLexId () == y.neuroLexId ()))
+      return false;
+
     if (!(x.from () == y.from ()))
       return false;
 
@@ -42461,7 +45422,8 @@ namespace neuroml2
 
   BaseConnection::
   BaseConnection (const id_type& id)
-  : ::neuroml2::BaseNonNegativeIntegerId (id)
+  : ::neuroml2::BaseNonNegativeIntegerId (id),
+    neuroLexId_ (this)
   {
   }
 
@@ -42469,7 +45431,8 @@ namespace neuroml2
   BaseConnection (const BaseConnection& x,
                   ::xml_schema::flags f,
                   ::xml_schema::container* c)
-  : ::neuroml2::BaseNonNegativeIntegerId (x, f, c)
+  : ::neuroml2::BaseNonNegativeIntegerId (x, f, c),
+    neuroLexId_ (x.neuroLexId_, f, this)
   {
   }
 
@@ -42477,8 +45440,36 @@ namespace neuroml2
   BaseConnection (const ::xercesc::DOMElement& e,
                   ::xml_schema::flags f,
                   ::xml_schema::container* c)
-  : ::neuroml2::BaseNonNegativeIntegerId (e, f, c)
+  : ::neuroml2::BaseNonNegativeIntegerId (e, f | ::xml_schema::flags::base, c),
+    neuroLexId_ (this)
   {
+    if ((f & ::xml_schema::flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void BaseConnection::
+  parse (::xsd::cxx::xml::dom::parser< char >& p,
+         ::xml_schema::flags f)
+  {
+    this->::neuroml2::BaseNonNegativeIntegerId::parse (p, f);
+
+    p.reset_attributes ();
+
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< char > n (
+        ::xsd::cxx::xml::dom::name< char > (i));
+
+      if (n.name () == "neuroLexId" && n.namespace_ ().empty ())
+      {
+        this->neuroLexId_.set (neuroLexId_traits::create (i, f, this));
+        continue;
+      }
+    }
   }
 
   BaseConnection* BaseConnection::
@@ -42488,9 +45479,40 @@ namespace neuroml2
     return new class BaseConnection (*this, f, c);
   }
 
+  BaseConnection& BaseConnection::
+  operator= (const BaseConnection& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::neuroml2::BaseNonNegativeIntegerId& > (*this) = x;
+      this->neuroLexId_ = x.neuroLexId_;
+    }
+
+    return *this;
+  }
+
   BaseConnection::
   ~BaseConnection ()
   {
+  }
+
+  bool
+  operator== (const BaseConnection& x, const BaseConnection& y)
+  {
+    if (!(static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (x) ==
+          static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (y)))
+      return false;
+
+    if (!(x.neuroLexId () == y.neuroLexId ()))
+      return false;
+
+    return true;
+  }
+
+  bool
+  operator!= (const BaseConnection& x, const BaseConnection& y)
+  {
+    return !(x == y);
   }
 
   // BaseConnectionOldFormat
@@ -43910,7 +46932,7 @@ namespace neuroml2
   ExplicitInput::
   ExplicitInput (const target_type& target,
                  const input_type& input)
-  : ::xml_schema::type (),
+  : ::neuroml2::BaseWithoutId (),
     target_ (target, this),
     input_ (input, this),
     destination_ (this)
@@ -43921,7 +46943,7 @@ namespace neuroml2
   ExplicitInput (const ExplicitInput& x,
                  ::xml_schema::flags f,
                  ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  : ::neuroml2::BaseWithoutId (x, f, c),
     target_ (x.target_, f, this),
     input_ (x.input_, f, this),
     destination_ (x.destination_, f, this)
@@ -43932,7 +46954,7 @@ namespace neuroml2
   ExplicitInput (const ::xercesc::DOMElement& e,
                  ::xml_schema::flags f,
                  ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  : ::neuroml2::BaseWithoutId (e, f | ::xml_schema::flags::base, c),
     target_ (this),
     input_ (this),
     destination_ (this)
@@ -44000,7 +47022,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::neuroml2::BaseWithoutId& > (*this) = x;
       this->target_ = x.target_;
       this->input_ = x.input_;
       this->destination_ = x.destination_;
@@ -44214,8 +47236,7 @@ namespace neuroml2
   Input (const id_type& id,
          const target_type& target,
          const destination_type& destination)
-  : ::xml_schema::type (),
-    id_ (id, this),
+  : ::neuroml2::BaseNonNegativeIntegerId (id),
     target_ (target, this),
     destination_ (destination, this),
     segmentId_ (this),
@@ -44227,8 +47248,7 @@ namespace neuroml2
   Input (const Input& x,
          ::xml_schema::flags f,
          ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
-    id_ (x.id_, f, this),
+  : ::neuroml2::BaseNonNegativeIntegerId (x, f, c),
     target_ (x.target_, f, this),
     destination_ (x.destination_, f, this),
     segmentId_ (x.segmentId_, f, this),
@@ -44240,8 +47260,7 @@ namespace neuroml2
   Input (const ::xercesc::DOMElement& e,
          ::xml_schema::flags f,
          ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
-    id_ (this),
+  : ::neuroml2::BaseNonNegativeIntegerId (e, f | ::xml_schema::flags::base, c),
     target_ (this),
     destination_ (this),
     segmentId_ (this),
@@ -44258,17 +47277,15 @@ namespace neuroml2
   parse (::xsd::cxx::xml::dom::parser< char >& p,
          ::xml_schema::flags f)
   {
+    this->::neuroml2::BaseNonNegativeIntegerId::parse (p, f);
+
+    p.reset_attributes ();
+
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
       const ::xsd::cxx::xml::qualified_name< char > n (
         ::xsd::cxx::xml::dom::name< char > (i));
-
-      if (n.name () == "id" && n.namespace_ ().empty ())
-      {
-        this->id_.set (id_traits::create (i, f, this));
-        continue;
-      }
 
       if (n.name () == "target" && n.namespace_ ().empty ())
       {
@@ -44293,13 +47310,6 @@ namespace neuroml2
         this->fractionAlong_.set (fractionAlong_traits::create (i, f, this));
         continue;
       }
-    }
-
-    if (!id_.present ())
-    {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "id",
-        "");
     }
 
     if (!target_.present ())
@@ -44329,8 +47339,7 @@ namespace neuroml2
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
-      this->id_ = x.id_;
+      static_cast< ::neuroml2::BaseNonNegativeIntegerId& > (*this) = x;
       this->target_ = x.target_;
       this->destination_ = x.destination_;
       this->segmentId_ = x.segmentId_;
@@ -44348,7 +47357,8 @@ namespace neuroml2
   bool
   operator== (const Input& x, const Input& y)
   {
-    if (!(x.id () == y.id ()))
+    if (!(static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (x) ==
+          static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (y)))
       return false;
 
     if (!(x.target () == y.target ()))
@@ -46554,6 +49564,14 @@ namespace neuroml2
   }
 
   ::std::ostream&
+  operator<< (::std::ostream& o, const Nml2PopulationReferencePath& i)
+  {
+    o << static_cast< const ::xml_schema::string& > (i);
+
+    return o;
+  }
+
+  ::std::ostream&
   operator<< (::std::ostream& o, const NonNegativeInteger& i)
   {
     o << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::non_negative_integer, char, ::xml_schema::simple_type >& > (i);
@@ -46592,16 +49610,26 @@ namespace neuroml2
   }
 
   ::std::ostream&
+  operator<< (::std::ostream& o, const BaseWithoutId&)
+  {
+    return o;
+  }
+
+  ::std::ostream&
   operator<< (::std::ostream& o, const Property& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "tag: " << i.tag ();
     o << ::std::endl << "value: " << i.value ();
     return o;
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const Annotation&)
+  operator<< (::std::ostream& o, const Annotation& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     return o;
   }
 
@@ -46620,6 +49648,13 @@ namespace neuroml2
          b != e; ++b)
     {
       o << ::std::endl << "Parameter: " << *b;
+    }
+
+    for (ComponentType::DerivedParameter_const_iterator
+         b (i.DerivedParameter ().begin ()), e (i.DerivedParameter ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "DerivedParameter: " << *b;
     }
 
     for (ComponentType::Constant_const_iterator
@@ -46674,6 +49709,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Constant& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "name: " << i.name ();
     o << ::std::endl << "dimension: " << i.dimension ();
     o << ::std::endl << "value: " << i.value ();
@@ -46688,6 +49725,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Exposure& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "name: " << i.name ();
     o << ::std::endl << "dimension: " << i.dimension ();
     if (i.description ())
@@ -46701,6 +49740,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const NamedDimensionalType& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "name: " << i.name ();
     o << ::std::endl << "dimension: " << i.dimension ();
     if (i.description ())
@@ -46714,6 +49755,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const NamedDimensionalVariable& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "name: " << i.name ();
     o << ::std::endl << "dimension: " << i.dimension ();
     if (i.description ())
@@ -46734,6 +49777,15 @@ namespace neuroml2
   {
     o << static_cast< const ::neuroml2::NamedDimensionalType& > (i);
 
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const DerivedParameter& i)
+  {
+    o << static_cast< const ::neuroml2::NamedDimensionalType& > (i);
+
+    o << ::std::endl << "value: " << i.value ();
     return o;
   }
 
@@ -46795,6 +49847,32 @@ namespace neuroml2
          b != e; ++b)
     {
       o << ::std::endl << "TimeDerivative: " << *b;
+    }
+
+    if (i.OnStart ())
+    {
+      o << ::std::endl << "OnStart: " << *i.OnStart ();
+    }
+
+    for (Dynamics::OnEvent_const_iterator
+         b (i.OnEvent ().begin ()), e (i.OnEvent ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "OnEvent: " << *b;
+    }
+
+    for (Dynamics::OnCondition_const_iterator
+         b (i.OnCondition ().begin ()), e (i.OnCondition ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "OnCondition: " << *b;
+    }
+
+    for (Dynamics::Regime_const_iterator
+         b (i.Regime ().begin ()), e (i.Regime ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "Regime: " << *b;
     }
 
     return o;
@@ -46862,20 +49940,147 @@ namespace neuroml2
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const ZeroToOne& i)
+  operator<< (::std::ostream& o, const OnStart& i)
   {
-    o << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::float_, char, ::xml_schema::simple_type >& > (i);
+    for (OnStart::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), e (i.StateAssignment ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "StateAssignment: " << *b;
+    }
 
     return o;
   }
 
   ::std::ostream&
-  operator<< (::std::ostream& o, const BaseWithoutId& i)
+  operator<< (::std::ostream& o, const StateAssignment& i)
   {
-    if (i.neuroLexId ())
+    o << ::std::endl << "variable: " << i.variable ();
+    o << ::std::endl << "value: " << i.value ();
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const OnEvent& i)
+  {
+    for (OnEvent::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), e (i.StateAssignment ().end ());
+         b != e; ++b)
     {
-      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+      o << ::std::endl << "StateAssignment: " << *b;
     }
+
+    for (OnEvent::EventOut_const_iterator
+         b (i.EventOut ().begin ()), e (i.EventOut ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "EventOut: " << *b;
+    }
+
+    o << ::std::endl << "port: " << i.port ();
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const EventOut& i)
+  {
+    o << ::std::endl << "port: " << i.port ();
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const OnCondition& i)
+  {
+    for (OnCondition::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), e (i.StateAssignment ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "StateAssignment: " << *b;
+    }
+
+    for (OnCondition::EventOut_const_iterator
+         b (i.EventOut ().begin ()), e (i.EventOut ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "EventOut: " << *b;
+    }
+
+    if (i.Transition ())
+    {
+      o << ::std::endl << "Transition: " << *i.Transition ();
+    }
+
+    o << ::std::endl << "test: " << i.test ();
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const Transition& i)
+  {
+    o << ::std::endl << "regime: " << i.regime ();
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const Regime& i)
+  {
+    for (Regime::TimeDerivative_const_iterator
+         b (i.TimeDerivative ().begin ()), e (i.TimeDerivative ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "TimeDerivative: " << *b;
+    }
+
+    if (i.OnEntry ())
+    {
+      o << ::std::endl << "OnEntry: " << *i.OnEntry ();
+    }
+
+    for (Regime::OnCondition_const_iterator
+         b (i.OnCondition ().begin ()), e (i.OnCondition ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "OnCondition: " << *b;
+    }
+
+    o << ::std::endl << "name: " << i.name ();
+    if (i.initial ())
+    {
+      o << ::std::endl << "initial: " << *i.initial ();
+    }
+
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const OnEntry& i)
+  {
+    for (OnEntry::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), e (i.StateAssignment ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "StateAssignment: " << *b;
+    }
+
+    return o;
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, TrueOrFalse::value i)
+  {
+    return o << TrueOrFalse::_xsd_TrueOrFalse_literals_[i];
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const TrueOrFalse& i)
+  {
+    return o << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  ::std::ostream&
+  operator<< (::std::ostream& o, const ZeroToOne& i)
+  {
+    o << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::float_, char, ::xml_schema::simple_type >& > (i);
 
     return o;
   }
@@ -47169,6 +50374,13 @@ namespace neuroml2
       o << ::std::endl << "pinskyRinzelCA3Cell: " << *b;
     }
 
+    for (NeuroMLDocument_base::hindmarshRose1984Cell_const_iterator
+         b (i.hindmarshRose1984Cell ().begin ()), e (i.hindmarshRose1984Cell ().end ());
+         b != e; ++b)
+    {
+      o << ::std::endl << "hindmarshRose1984Cell: " << *b;
+    }
+
     for (NeuroMLDocument_base::pulseGenerator_const_iterator
          b (i.pulseGenerator ().begin ()), e (i.pulseGenerator ().end ());
          b != e; ++b)
@@ -47415,6 +50627,11 @@ namespace neuroml2
       o << ::std::endl << "q10ConductanceScaling: " << *b;
     }
 
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
+
     return o;
   }
 
@@ -47438,6 +50655,11 @@ namespace neuroml2
     if (i.conductance ())
     {
       o << ::std::endl << "conductance: " << *i.conductance ();
+    }
+
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
     }
 
     return o;
@@ -47554,6 +50776,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Q10ConductanceScaling& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "q10Factor: " << i.q10Factor ();
     o << ::std::endl << "experimentalTemp: " << i.experimentalTemp ();
     return o;
@@ -47916,6 +51140,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const HHRate& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "type: " << i.type ();
     if (i.rate ())
     {
@@ -47938,6 +51164,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const HHVariable& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "type: " << i.type ();
     if (i.rate ())
     {
@@ -47960,6 +51188,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const HHTime& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "type: " << i.type ();
     if (i.rate ())
     {
@@ -48012,6 +51242,11 @@ namespace neuroml2
   operator<< (::std::ostream& o, const BaseSynapse& i)
   {
     o << static_cast< const ::neuroml2::Standalone& > (i);
+
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
 
     return o;
   }
@@ -48186,6 +51421,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const BlockMechanism& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "type: " << i.type ();
     o << ::std::endl << "species: " << i.species ();
     o << ::std::endl << "blockConcentration: " << i.blockConcentration ();
@@ -48209,6 +51446,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const PlasticityMechanism& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "type: " << i.type ();
     o << ::std::endl << "initReleaseProb: " << i.initReleaseProb ();
     o << ::std::endl << "tauRec: " << i.tauRec ();
@@ -48224,6 +51463,11 @@ namespace neuroml2
   operator<< (::std::ostream& o, const BaseCell& i)
   {
     o << static_cast< const ::neuroml2::Standalone& > (i);
+
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
 
     return o;
   }
@@ -48382,6 +51626,25 @@ namespace neuroml2
   }
 
   ::std::ostream&
+  operator<< (::std::ostream& o, const HindmarshRose1984Cell& i)
+  {
+    o << static_cast< const ::neuroml2::BaseCellMembPotCap& > (i);
+
+    o << ::std::endl << "a: " << i.a ();
+    o << ::std::endl << "b: " << i.b ();
+    o << ::std::endl << "c: " << i.c ();
+    o << ::std::endl << "d: " << i.d ();
+    o << ::std::endl << "s: " << i.s ();
+    o << ::std::endl << "x1: " << i.x1 ();
+    o << ::std::endl << "r: " << i.r ();
+    o << ::std::endl << "x0: " << i.x0 ();
+    o << ::std::endl << "y0: " << i.y0 ();
+    o << ::std::endl << "z0: " << i.z0 ();
+    o << ::std::endl << "v_scaling: " << i.v_scaling ();
+    return o;
+  }
+
+  ::std::ostream&
   operator<< (::std::ostream& o, const Cell& i)
   {
     o << static_cast< const ::neuroml2::BaseCell& > (i);
@@ -48474,12 +51737,19 @@ namespace neuroml2
       o << ::std::endl << "name: " << *i.name ();
     }
 
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
+
     return o;
   }
 
   ::std::ostream&
   operator<< (::std::ostream& o, const SegmentParent& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "segment: " << i.segment ();
     o << ::std::endl << "fractionAlong: " << i.fractionAlong ();
     return o;
@@ -48488,6 +51758,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Point3DWithDiam& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "x: " << i.x ();
     o << ::std::endl << "y: " << i.y ();
     o << ::std::endl << "z: " << i.z ();
@@ -48552,6 +51824,11 @@ namespace neuroml2
       o << ::std::endl << "inhomogeneousParameter: " << *b;
     }
 
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
+
     return o;
   }
 
@@ -48590,6 +51867,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const ProximalDetails& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "translationStart: " << i.translationStart ();
     return o;
   }
@@ -48597,6 +51876,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const DistalDetails& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "normalizationEnd: " << i.normalizationEnd ();
     return o;
   }
@@ -48604,6 +51885,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Member& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "segment: " << i.segment ();
     return o;
   }
@@ -48611,6 +51894,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Include& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
   }
@@ -48618,6 +51903,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Path& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.from ())
     {
       o << ::std::endl << "from: " << *i.from ();
@@ -48634,6 +51921,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const SubTree& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.from ())
     {
       o << ::std::endl << "from: " << *i.from ();
@@ -48650,6 +51939,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const SegmentEndPoint& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "segment: " << i.segment ();
     return o;
   }
@@ -48695,6 +51986,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const MembraneProperties& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     for (MembraneProperties::channelPopulation_const_iterator
          b (i.channelPopulation ().begin ()), e (i.channelPopulation ().end ());
          b != e; ++b)
@@ -48800,6 +52093,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const SpikeThresh& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "value: " << i.value ();
     o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
@@ -48808,6 +52103,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const SpecificCapacitance& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "value: " << i.value ();
     o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
@@ -48816,6 +52113,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const InitMembPotential& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "value: " << i.value ();
     o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
@@ -48824,6 +52123,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Resistivity& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "value: " << i.value ();
     o << ::std::endl << "segmentGroup: " << i.segmentGroup ();
     return o;
@@ -49034,6 +52335,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const InhomogeneousValue& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "inhomogeneousParameter: " << i.inhomogeneousParameter ();
     o << ::std::endl << "value: " << i.value ();
     return o;
@@ -49042,7 +52345,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Species& i)
   {
-    o << ::std::endl << "id: " << i.id ();
+    o << static_cast< const ::neuroml2::Base& > (i);
+
     o << ::std::endl << "concentrationModel: " << i.concentrationModel ();
     if (i.ion ())
     {
@@ -49067,6 +52371,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const IntracellularProperties& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     for (IntracellularProperties::species_const_iterator
          b (i.species ().begin ()), e (i.species ().end ());
          b != e; ++b)
@@ -49110,6 +52416,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const ExtracellularPropertiesLocal& i)
   {
+    o << static_cast< const ::neuroml2::Base& > (i);
+
     for (ExtracellularPropertiesLocal::species_const_iterator
          b (i.species ().begin ()), e (i.species ().end ());
          b != e; ++b)
@@ -49483,6 +52791,11 @@ namespace neuroml2
       o << ::std::endl << "temperature: " << *i.temperature ();
     }
 
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
+
     return o;
   }
 
@@ -49519,6 +52832,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const SpaceStructure& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.xSpacing ())
     {
       o << ::std::endl << "xSpacing: " << *i.xSpacing ();
@@ -49598,6 +52913,11 @@ namespace neuroml2
       o << ::std::endl << "extracellularProperties: " << *i.extracellularProperties ();
     }
 
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
+
     return o;
   }
 
@@ -49616,6 +52936,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Layout& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.random ())
     {
       o << ::std::endl << "random: " << *i.random ();
@@ -49642,6 +52964,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const UnstructuredLayout& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.number ())
     {
       o << ::std::endl << "number: " << *i.number ();
@@ -49653,6 +52977,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const RandomLayout& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.number ())
     {
       o << ::std::endl << "number: " << *i.number ();
@@ -49669,6 +52995,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const GridLayout& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     if (i.xSize ())
     {
       o << ::std::endl << "xSize: " << *i.xSize ();
@@ -49690,6 +53018,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Instance& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "location: " << i.location ();
     if (i.id ())
     {
@@ -49717,6 +53047,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Location& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "x: " << i.x ();
     o << ::std::endl << "y: " << i.y ();
     o << ::std::endl << "z: " << i.z ();
@@ -49735,6 +53067,13 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const SynapticConnection& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
+
     o << ::std::endl << "from: " << i.from ();
     o << ::std::endl << "to: " << i.to ();
     o << ::std::endl << "synapse: " << i.synapse ();
@@ -49783,6 +53122,11 @@ namespace neuroml2
   operator<< (::std::ostream& o, const BaseConnection& i)
   {
     o << static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (i);
+
+    if (i.neuroLexId ())
+    {
+      o << ::std::endl << "neuroLexId: " << *i.neuroLexId ();
+    }
 
     return o;
   }
@@ -49947,6 +53291,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const ExplicitInput& i)
   {
+    o << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
     o << ::std::endl << "target: " << i.target ();
     o << ::std::endl << "input: " << i.input ();
     if (i.destination ())
@@ -49984,7 +53330,8 @@ namespace neuroml2
   ::std::ostream&
   operator<< (::std::ostream& o, const Input& i)
   {
-    o << ::std::endl << "id: " << i.id ();
+    o << static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (i);
+
     o << ::std::endl << "target: " << i.target ();
     o << ::std::endl << "destination: " << i.destination ();
     if (i.segmentId ())
@@ -50868,6 +54215,25 @@ namespace neuroml2
   }
 
   void
+  operator<< (::xercesc::DOMElement& e, const Nml2PopulationReferencePath& i)
+  {
+    e << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMAttr& a, const Nml2PopulationReferencePath& i)
+  {
+    a << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xml_schema::list_stream& l,
+              const Nml2PopulationReferencePath& i)
+  {
+    l << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
   operator<< (::xercesc::DOMElement& e, const NonNegativeInteger& i)
   {
     e << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::non_negative_integer, char, ::xml_schema::simple_type >& > (i);
@@ -50963,9 +54329,26 @@ namespace neuroml2
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const Property& i)
+  operator<< (::xercesc::DOMElement& e, const BaseWithoutId& i)
   {
     e << static_cast< const ::xml_schema::type& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMAttr&, const BaseWithoutId&)
+  {
+  }
+
+  void
+  operator<< (::xml_schema::list_stream&,
+              const BaseWithoutId&)
+  {
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const Property& i)
+  {
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // tag
     //
@@ -50993,7 +54376,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Annotation& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
   }
 
   void
@@ -51025,6 +54408,21 @@ namespace neuroml2
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
           "Parameter",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // DerivedParameter
+    //
+    for (ComponentType::DerivedParameter_const_iterator
+         b (i.DerivedParameter ().begin ()), n (i.DerivedParameter ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "DerivedParameter",
           "http://www.neuroml.org/schema/neuroml2",
           e));
 
@@ -51145,7 +54543,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Constant& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // name
     //
@@ -51196,7 +54594,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Exposure& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // name
     //
@@ -51236,7 +54634,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const NamedDimensionalType& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // name
     //
@@ -51276,7 +54674,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const NamedDimensionalVariable& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // name
     //
@@ -51329,6 +54727,23 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement& e, const Parameter& i)
   {
     e << static_cast< const ::neuroml2::NamedDimensionalType& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const DerivedParameter& i)
+  {
+    e << static_cast< const ::neuroml2::NamedDimensionalType& > (i);
+
+    // value
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "value",
+          e));
+
+      a << i.value ();
+    }
   }
 
   void
@@ -51442,6 +54857,64 @@ namespace neuroml2
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
           "TimeDerivative",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // OnStart
+    //
+    if (i.OnStart ())
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "OnStart",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *i.OnStart ();
+    }
+
+    // OnEvent
+    //
+    for (Dynamics::OnEvent_const_iterator
+         b (i.OnEvent ().begin ()), n (i.OnEvent ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "OnEvent",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // OnCondition
+    //
+    for (Dynamics::OnCondition_const_iterator
+         b (i.OnCondition ().begin ()), n (i.OnCondition ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "OnCondition",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // Regime
+    //
+    for (Dynamics::Regime_const_iterator
+         b (i.Regime ().begin ()), n (i.Regime ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "Regime",
           "http://www.neuroml.org/schema/neuroml2",
           e));
 
@@ -51561,6 +55034,308 @@ namespace neuroml2
 
       a << i.value ();
     }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const OnStart& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // StateAssignment
+    //
+    for (OnStart::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), n (i.StateAssignment ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "StateAssignment",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const StateAssignment& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // variable
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "variable",
+          e));
+
+      a << i.variable ();
+    }
+
+    // value
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "value",
+          e));
+
+      a << i.value ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const OnEvent& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // StateAssignment
+    //
+    for (OnEvent::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), n (i.StateAssignment ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "StateAssignment",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // EventOut
+    //
+    for (OnEvent::EventOut_const_iterator
+         b (i.EventOut ().begin ()), n (i.EventOut ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "EventOut",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // port
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "port",
+          e));
+
+      a << i.port ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const EventOut& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // port
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "port",
+          e));
+
+      a << i.port ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const OnCondition& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // StateAssignment
+    //
+    for (OnCondition::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), n (i.StateAssignment ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "StateAssignment",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // EventOut
+    //
+    for (OnCondition::EventOut_const_iterator
+         b (i.EventOut ().begin ()), n (i.EventOut ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "EventOut",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // Transition
+    //
+    if (i.Transition ())
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "Transition",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *i.Transition ();
+    }
+
+    // test
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "test",
+          e));
+
+      a << i.test ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const Transition& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // regime
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "regime",
+          e));
+
+      a << i.regime ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const Regime& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // TimeDerivative
+    //
+    for (Regime::TimeDerivative_const_iterator
+         b (i.TimeDerivative ().begin ()), n (i.TimeDerivative ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "TimeDerivative",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // OnEntry
+    //
+    if (i.OnEntry ())
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "OnEntry",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *i.OnEntry ();
+    }
+
+    // OnCondition
+    //
+    for (Regime::OnCondition_const_iterator
+         b (i.OnCondition ().begin ()), n (i.OnCondition ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "OnCondition",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
+    // name
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "name",
+          e));
+
+      a << i.name ();
+    }
+
+    // initial
+    //
+    if (i.initial ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "initial",
+          e));
+
+      a << *i.initial ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const OnEntry& i)
+  {
+    e << static_cast< const ::xml_schema::type& > (i);
+
+    // StateAssignment
+    //
+    for (OnEntry::StateAssignment_const_iterator
+         b (i.StateAssignment ().begin ()), n (i.StateAssignment ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "StateAssignment",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const TrueOrFalse& i)
+  {
+    e << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMAttr& a, const TrueOrFalse& i)
+  {
+    a << static_cast< const ::xml_schema::string& > (i);
+  }
+
+  void
+  operator<< (::xml_schema::list_stream& l,
+              const TrueOrFalse& i)
+  {
+    l << static_cast< const ::xml_schema::string& > (i);
   }
 
   void
@@ -51728,24 +55503,6 @@ namespace neuroml2
 
     ::neuroml2::neuroml (*d, s, f);
     return d;
-  }
-
-  void
-  operator<< (::xercesc::DOMElement& e, const BaseWithoutId& i)
-  {
-    e << static_cast< const ::xml_schema::type& > (i);
-
-    // neuroLexId
-    //
-    if (i.neuroLexId ())
-    {
-      ::xercesc::DOMAttr& a (
-        ::xsd::cxx::xml::dom::create_attribute (
-          "neuroLexId",
-          e));
-
-      a << *i.neuroLexId ();
-    }
   }
 
   void
@@ -52354,6 +56111,21 @@ namespace neuroml2
       s << *b;
     }
 
+    // hindmarshRose1984Cell
+    //
+    for (NeuroMLDocument_base::hindmarshRose1984Cell_const_iterator
+         b (i.hindmarshRose1984Cell ().begin ()), n (i.hindmarshRose1984Cell ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "hindmarshRose1984Cell",
+          "http://www.neuroml.org/schema/neuroml2",
+          e));
+
+      s << *b;
+    }
+
     // pulseGenerator
     //
     for (NeuroMLDocument_base::pulseGenerator_const_iterator
@@ -52871,6 +56643,18 @@ namespace neuroml2
 
       s << *b;
     }
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -52915,6 +56699,18 @@ namespace neuroml2
           e));
 
       a << *i.conductance ();
+    }
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
     }
   }
 
@@ -53125,7 +56921,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Q10ConductanceScaling& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // q10Factor
     //
@@ -54134,7 +57930,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const HHRate& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // type
     //
@@ -54187,7 +57983,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const HHVariable& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // type
     //
@@ -54240,7 +58036,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const HHTime& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // type
     //
@@ -54406,6 +58202,18 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement& e, const BaseSynapse& i)
   {
     e << static_cast< const ::neuroml2::Standalone& > (i);
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -54821,7 +58629,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const BlockMechanism& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // type
     //
@@ -54901,7 +58709,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const PlasticityMechanism& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // type
     //
@@ -54953,6 +58761,18 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement& e, const BaseCell& i)
   {
     e << static_cast< const ::neuroml2::Standalone& > (i);
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -55737,6 +59557,133 @@ namespace neuroml2
   }
 
   void
+  operator<< (::xercesc::DOMElement& e, const HindmarshRose1984Cell& i)
+  {
+    e << static_cast< const ::neuroml2::BaseCellMembPotCap& > (i);
+
+    // a
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "a",
+          e));
+
+      a << i.a ();
+    }
+
+    // b
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "b",
+          e));
+
+      a << i.b ();
+    }
+
+    // c
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "c",
+          e));
+
+      a << i.c ();
+    }
+
+    // d
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "d",
+          e));
+
+      a << i.d ();
+    }
+
+    // s
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "s",
+          e));
+
+      a << i.s ();
+    }
+
+    // x1
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "x1",
+          e));
+
+      a << i.x1 ();
+    }
+
+    // r
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "r",
+          e));
+
+      a << i.r ();
+    }
+
+    // x0
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "x0",
+          e));
+
+      a << i.x0 ();
+    }
+
+    // y0
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "y0",
+          e));
+
+      a << i.y0 ();
+    }
+
+    // z0
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "z0",
+          e));
+
+      a << i.z0 ();
+    }
+
+    // v_scaling
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "v_scaling",
+          e));
+
+      a << i.v_scaling ();
+    }
+  }
+
+  void
   operator<< (::xercesc::DOMElement& e, const Cell& i)
   {
     e << static_cast< const ::neuroml2::BaseCell& > (i);
@@ -55918,12 +59865,24 @@ namespace neuroml2
 
       a << *i.name ();
     }
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
   operator<< (::xercesc::DOMElement& e, const SegmentParent& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // segment
     //
@@ -55951,7 +59910,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Point3DWithDiam& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // x
     //
@@ -56118,6 +60077,18 @@ namespace neuroml2
 
       s << *b;
     }
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -56196,7 +60167,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const ProximalDetails& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // translationStart
     //
@@ -56213,7 +60184,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const DistalDetails& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // normalizationEnd
     //
@@ -56230,7 +60201,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Member& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // segment
     //
@@ -56247,7 +60218,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Include& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // segmentGroup
     //
@@ -56264,7 +60235,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Path& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // from
     //
@@ -56296,7 +60267,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const SubTree& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // from
     //
@@ -56328,7 +60299,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const SegmentEndPoint& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // segment
     //
@@ -56433,7 +60404,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const MembraneProperties& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // channelPopulation
     //
@@ -56640,7 +60611,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const SpikeThresh& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // value
     //
@@ -56668,7 +60639,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const SpecificCapacitance& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // value
     //
@@ -56696,7 +60667,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const InitMembPotential& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // value
     //
@@ -56724,7 +60695,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Resistivity& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // value
     //
@@ -57336,7 +61307,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const InhomogeneousValue& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // inhomogeneousParameter
     //
@@ -57364,18 +61335,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Species& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
-
-    // id
-    //
-    {
-      ::xercesc::DOMAttr& a (
-        ::xsd::cxx::xml::dom::create_attribute (
-          "id",
-          e));
-
-      a << i.id ();
-    }
+    e << static_cast< const ::neuroml2::Base& > (i);
 
     // concentrationModel
     //
@@ -57454,7 +61414,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const IntracellularProperties& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // species
     //
@@ -57517,7 +61477,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const ExtracellularPropertiesLocal& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::Base& > (i);
 
     // species
     //
@@ -58573,6 +62533,18 @@ namespace neuroml2
 
       a << *i.temperature ();
     }
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -58628,7 +62600,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const SpaceStructure& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // xSpacing
     //
@@ -58816,6 +62788,18 @@ namespace neuroml2
 
       a << *i.extracellularProperties ();
     }
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -58840,7 +62824,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Layout& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // random
     //
@@ -58897,7 +62881,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const UnstructuredLayout& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // number
     //
@@ -58915,7 +62899,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const RandomLayout& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // number
     //
@@ -58945,7 +62929,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const GridLayout& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // xSize
     //
@@ -58987,7 +62971,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Instance& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // location
     //
@@ -59053,7 +63037,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Location& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // x
     //
@@ -59109,7 +63093,19 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const SynapticConnection& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
 
     // from
     //
@@ -59236,6 +63232,18 @@ namespace neuroml2
   operator<< (::xercesc::DOMElement& e, const BaseConnection& i)
   {
     e << static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (i);
+
+    // neuroLexId
+    //
+    if (i.neuroLexId ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "neuroLexId",
+          e));
+
+      a << *i.neuroLexId ();
+    }
   }
 
   void
@@ -59612,7 +63620,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const ExplicitInput& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::neuroml2::BaseWithoutId& > (i);
 
     // target
     //
@@ -59710,18 +63718,7 @@ namespace neuroml2
   void
   operator<< (::xercesc::DOMElement& e, const Input& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
-
-    // id
-    //
-    {
-      ::xercesc::DOMAttr& a (
-        ::xsd::cxx::xml::dom::create_attribute (
-          "id",
-          e));
-
-      a << i.id ();
-    }
+    e << static_cast< const ::neuroml2::BaseNonNegativeIntegerId& > (i);
 
     // target
     //

@@ -11,7 +11,7 @@ cmake_policy(SET CMP0048 NEW) # VERSION option to project()
 
 # Note: the version number uses Semantic Versioning http://semver.org/
 project(NeuroML_API
-    VERSION 2.2.0
+    VERSION 2.3.0
     DESCRIPTION "C++ API for NeuroML 2"
     HOMEPAGE_URL "https://github.com/NeuroML/NeuroML_API"
     )
@@ -21,7 +21,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/modules)
 ############################
 
 # Which schema to provide the API for
-set(NeuroML_SCHEMA_PATH "${PROJECT_SOURCE_DIR}/src/schema/NeuroML_v2.2.xsd"
+set(NeuroML_SCHEMA_PATH "${PROJECT_SOURCE_DIR}/src/schema/NeuroML_v2.3.xsd"
     CACHE PATH
     "Path to the schema file to base the API on.")
 
