@@ -1,0 +1,7 @@
+<map id="neuroml2::PlasticityMechanism" name="neuroml2::PlasticityMechanism">
+<area shape="rect" id="Node000001" title="Class corresponding to the PlasticityMechanism schema type." alt="" coords="5,152,232,177"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="25,79,212,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,118,121,152,116,152,116,118"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="47,5,190,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,44,121,79,116,79,116,44"/>
+</map>

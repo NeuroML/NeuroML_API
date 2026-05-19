@@ -1,0 +1,25 @@
+<map id="neuroml2::basePyNNIaFCondCell" name="neuroml2::basePyNNIaFCondCell">
+<area shape="rect" id="Node000001" title="Class corresponding to the basePyNNIaFCondCell schema type." alt="" coords="154,519,391,544"/>
+<area shape="rect" id="Node000009" href="$classneuroml2_1_1_e_i_f__cond__exp__isfa__ista.html" title="Class corresponding to the EIF_cond_exp_isfa_ista schema type." alt="" coords="5,592,156,632"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="233,552,128,594,126,589,231,547"/>
+<area shape="rect" id="Node000011" href="$classneuroml2_1_1_i_f__cond__alpha.html" title="Class corresponding to the IF_cond_alpha schema type." alt="" coords="180,599,365,625"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="275,558,275,599,270,599,270,558"/>
+<area shape="rect" id="Node000012" href="$classneuroml2_1_1_i_f__cond__exp.html" title="Class corresponding to the IF_cond_exp schema type." alt="" coords="390,599,563,625"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="316,546,448,597,446,602,314,551"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1base_py_n_n_ia_f_cell.html" title="Class corresponding to the basePyNNIaFCell schema type." alt="" coords="171,445,375,471"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,484,275,519,270,519,270,484"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1base_py_n_n_cell.html" title="Class corresponding to the basePyNNCell schema type." alt="" coords="181,372,365,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,411,275,445,270,445,270,411"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="198,299,347,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="275,338,275,372,270,372,270,338"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="190,225,355,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="275,264,275,299,270,299,270,264"/>
+<area shape="rect" id="Node000006" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="211,152,335,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="275,191,275,225,270,225,270,191"/>
+<area shape="rect" id="Node000007" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="179,79,366,104"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="275,118,275,152,270,152,270,118"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="201,5,344,31"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="275,44,275,79,270,79,270,44"/>
+<area shape="rect" id="Node000010" href="$classneuroml2_1_1_e_i_f__cond__alpha__isfa__ista.html" title="Class corresponding to the EIF_cond_alpha_isfa_ista schema type." alt="" coords="5,680,156,720"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="83,646,83,680,78,680,78,646"/>
+</map>

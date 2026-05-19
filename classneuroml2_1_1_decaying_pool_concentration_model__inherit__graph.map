@@ -1,0 +1,13 @@
+<map id="neuroml2::DecayingPoolConcentrationModel" name="neuroml2::DecayingPoolConcentrationModel">
+<area shape="rect" id="Node000001" title="Class corresponding to the DecayingPoolConcentrationModel schema type." alt="" coords="5,299,277,339"/>
+<area shape="rect" id="Node000006" href="$classneuroml2_1_1_concentration_model___d.html" title="Class corresponding to the ConcentrationModel_D schema type." alt="" coords="21,387,261,412"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="144,352,144,386,139,386,139,352"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="59,225,224,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,264,144,299,139,299,139,264"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="79,152,203,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,191,144,225,139,225,139,191"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="48,79,235,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,118,144,152,139,152,139,118"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="70,5,213,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="144,44,144,79,139,79,139,44"/>
+</map>

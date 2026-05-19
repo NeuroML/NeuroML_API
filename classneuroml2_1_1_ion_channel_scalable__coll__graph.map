@@ -1,0 +1,11 @@
+<map id="neuroml2::IonChannelScalable" name="neuroml2::IonChannelScalable">
+<area shape="rect" id="Node000001" title="Class corresponding to the IonChannelScalable schema type." alt="" coords="5,299,225,324"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="33,225,198,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,264,118,299,113,299,113,264"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="53,152,177,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,191,118,225,113,225,113,191"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="22,79,209,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="118,118,118,152,113,152,113,118"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="44,5,187,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="118,44,118,79,113,79,113,44"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="neuroml2::Q10ConductanceScaling" name="neuroml2::Q10ConductanceScaling">
+<area shape="rect" id="Node000001" title="Class corresponding to the Q10ConductanceScaling schema type." alt="" coords="5,152,208,192"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="13,79,200,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,118,109,152,104,152,104,118"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="35,5,178,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,44,109,79,104,79,104,44"/>
+</map>

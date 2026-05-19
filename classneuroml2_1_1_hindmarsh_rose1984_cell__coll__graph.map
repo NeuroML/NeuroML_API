@@ -1,0 +1,15 @@
+<map id="neuroml2::HindmarshRose1984Cell" name="neuroml2::HindmarshRose1984Cell">
+<area shape="rect" id="Node000001" title="Class corresponding to the HindmarshRose1984Cell schema type." alt="" coords="5,445,257,471"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_cell_memb_pot_cap.html" title="Class corresponding to the BaseCellMembPotCap schema type." alt="" coords="13,372,249,397"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,411,134,445,129,445,129,411"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="57,299,206,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="134,338,134,372,129,372,129,338"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="49,225,214,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="134,264,134,299,129,299,129,264"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="69,152,193,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,191,134,225,129,225,129,191"/>
+<area shape="rect" id="Node000006" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="38,79,225,104"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="134,118,134,152,129,152,129,118"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="60,5,203,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="134,44,134,79,129,79,129,44"/>
+</map>

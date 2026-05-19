@@ -1,0 +1,9 @@
+<map id="neuroml2::ReactionScheme" name="neuroml2::ReactionScheme">
+<area shape="rect" id="Node000001" title="Class corresponding to the ReactionScheme schema type." alt="" coords="5,225,207,251"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="44,152,168,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,191,109,225,103,225,103,191"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="13,79,199,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,118,109,152,103,152,103,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="35,5,177,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="109,44,109,79,103,79,103,44"/>
+</map>

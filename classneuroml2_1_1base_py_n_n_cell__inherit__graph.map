@@ -1,0 +1,31 @@
+<map id="neuroml2::basePyNNCell" name="neuroml2::basePyNNCell">
+<area shape="rect" id="Node000001" title="Class corresponding to the basePyNNCell schema type." alt="" coords="112,372,296,397"/>
+<area shape="rect" id="Node000007" href="$classneuroml2_1_1_h_h__cond__exp.html" title="Class corresponding to the HH_cond_exp schema type." alt="" coords="5,445,187,471"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="177,407,115,447,112,443,174,403"/>
+<area shape="rect" id="Node000008" href="$classneuroml2_1_1base_py_n_n_ia_f_cell.html" title="Class corresponding to the basePyNNIaFCell schema type." alt="" coords="211,445,415,471"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="234,403,297,443,294,447,232,407"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="129,299,279,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,338,207,372,201,372,201,338"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="121,225,287,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,264,207,299,201,299,201,264"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="142,152,266,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="207,191,207,225,201,225,201,191"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="111,79,297,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="207,118,207,152,201,152,201,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="133,5,275,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="207,44,207,79,201,79,201,44"/>
+<area shape="rect" id="Node000009" href="$classneuroml2_1_1_i_f__curr__alpha.html" title="Class corresponding to the IF_curr_alpha schema type." alt="" coords="27,519,205,544"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="270,478,149,521,147,516,268,473"/>
+<area shape="rect" id="Node000010" href="$classneuroml2_1_1_i_f__curr__exp.html" title="Class corresponding to the IF_curr_exp schema type." alt="" coords="230,519,397,544"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="316,484,316,519,311,519,311,484"/>
+<area shape="rect" id="Node000011" href="$classneuroml2_1_1base_py_n_n_ia_f_cond_cell.html" title="Class corresponding to the basePyNNIaFCondCell schema type." alt="" coords="421,519,659,544"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="364,472,504,516,503,521,362,477"/>
+<area shape="rect" id="Node000012" href="$classneuroml2_1_1_e_i_f__cond__exp__isfa__ista.html" title="Class corresponding to the EIF_cond_exp_isfa_ista schema type." alt="" coords="273,592,423,632"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="501,552,395,594,393,589,499,547"/>
+<area shape="rect" id="Node000014" href="$classneuroml2_1_1_i_f__cond__alpha.html" title="Class corresponding to the IF_cond_alpha schema type." alt="" coords="447,599,633,625"/>
+<area shape="poly" id="edge13_Node000011_Node000014" title=" " alt="" coords="543,558,543,599,537,599,537,558"/>
+<area shape="rect" id="Node000015" href="$classneuroml2_1_1_i_f__cond__exp.html" title="Class corresponding to the IF_cond_exp schema type." alt="" coords="657,599,831,625"/>
+<area shape="poly" id="edge14_Node000011_Node000015" title=" " alt="" coords="583,546,715,597,713,602,581,551"/>
+<area shape="rect" id="Node000013" href="$classneuroml2_1_1_e_i_f__cond__alpha__isfa__ista.html" title="Class corresponding to the EIF_cond_alpha_isfa_ista schema type." alt="" coords="273,680,423,720"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="351,646,351,680,345,680,345,646"/>
+</map>

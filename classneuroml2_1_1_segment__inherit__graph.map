@@ -1,0 +1,11 @@
+<map id="neuroml2::Segment" name="neuroml2::Segment">
+<area shape="rect" id="Node000001" title="Class corresponding to the Segment schema type." alt="" coords="35,313,185,339"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_segment__base.html" title="Class corresponding to the Segment schema type." alt="" coords="16,240,204,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,279,113,313,107,313,107,279"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="5,152,215,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,206,113,240,107,240,107,206"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="17,79,203,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,118,113,152,107,152,107,118"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="39,5,181,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="113,44,113,79,107,79,107,44"/>
+</map>

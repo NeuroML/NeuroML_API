@@ -1,0 +1,13 @@
+<map id="neuroml2::BaseCurrentBasedSynapse" name="neuroml2::BaseCurrentBasedSynapse">
+<area shape="rect" id="Node000001" title="Class corresponding to the BaseCurrentBasedSynapse schema type." alt="" coords="5,372,217,412"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_synapse.html" title="Class corresponding to the BaseSynapse schema type." alt="" coords="22,299,201,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,338,114,372,109,372,109,338"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="29,225,194,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,264,114,299,109,299,109,264"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="49,152,173,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="114,191,114,225,109,225,109,191"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="18,79,205,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="114,118,114,152,109,152,109,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="40,5,183,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="114,44,114,79,109,79,109,44"/>
+</map>

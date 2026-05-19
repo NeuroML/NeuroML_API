@@ -1,0 +1,11 @@
+<map id="neuroml2::ChannelDensityNernstCa2" name="neuroml2::ChannelDensityNernstCa2">
+<area shape="rect" id="Node000001" title="Class corresponding to the ChannelDensityNernstCa2 schema type." alt="" coords="5,313,200,353"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_channel_density_nernst.html" title="Class corresponding to the ChannelDensityNernst schema type." alt="" coords="5,225,200,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,279,105,313,100,313,100,279"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="41,152,165,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,191,105,225,100,225,100,191"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="9,79,196,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,118,105,152,100,152,100,118"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="31,5,174,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="105,44,105,79,100,79,100,44"/>
+</map>

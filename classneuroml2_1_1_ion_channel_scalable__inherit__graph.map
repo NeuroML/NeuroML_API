@@ -1,0 +1,17 @@
+<map id="neuroml2::IonChannelScalable" name="neuroml2::IonChannelScalable">
+<area shape="rect" id="Node000001" title="Class corresponding to the IonChannelScalable schema type." alt="" coords="97,299,317,324"/>
+<area shape="rect" id="Node000006" href="$classneuroml2_1_1_ion_channel.html" title="Class corresponding to the IonChannel schema type." alt="" coords="125,372,290,397"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="210,338,210,372,205,372,205,338"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="125,225,290,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,264,210,299,205,299,205,264"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="145,152,269,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,191,210,225,205,225,205,191"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="114,79,301,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="210,118,210,152,205,152,205,118"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="136,5,279,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="210,44,210,79,205,79,205,44"/>
+<area shape="rect" id="Node000007" href="$classneuroml2_1_1_ion_channel_h_h.html" title="Class corresponding to the IonChannelHH schema type." alt="" coords="5,445,191,471"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="180,407,117,447,114,443,177,403"/>
+<area shape="rect" id="Node000008" href="$classneuroml2_1_1_ion_channel_v_shift.html" title="Class corresponding to the IonChannelVShift schema type." alt="" coords="215,445,418,471"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="238,403,300,443,297,447,235,407"/>
+</map>

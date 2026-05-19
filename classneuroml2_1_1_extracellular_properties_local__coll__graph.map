@@ -1,0 +1,9 @@
+<map id="neuroml2::ExtracellularPropertiesLocal" name="neuroml2::ExtracellularPropertiesLocal">
+<area shape="rect" id="Node000001" title="Class corresponding to the ExtracellularPropertiesLocal schema type." alt="" coords="5,225,245,265"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="63,152,187,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,191,128,225,123,225,123,191"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="32,79,219,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="128,118,128,152,123,152,123,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="54,5,197,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="128,44,128,79,123,79,123,44"/>
+</map>

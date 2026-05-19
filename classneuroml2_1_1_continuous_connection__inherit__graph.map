@@ -1,0 +1,17 @@
+<map id="neuroml2::ContinuousConnection" name="neuroml2::ContinuousConnection">
+<area shape="rect" id="Node000001" title="Class corresponding to the ContinuousConnection schema type." alt="" coords="5,401,244,427"/>
+<area shape="rect" id="Node000007" href="$classneuroml2_1_1_continuous_connection_instance.html" title="Class corresponding to the ContinuousConnectionInstance schema type." alt="" coords="5,475,244,515"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="127,440,127,475,122,475,122,440"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_connection_new_format.html" title="Class corresponding to the BaseConnectionNewFormat schema type." alt="" coords="26,313,223,353"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,367,127,401,122,401,122,367"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_connection.html" title="Class corresponding to the BaseConnection schema type." alt="" coords="26,240,223,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,279,127,313,122,313,122,279"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="20,152,229,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,206,127,240,122,240,122,206"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="31,79,218,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="127,118,127,152,122,152,122,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="53,5,196,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="127,44,127,79,122,79,122,44"/>
+<area shape="rect" id="Node000008" href="$classneuroml2_1_1_continuous_connection_instance_w.html" title="Class corresponding to the ContinuousConnectionInstanceW schema type." alt="" coords="5,563,244,603"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="127,529,127,562,122,562,122,529"/>
+</map>
