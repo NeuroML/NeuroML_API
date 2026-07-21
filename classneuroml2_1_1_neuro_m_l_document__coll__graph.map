@@ -1,0 +1,13 @@
+<map id="neuroml2::NeuroMLDocument" name="neuroml2::NeuroMLDocument">
+<area shape="rect" id="Node000001" title="Class corresponding to the NeuroMLDocument schema type." alt="" coords="24,372,241,397"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_neuro_m_l_document__base.html" title="Class corresponding to the NeuroMLDocument schema type." alt="" coords="5,299,260,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,338,135,372,130,372,130,338"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="50,225,215,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,264,135,299,130,299,130,264"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="71,152,195,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="135,191,135,225,130,225,130,191"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="39,79,226,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="135,118,135,152,130,152,130,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="61,5,204,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="135,44,135,79,130,79,130,44"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,104,244,129"/>
+<area shape="rect" id="Node000001" href="$classneuroml2_1_1_double_greater_than_zero.html" title="Class corresponding to the DoubleGreaterThanZero schema type." alt="" coords="292,5,541,31"/>
+<area shape="poly" id="edge237_Node000000_Node000001" title=" " alt="" coords="161,95,221,67,291,39,335,28,336,33,293,45,223,72,163,100"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_non_negative_integer.html" title="Class corresponding to the NonNegativeInteger schema type." alt="" coords="305,55,528,80"/>
+<area shape="poly" id="edge238_Node000000_Node000002" title=" " alt="" coords="213,99,340,77,341,83,214,104"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_positive_integer.html" title="Class corresponding to the PositiveInteger schema type." alt="" coords="321,104,512,129"/>
+<area shape="poly" id="edge239_Node000000_Node000003" title=" " alt="" coords="258,114,321,114,321,119,258,119"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_zero_or_one.html" title="Enumeration class corresponding to the ZeroOrOne schema type." alt="" coords="335,153,498,179"/>
+<area shape="poly" id="edge240_Node000000_Node000004" title=" " alt="" coords="214,129,341,151,340,156,213,134"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_zero_to_one.html" title="Class corresponding to the ZeroToOne schema type." alt="" coords="335,203,498,228"/>
+<area shape="poly" id="edge241_Node000000_Node000005" title=" " alt="" coords="164,133,224,161,293,187,341,200,340,205,291,193,222,166,162,138"/>
+</map>

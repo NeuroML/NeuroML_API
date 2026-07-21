@@ -1,0 +1,19 @@
+<map id="neuroml2::IF_cond_exp" name="neuroml2::IF_cond_exp">
+<area shape="rect" id="Node000001" title="Class corresponding to the IF_cond_exp schema type." alt="" coords="37,592,211,617"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1base_py_n_n_ia_f_cond_cell.html" title="Class corresponding to the basePyNNIaFCondCell schema type." alt="" coords="5,519,243,544"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,558,127,592,121,592,121,558"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1base_py_n_n_ia_f_cell.html" title="Class corresponding to the basePyNNIaFCell schema type." alt="" coords="22,445,226,471"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,484,127,519,121,519,121,484"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1base_py_n_n_cell.html" title="Class corresponding to the basePyNNCell schema type." alt="" coords="32,372,216,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,411,127,445,121,445,121,411"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base_cell.html" title="Class corresponding to the BaseCell schema type." alt="" coords="49,299,199,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="127,338,127,372,121,372,121,338"/>
+<area shape="rect" id="Node000006" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="41,225,207,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="127,264,127,299,121,299,121,264"/>
+<area shape="rect" id="Node000007" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="62,152,186,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="127,191,127,225,121,225,121,191"/>
+<area shape="rect" id="Node000008" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="31,79,217,104"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="127,118,127,152,121,152,121,118"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="53,5,195,31"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="127,44,127,79,121,79,121,44"/>
+</map>

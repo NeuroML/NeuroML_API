@@ -1,0 +1,99 @@
+<map id="neuroml2::BaseWithoutId" name="neuroml2::BaseWithoutId">
+<area shape="rect" id="Node000001" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="196,1081,383,1107"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_annotation.html" title="Class corresponding to the Annotation schema type." alt="" coords="475,128,637,153"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="288,1067,292,887,299,757,310,615,328,474,352,344,368,287,386,237,406,195,429,164,450,149,474,140,476,145,452,154,433,168,410,198,390,239,373,288,358,345,333,475,316,616,304,757,298,888,293,1068"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="494,177,618,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,1068,294,896,301,773,314,639,331,505,355,383,370,329,387,282,407,243,429,213,443,202,459,194,493,186,494,191,461,199,446,207,433,217,411,246,392,284,375,330,361,384,336,506,319,640,307,773,299,896,294,1068"/>
+<area shape="rect" id="Node000126" href="$classneuroml2_1_1_base_non_negative_integer_id.html" title="Class corresponding to the BaseNonNegativeIntegerId schema type." alt="" coords="451,227,661,267"/>
+<area shape="poly" id="edge12_Node000001_Node000126" title=" " alt="" coords="289,1067,297,908,319,671,337,548,361,435,391,343,409,306,429,279,449,263,453,267,433,283,413,309,396,345,366,437,343,549,325,672,303,908,294,1067"/>
+<area shape="rect" id="Node000144" href="$classneuroml2_1_1_block_mechanism.html" title="Class corresponding to the BlockMechanism schema type." alt="" coords="455,292,657,317"/>
+<area shape="poly" id="edge13_Node000001_Node000144" title=" " alt="" coords="289,1068,298,916,321,693,339,578,362,473,392,387,409,353,429,328,453,312,456,316,433,332,414,356,397,389,367,475,344,579,326,694,303,916,294,1068"/>
+<area shape="rect" id="Node000145" href="$classneuroml2_1_1_constant.html" title="Class corresponding to the Constant schema type." alt="" coords="481,341,631,367"/>
+<area shape="poly" id="edge14_Node000001_Node000145" title=" " alt="" coords="289,1067,300,924,324,716,342,609,365,512,394,432,411,401,429,377,452,361,479,353,481,358,455,366,432,381,415,404,399,434,371,513,347,611,329,717,305,924,295,1067"/>
+<area shape="rect" id="Node000146" href="$classneuroml2_1_1_distal_details.html" title="Class corresponding to the DistalDetails schema type." alt="" coords="468,391,644,416"/>
+<area shape="poly" id="edge15_Node000001_Node000146" title=" " alt="" coords="290,1067,302,933,327,740,346,641,368,551,396,477,412,448,429,427,446,414,466,405,469,410,449,418,433,431,416,451,401,479,373,553,351,643,332,741,307,934,295,1068"/>
+<area shape="rect" id="Node000147" href="$classneuroml2_1_1_explicit_input.html" title="Class corresponding to the ExplicitInput schema type." alt="" coords="469,440,643,465"/>
+<area shape="poly" id="edge16_Node000001_Node000147" title=" " alt="" coords="290,1067,304,942,330,764,349,673,371,590,398,522,413,496,429,476,447,463,468,454,470,459,450,467,433,480,417,499,403,524,376,592,354,674,336,765,309,943,296,1068"/>
+<area shape="rect" id="Node000148" href="$classneuroml2_1_1_exposure.html" title="Class corresponding to the Exposure schema type." alt="" coords="480,489,632,515"/>
+<area shape="poly" id="edge17_Node000001_Node000148" title=" " alt="" coords="291,1067,306,951,334,788,352,705,374,629,400,567,414,543,429,525,452,510,479,501,481,506,455,515,432,529,418,547,405,570,379,631,358,706,339,789,311,952,296,1068"/>
+<area shape="rect" id="Node000149" href="$classneuroml2_1_1_grid_layout.html" title="Class corresponding to the GridLayout schema type." alt="" coords="475,539,637,564"/>
+<area shape="poly" id="edge18_Node000001_Node000149" title=" " alt="" coords="292,1067,308,960,337,812,356,737,378,668,402,612,429,575,450,560,473,552,475,557,452,565,433,579,406,615,383,670,361,738,342,813,313,961,297,1068"/>
+<area shape="rect" id="Node000150" href="$classneuroml2_1_1_h_h_rate.html" title="Class corresponding to the HHRate schema type." alt="" coords="485,588,627,613"/>
+<area shape="poly" id="edge19_Node000001_Node000150" title=" " alt="" coords="287,1067,290,981,297,924,308,861,325,797,350,734,384,675,429,624,455,608,484,599,485,605,457,613,432,628,389,678,355,736,330,799,313,863,302,925,296,982,293,1067"/>
+<area shape="rect" id="Node000151" href="$classneuroml2_1_1_h_h_time.html" title="Class corresponding to the HHTime schema type." alt="" coords="483,637,629,663"/>
+<area shape="poly" id="edge20_Node000001_Node000151" title=" " alt="" coords="288,1067,294,989,302,938,314,882,332,825,356,770,388,718,429,673,454,658,482,649,484,654,456,663,432,677,393,721,361,772,337,827,319,884,307,939,300,990,294,1067"/>
+<area shape="rect" id="Node000152" href="$classneuroml2_1_1_h_h_variable.html" title="Class corresponding to the HHVariable schema type." alt="" coords="473,687,639,712"/>
+<area shape="poly" id="edge21_Node000001_Node000152" title=" " alt="" coords="290,1067,299,998,321,904,339,854,362,806,392,761,429,723,450,710,472,701,474,706,452,714,432,727,396,765,367,809,344,856,326,906,304,999,295,1068"/>
+<area shape="rect" id="Node000153" href="$classneuroml2_1_1_include.html" title="Class corresponding to the Include schema type." alt="" coords="487,736,625,761"/>
+<area shape="poly" id="edge22_Node000001_Node000153" title=" " alt="" coords="291,1067,303,1006,328,926,346,883,368,842,396,805,429,772,456,757,486,748,487,753,458,761,432,776,400,808,373,845,350,886,333,928,308,1007,297,1068"/>
+<area shape="rect" id="Node000154" href="$classneuroml2_1_1_inhomogeneous_value.html" title="Class corresponding to the InhomogeneousValue schema type." alt="" coords="440,785,672,811"/>
+<area shape="poly" id="edge23_Node000001_Node000154" title=" " alt="" coords="294,1068,308,1015,335,948,353,913,374,879,400,848,429,821,451,809,454,813,432,825,403,852,378,882,357,916,339,950,313,1017,299,1069"/>
+<area shape="rect" id="Node000155" href="$classneuroml2_1_1_init_memb_potential.html" title="Class corresponding to the InitMembPotential schema type." alt="" coords="450,835,662,860"/>
+<area shape="poly" id="edge24_Node000001_Node000155" title=" " alt="" coords="297,1067,315,1024,342,970,380,916,403,891,429,870,454,858,456,862,432,875,407,895,384,919,347,973,319,1026,302,1069"/>
+<area shape="rect" id="Node000156" href="$classneuroml2_1_1_instance.html" title="Class corresponding to the Instance schema type." alt="" coords="483,884,629,909"/>
+<area shape="poly" id="edge25_Node000001_Node000156" title=" " alt="" coords="301,1068,322,1034,350,993,386,953,429,920,455,908,481,900,483,905,456,913,432,924,390,957,354,997,326,1037,306,1071"/>
+<area shape="rect" id="Node000157" href="$classneuroml2_1_1_intracellular_properties.html" title="Class corresponding to the IntracellularProperties schema type." alt="" coords="438,933,674,959"/>
+<area shape="poly" id="edge26_Node000001_Node000157" title=" " alt="" coords="308,1069,359,1018,393,991,430,969,463,956,465,961,432,974,396,996,363,1022,312,1073"/>
+<area shape="rect" id="Node000159" href="$classneuroml2_1_1_layout.html" title="Class corresponding to the Layout schema type." alt="" coords="488,983,624,1008"/>
+<area shape="poly" id="edge27_Node000001_Node000159" title=" " alt="" coords="321,1072,371,1044,430,1018,487,1003,488,1008,432,1023,373,1049,324,1076"/>
+<area shape="rect" id="Node000160" href="$classneuroml2_1_1_location.html" title="Class corresponding to the Location schema type." alt="" coords="483,1032,629,1057"/>
+<area shape="poly" id="edge28_Node000001_Node000160" title=" " alt="" coords="371,1076,486,1055,487,1060,372,1081"/>
+<area shape="rect" id="Node000161" href="$classneuroml2_1_1_member.html" title="Class corresponding to the Member schema type." alt="" coords="483,1081,629,1107"/>
+<area shape="poly" id="edge29_Node000001_Node000161" title=" " alt="" coords="397,1091,482,1091,482,1097,397,1097"/>
+<area shape="rect" id="Node000162" href="$classneuroml2_1_1_membrane_properties.html" title="Class corresponding to the MembraneProperties schema type." alt="" coords="442,1131,670,1156"/>
+<area shape="poly" id="edge30_Node000001_Node000162" title=" " alt="" coords="372,1107,487,1128,486,1133,371,1112"/>
+<area shape="rect" id="Node000164" href="$classneuroml2_1_1_named_dimensional_type.html" title="Class corresponding to the NamedDimensionalType schema type." alt="" coords="431,1180,681,1205"/>
+<area shape="poly" id="edge31_Node000001_Node000164" title=" " alt="" coords="323,1112,373,1140,432,1166,471,1177,470,1182,430,1171,371,1145,320,1116"/>
+<area shape="rect" id="Node000169" href="$classneuroml2_1_1_named_dimensional_variable.html" title="Class corresponding to the NamedDimensionalVariable schema type." alt="" coords="445,1230,667,1270"/>
+<area shape="poly" id="edge32_Node000001_Node000169" title=" " alt="" coords="312,1115,363,1166,396,1193,432,1216,459,1228,457,1232,429,1220,393,1197,359,1170,308,1119"/>
+<area shape="rect" id="Node000173" href="$classneuroml2_1_1_path.html" title="Class corresponding to the Path schema type." alt="" coords="496,1295,616,1320"/>
+<area shape="poly" id="edge33_Node000001_Node000173" title=" " alt="" coords="304,1118,324,1155,352,1199,388,1243,432,1280,463,1294,496,1302,495,1307,461,1299,429,1284,385,1247,348,1202,319,1158,300,1121"/>
+<area shape="rect" id="Node000174" href="$classneuroml2_1_1_plasticity_mechanism.html" title="Class corresponding to the PlasticityMechanism schema type." alt="" coords="443,1344,669,1369"/>
+<area shape="poly" id="edge34_Node000001_Node000174" title=" " alt="" coords="300,1119,317,1166,344,1223,382,1282,406,1308,432,1330,452,1341,450,1346,429,1335,402,1312,378,1285,339,1226,312,1168,295,1121"/>
+<area shape="rect" id="Node000175" href="$classneuroml2_1_1_point3_d_with_diam.html" title="Class corresponding to the Point3DWithDiam schema type." alt="" coords="452,1393,660,1419"/>
+<area shape="poly" id="edge35_Node000001_Node000175" title=" " alt="" coords="298,1120,312,1175,337,1246,355,1283,376,1319,402,1352,432,1380,453,1392,450,1397,429,1384,398,1356,372,1322,350,1286,332,1248,306,1177,293,1121"/>
+<area shape="rect" id="Node000176" href="$classneuroml2_1_1_property.html" title="Class corresponding to the Property schema type." alt="" coords="483,1443,629,1468"/>
+<area shape="poly" id="edge36_Node000001_Node000176" title=" " alt="" coords="296,1120,307,1184,330,1268,348,1313,370,1356,398,1395,432,1429,456,1443,483,1451,482,1456,454,1448,429,1433,394,1399,366,1359,343,1315,325,1270,301,1185,291,1121"/>
+<area shape="rect" id="Node000177" href="$classneuroml2_1_1_proximal_details.html" title="Class corresponding to the ProximalDetails schema type." alt="" coords="458,1492,654,1517"/>
+<area shape="poly" id="edge37_Node000001_Node000177" title=" " alt="" coords="294,1120,302,1192,323,1290,341,1342,364,1392,395,1439,432,1479,459,1494,457,1499,429,1483,390,1442,360,1395,336,1344,318,1291,297,1193,289,1121"/>
+<area shape="rect" id="Node000178" href="$classneuroml2_1_1_q10_conductance_scaling.html" title="Class corresponding to the Q10ConductanceScaling schema type." alt="" coords="455,1542,657,1582"/>
+<area shape="poly" id="edge38_Node000001_Node000178" title=" " alt="" coords="294,1120,299,1200,307,1253,319,1310,336,1369,360,1427,392,1481,432,1528,456,1544,453,1548,429,1532,388,1484,356,1430,331,1371,313,1311,301,1254,294,1201,288,1121"/>
+<area shape="rect" id="Node000179" href="$classneuroml2_1_1_random_layout.html" title="Class corresponding to the RandomLayout schema type." alt="" coords="461,1607,651,1632"/>
+<area shape="poly" id="edge39_Node000001_Node000179" title=" " alt="" coords="297,1120,314,1224,343,1366,362,1439,384,1504,407,1557,432,1592,462,1609,459,1614,429,1596,402,1560,379,1506,357,1440,338,1368,309,1225,292,1121"/>
+<area shape="rect" id="Node000180" href="$classneuroml2_1_1_resistivity.html" title="Class corresponding to the Resistivity schema type." alt="" coords="475,1656,637,1681"/>
+<area shape="poly" id="edge40_Node000001_Node000180" title=" " alt="" coords="296,1120,312,1234,340,1392,359,1472,380,1545,405,1604,418,1626,432,1643,452,1656,476,1664,474,1669,450,1661,429,1647,414,1629,400,1606,375,1547,353,1473,335,1393,306,1235,291,1121"/>
+<area shape="rect" id="Node000181" href="$classneuroml2_1_1_segment_end_point.html" title="Class corresponding to the SegmentEndPoint schema type." alt="" coords="453,1705,659,1731"/>
+<area shape="poly" id="edge41_Node000001_Node000181" title=" " alt="" coords="296,1120,310,1243,336,1416,355,1504,377,1584,403,1649,417,1674,432,1692,454,1706,451,1711,429,1696,413,1677,398,1651,372,1586,350,1505,331,1416,304,1243,290,1121"/>
+<area shape="rect" id="Node000182" href="$classneuroml2_1_1_segment_parent.html" title="Class corresponding to the SegmentParent schema type." alt="" coords="461,1755,651,1780"/>
+<area shape="poly" id="edge42_Node000001_Node000182" title=" " alt="" coords="295,1120,308,1252,333,1439,352,1535,374,1623,401,1694,416,1721,432,1741,461,1759,459,1764,429,1745,412,1724,396,1697,369,1625,346,1537,328,1440,302,1252,290,1121"/>
+<area shape="rect" id="Node000183" href="$classneuroml2_1_1_space_structure.html" title="Class corresponding to the SpaceStructure schema type." alt="" coords="461,1804,651,1829"/>
+<area shape="poly" id="edge43_Node000001_Node000183" title=" " alt="" coords="295,1120,306,1260,330,1463,348,1567,371,1662,399,1739,415,1769,433,1791,446,1801,462,1809,459,1813,443,1806,429,1795,411,1772,394,1742,366,1663,343,1568,325,1464,300,1261,289,1120"/>
+<area shape="rect" id="Node000184" href="$classneuroml2_1_1_specific_capacitance.html" title="Class corresponding to the SpecificCapacitance schema type." alt="" coords="445,1853,667,1879"/>
+<area shape="poly" id="edge44_Node000001_Node000184" title=" " alt="" coords="294,1120,304,1269,327,1487,345,1599,368,1701,397,1785,414,1816,433,1840,447,1851,443,1855,429,1844,410,1819,392,1787,363,1703,340,1600,321,1487,298,1270,289,1121"/>
+<area shape="rect" id="Node000185" href="$classneuroml2_1_1_spike_thresh.html" title="Class corresponding to the SpikeThresh schema type." alt="" coords="471,1903,641,1928"/>
+<area shape="poly" id="edge45_Node000001_Node000185" title=" " alt="" coords="294,1120,302,1277,324,1510,341,1630,365,1740,395,1830,413,1864,433,1889,450,1902,471,1911,469,1916,448,1907,429,1893,409,1867,390,1832,360,1741,336,1631,318,1511,297,1278,289,1120"/>
+<area shape="rect" id="Node000186" href="$classneuroml2_1_1_sub_tree.html" title="Class corresponding to the SubTree schema type." alt="" coords="485,1952,627,1977"/>
+<area shape="poly" id="edge46_Node000001_Node000186" title=" " alt="" coords="294,1121,300,1287,308,1405,321,1534,338,1662,362,1779,377,1830,393,1875,412,1912,432,1939,457,1955,485,1963,484,1968,454,1960,429,1943,407,1914,389,1877,372,1832,357,1781,333,1663,315,1535,303,1406,295,1287,288,1121"/>
+<area shape="rect" id="Node000187" href="$classneuroml2_1_1_synaptic_connection.html" title="Class corresponding to the SynapticConnection schema type." alt="" coords="445,2001,667,2027"/>
+<area shape="poly" id="edge47_Node000001_Node000187" title=" " alt="" coords="294,1120,299,1295,306,1421,317,1557,335,1693,359,1818,374,1873,392,1920,411,1959,433,1988,447,1999,443,2003,429,1992,406,1962,387,1922,369,1874,354,1819,330,1694,312,1558,300,1421,293,1295,288,1121"/>
+<area shape="rect" id="Node000188" href="$classneuroml2_1_1_unstructured_layout.html" title="Class corresponding to the UnstructuredLayout schema type." alt="" coords="446,2051,666,2076"/>
+<area shape="poly" id="edge48_Node000001_Node000188" title=" " alt="" coords="293,1121,297,1304,303,1436,314,1581,332,1725,356,1857,372,1915,390,1965,410,2007,433,2037,447,2049,444,2053,429,2041,405,2009,385,1967,367,1917,351,1858,326,1726,309,1581,298,1437,292,1304,288,1121"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,1081,148,1107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,1091,196,1091,196,1097,162,1097"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_base_projection.html" title="Class corresponding to the BaseProjection schema type." alt="" coords="751,5,940,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="631,185,657,177,680,164,692,150,699,136,703,105,707,73,714,57,728,41,749,28,752,32,731,45,719,59,712,74,708,105,704,137,697,153,683,168,659,182,632,190"/>
+<area shape="rect" id="Node000009" href="$classneuroml2_1_1_cell_set.html" title="Class corresponding to the CellSet schema type." alt="" coords="776,55,915,80"/>
+<area shape="poly" id="edge5_Node000004_Node000009" title=" " alt="" coords="631,183,657,176,680,164,696,147,703,129,711,109,728,91,750,79,775,71,776,76,753,83,731,95,715,112,708,130,700,150,683,168,658,181,632,188"/>
+<area shape="rect" id="Node000010" href="$classneuroml2_1_1_channel_density.html" title="Class corresponding to the ChannelDensity schema type." alt="" coords="748,104,943,129"/>
+<area shape="poly" id="edge6_Node000004_Node000010" title=" " alt="" coords="631,177,680,164,704,152,728,140,773,127,774,132,730,144,707,156,682,168,632,182"/>
+<area shape="rect" id="Node000012" href="$classneuroml2_1_1_channel_density_g_h_k.html" title="Class corresponding to the ChannelDensityGHK schema type." alt="" coords="733,153,957,179"/>
+<area shape="poly" id="edge7_Node000004_Node000012" title=" " alt="" coords="631,181,733,173,733,178,632,186"/>
+<area shape="rect" id="Node000013" href="$classneuroml2_1_1_channel_density_g_h_k2.html" title="Class corresponding to the ChannelDensityGHK2 schema type." alt="" coords="729,203,961,228"/>
+<area shape="poly" id="edge8_Node000004_Node000013" title=" " alt="" coords="632,194,729,203,729,208,632,199"/>
+<area shape="rect" id="Node000014" href="$classneuroml2_1_1_channel_density_nernst.html" title="Class corresponding to the ChannelDensityNernst schema type." alt="" coords="748,253,943,293"/>
+<area shape="poly" id="edge9_Node000004_Node000014" title=" " alt="" coords="632,199,682,213,707,225,730,238,765,250,763,255,728,243,704,230,680,218,631,204"/>
+<area shape="rect" id="Node000016" href="$classneuroml2_1_1_channel_density_non_uniform.html" title="Class corresponding to the ChannelDensityNonUniform schema type." alt="" coords="748,317,943,357"/>
+<area shape="poly" id="edge10_Node000004_Node000016" title=" " alt="" coords="633,192,659,200,683,213,701,235,708,259,714,281,731,303,749,314,746,319,728,307,710,284,703,260,697,238,680,217,657,205,631,197"/>
+<area shape="rect" id="Node000017" href="$classneuroml2_1_1_channel_density_non_uniform_g_h_k.html" title="Class corresponding to the ChannelDensityNonUniformGHK schema type." alt="" coords="748,381,943,421"/>
+<area shape="poly" id="edge11_Node000004_Node000017" title=" " alt="" coords="633,190,660,198,683,213,699,232,707,252,709,291,710,330,717,348,731,367,749,380,746,384,727,371,712,351,705,331,703,291,701,253,694,235,680,217,657,203,631,195"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="src/NeuroML_v2.3.hxx" name="src/NeuroML_v2.3.hxx">
+<area shape="rect" id="Node000001" title="Generated from NeuroML_v2.3.xsd." alt="" coords="90,5,257,31"/>
+<area shape="rect" id="Node000002" href="$_neuro_m_l__v2_83_8cxx_source.html" title=" " alt="" coords="5,79,171,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,41,104,80,100,76,148,37"/>
+<area shape="rect" id="Node000003" href="$neuroml_8hxx_source.html" title=" " alt="" coords="195,79,322,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,37,246,76,243,80,196,41"/>
+<area shape="rect" id="Node000004" href="$_neuro_m_l__custom_8cxx_source.html" title=" " alt="" coords="146,152,371,207"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="261,118,261,152,256,152,256,118"/>
+</map>

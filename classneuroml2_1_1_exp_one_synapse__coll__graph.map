@@ -1,0 +1,17 @@
+<map id="neuroml2::ExpOneSynapse" name="neuroml2::ExpOneSynapse">
+<area shape="rect" id="Node000001" title="Class corresponding to the ExpOneSynapse schema type." alt="" coords="11,548,208,573"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_conductance_based_synapse.html" title="Class corresponding to the BaseConductanceBasedSynapse schema type." alt="" coords="5,460,213,500"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,514,112,548,107,548,107,514"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_voltage_dep_synapse.html" title="Class corresponding to the BaseVoltageDepSynapse schema type." alt="" coords="10,372,209,412"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,426,112,460,107,460,107,426"/>
+<area shape="rect" id="Node000004" href="$classneuroml2_1_1_base_synapse.html" title="Class corresponding to the BaseSynapse schema type." alt="" coords="20,299,199,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,338,112,372,107,372,107,338"/>
+<area shape="rect" id="Node000005" href="$classneuroml2_1_1_standalone.html" title="Class corresponding to the Standalone schema type." alt="" coords="27,225,192,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="112,264,112,299,107,299,107,264"/>
+<area shape="rect" id="Node000006" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="47,152,171,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="112,191,112,225,107,225,107,191"/>
+<area shape="rect" id="Node000007" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="16,79,203,104"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="112,118,112,152,107,152,107,118"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="38,5,181,31"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="112,44,112,79,107,79,107,44"/>
+</map>

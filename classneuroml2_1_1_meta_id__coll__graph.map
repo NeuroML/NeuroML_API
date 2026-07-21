@@ -1,0 +1,5 @@
+<map id="neuroml2::MetaId" name="neuroml2::MetaId">
+<area shape="rect" id="Node000001" title="Class corresponding to the MetaId schema type." alt="" coords="12,79,149,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,156,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,44,83,79,78,79,78,44"/>
+</map>

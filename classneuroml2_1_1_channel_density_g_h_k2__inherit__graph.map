@@ -1,0 +1,9 @@
+<map id="neuroml2::ChannelDensityGHK2" name="neuroml2::ChannelDensityGHK2">
+<area shape="rect" id="Node000001" title="Class corresponding to the ChannelDensityGHK2 schema type." alt="" coords="5,225,237,251"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base.html" title="Class corresponding to the Base schema type." alt="" coords="59,152,183,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,191,124,225,119,225,119,191"/>
+<area shape="rect" id="Node000003" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="28,79,215,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,118,124,152,119,152,119,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="50,5,193,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="124,44,124,79,119,79,119,44"/>
+</map>

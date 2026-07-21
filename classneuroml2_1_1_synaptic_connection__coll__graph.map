@@ -1,0 +1,7 @@
+<map id="neuroml2::SynapticConnection" name="neuroml2::SynapticConnection">
+<area shape="rect" id="Node000001" title="Class corresponding to the SynapticConnection schema type." alt="" coords="5,152,227,177"/>
+<area shape="rect" id="Node000002" href="$classneuroml2_1_1_base_without_id.html" title="Class corresponding to the BaseWithoutId schema type." alt="" coords="23,79,209,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,118,119,152,113,152,113,118"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="45,5,187,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,44,119,79,113,79,113,44"/>
+</map>
